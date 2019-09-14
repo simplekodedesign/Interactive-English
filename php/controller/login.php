@@ -25,20 +25,20 @@
     if(password_verify($_POST["pass"],$pass)){
       $_SESSION["user"]=$user;
       //buscar codigo de alumno y de codigo de usuario
-      $results=Connection::request("select Co_Usuario,Co_Alumno from m210_usuario where Tx_Email like '".$user."'");
+      $results=Connection::request("select Co_Usuario,Co_Alumno,Tx_Url from m210_usuario where Tx_Email like '".$user."'");
       if($results->rowCount()>0){
         while($res=$results->fetch(PDO::FETCH_ASSOC)){
           $_SESSION["co_usuario"]=$res["Co_Usuario"];
+          $_SESSION["user_icon"]=$res["Tx_Url"];
           $coAlumno=$res["Co_Alumno"];
         }
       }
         //guardar datos personales del usuario en variables de sesion
-        $results=Connection::request("select Nb_Apellido,Nb_Alumno,Tx_Url from m220_alumno where Co_Alumno=".$coAlumno);
+        $results=Connection::request("select Nb_Apellido,Nb_Alumno from m220_alumno where Co_Alumno=".$coAlumno);
         if($results->rowCount()>0){
           while($res=$results->fetch(PDO::FETCH_ASSOC)){
             $_SESSION["name"]=$res["Nb_Alumno"];
             $_SESSION["surname"]=$res["Nb_Apellido"];
-            $_SESSION["user_icon"]=$res["Tx_Url"];
           }
         }
         //guardar datos del usuario respecto a su avance en el sistema en variables de sesion

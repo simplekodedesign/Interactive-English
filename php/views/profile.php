@@ -1,17 +1,16 @@
 <?php
   //Buscar email
-  $results=Connection::request("select Co_Alumno from m210_usuario where Co_Usuario=".$_SESSION["co_usuario"]);
+  $results=Connection::request("select Co_Alumno,Tx_Url from m210_usuario where Co_Usuario=".$_SESSION["co_usuario"]);
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       $coAlumno=$res["Co_Alumno"];
+      $photo=$res["Tx_Url"];
     }
   }
-  $results=Connection::request("select Co_Alumno,Tx_Email,Nb_ApellidoRepre,Nb_Representante,Tx_Url,Fe_Nacimiento from m220_alumno where Co_Alumno=".$coAlumno);
+  $results=Connection::request("select Co_Alumno,Tx_Email,Nb_ApellidoRepre,Nb_Representante,Fe_Nacimiento from m220_alumno where Co_Alumno=".$coAlumno);
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
-      // $email=$res["Tx_Email"];
       $parent=$res["Nb_Representante"]." ".$res["Nb_ApellidoRepre"];
-      $photo=$res["Tx_Url"];
       $birth=$res["Fe_Nacimiento"];
     }
   }

@@ -11,7 +11,7 @@
     }
   }
   $_SESSION["user_icon"]=$_GET["ui"];
-  $results=Connection::request("update m220_alumno set Tx_Url='".$_GET["ui"]."' where Co_Alumno=".$coAlumno);
+  $results=Connection::request("update m210_usuario set Tx_Url='".$_GET["ui"]."' where Co_Usuario=".$_SESSION["co_usuario"]);
   $message.="Icono de perfil cambiado con exito\n";
   if(isset($_GET["op"])&&isset($_GET["np"])){
     $results=Connection::request("select Tx_Clave from m210_usuario where Co_Usuario=".$_SESSION["co_usuario"]);
