@@ -1,0 +1,54 @@
+.cont_abc{
+	display: flex;
+	justify-content: center;
+  align-items: center;
+	flex-wrap: wrap;
+  height: 60%;
+	width: 100vw;
+}
+
+.vocabulary{
+	width: 150px;
+	margin: 15px 0;
+	color: green;
+	text-align: center;
+	background-color: lightblue;
+	border-radius: 15px;
+}
+
+.buttons span {
+	width: 50px;
+}
+
+video{
+	max-width: 1024;
+	max-height: 768px;
+}
+
+.buttons{
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	height: 50px;
+}
+
+/* .NavButtons{
+	display: flex;
+} */
+
+
+@media only screen and (min-width: 650px) {
+  video{
+    width: 70%;
+  }
+
+.titles{
+  font-size: 2em;
+}
+
+@media only screen and (min-width: 1020px) {
+
+  .titles{
+    font-size: 4em;
+  }
+}

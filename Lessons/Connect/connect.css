@@ -1,0 +1,52 @@
+.playground {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    min-width: 250px;
+    max-width: 100%;
+    min-height: 60vh;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 35px;
+    padding: 0px 5px;
+}
+
+.column {
+    height: auto;
+    position: relative;
+}
+
+.text {
+    transition: .5s ease;
+    font-size: 75%;
+    text-align: center;
+    /* border-bottom: 5px solid #FF0066; */
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0 12px;
+}
+
+
+.guardian {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+/* .NavButtons {
+	display: flex;
+} */
+
+@media only screen and (min-width: 650px) {
+    .text {
+        font-size: 150%;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+
+}

@@ -1,0 +1,48 @@
+.cont_abc{
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+	flex-wrap: wrap;
+  	height: 350px;
+	margin: 15px;
+	width: 350px;
+}
+
+.contain{
+	width: 100vw;
+}
+
+.vocabulary{
+	width: 150px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.letra{
+	min-width: 200px;
+	width: auto;
+	text-align: center;
+	cursor: pointer;
+	height: auto;
+	max-width: 400px;
+	transform: scale(0,0);
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+
+}
+
+.buttons span {
+	width: 50px;
+}
+
+.active{
+	transform: scale(1,1);
+}
+
+.buttons{
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	height: 50px;
+}

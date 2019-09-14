@@ -1,0 +1,51 @@
+.welcome{
+	justify-content: center;
+}
+
+.theme{
+	margin-top: 15px;
+}
+
+.cont_abc{
+	min-height: 300px;
+	display: flex;
+	justify-content: space-around;
+  align-items: center;
+	flex-wrap: wrap;
+  height: auto;
+}
+
+.letra{
+	width: 23%;
+	font-size: 1em;
+	font-weight: bold;
+	cursor: pointer;
+  text-align: center;
+  margin: 5px 0;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+
+.letra:hover{
+	transform: scale(1.2,1.2);
+}
+
+.number{
+	display: block;
+	margin-top: 5px;
+	height: 30px;
+	font-size: 11px;
+	transform: scale(0,0);
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: 1s;
+}
+
+.active .number{
+	transform: scale(1,1);
+}
+
+/* .NavButtons {
+	display: flex;
+} */

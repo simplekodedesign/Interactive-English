@@ -1,0 +1,84 @@
+#main{
+    justify-content: flex-start;
+}
+
+.playground {
+  margin-top: 40px;
+  min-width: 250px;
+  max-width: 1024px;
+  min-height: 80vh;
+  width: 80%;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+    margin: 0 2px 15px;
+    display: flex;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.guardian {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+/* .NavButtons {
+	display: flex;
+} */
+
+@media only screen and (min-width: 650px) {
+    .themeLesson {
+        width: 550px;
+    }
+
+    .les {
+        margin-bottom: 25px;
+        width: 200px;
+        height: 190px;
+    }
+
+    .lesImage {
+        width: 150px;
+        height: 150px;
+    }
+    .card {
+        margin: 0 10px 15px;
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media only screen and (min-width: 1020px){
+  .card{
+    margin: 0 20px 30px;
+    height: 125px;
+    width: 125px;
+  }
+}

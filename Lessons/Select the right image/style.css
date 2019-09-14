@@ -1,0 +1,47 @@
+.cont_abc{
+	min-height: 300px;
+	min-width: 200px;
+	height: 15em;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	justify-content: center;
+	align-items: center;
+  height: auto;
+	max-width: 400px;
+	max-height: 400px;
+	width: 40vw;
+}
+
+.letra{
+	width: 100%;
+	font-size: 3em;
+	font-weight: bold;
+	cursor: pointer;
+  text-align: center;
+	transform: scale(0,0);
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+	height: 100px;
+}
+
+.active{
+	transform: scale(1,1);
+}
+
+
+@media only screen and (min-width: 650px) {
+  .theme1 .letra{
+    font-size: 4em !important;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .theme1 .letra{
+    font-size: 6em !important;
+  }
+}
+
+/* .NavButtons {
+	display: flex;
+} */

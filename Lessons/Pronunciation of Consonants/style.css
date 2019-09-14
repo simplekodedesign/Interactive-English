@@ -1,0 +1,36 @@
+.cont_abc{
+	min-height: 300px;
+	height: 15em;
+	width: 15em;
+	display: flex;
+	position: relative;
+	justify-content: center;
+  align-content: flex-start;
+	flex-wrap: nowrap;
+  height: auto;
+}
+
+.letra{
+	width: 100%;
+	font-size: 15em;
+	position: absolute;
+	font-weight: bold;
+	cursor: pointer;
+  text-align: center;
+  margin: 10px;
+	top: 0;
+	left: 0;
+	/* right: 100%;  */
+	transform: scale(0,0);
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+
+.active{
+	transform: scale(1,1);
+}
+
+/* .NavButtons {
+	display: flex;
+} */

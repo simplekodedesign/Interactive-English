@@ -1,0 +1,30 @@
+<section class="welcome" id="main">
+
+    <h1 class="titles" id="titles">The Letters</h1>
+    <span>Select the right order of the sentence</span>
+
+    <div class="theme">
+      <div class="cont_abc" id="cont_all">
+        <div class="letra 0 active" id="A"><img src="space.png" width="100%" height="100%" alt="say_the_correct_word"></div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <div class="input">
+        <input type="text" value="" placeholder="Text" class="write" id="write" disabled>
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </div>
+      <input type="reset" class="lessonButton validate" id="reset" placeholder="Reset" value="Reset">
+      <span class="lessonButton validate check" id="validate">Validate</span>
+      <span class="lessonButton">He</span>
+      <span class="lessonButton">is</span>
+      <span class="lessonButton">a</span>
+      <span class="lessonButton">algo</span> <!--Usar Full si los botones son impares-->
+    </div>
+</section>
+<script type="text/javascript">
+  var cord=<?php echo $_GET["co"]?>;
+</script>
+
+    <!-- <script src="../../mainJS.js"></script>
+    <script src="javascript.js"></script> -->

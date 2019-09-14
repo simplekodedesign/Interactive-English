@@ -1,0 +1,52 @@
+.cont_abc{
+	min-height: 300px;
+	display: flex;
+	justify-content: space-around;
+  align-items: center;
+	flex-wrap: wrap;
+  height: auto;
+}
+.letra{
+	width: 20%;
+	font-size: 3.5em;
+	font-weight: bold;
+	cursor: pointer;
+  text-align: center;
+  margin: 10px;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+.letra:hover{
+	transform: scale(1.2,1.2);
+}
+
+/* .NavButtons {
+	display: flex;
+} */
+
+@media only screen and (min-width: 650px) {
+	.cont_abc {
+		min-width: 600px;
+		margin-top: 40px;
+	}
+
+	.letra {
+		font-size: 4.5em;
+		margin: 5px;
+		width: 18%;
+	}
+}
+
+@media only screen and (min-width: 1020px) {
+
+	.cont_abc {
+		min-width: 1000px;
+		margin-top: 50px;
+	}
+
+	.letra {
+		font-size: 5em;
+		width: 15%;
+	}
+}

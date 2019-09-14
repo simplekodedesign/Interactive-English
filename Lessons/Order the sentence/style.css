@@ -1,0 +1,86 @@
+.cont_abc{
+	min-height: 300px;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+	flex-wrap: wrap;
+  /* height: auto; */
+	height: 40vh;
+	max-width: 400px;
+	max-height: 400px;
+	width: 100vw;
+}
+
+button, input{
+	border: 0;
+	margin: 2px;
+}
+
+.AnotherButton{
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px 8px;
+  height: auto;
+  /* width: 200px; */
+  width: 125px; /*CAMBIOS DG */
+}
+
+.vocabulary{
+	width: 150px;
+	margin: 15px 0;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.buttons{
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	/* align-items: center; */
+}
+
+.input{
+	width: 100%;
+	font-size: 30px;
+	display: flex;
+	min-height: 24px;
+	justify-content: center;
+	margin: 7px auto;
+	grid-column: span 2;
+}
+
+.letra{
+	width: 200px;
+	height: auto;
+	cursor: pointer;
+  margin: 10px;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+
+.active{
+	transform: scale(1,1);
+}
+
+.write{
+	text-align: center;
+	border: 0;
+	border-radius: 5px;
+	margin: auto;
+}
+
+.validate{
+	margin-bottom: 50px !important;
+}
+
+.full{
+	grid-column: span 2;
+	width: 100%;
+}
+
+/* .NavButtons {
+	display: flex;
+} */

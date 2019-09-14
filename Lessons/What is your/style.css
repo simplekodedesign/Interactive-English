@@ -1,0 +1,49 @@
+.cont_abc{
+	min-height: 300px;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+	flex-wrap: wrap;
+  height: auto;
+	width: 60vw;
+}
+
+.buttons{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.input{
+	width: 100%;
+	font-size: 30px;
+	display: flex;
+	min-height: 24px;
+	justify-content: center;
+	margin: 7px auto;
+}
+
+.letra{
+	width: 100%;
+	cursor: pointer;
+  text-align: center;
+	transform: scale(0,0);
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+
+.write{
+	text-align: center;
+	border: 0;
+	border-radius: 5px;
+	margin: auto;
+}
+
+.active{
+	transform: scale(1,1);
+}
+
+.NavButtons {
+	display: flex;
+}

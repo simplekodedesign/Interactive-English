@@ -1,0 +1,623 @@
+
+.playground {
+    /*min-width: 250px; */
+    margin: 120px 0;
+    width: 304px;
+    height: 585px;
+    /* height: auto; */
+    display: grid;
+    background-color: rgb(124, 121, 126);
+
+    grid-template-columns: 2fr 1fr 2fr;
+}
+
+.col {
+    height: auto;
+    background-color: rgb(124,121,126);
+    padding: 5px 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 28px;
+    overflow: visible;
+}
+
+#col1 {
+    padding-left: 5px;
+}
+
+#col2 {
+    padding-right: 5px;
+}
+
+.block {
+    height: 100%;
+    background-color: rgba(21, 255, 0, 0);
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 25;
+    overflow: visible;
+    /* margin: 5px 0px; */
+}
+
+.block::before, .block::after {
+    content: "";
+    width: 25%;
+    height: 3px;
+    position: absolute;
+    background-color: yellow;
+    bottom: -14px;
+    left: 15px;
+}
+
+.block::after {
+    left: unset;
+    right: 15px;
+}
+
+.endblock::before , .endblock::after {
+    content: none;
+}
+
+.street {
+    position: relative;
+    height: auto;
+    /* background-color: rgb(151, 2, 250); */
+    padding: 5px 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 28px;
+}
+
+.blockst {
+    position: relative;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.blockst::before, .blockst::after {
+    content: "";
+    background-color: yellow;
+    height: 100%;
+    width: 4px;
+
+    position: absolute;
+    top: 0;
+    left: 40%;
+}
+
+.blockst::after {
+    left: unset;
+    right: 40%;
+}
+
+.shop {
+    height: 50%;
+    width: 50%;
+    position: relative;
+    border-radius: 12px;
+    background-color: rgb(30, 255, 0);
+    border: 2px solid rgb(45, 46, 51);
+    overflow: visible;
+    z-index: 26;
+}
+
+.shop span {
+    display: none;
+}
+
+.shop img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: .5s ease;
+    z-index: 100;
+}
+
+.shop img:hover {
+    transform: scale(1.2, 1.2);
+    z-index: 100;
+}
+/*---------------------Pasos Peatonales-------------------*/
+
+#c1b1 .s3, #c1b2 .s3, #c1b3 .s3, #c2b1 .s4, #c2b2 .s3, #c2b3 .s3, #c1b1 .s2, #c2b3 .s1, #c1b4 .s4 {
+    position: relative;
+}
+
+#c1b1 .s3::after, #c1b2 .s3::after, #c1b3 .s3::after, #c2b1 .s4::after, #c2b2 .s3::after, #c2b3 .s3::after {
+    content: "";
+    height: 28px;
+    width: 10px;
+    background-color: rgb(255, 255, 255);
+
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    z-index: -1;
+}
+
+#c2b1 .s4::after {
+    left: unset;
+    right: 0;
+}
+
+#c1b1 .s2 .pasoP, #c2b3 .s1 .pasoP, #c1b4 .s4 .pasoP {
+    position: absolute;
+    background-color: white;
+    height: 10px;
+    width: 50%;
+    z-index: -1;
+}
+
+#c1b1 .s2 .pasoP {
+    top: -3%;
+    right: -85%;
+}
+
+#c2b3 .s1 .pasoP {
+    top: -3%;
+    left: -85%;
+}
+
+#c1b4 .s4 .pasoP {
+    bottom: -2%;
+    right: -85%;
+}
+
+.pasoP::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 10px;
+    width: 50%;
+    top: 0;
+    left: -65%;
+    z-index: 3;
+}
+
+.pasoP::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 10px;
+    width: 50%;
+    top: 0;
+    right: -65%;
+    z-index: 3;
+}
+
+/*----------------------Elementos de calles-------------------*/
+/*BUSES*/
+
+#c1b1 .s4, #c1b3 .s2, #c2b3 .s2, #c2b4 .s1 {
+    position: relative;
+}
+
+#c1b1 .s4 i, #c1b3 .s2 i, #c2b3 .s2 i, #c2b4 .s1 i{
+    position: absolute;
+    font-size: 125%;
+    color: rgb(6, 0, 83);
+}
+
+#c1b1 .s4 i {
+    top: 50%;
+    right: -18px;
+}
+
+#c1b3 .s2 i, #c2b3 .s2 i {
+    top: -18px;
+    right: 8px;
+
+    transform: rotate(-90deg);
+}
+
+#c2b4 .s1 i {
+    top: 60%;
+    left: -18px;
+}
+
+/*TAXIS*/
+
+#c1b2 .s2, #c2b2 .s1, #c1b4 .s2, #c2b4 .s2 {
+    position: relative;
+}
+
+#c1b2 .s2 i, #c2b2 .s1 i, #c1b4 .s2 i, #c2b4 .s2 i {
+    position: absolute;
+    font-size: 125%;
+    color: rgb(255, 255, 0);
+}
+
+#c1b2 .s2 i, #c1b4 .s2 i {
+    top: -17px;
+    left: -10px;
+    transform: rotate(-90deg);
+}
+
+#c2b2 .s1 i {
+    transform: rotate(-90deg);
+    right: -10px;
+    top: -17px;
+}
+
+#c2b4 .s2 i {
+    transform: rotate(-90deg);
+    left: -10px;
+    top: -17px;
+}
+
+/*Semaforos*/
+
+#c2b2 .s3, #c1b2 .s4, #c2b3 .s3, #c1b3 .s4, #c2b1 .s3, #c2b4 .s3 {
+    position: relative;
+}
+
+#c2b2 .s3 i, #c1b2 .s4 i, #c2b3 .s3 i, #c1b3 .s4 i, #c2b1 .s3 i, #c2b4 .s3 i{
+    position: absolute;
+    font-size: 125%;
+    color: black;
+    z-index: 4;
+}
+
+#c2b2 .s3 i, #c2b3 .s3 i {
+    bottom: 0;
+    left: -15px;
+}
+
+#c1b2 .s4 i, #c1b3 .s4 i {
+    bottom: 0;
+    right: -15px;
+}
+
+#c2b1 .s3 i , #c2b4 .s3 i{
+    bottom: 0;
+    left: -40px;
+}
+
+
+.questionsContainer {
+    width: 304px;
+    height: auto;
+    color: rgb(0, 0, 0);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.questionsContainer p {
+    min-width: 250px;
+    position: relative;
+    margin-top: 20px;
+    border-radius: 12px;
+    background-color: rgb(136, 189, 233);
+    text-align: center;
+    width: auto;
+}
+
+#esp::before {
+    content:"Español";
+    position: absolute;
+    left: 0;
+    top: -110%;
+}
+
+#eng::before {
+    content:"English";
+    position: absolute;
+    left: 0;
+    top: -100%;
+}
+
+.questionsContainer img {
+    width: 250px;
+    height: 250px;
+}
+
+/*---------------------REPSONSIVE TABLET---------------------*/
+
+@media only screen and (min-width: 650px) {
+    .playground {
+        width: 580px;
+        height: 1116px;
+        overflow: hidden;
+    }
+
+    .col {
+        grid-gap: 40px;
+    }
+
+    .block::before, .block::after {
+        bottom: -21px;
+    }
+
+    /*SEMAFOROS*/
+
+    #c2b2 .s3 i, #c1b2 .s4 i, #c2b3 .s3 i, #c1b3 .s4 i, #c2b1 .s3 i, #c2b4 .s3 i{
+        position: absolute;
+        font-size: 225%;
+        color: black;
+        z-index: 4;
+    }
+
+    #c2b2 .s3 i, #c2b3 .s3 i {
+        bottom: 0;
+        left: -25px;
+    }
+
+    #c1b2 .s4 i, #c1b3 .s4 i {
+        bottom: 0;
+        right: -25px;
+    }
+
+    #c2b1 .s3 i , #c2b4 .s3 i{
+        bottom: 0;
+        left: -73px;
+    }
+
+    /*PASOS PEATONALES*/
+
+    #c1b1 .s3::after, #c1b2 .s3::after, #c1b3 .s3::after, #c2b1 .s4::after, #c2b2 .s3::after, #c2b3 .s3::after {
+        height: 41px;
+        bottom: -42px;
+    }
+
+    #c1b1 .s2 .pasoP, #c2b3 .s1 .pasoP, #c1b4 .s4 .pasoP {
+        height: 20px;
+        width: 50%;
+        z-index: -1;
+    }
+
+    #c1b1 .s2 .pasoP {
+        top: -2%;
+        right: -80%;
+    }
+
+    #c2b3 .s1 .pasoP {
+        top: -2%;
+        left: -80%;
+    }
+
+    #c1b4 .s4 .pasoP {
+        bottom: -2%;
+        right: -80%;
+    }
+
+    .pasoP::before {
+        height: 100%;
+        left: -60%;
+    }
+
+    .pasoP::after {
+        height: 100%;
+        right: -60%;
+    }
+
+    /*BUSES*/
+
+    #c1b1 .s4 i, #c1b3 .s2 i, #c2b3 .s2 i, #c2b4 .s1 i{
+        font-size: 180%;
+    }
+
+    #c1b1 .s4 i {
+        right: -30px;
+    }
+
+    #c1b3 .s2 i, #c2b3 .s2 i {
+        top: -30px;
+    }
+
+    #c2b4 .s1 i {
+        left: -30px;
+    }
+
+    /*TAXIS*/
+
+    #c1b2 .s2 i, #c2b2 .s1 i, #c1b4 .s2 i, #c2b4 .s2 i {
+        font-size: 150%;
+    }
+
+    #c1b2 .s2 i, #c1b4 .s2 i {
+        top: -25px;
+    }
+
+    #c2b2 .s1 i {
+        top: -25px;
+    }
+
+    #c2b4 .s2 i {
+        top: -25px;
+    }
+
+
+    /*INPUTS*/
+
+    .questionsContainer {
+        width: 450px;
+        height: auto;
+        color: rgb(0, 0, 0);
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding-top: 75px;
+        margin-left: 50px;
+    }
+
+    .questionsContainer p {
+        min-width: 350px;
+        font-size: 200%;
+        margin-top: 20px;
+        border-radius: 12px;
+        background-color: rgb(136, 189, 233);
+        text-align: center;
+        width: auto;
+    }
+
+    .questionsContainer img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/*-----------------------------PC RESPONSIVE--------------------*/
+
+@media only screen and (min-width: 1020px) {
+
+    .playgroundContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* #main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    .playground {
+        width: 458px;
+        height: 880px;
+        overflow: hidden;
+    }
+
+    .col {
+        grid-gap: 30px;
+    }
+
+    .block::before, .block::after {
+        bottom: -16px;
+    }
+
+    /*SEMAFOROS*/
+
+    #c2b2 .s3 i, #c1b2 .s4 i, #c2b3 .s3 i, #c1b3 .s4 i, #c2b1 .s3 i, #c2b4 .s3 i{
+        position: absolute;
+        font-size: 180%;
+        color: black;
+    }
+
+    #c2b2 .s3 i, #c2b3 .s3 i {
+        bottom: 0;
+        left: -23px;
+    }
+
+    #c1b2 .s4 i, #c1b3 .s4 i {
+        bottom: 0;
+        right: -23px;
+    }
+
+    #c2b1 .s3 i , #c2b4 .s3 i{
+        bottom: 0;
+        left: -59px;
+    }
+
+    /*PASOS PEATONALES*/
+
+    #c1b1 .s3::after, #c1b2 .s3::after, #c1b3 .s3::after, #c2b1 .s4::after, #c2b2 .s3::after, #c2b3 .s3::after {
+        height: 41px;
+        bottom: -35px;
+    }
+
+    #c1b1 .s2 .pasoP, #c2b3 .s1 .pasoP, #c1b4 .s4 .pasoP {
+        height: 20px;
+        width: 50%;
+        z-index: -1;
+    }
+
+    #c1b1 .s2 .pasoP {
+        top: -2%;
+        right: -80%;
+    }
+
+    #c2b3 .s1 .pasoP {
+        top: -2%;
+        left: -80%;
+    }
+
+    #c1b4 .s4 .pasoP {
+        bottom: -2%;
+        right: -80%;
+    }
+
+    .pasoP::before {
+        height: 100%;
+        left: -60%;
+    }
+
+    .pasoP::after {
+        height: 100%;
+        right: -60%;
+    }
+
+    /*BUSES*/
+
+    #c1b1 .s4 i, #c1b3 .s2 i, #c2b3 .s2 i, #c2b4 .s1 i{
+        font-size: 130%;
+    }
+
+    #c1b1 .s4 i {
+        right: -20px;
+    }
+
+    #c1b3 .s2 i, #c2b3 .s2 i {
+        top: -18px;
+    }
+
+    #c2b4 .s1 i {
+        left: -20px;
+    }
+
+    /*TAXIS*/
+
+    #c1b2 .s2 i, #c2b2 .s1 i, #c1b4 .s2 i, #c2b4 .s2 i {
+        font-size: 110%;
+    }
+
+    #c1b2 .s2 i, #c1b4 .s2 i, #c2b2 .s1 i, #c2b4 .s2 i {
+        top: -15px;
+    }
+
+    /*INPUTS*/
+
+    .questionsContainer {
+        width: 450px;
+        height: auto;
+        background-color: rgba(165, 42, 42, 0);
+        color: rgb(0, 0, 0);
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding-top: 75px;
+        margin-left: 50px;
+    }
+
+    .questionsContainer p {
+        min-width: 350px;
+        font-size: 200%;
+        margin-top: 20px;
+        border-radius: 12px;
+        background-color: rgb(136, 189, 233);
+        text-align: center;
+        width: auto;
+    }
+
+    .questionsContainer img {
+        width: 200px;
+        height: 200px;
+    }
+}

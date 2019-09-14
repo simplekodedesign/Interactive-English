@@ -1,0 +1,45 @@
+.cont_abc{
+	min-height: 50px;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+	flex-wrap: wrap;
+  	height: auto;
+	width: 50vw;
+	max-width: 400px;
+	max-height: 400px;
+}
+
+.buttons{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.input{
+	width: 100%;
+	font-size: 30px;
+	display: flex;
+	min-height: 24px;
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.write{
+	text-align: center;
+	border: 0;
+	border-radius: 5px;
+	margin: auto;
+}
+
+.input i{
+	position: absolute;
+	font-size: 32px;
+	right: 0;
+	top: 0;
+}
+
+.NavButtons {
+	display: flex;
+}

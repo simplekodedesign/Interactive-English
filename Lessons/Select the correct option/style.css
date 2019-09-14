@@ -1,0 +1,35 @@
+.cont_abc{
+	min-height: 400px;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+	flex-wrap: wrap;
+  height: 400px;
+	width: 100vw;
+}
+
+.buttons{
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	/* align-items: center; */
+}
+
+.letra{
+	width: 200px;
+	height: auto;
+	cursor: pointer;
+  margin: 10px;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+
+.letra:hover{
+	transform: scale(1.2,1.2);
+  color: navy;
+}
+
+/* .NavButtons {
+	display: flex;
+} */
