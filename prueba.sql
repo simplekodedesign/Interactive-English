@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 14-09-2019 a las 22:41:28
+-- Tiempo de generación: 15-09-2019 a las 21:48:49
 -- Versión del servidor: 5.6.37
 -- Versión de PHP: 5.6.31
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `m210_usuario` (
   `St_Session` int(11) NOT NULL DEFAULT '0',
   `Tx_Url` varchar(200) NOT NULL,
   `Fe_Status` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `m210_usuario`
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `m220_alumno` (
   `Nu_Telefono_Movil` varchar(20) NOT NULL,
   `Fe_Nacimiento` date NOT NULL,
   `St_Alumno` enum('A','I') DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `m220_alumno`
@@ -121,7 +121,7 @@ INSERT INTO `p020_institucion` (`Nu_Identificacion`, `Nb_Institucion`, `Img_Url`
 CREATE TABLE IF NOT EXISTS `p030_nivel` (
   `Co_Nivel` int(11) NOT NULL,
   `Nb_Nivel` varchar(120) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `p030_nivel`
@@ -250,154 +250,154 @@ CREATE TABLE IF NOT EXISTS `p070_orden` (
 --
 
 INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_Ant`, `Les_Sig`) VALUES
-(1, 1, 1, 'The Letters', '#', '?url=Lessons/Video/index.php&co=2'),
-(1, 1, 2, 'The Letters', '?url=Lessons/Video/index.php&co=1', '?url=Lessons/Video/index.php&co=3'),
-(1, 1, 3, 'Pronunciation of the Letters', '?url=Lessons/Video/index.php&co=2', '?url=Lessons/ABC/index.php&co=4'),
-(1, 2, 4, 'The ABC', '?url=Lessons/Video/index.php&co=3', '?url=Lessons/Pronunciation/index.php&co=5'),
-(1, 3, 5, 'Pronunciation of the ABC in Order', '?url=Lessons/ABC/index.php&co=4', '?url=Lessons/Pronunciation2/index.php&co=6'),
-(1, 4, 6, 'Pronunciation of the ABC', '?url=Lessons/Pronunciation/index.php&co=5', '?url=Lessons/Video/index.php&co=7'),
-(1, 1, 7, 'Letter Sounds', '?url=Lessons/Pronunciation2/index.php&co=6', '?url=Lessons/Say the correct word/index.php&co=8'),
-(1, 5, 8, 'Sound Examples', '?url=Lessons/Video/index.php&co=7', '?url=Lessons/Video/index.php&co=9'),
-(1, 1, 9, 'The Vowels', '?url=Lessons/Say the correct word/index.php&co=8', '?url=Lessons/Video/index.php&co=10'),
-(1, 1, 10, 'The Consonants', '?url=Lessons/Video/index.php&co=9', '?url=Lessons/Video/index.php&co=11'),
-(1, 1, 11, 'Vowels and Consonants', '?url=Lessons/Video/index.php&co=10', '?url=Lessons/Pronunciation of Vowels/index.php&co=12'),
-(1, 6, 12, 'Pronunciation of the Vowels', '?url=Lessons/Video/index.php&co=11', '?url=Lessons/Pronunciation of Consonants/index.php&co=13'),
-(1, 7, 13, 'Pronunciation of the Consonants', '?url=Lessons/Pronunciation of Vowels/index.php&co=12', '?url=Lessons/Video/index.php&co=14'),
-(1, 1, 14, 'Spell', '?url=Lessons/Pronunciation of Consonants/index.php&co=13', '?url=Lessons/Video/index.php&co=15'),
-(2, 1, 15, 'The Greetings', '?url=Lessons/Video/index.php&co=14', '?url=Lessons/Vocabulary txt/index.php&co=16'),
-(2, 12, 16, 'The Greetings', '?url=Lessons/Video/index.php&co=15', '?url=Lessons/Video/index.php&co=17'),
-(2, 1, 17, 'The Greetings', '?url=Lessons/Vocabulary txt/index.php&co=16', '?url=Lessons/Video/index.php&co=18'),
-(2, 1, 18, 'The Greetings Song', '?url=Lessons/Video/index.php&co=17', '?url=Lessons/Say the correct txt/index.php&co=19'),
-(2, 15, 19, 'Pronunciation of The Greetings', '?url=Lessons/Video/index.php&co=18', '?url=Lessons/Connect/index.php&co=20'),
-(2, 10, 20, 'Match the Greeting', '?url=Lessons/Say the correct txt/index.php&co=19', '?url=Lessons/Translate into spanish/index.php&co=21'),
-(2, 11, 21, 'Translate into Spanish', '?url=Lessons/Connect/index.php&co=20', '?url=Lessons/Video/index.php&co=22'),
-(3, 1, 22, 'The Numbers', '?url=Lessons/Translate into spanish/index.php&co=21', '?url=Lessons/Vocabulary txt/index.php&co=23'),
-(3, 12, 23, 'The Numbers', '?url=Lessons/Video/index.php&co=22', '?url=Lessons/Memory Numbers/index.php&co=24'),
-(3, 13, 24, 'Memory Game', '?url=Lessons/Vocabulary txt/index.php&co=23', '?url=Lessons/Write the correct txt/index.php&co=25'),
-(3, 14, 25, 'Write the correct Number', '?url=Lessons/Memory Numbers/index.php&co=24', '?url=Lessons/Say the correct txt/index.php&co=26'),
-(3, 15, 26, 'Say the Number', '?url=Lessons/Write the correct txt/index.php&co=25', '?url=Lessons/Unscramble/index.php&co=27'),
-(3, 21, 27, 'Unscramble the Number', '?url=Lessons/Say the correct txt/index.php&co=26', '?url=Lessons/Select the right image/index.php&co=28'),
-(3, 16, 28, 'Select the correct Image', '?url=Lessons/Unscramble/index.php&co=27', '?url=Lessons/Video/index.php&co=29'),
-(4, 1, 29, 'Personal Information', '?url=Lessons/Select the right image/index.php&co=28', '?url=Lessons/Vocabulary txt/index.php&co=30'),
-(4, 12, 30, 'Vocabulary', '?url=Lessons/Video/index.php&co=29', '?url=Lessons/Connect/index.php&co=31'),
-(4, 10, 31, 'Connect', '?url=Lessons/Vocabulary txt/index.php&co=30', '?url=Lessons/Write the correct txt/index.php&co=32'),
-(4, 14, 32, 'Write the correct Question', '?url=Lessons/Connect/index.php&co=31', '?url=Lessons/Unscramble/index.php&co=33'),
-(4, 21, 33, 'Unscramble the words', '?url=Lessons/Write the correct txt/index.php&co=32', '?url=Lessons/Connect/index.php&co=34'),
-(4, 10, 34, 'Connect', '?url=Lessons/Unscramble/index.php&co=33', '?url=Lessons/Video/index.php&co=35'),
-(5, 1, 35, 'A, And, The', '?url=Lessons/Connect/index.php&co=34', '?url=Lessons/Video/index.php&co=36'),
-(5, 1, 36, 'Here - There', '?url=Lessons/Video/index.php&co=35', '?url=Lessons/Video/index.php&co=37'),
-(5, 1, 37, 'The Preposition A', '?url=Lessons/Video/index.php&co=36', '?url=Lessons/Video/index.php&co=38'),
-(5, 1, 38, 'The Preprosition An', '?url=Lessons/Video/index.php&co=37', '?url=Lessons/Write the right option/index.php&co=39'),
-(5, 17, 39, 'Complete with a or an', '?url=Lessons/Video/index.php&co=38', '?url=Lessons/Video/index.php&co=40'),
-(5, 1, 40, 'The and H', '?url=Lessons/Write the right option/index.php&co=39', '?url=Lessons/Say the correct word/index.php&co=41'),
-(5, 5, 41, 'Repeat after the teacher', '?url=Lessons/Video/index.php&co=40', '?url=Lessons/Video/index.php&co=42'),
-(6, 1, 42, 'Animals', '?url=Lessons/Say the correct word/index.php&co=41', '?url=Lessons/Vocabulary/index.php&co=43'),
-(6, 8, 43, 'Animals', '?url=Lessons/Video/index.php&co=42', '?url=Lessons/Video/index.php&co=44'),
-(6, 1, 44, 'Animals', '?url=Lessons/Vocabulary/index.php&co=43', '?url=Lessons/Memory/index.php&co=45'),
-(6, 18, 45, 'Memory Game', '?url=Lessons/Video/index.php&co=44', '?url=Lessons/Speak Memory/index.php&co=46'),
-(6, 19, 46, 'Speak Memory', '?url=Lessons/Memory/index.php&co=45', '?url=Lessons/Connect with image/index.php&co=47'),
-(6, 20, 47, 'Match the Animals', '?url=Lessons/Speak Memory/index.php&co=46', '?url=Lessons/Say the correct word/index.php&co=48'),
-(6, 5, 48, 'Say the correct Animal', '?url=Lessons/Connect with image/index.php&co=47', '?url=Lessons/Write the right option/index.php&co=49'),
-(6, 17, 49, 'Write the correct Animal', '?url=Lessons/Say the correct word/index.php&co=48', '?url=Lessons/Video/index.php&co=50'),
-(7, 1, 50, 'Food & Drinks', '?url=Lessons/Write the right option/index.php&co=49', '?url=Lessons/Vocabulary/index.php&co=51'),
-(7, 8, 51, 'Food & Drinks Vocabulary', '?url=Lessons/Video/index.php&co=50', '?url=Lessons/Memory/index.php&co=52'),
-(7, 18, 52, 'Memory Game', '?url=Lessons/Vocabulary/index.php&co=51', '?url=Lessons/Speak Memory/index.php&co=53'),
-(7, 19, 53, 'Speak Memory', '?url=Lessons/Memory/index.php&co=52', '?url=Lessons/Connect with image/index.php&co=54'),
-(7, 20, 54, 'Match the image and text', '?url=Lessons/Speak Memory/index.php&co=53', '?url=Lessons/Write the right option/index.php&co=55'),
-(7, 17, 55, 'Write the correct word', '?url=Lessons/Connect with image/index.php&co=54', '?url=Lessons/Say the correct word/index.php&co=56'),
-(7, 5, 56, 'Say the correct word', '?url=Lessons/Write the right option/index.php&co=55', '?url=Lessons/Video/index.php&co=57'),
-(8, 1, 57, 'Parts of the Body', '?url=Lessons/Say the correct word/index.php&co=56', '?url=Lessons/Vocabulary/index.php&co=58'),
-(8, 8, 58, 'Parts of the Body - Vocabulary', '?url=Lessons/Video/index.php&co=57', '?url=Lessons/Memory/index.php&co=59'),
-(8, 18, 59, 'Memory Game', '?url=Lessons/Vocabulary/index.php&co=58', '?url=Lessons/Speak Memory/index.php&co=60'),
-(8, 19, 60, 'Speak Memory', '?url=Lessons/Memory/index.php&co=59', '?url=Lessons/Connect with image/index.php&co=61'),
-(8, 20, 61, 'Match the image and text', '?url=Lessons/Speak Memory/index.php&co=60', '?url=Lessons/Write the right option/index.php&co=62'),
-(8, 17, 62, 'Write the correct word', '?url=Lessons/Connect with image/index.php&co=61', '?url=Lessons/Say the correct word/index.php&co=63'),
-(8, 5, 63, 'Say the correct word', '?url=Lessons/Write the right option/index.php&co=62', '?url=Lessons/Video/index.php&co=64'),
-(9, 1, 64, 'Nouns', '?url=Lessons/Say the correct word/index.php&co=63', '?url=Lessons/Video/index.php&co=65'),
-(9, 1, 65, 'Plurals', '?url=Lessons/Video/index.php&co=64', '?url=Lessons/Video/index.php&co=66'),
-(9, 1, 66, 'Plurals', '?url=Lessons/Video/index.php&co=65', '?url=Lessons/Video/index.php&co=67'),
-(9, 1, 67, 'Plurals', '?url=Lessons/Video/index.php&co=66', '?url=Lessons/Video/index.php&co=68'),
-(9, 1, 68, 'Plurals', '?url=Lessons/Video/index.php&co=67', '?url=Lessons/Vocabulary/index.php&co=69'),
-(9, 8, 69, 'Vocabulary', '?url=Lessons/Video/index.php&co=68', '?url=Lessons/Connect with image/index.php&co=70'),
-(9, 20, 70, 'Conect the correct options', '?url=Lessons/Vocabulary/index.php&co=69', '?url=Lessons/Write the right option/index.php&co=71'),
-(9, 17, 71, 'Write the right option', '?url=Lessons/Connect with image/index.php&co=70', '?url=Lessons/Vocabulary/index.php&co=72'),
-(9, 8, 72, 'Vocabulary', '?url=Lessons/Write the right option/index.php&co=71', '?url=Lessons/Write the right option/index.php&co=73'),
-(9, 17, 73, 'Write the right option', '?url=Lessons/Vocabulary/index.php&co=72', '?url=Lessons/Connect/index.php&co=74'),
-(9, 10, 74, 'Connect', '?url=Lessons/Write the right option/index.php&co=73', '?url=Lessons/Video/index.php&co=75'),
-(10, 1, 75, 'This and These', '?url=Lessons/Connect/index.php&co=74', '?url=Lessons/Memory/index.php&co=76'),
-(10, 18, 76, 'Memory Game', '?url=Lessons/Video/index.php&co=75', '?url=Lessons/Select the correct option/index.php&co=77'),
-(10, 9, 77, 'Select the correct option', '?url=Lessons/Memory/index.php&co=76', '?url=Lessons/Say the correct word/index.php&co=78'),
-(10, 5, 78, 'Say the correct word', '?url=Lessons/Select the correct option/index.php&co=77', '?url=Lessons/Write the correct txt/index.php&co=79'),
-(10, 14, 79, 'Write This or These', '?url=Lessons/Say the correct word/index.php&co=78', '?url=Lessons/Say the correct word/index.php&co=80'),
-(10, 5, 80, 'Say this or these', '?url=Lessons/Write the correct txt/index.php&co=79', '?url=Lessons/Write the right option/index.php&co=81'),
-(10, 17, 81, 'Answer the Question', '?url=Lessons/Say the correct word/index.php&co=80', '?url=Lessons/Video/index.php&co=82'),
-(11, 1, 82, 'That-Those', '?url=Lessons/Write the right option/index.php&co=81', '?url=Lessons/Memory/index.php&co=83'),
-(11, 18, 83, 'Memory Game', '?url=Lessons/Video/index.php&co=82', '?url=Lessons/Select the correct option/index.php&co=84'),
-(11, 9, 84, 'Select the correct option', '?url=Lessons/Memory/index.php&co=83', '?url=Lessons/Say the correct word/index.php&co=85'),
-(11, 5, 85, 'Say That or Those', '?url=Lessons/Select the correct option/index.php&co=84', '?url=Lessons/Write the correct txt/index.php&co=86'),
-(11, 14, 86, 'Write That or Those', '?url=Lessons/Say the correct word/index.php&co=85', '?url=Lessons/Say the correct word/index.php&co=87'),
-(11, 5, 87, 'Say That or Those', '?url=Lessons/Write the correct txt/index.php&co=86', '?url=Lessons/Write the right option/index.php&co=88'),
-(11, 17, 88, 'Answer the Question', '?url=Lessons/Say the correct word/index.php&co=87', '?url=Lessons/Video/index.php&co=89'),
-(12, 1, 89, 'The Colors - Presentation Video', '?url=Lessons/Write the right option/index.php&co=88', '?url=Lessons/Vocabulary/index.php&co=90'),
-(12, 8, 90, 'Vocabulary', '?url=Lessons/Video/index.php&co=89', '?url=Lessons/Memory/index.php&co=91'),
-(12, 18, 91, 'Memory', '?url=Lessons/Vocabulary/index.php&co=90', '?url=Lessons/Speak Memory/index.php&co=92'),
-(12, 19, 92, 'Speak Memory', '?url=Lessons/Memory/index.php&co=91', '?url=Lessons/Write the right option/index.php&co=93'),
-(12, 17, 93, 'Write the correct color', '?url=Lessons/Speak Memory/index.php&co=92', '?url=Lessons/Video/index.php&co=94'),
-(12, 1, 94, 'Song of the Colors', '?url=Lessons/Write the right option/index.php&co=93', '?url=Lessons/Write the right option/index.php&co=95'),
-(12, 17, 95, 'Description with colors', '?url=Lessons/Video/index.php&co=94', '?url=Lessons/Write the right option/index.php&co=96'),
-(12, 17, 96, 'Describe the colors (use these and this)', '?url=Lessons/Write the right option/index.php&co=95', '?url=Lessons/Video/index.php&co=97'),
-(13, 1, 97, 'Personal Pronouns', '?url=Lessons/Write the right option/index.php&co=96', '?url=Lessons/Say the correct word/index.php&co=98'),
-(13, 5, 98, 'Say the personal pronoun', '?url=Lessons/Video/index.php&co=97', '?url=Lessons/Translate into spanish/index.php&co=99'),
-(13, 11, 99, 'Translate into Spanish', '?url=Lessons/Say the correct word/index.php&co=98', '?url=Lessons/Video/index.php&co=100'),
-(13, 1, 100, 'Personal Pronouns', '?url=Lessons/Translate into spanish/index.php&co=99', '?url=Lessons/Video/index.php&co=101'),
-(13, 1, 101, 'Professions', '?url=Lessons/Video/index.php&co=100', '?url=Lessons/Vocabulary/index.php&co=102'),
-(13, 8, 102, 'Vocabulary', '?url=Lessons/Video/index.php&co=101', '?url=Lessons/Connect with image/index.php&co=103'),
-(13, 20, 103, 'Connect the image and the text', '?url=Lessons/Vocabulary/index.php&co=102', '?url=Lessons/Translate into spanish/index.php&co=104'),
-(13, 11, 104, 'Translate to English', '?url=Lessons/Connect with image/index.php&co=103', '?url=Lessons/Memory/index.php&co=105'),
-(13, 18, 105, 'Memory Game', '?url=Lessons/Translate into spanish/index.php&co=104', '?url=Lessons/Video/index.php&co=106'),
-(13, 1, 106, 'Emotions with the verb TO BE', '?url=Lessons/Memory/index.php&co=105', '?url=Lessons/Vocabulary/index.php&co=107'),
-(13, 8, 107, 'Vocabulary', '?url=Lessons/Video/index.php&co=106', '?url=Lessons/Memory/index.php&co=108'),
-(13, 18, 108, 'Memory Game', '?url=Lessons/Vocabulary/index.php&co=107', '?url=Lessons/Video/index.php&co=109'),
-(13, 1, 109, 'Negative of the Verb TO BE', '?url=Lessons/Memory/index.php&co=108', '?url=Lessons/Say the correct word/index.php&co=110'),
-(13, 5, 110, 'Repeat after the teacher', '?url=Lessons/Video/index.php&co=109', '?url=Lessons/Write the right option/index.php&co=111'),
-(13, 17, 111, 'Write in negative', '?url=Lessons/Say the correct word/index.php&co=110', '?url=Lessons/Video/index.php&co=112'),
-(13, 1, 112, 'Yes - No Questions with verb To Be', '?url=Lessons/Write the right option/index.php&co=111', '?url=Lessons/Write the right option/index.php&co=113'),
-(13, 17, 113, 'Answer the question', '?url=Lessons/Video/index.php&co=112', '?url=Lessons/Video/index.php&co=114'),
-(14, 1, 114, 'Sports', '?url=Lessons/Write the right option/index.php&co=113', '?url=Lessons/Vocabulary/index.php&co=115'),
-(14, 8, 115, 'Vocabulary', '?url=Lessons/Video/index.php&co=114', '?url=Lessons/Memory/index.php&co=116'),
-(14, 18, 116, 'Memory Game', '?url=Lessons/Vocabulary/index.php&co=115', '?url=Lessons/Write the right option/index.php&co=117'),
-(14, 17, 117, 'Write the correct Sport', '?url=Lessons/Memory/index.php&co=116', '?url=Lessons/Connect with image/index.php&co=118'),
-(14, 20, 118, 'Connect the image and text', '?url=Lessons/Write the right option/index.php&co=117', '?url=Lessons/Say the correct word/index.php&co=119'),
-(14, 5, 119, 'Sports – Pronunciation', '?url=Lessons/Connect with image/index.php&co=118', '?url=Lessons/Unscramble/index.php&co=120'),
-(14, 21, 120, 'Unscramble the word', '?url=Lessons/Say the correct word/index.php&co=119', '?url=Lessons/Video/index.php&co=121'),
-(15, 1, 121, 'Prepositions', '?url=Lessons/Unscramble/index.php&co=120', '?url=Lessons/Vocabulary/index.php&co=122'),
-(15, 8, 122, 'Vocabulary', '?url=Lessons/Video/index.php&co=121', '?url=Lessons/Say the correct word/index.php&co=123'),
-(15, 5, 123, 'Pronunciation of the preposition', '?url=Lessons/Vocabulary/index.php&co=122', '?url=Lessons/Memory/index.php&co=124'),
-(15, 18, 124, 'Memory Card', '?url=Lessons/Say the correct word/index.php&co=123', '?url=Lessons/Write the right option/index.php&co=125'),
-(15, 17, 125, 'Write the correct preposition', '?url=Lessons/Memory/index.php&co=124', '?url=Lessons/Video/index.php&co=126'),
-(15, 1, 126, 'Prepositions', '?url=Lessons/Write the right option/index.php&co=125', '?url=Lessons/Speak Memory/index.php&co=127'),
-(15, 19, 127, 'Speak Memory', '?url=Lessons/Video/index.php&co=126', '?url=Lessons/Connect/index.php&co=128'),
-(15, 10, 128, 'Connect the correct words', '?url=Lessons/Speak Memory/index.php&co=127', '?url=Lessons/Video/index.php&co=129'),
-(16, 1, 129, 'Directions', '?url=Lessons/Connect/index.php&co=128', '?url=Lessons/Vocabulary Directions/index.php&co=130'),
-(16, 22, 130, 'Vocabulary', '?url=Lessons/Video/index.php&co=129', '?url=Lessons/Memory/index.php&co=131'),
-(16, 18, 131, 'Memory Game', '?url=Lessons/Vocabulary Directions/index.php&co=130', '?url=Lessons/Say the correct word/index.php&co=132'),
-(16, 5, 132, 'Pronunciation', '?url=Lessons/Memory/index.php&co=131', '?url=Lessons/Connect with image/index.php&co=133'),
-(16, 20, 133, 'Connect the image with the correct word', '?url=Lessons/Say the correct word/index.php&co=132', '?url=Lessons/Write the right option/index.php&co=134'),
-(16, 17, 134, 'Write the correct place', '?url=Lessons/Connect with image/index.php&co=133', '?url=Lessons/Speak Memory/index.php&co=135'),
-(16, 19, 135, 'Speak Memory', '?url=Lessons/Write the right option/index.php&co=134', '?url=Lessons/Directions/index.php&co=136'),
-(16, 23, 136, 'Where is ?', '?url=Lessons/Speak Memory/index.php&co=135', '?url=Lessons/Video/index.php&co=137'),
-(17, 1, 137, 'Family', '?url=Lessons/Directions/index.php&co=136', '?url=Lessons/Vocabulary/index.php&co=138'),
-(17, 8, 138, 'Vocabulary', '?url=Lessons/Video/index.php&co=137', '?url=Lessons/Memory/index.php&co=139'),
-(17, 18, 139, 'Memory Game', '?url=Lessons/Vocabulary/index.php&co=138', '?url=Lessons/Connect with image/index.php&co=140'),
-(17, 20, 140, 'Connect the image with the text', '?url=Lessons/Memory/index.php&co=139', '?url=Lessons/Say the correct word/index.php&co=141'),
-(17, 5, 141, 'Pronunciation', '?url=Lessons/Connect with image/index.php&co=140', '?url=Lessons/Write the right option/index.php&co=142'),
-(17, 17, 142, 'Write the correct name of the family member', '?url=Lessons/Say the correct word/index.php&co=141', '?url=Lessons/Unscramble/index.php&co=143'),
-(17, 21, 143, 'Unscramble the words', '?url=Lessons/Write the right option/index.php&co=142', '?url=Lessons/Video/index.php&co=144'),
-(18, 1, 144, 'What time is it?', '?url=Lessons/Unscramble/index.php&co=143', '?url=Lessons/Say the correct word/index.php&co=145'),
-(18, 5, 145, 'Say the correct hour', '?url=Lessons/Video/index.php&co=144', '?url=Lessons/Write the right option/index.php&co=146'),
-(18, 17, 146, 'Write the right hour', '?url=Lessons/Say the correct word/index.php&co=145', '?url=Lessons/Memory/index.php&co=147'),
-(18, 18, 147, 'Memory', '?url=Lessons/Write the right option/index.php&co=146', '?url=Lessons/Select the correct option/index.php&co=148'),
-(18, 9, 148, 'Select the right hour', '?url=Lessons/Memory/index.php&co=147', '#');
+(1, 1, 1, 'The Letters', '#', '?url=../../Lessons/Video/index.php&co=2'),
+(1, 1, 2, 'The Letters', '?url=../../Lessons/Video/index.php&co=1', '?url=../../Lessons/Video/index.php&co=3'),
+(1, 1, 3, 'Pronunciation of the Letters', '?url=../../Lessons/Video/index.php&co=2', '?url=../../Lessons/ABC/index.php&co=4'),
+(1, 2, 4, 'The ABC', '?url=../../Lessons/Video/index.php&co=3', '?url=../../Lessons/Pronunciation/index.php&co=5'),
+(1, 3, 5, 'Pronunciation of the ABC in Order', '?url=../../Lessons/ABC/index.php&co=4', '?url=../../Lessons/Pronunciation2/index.php&co=6'),
+(1, 4, 6, 'Pronunciation of the ABC', '?url=../../Lessons/Pronunciation/index.php&co=5', '?url=../../Lessons/Video/index.php&co=7'),
+(1, 1, 7, 'Letter Sounds', '?url=../../Lessons/Pronunciation2/index.php&co=6', '?url=../../Lessons/Say the correct word/index.php&co=8'),
+(1, 5, 8, 'Sound Examples', '?url=../../Lessons/Video/index.php&co=7', '?url=../../Lessons/Video/index.php&co=9'),
+(1, 1, 9, 'The Vowels', '?url=../../Lessons/Say the correct word/index.php&co=8', '?url=../../Lessons/Video/index.php&co=10'),
+(1, 1, 10, 'The Consonants', '?url=../../Lessons/Video/index.php&co=9', '?url=../../Lessons/Video/index.php&co=11'),
+(1, 1, 11, 'Vowels and Consonants', '?url=../../Lessons/Video/index.php&co=10', '?url=../../Lessons/Pronunciation of Vowels/index.php&co=12'),
+(1, 6, 12, 'Pronunciation of the Vowels', '?url=../../Lessons/Video/index.php&co=11', '?url=../../Lessons/Pronunciation of Consonants/index.php&co=13'),
+(1, 7, 13, 'Pronunciation of the Consonants', '?url=../../Lessons/Pronunciation of Vowels/index.php&co=12', '?url=../../Lessons/Video/index.php&co=14'),
+(1, 1, 14, 'Spell', '?url=../../Lessons/Pronunciation of Consonants/index.php&co=13', '?url=../../Lessons/Video/index.php&co=15'),
+(2, 1, 15, 'The Greetings', '?url=../../Lessons/Video/index.php&co=14', '?url=../../Lessons/Vocabulary txt/index.php&co=16'),
+(2, 12, 16, 'The Greetings', '?url=../../Lessons/Video/index.php&co=15', '?url=../../Lessons/Video/index.php&co=17'),
+(2, 1, 17, 'The Greetings', '?url=../../Lessons/Vocabulary txt/index.php&co=16', '?url=../../Lessons/Video/index.php&co=18'),
+(2, 1, 18, 'The Greetings Song', '?url=../../Lessons/Video/index.php&co=17', '?url=../../Lessons/Say the correct txt/index.php&co=19'),
+(2, 15, 19, 'Pronunciation of The Greetings', '?url=../../Lessons/Video/index.php&co=18', '?url=../../Lessons/Connect/index.php&co=20'),
+(2, 10, 20, 'Match the Greeting', '?url=../../Lessons/Say the correct txt/index.php&co=19', '?url=../../Lessons/Translate into spanish/index.php&co=21'),
+(2, 11, 21, 'Translate into Spanish', '?url=../../Lessons/Connect/index.php&co=20', '?url=../../Lessons/Video/index.php&co=22'),
+(3, 1, 22, 'The Numbers', '?url=../../Lessons/Translate into spanish/index.php&co=21', '?url=../../Lessons/Vocabulary txt/index.php&co=23'),
+(3, 12, 23, 'The Numbers', '?url=../../Lessons/Video/index.php&co=22', '?url=../../Lessons/Memory Numbers/index.php&co=24'),
+(3, 13, 24, 'Memory Game', '?url=../../Lessons/Vocabulary txt/index.php&co=23', '?url=../../Lessons/Write the correct txt/index.php&co=25'),
+(3, 14, 25, 'Write the correct Number', '?url=../../Lessons/Memory Numbers/index.php&co=24', '?url=../../Lessons/Say the correct txt/index.php&co=26'),
+(3, 15, 26, 'Say the Number', '?url=../../Lessons/Write the correct txt/index.php&co=25', '?url=../../Lessons/Unscramble/index.php&co=27'),
+(3, 21, 27, 'Unscramble the Number', '?url=../../Lessons/Say the correct txt/index.php&co=26', '?url=../../Lessons/Select the right image/index.php&co=28'),
+(3, 16, 28, 'Select the correct Image', '?url=../../Lessons/Unscramble/index.php&co=27', '?url=../../Lessons/Video/index.php&co=29'),
+(4, 1, 29, 'Personal Information', '?url=../../Lessons/Select the right image/index.php&co=28', '?url=../../Lessons/Vocabulary txt/index.php&co=30'),
+(4, 12, 30, 'Vocabulary', '?url=../../Lessons/Video/index.php&co=29', '?url=../../Lessons/Connect/index.php&co=31'),
+(4, 10, 31, 'Connect', '?url=../../Lessons/Vocabulary txt/index.php&co=30', '?url=../../Lessons/Write the correct txt/index.php&co=32'),
+(4, 14, 32, 'Write the correct Question', '?url=../../Lessons/Connect/index.php&co=31', '?url=../../Lessons/Unscramble/index.php&co=33'),
+(4, 21, 33, 'Unscramble the words', '?url=../../Lessons/Write the correct txt/index.php&co=32', '?url=../../Lessons/Connect/index.php&co=34'),
+(4, 10, 34, 'Connect', '?url=../../Lessons/Unscramble/index.php&co=33', '?url=../../Lessons/Video/index.php&co=35'),
+(5, 1, 35, 'A, And, The', '?url=../../Lessons/Connect/index.php&co=34', '?url=../../Lessons/Video/index.php&co=36'),
+(5, 1, 36, 'Here - There', '?url=../../Lessons/Video/index.php&co=35', '?url=../../Lessons/Video/index.php&co=37'),
+(5, 1, 37, 'The Preposition A', '?url=../../Lessons/Video/index.php&co=36', '?url=../../Lessons/Video/index.php&co=38'),
+(5, 1, 38, 'The Preprosition An', '?url=../../Lessons/Video/index.php&co=37', '?url=../../Lessons/Write the right option/index.php&co=39'),
+(5, 17, 39, 'Complete with a or an', '?url=../../Lessons/Video/index.php&co=38', '?url=../../Lessons/Video/index.php&co=40'),
+(5, 1, 40, 'The and H', '?url=../../Lessons/Write the right option/index.php&co=39', '?url=../../Lessons/Say the correct word/index.php&co=41'),
+(5, 5, 41, 'Repeat after the teacher', '?url=../../Lessons/Video/index.php&co=40', '?url=../../Lessons/Video/index.php&co=42'),
+(6, 1, 42, 'Animals', '?url=../../Lessons/Say the correct word/index.php&co=41', '?url=../../Lessons/Vocabulary/index.php&co=43'),
+(6, 8, 43, 'Animals', '?url=../../Lessons/Video/index.php&co=42', '?url=../../Lessons/Video/index.php&co=44'),
+(6, 1, 44, 'Animals', '?url=../../Lessons/Vocabulary/index.php&co=43', '?url=../../Lessons/Memory/index.php&co=45'),
+(6, 18, 45, 'Memory Game', '?url=../../Lessons/Video/index.php&co=44', '?url=../../Lessons/Speak Memory/index.php&co=46'),
+(6, 19, 46, 'Speak Memory', '?url=../../Lessons/Memory/index.php&co=45', '?url=../../Lessons/Connect with image/index.php&co=47'),
+(6, 20, 47, 'Match the Animals', '?url=../../Lessons/Speak Memory/index.php&co=46', '?url=../../Lessons/Say the correct word/index.php&co=48'),
+(6, 5, 48, 'Say the correct Animal', '?url=../../Lessons/Connect with image/index.php&co=47', '?url=../../Lessons/Write the right option/index.php&co=49'),
+(6, 17, 49, 'Write the correct Animal', '?url=../../Lessons/Say the correct word/index.php&co=48', '?url=../../Lessons/Video/index.php&co=50'),
+(7, 1, 50, 'Food & Drinks', '?url=../../Lessons/Write the right option/index.php&co=49', '?url=../../Lessons/Vocabulary/index.php&co=51'),
+(7, 8, 51, 'Food & Drinks Vocabulary', '?url=../../Lessons/Video/index.php&co=50', '?url=../../Lessons/Memory/index.php&co=52'),
+(7, 18, 52, 'Memory Game', '?url=../../Lessons/Vocabulary/index.php&co=51', '?url=../../Lessons/Speak Memory/index.php&co=53'),
+(7, 19, 53, 'Speak Memory', '?url=../../Lessons/Memory/index.php&co=52', '?url=../../Lessons/Connect with image/index.php&co=54'),
+(7, 20, 54, 'Match the image and text', '?url=../../Lessons/Speak Memory/index.php&co=53', '?url=../../Lessons/Write the right option/index.php&co=55'),
+(7, 17, 55, 'Write the correct word', '?url=../../Lessons/Connect with image/index.php&co=54', '?url=../../Lessons/Say the correct word/index.php&co=56'),
+(7, 5, 56, 'Say the correct word', '?url=../../Lessons/Write the right option/index.php&co=55', '?url=../../Lessons/Video/index.php&co=57'),
+(8, 1, 57, 'Parts of the Body', '?url=../../Lessons/Say the correct word/index.php&co=56', '?url=../../Lessons/Vocabulary/index.php&co=58'),
+(8, 8, 58, 'Parts of the Body - Vocabulary', '?url=../../Lessons/Video/index.php&co=57', '?url=../../Lessons/Memory/index.php&co=59'),
+(8, 18, 59, 'Memory Game', '?url=../../Lessons/Vocabulary/index.php&co=58', '?url=../../Lessons/Speak Memory/index.php&co=60'),
+(8, 19, 60, 'Speak Memory', '?url=../../Lessons/Memory/index.php&co=59', '?url=../../Lessons/Connect with image/index.php&co=61'),
+(8, 20, 61, 'Match the image and text', '?url=../../Lessons/Speak Memory/index.php&co=60', '?url=../../Lessons/Write the right option/index.php&co=62'),
+(8, 17, 62, 'Write the correct word', '?url=../../Lessons/Connect with image/index.php&co=61', '?url=../../Lessons/Say the correct word/index.php&co=63'),
+(8, 5, 63, 'Say the correct word', '?url=../../Lessons/Write the right option/index.php&co=62', '?url=../../Lessons/Video/index.php&co=64'),
+(9, 1, 64, 'Nouns', '?url=../../Lessons/Say the correct word/index.php&co=63', '?url=../../Lessons/Video/index.php&co=65'),
+(9, 1, 65, 'Plurals', '?url=../../Lessons/Video/index.php&co=64', '?url=../../Lessons/Video/index.php&co=66'),
+(9, 1, 66, 'Plurals', '?url=../../Lessons/Video/index.php&co=65', '?url=../../Lessons/Video/index.php&co=67'),
+(9, 1, 67, 'Plurals', '?url=../../Lessons/Video/index.php&co=66', '?url=../../Lessons/Video/index.php&co=68'),
+(9, 1, 68, 'Plurals', '?url=../../Lessons/Video/index.php&co=67', '?url=../../Lessons/Vocabulary/index.php&co=69'),
+(9, 8, 69, 'Vocabulary', '?url=../../Lessons/Video/index.php&co=68', '?url=../../Lessons/Connect with image/index.php&co=70'),
+(9, 20, 70, 'Conect the correct options', '?url=../../Lessons/Vocabulary/index.php&co=69', '?url=../../Lessons/Write the right option/index.php&co=71'),
+(9, 17, 71, 'Write the right option', '?url=../../Lessons/Connect with image/index.php&co=70', '?url=../../Lessons/Vocabulary/index.php&co=72'),
+(9, 8, 72, 'Vocabulary', '?url=../../Lessons/Write the right option/index.php&co=71', '?url=../../Lessons/Write the right option/index.php&co=73'),
+(9, 17, 73, 'Write the right option', '?url=../../Lessons/Vocabulary/index.php&co=72', '?url=../../Lessons/Connect/index.php&co=74'),
+(9, 10, 74, 'Connect', '?url=../../Lessons/Write the right option/index.php&co=73', '?url=../../Lessons/Video/index.php&co=75'),
+(10, 1, 75, 'This and These', '?url=../../Lessons/Connect/index.php&co=74', '?url=../../Lessons/Memory/index.php&co=76'),
+(10, 18, 76, 'Memory Game', '?url=../../Lessons/Video/index.php&co=75', '?url=../../Lessons/Select the correct option/index.php&co=77'),
+(10, 9, 77, 'Select the correct option', '?url=../../Lessons/Memory/index.php&co=76', '?url=../../Lessons/Say the correct word/index.php&co=78'),
+(10, 5, 78, 'Say the correct word', '?url=../../Lessons/Select the correct option/index.php&co=77', '?url=../../Lessons/Write the correct txt/index.php&co=79'),
+(10, 14, 79, 'Write This or These', '?url=../../Lessons/Say the correct word/index.php&co=78', '?url=../../Lessons/Say the correct word/index.php&co=80'),
+(10, 5, 80, 'Say this or these', '?url=../../Lessons/Write the correct txt/index.php&co=79', '?url=../../Lessons/Write the right option/index.php&co=81'),
+(10, 17, 81, 'Answer the Question', '?url=../../Lessons/Say the correct word/index.php&co=80', '?url=../../Lessons/Video/index.php&co=82'),
+(11, 1, 82, 'That-Those', '?url=../../Lessons/Write the right option/index.php&co=81', '?url=../../Lessons/Memory/index.php&co=83'),
+(11, 18, 83, 'Memory Game', '?url=../../Lessons/Video/index.php&co=82', '?url=../../Lessons/Select the correct option/index.php&co=84'),
+(11, 9, 84, 'Select the correct option', '?url=../../Lessons/Memory/index.php&co=83', '?url=../../Lessons/Say the correct word/index.php&co=85'),
+(11, 5, 85, 'Say That or Those', '?url=../../Lessons/Select the correct option/index.php&co=84', '?url=../../Lessons/Write the correct txt/index.php&co=86'),
+(11, 14, 86, 'Write That or Those', '?url=../../Lessons/Say the correct word/index.php&co=85', '?url=../../Lessons/Say the correct word/index.php&co=87'),
+(11, 5, 87, 'Say That or Those', '?url=../../Lessons/Write the correct txt/index.php&co=86', '?url=../../Lessons/Write the right option/index.php&co=88'),
+(11, 17, 88, 'Answer the Question', '?url=../../Lessons/Say the correct word/index.php&co=87', '?url=../../Lessons/Video/index.php&co=89'),
+(12, 1, 89, 'The Colors - Presentation Video', '?url=../../Lessons/Write the right option/index.php&co=88', '?url=../../Lessons/Vocabulary/index.php&co=90'),
+(12, 8, 90, 'Vocabulary', '?url=../../Lessons/Video/index.php&co=89', '?url=../../Lessons/Memory/index.php&co=91'),
+(12, 18, 91, 'Memory', '?url=../../Lessons/Vocabulary/index.php&co=90', '?url=../../Lessons/Speak Memory/index.php&co=92'),
+(12, 19, 92, 'Speak Memory', '?url=../../Lessons/Memory/index.php&co=91', '?url=../../Lessons/Write the right option/index.php&co=93'),
+(12, 17, 93, 'Write the correct color', '?url=../../Lessons/Speak Memory/index.php&co=92', '?url=../../Lessons/Video/index.php&co=94'),
+(12, 1, 94, 'Song of the Colors', '?url=../../Lessons/Write the right option/index.php&co=93', '?url=../../Lessons/Write the right option/index.php&co=95'),
+(12, 17, 95, 'Description with colors', '?url=../../Lessons/Video/index.php&co=94', '?url=../../Lessons/Write the right option/index.php&co=96'),
+(12, 17, 96, 'Describe the colors (use these and this)', '?url=../../Lessons/Write the right option/index.php&co=95', '?url=../../Lessons/Video/index.php&co=97'),
+(13, 1, 97, 'Personal Pronouns', '?url=../../Lessons/Write the right option/index.php&co=96', '?url=../../Lessons/Say the correct word/index.php&co=98'),
+(13, 5, 98, 'Say the personal pronoun', '?url=../../Lessons/Video/index.php&co=97', '?url=../../Lessons/Translate into spanish/index.php&co=99'),
+(13, 11, 99, 'Translate into Spanish', '?url=../../Lessons/Say the correct word/index.php&co=98', '?url=../../Lessons/Video/index.php&co=100'),
+(13, 1, 100, 'Personal Pronouns', '?url=../../Lessons/Translate into spanish/index.php&co=99', '?url=../../Lessons/Video/index.php&co=101'),
+(13, 1, 101, 'Professions', '?url=../../Lessons/Video/index.php&co=100', '?url=../../Lessons/Vocabulary/index.php&co=102'),
+(13, 8, 102, 'Vocabulary', '?url=../../Lessons/Video/index.php&co=101', '?url=../../Lessons/Connect with image/index.php&co=103'),
+(13, 20, 103, 'Connect the image and the text', '?url=../../Lessons/Vocabulary/index.php&co=102', '?url=../../Lessons/Translate into spanish/index.php&co=104'),
+(13, 11, 104, 'Translate to English', '?url=../../Lessons/Connect with image/index.php&co=103', '?url=../../Lessons/Memory/index.php&co=105'),
+(13, 18, 105, 'Memory Game', '?url=../../Lessons/Translate into spanish/index.php&co=104', '?url=../../Lessons/Video/index.php&co=106'),
+(13, 1, 106, 'Emotions with the verb TO BE', '?url=../../Lessons/Memory/index.php&co=105', '?url=../../Lessons/Vocabulary/index.php&co=107'),
+(13, 8, 107, 'Vocabulary', '?url=../../Lessons/Video/index.php&co=106', '?url=../../Lessons/Memory/index.php&co=108'),
+(13, 18, 108, 'Memory Game', '?url=../../Lessons/Vocabulary/index.php&co=107', '?url=../../Lessons/Video/index.php&co=109'),
+(13, 1, 109, 'Negative of the Verb TO BE', '?url=../../Lessons/Memory/index.php&co=108', '?url=../../Lessons/Say the correct word/index.php&co=110'),
+(13, 5, 110, 'Repeat after the teacher', '?url=../../Lessons/Video/index.php&co=109', '?url=../../Lessons/Write the right option/index.php&co=111'),
+(13, 17, 111, 'Write in negative', '?url=../../Lessons/Say the correct word/index.php&co=110', '?url=../../Lessons/Video/index.php&co=112'),
+(13, 1, 112, 'Yes - No Questions with verb To Be', '?url=../../Lessons/Write the right option/index.php&co=111', '?url=../../Lessons/Write the right option/index.php&co=113'),
+(13, 17, 113, 'Answer the question', '?url=../../Lessons/Video/index.php&co=112', '?url=../../Lessons/Video/index.php&co=114'),
+(14, 1, 114, 'Sports', '?url=../../Lessons/Write the right option/index.php&co=113', '?url=../../Lessons/Vocabulary/index.php&co=115'),
+(14, 8, 115, 'Vocabulary', '?url=../../Lessons/Video/index.php&co=114', '?url=../../Lessons/Memory/index.php&co=116'),
+(14, 18, 116, 'Memory Game', '?url=../../Lessons/Vocabulary/index.php&co=115', '?url=../../Lessons/Write the right option/index.php&co=117'),
+(14, 17, 117, 'Write the correct Sport', '?url=../../Lessons/Memory/index.php&co=116', '?url=../../Lessons/Connect with image/index.php&co=118'),
+(14, 20, 118, 'Connect the image and text', '?url=../../Lessons/Write the right option/index.php&co=117', '?url=../../Lessons/Say the correct word/index.php&co=119'),
+(14, 5, 119, 'Sports – Pronunciation', '?url=../../Lessons/Connect with image/index.php&co=118', '?url=../../Lessons/Unscramble/index.php&co=120'),
+(14, 21, 120, 'Unscramble the word', '?url=../../Lessons/Say the correct word/index.php&co=119', '?url=../../Lessons/Video/index.php&co=121'),
+(15, 1, 121, 'Prepositions', '?url=../../Lessons/Unscramble/index.php&co=120', '?url=../../Lessons/Vocabulary/index.php&co=122'),
+(15, 8, 122, 'Vocabulary', '?url=../../Lessons/Video/index.php&co=121', '?url=../../Lessons/Say the correct word/index.php&co=123'),
+(15, 5, 123, 'Pronunciation of the preposition', '?url=../../Lessons/Vocabulary/index.php&co=122', '?url=../../Lessons/Memory/index.php&co=124'),
+(15, 18, 124, 'Memory Card', '?url=../../Lessons/Say the correct word/index.php&co=123', '?url=../../Lessons/Write the right option/index.php&co=125'),
+(15, 17, 125, 'Write the correct preposition', '?url=../../Lessons/Memory/index.php&co=124', '?url=../../Lessons/Video/index.php&co=126'),
+(15, 1, 126, 'Prepositions', '?url=../../Lessons/Write the right option/index.php&co=125', '?url=../../Lessons/Speak Memory/index.php&co=127'),
+(15, 19, 127, 'Speak Memory', '?url=../../Lessons/Video/index.php&co=126', '?url=../../Lessons/Connect/index.php&co=128'),
+(15, 10, 128, 'Connect the correct words', '?url=../../Lessons/Speak Memory/index.php&co=127', '?url=../../Lessons/Video/index.php&co=129'),
+(16, 1, 129, 'Directions', '?url=../../Lessons/Connect/index.php&co=128', '?url=../../Lessons/Vocabulary Directions/index.php&co=130'),
+(16, 22, 130, 'Vocabulary', '?url=../../Lessons/Video/index.php&co=129', '?url=../../Lessons/Memory/index.php&co=131'),
+(16, 18, 131, 'Memory Game', '?url=../../Lessons/Vocabulary Directions/index.php&co=130', '?url=../../Lessons/Say the correct word/index.php&co=132'),
+(16, 5, 132, 'Pronunciation', '?url=../../Lessons/Memory/index.php&co=131', '?url=../../Lessons/Connect with image/index.php&co=133'),
+(16, 20, 133, 'Connect the image with the correct word', '?url=../../Lessons/Say the correct word/index.php&co=132', '?url=../../Lessons/Write the right option/index.php&co=134'),
+(16, 17, 134, 'Write the correct place', '?url=../../Lessons/Connect with image/index.php&co=133', '?url=../../Lessons/Speak Memory/index.php&co=135'),
+(16, 19, 135, 'Speak Memory', '?url=../../Lessons/Write the right option/index.php&co=134', '?url=../../Lessons/Directions/index.php&co=136'),
+(16, 23, 136, 'Where is ?', '?url=../../Lessons/Speak Memory/index.php&co=135', '?url=../../Lessons/Video/index.php&co=137'),
+(17, 1, 137, 'Family', '?url=../../Lessons/Directions/index.php&co=136', '?url=../../Lessons/Vocabulary/index.php&co=138'),
+(17, 8, 138, 'Vocabulary', '?url=../../Lessons/Video/index.php&co=137', '?url=../../Lessons/Memory/index.php&co=139'),
+(17, 18, 139, 'Memory Game', '?url=../../Lessons/Vocabulary/index.php&co=138', '?url=../../Lessons/Connect with image/index.php&co=140'),
+(17, 20, 140, 'Connect the image with the text', '?url=../../Lessons/Memory/index.php&co=139', '?url=../../Lessons/Say the correct word/index.php&co=141'),
+(17, 5, 141, 'Pronunciation', '?url=../../Lessons/Connect with image/index.php&co=140', '?url=../../Lessons/Write the right option/index.php&co=142'),
+(17, 17, 142, 'Write the correct name of the family member', '?url=../../Lessons/Say the correct word/index.php&co=141', '?url=../../Lessons/Unscramble/index.php&co=143'),
+(17, 21, 143, 'Unscramble the words', '?url=../../Lessons/Write the right option/index.php&co=142', '?url=../../Lessons/Video/index.php&co=144'),
+(18, 1, 144, 'What time is it?', '?url=../../Lessons/Unscramble/index.php&co=143', '?url=../../Lessons/Say the correct word/index.php&co=145'),
+(18, 5, 145, 'Say the correct hour', '?url=../../Lessons/Video/index.php&co=144', '?url=../../Lessons/Write the right option/index.php&co=146'),
+(18, 17, 146, 'Write the right hour', '?url=../../Lessons/Say the correct word/index.php&co=145', '?url=../../Lessons/Memory/index.php&co=147'),
+(18, 18, 147, 'Memory', '?url=../../Lessons/Write the right option/index.php&co=146', '?url=../../Lessons/Select the correct option/index.php&co=148'),
+(18, 9, 148, 'Select the right hour', '?url=../../Lessons/Memory/index.php&co=147', '#');
 
 -- --------------------------------------------------------
 
@@ -408,7 +408,7 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 CREATE TABLE IF NOT EXISTS `p080_rol` (
   `Co_Rol` int(11) NOT NULL,
   `Nb_Rol` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `p080_rol`
@@ -1739,7 +1739,14 @@ CREATE TABLE IF NOT EXISTS `t010_bitacora` (
   `Hr_Entrada` varchar(20) NOT NULL,
   `Hr_Salida` varchar(20) NOT NULL,
   `Nu_Lecciones` int(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `t010_bitacora`
+--
+
+INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_Entrada`, `Hr_Salida`, `Nu_Lecciones`) VALUES
+(1, 1, '2019-09-15', '09:35:08', '', 0);
 
 -- --------------------------------------------------------
 
@@ -3585,7 +3592,7 @@ CREATE TABLE IF NOT EXISTS `t030_cobranza` (
   `Co_Canon` float NOT NULL,
   `Solvencia` char(2) DEFAULT NULL,
   `Fe_ultimoPago` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -3813,17 +3820,17 @@ ALTER TABLE `t090_usuario_nivel`
 -- AUTO_INCREMENT de la tabla `m210_usuario`
 --
 ALTER TABLE `m210_usuario`
-  MODIFY `Co_Usuario` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=49;
+  MODIFY `Co_Usuario` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `m220_alumno`
 --
 ALTER TABLE `m220_alumno`
-  MODIFY `Co_Alumno` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+  MODIFY `Co_Alumno` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `p030_nivel`
 --
 ALTER TABLE `p030_nivel`
-  MODIFY `Co_Nivel` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `Co_Nivel` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `p040_temas`
 --
@@ -3838,17 +3845,17 @@ ALTER TABLE `p050_juego`
 -- AUTO_INCREMENT de la tabla `p080_rol`
 --
 ALTER TABLE `p080_rol`
-  MODIFY `Co_Rol` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `Co_Rol` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `t010_bitacora`
 --
 ALTER TABLE `t010_bitacora`
-  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `t030_cobranza`
 --
 ALTER TABLE `t030_cobranza`
-  MODIFY `Co_Cobranza` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `Co_Cobranza` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Restricciones para tablas volcadas
 --
