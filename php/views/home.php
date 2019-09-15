@@ -149,6 +149,10 @@
       }
     ?>
     <?php $par="'".$_GET["url"]."',".$_GET["co"];?>
+    <script type="text/javascript">
+      var se_actual = <?php echo $_SESSION["se_actual"];?>;
+      var te_actual = <?php echo $_SESSION["te_actual"];?>;
+    </script>
     <script src="../../js/routing.js"></script>
   </body>
 </html>
