@@ -20,6 +20,10 @@
   }
 
   //url para botones anterior y siguiente
+  $lant = "";
+  $lsig = "";
+  $lact = "";
+
   if(!empty($_GET["co"])){
     $results=Connection::request("select Les_Ant , Les_Sig from p070_orden where Co_Orden=".$_GET["co"]);
     if($results->rowCount()>0){
@@ -135,6 +139,16 @@
             <img src='".$gift."' width='70%' height='auto' alt='Help'>
           </div>
         </div>";
+
+        if($lant != "" && $lant != "#"){
+          echo "<div><a href='".$lant."'>Antes</a></div>";
+        }
+        if($lact != "" && $lact != "#"){
+          echo "<div><a href='".$lact."'>Actual</a></div>";
+        }
+        if($lsig != "" && $lsig != "#"){
+          echo "<div><a href='".$lsig."'>Siguiente</a></div>";
+        }
       }
     ?>
     <?php $par="'".$_GET["url"]."',".$_GET["co"];?>

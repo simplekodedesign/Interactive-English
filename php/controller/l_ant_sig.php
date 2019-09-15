@@ -20,12 +20,12 @@
   try {
     for($i=0;$i<$t;$i++){
       if($i-1>=0){
-        $lant="?url=Lessons/".redirect($co_juego[$i-1])."/index.php&co=".$co_orden[$i-1];
+        $lant="?url=../../Lessons/".redirect($co_juego[$i-1])."/index.php&co=".$co_orden[$i-1];
       }else{
         $lant="#";
       }
       if($i+1<$t){
-        $lsig="?url=Lessons/".redirect($co_juego[$i+1])."/index.php&co=".$co_orden[$i+1];
+        $lsig="?url=../../Lessons/".redirect($co_juego[$i+1])."/index.php&co=".$co_orden[$i+1];
       }else{
         $lsig="#";
       }
