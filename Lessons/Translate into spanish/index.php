@@ -30,7 +30,7 @@
     }
   }
 
-  echo"<link rel='stylesheet' href='Lessons/Translate into spanish/style.css?q=".$q."'>
+  echo"<link rel='stylesheet' href='../../Lessons/Translate into spanish/style.css?q=".$q."'>
   <div class='theme'>
     <div class='cont_abc' id='cont_all'>
       <div class='letra 0 active' id='phrase'></div>
@@ -43,7 +43,7 @@
     </div>
     <span class='lessonButton' id='btnCheck'>check</span>
   </div>
-  <script type='text/javascript' src='Lessons/Translate into spanish/Javascript.js?q=".$q."'></script>";
+  <script type='text/javascript' src='../../Lessons/Translate into spanish/Javascript.js?q=".$q."'></script>";
 ?>
 
 <script type="text/javascript">

@@ -17,7 +17,7 @@
     }
   }
 
-  echo "<link rel='stylesheet' href='Lessons/Speak Memory/style.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Speak Memory/style.css?q=".$q."'>
   <div class='playground' id='container'>";
 
   $pos=0;
@@ -59,7 +59,7 @@
 
   echo "<div class='guardian'></div>
   </div>
-  <script type='text/javascript' src='Lessons/Speak Memory/Javascript.js?q=".$q."'></script>";
+  <script type='text/javascript' src='../../Lessons/Speak Memory/Javascript.js?q=".$q."'></script>";
 ?>
 
 <script type="text/javascript">

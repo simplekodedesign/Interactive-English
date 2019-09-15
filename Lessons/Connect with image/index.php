@@ -44,7 +44,7 @@
   $compare2=array();
   for($i=0;$i<$total;$i++)$compare2[]=$compare[$i];
 
-  echo "<link rel='stylesheet' href='Lessons/Connect with image/style.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Connect with image/style.css?q=".$q."'>
       <div class='playground'>
       <div class='col' id='txts'>";
   $b=true;
@@ -79,7 +79,7 @@
   echo "<div class='guardian'></div>
         </div>
         </div>
-        <script type='text/javascript' src='Lessons/Connect with image/javascript.js?q=".$q."'></script>";
+        <script type='text/javascript' src='../../Lessons/Connect with image/javascript.js?q=".$q."'></script>";
 ?>
 
 <script type="text/javascript">

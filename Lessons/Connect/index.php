@@ -28,7 +28,7 @@
     }
   }
 
-  echo "<link rel='stylesheet' href='Lessons/Connect/connect.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Connect/connect.css?q=".$q."'>
   <div class='playground' id='container'>
   <div class='column' id='esp'>";
   $b=true;
@@ -57,7 +57,7 @@
   echo "<div class='guardian'></div>
       </div>
   </div>
-  <script type='text/javascript' src='Lessons/Connect/connect.js?q=".$q."'></script>";
+  <script type='text/javascript' src='../../Lessons/Connect/connect.js?q=".$q."'></script>";
 
 ?>
 

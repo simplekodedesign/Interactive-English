@@ -37,7 +37,7 @@
     }
   }
 
-  echo "<link rel='stylesheet' href='Lessons/Select the right image/style.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Select the right image/style.css?q=".$q."'>
   <div class='theme'>
     <div class='cont_abc' id='cont_all'>
       <div class='letra 0 active'></div>
@@ -48,7 +48,7 @@
   <div class='buttons'>
     <span class='lessonButton' id='btnListen'>Listen</span>
   </div>
-  <script type='text/javascript' src='Lessons/Select the right image/Javascript.js?q=".$q."'></script>";
+  <script type='text/javascript' src='../../Lessons/Select the right image/Javascript.js?q=".$q."'></script>";
 ?>
 <script type="text/javascript">
   var total=<?php echo $total?>;

@@ -35,7 +35,7 @@
       $total+=1; //total de elementos
     }
   }
-  echo "<link rel='stylesheet' href='Lessons/Say the correct txt/style.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Say the correct txt/style.css?q=".$q."'>
   <div class='theme'>
     <div class='cont_abc' id='cont_all'>
       <div class='letra 0 active' id='text'></div>
@@ -46,7 +46,7 @@
   <div class='buttons'>
       <span class='lessonButton' id='btnSpeak'>Speak</span>
   </div>
-  <script type='text/javascript' src='Lessons/Say the correct txt/Javascript.js?q=".$q."'></script>
+  <script type='text/javascript' src='../../Lessons/Say the correct txt/Javascript.js?q=".$q."'></script>
   ";
 ?>
 <script type="text/javascript">

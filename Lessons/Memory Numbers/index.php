@@ -18,7 +18,7 @@
   }
 
   //6*5
-  echo "<link rel='stylesheet' href='Lessons/Memory Numbers/style.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Memory Numbers/style.css?q=".$q."'>
   <div class='playground' id='container'>";
 
   $cards=array();
@@ -26,14 +26,14 @@
   for($i=0;$i<15;$i++){
     $cards[]="<div class='card'>
                     <div class='block'></div>
-                    <audio src='aud/categories/numbers/Cardinal Numbers/".($i+1).".mp3'></audio>
+                    <audio src='../../aud/categories/numbers/Cardinal Numbers/".($i+1).".mp3'></audio>
                     <p>".($i+1)."</p>
                 </div>";
   }
   for($i=0;$i<15;$i++){
     $cards[]="<div class='card'>
                     <div class='block'></div>
-                    <audio src='aud/categories/numbers/Cardinal Numbers/".($i+1).".mp3'></audio>
+                    <audio src='../../aud/categories/numbers/Cardinal Numbers/".($i+1).".mp3'></audio>
                     <p>".($i+1)."</p>
                 </div>";
   }
@@ -50,7 +50,7 @@
   echo "    <div class='guardian'></div>
     </div>
     <audio src='' id='cardAud' style='display:none;'></audio>
-    <script type='text/javascript' src='Lessons/Memory Numbers/Javascript.js?q=".$q."'></script>";
+    <script type='text/javascript' src='../../Lessons/Memory Numbers/Javascript.js?q=".$q."'></script>";
 ?>
 <script type="text/javascript">
   var cord=<?php echo $_GET["co"]?>;

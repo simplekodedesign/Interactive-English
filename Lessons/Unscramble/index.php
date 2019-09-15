@@ -37,7 +37,7 @@
     }
   }
 
-  echo "<link rel='stylesheet' href='Lessons/Unscramble/style.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Unscramble/style.css?q=".$q."'>
 
   <div class='cont_abc' id='cont_all'>
     <div class='letra 0 active' id='text'></div>
@@ -50,7 +50,7 @@
     <span class='lessonButton' id='check'>Check</span>
   </div>
   <audio src='' id='aud'></audio>
-  <script type='text/javascript' src='Lessons/Unscramble/Javascript.js?q=".$q."'></script>
+  <script type='text/javascript' src='../../Lessons/Unscramble/Javascript.js?q=".$q."'></script>
   ";
 ?>
 

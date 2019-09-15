@@ -44,7 +44,7 @@
     }
   }
 
-  echo "<link rel='stylesheet' href='Lessons/Say the correct word/style.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Say the correct word/style.css?q=".$q."'>
 
   <div class='cont_abc' id='cont_all'>
   <div class='letra 0 active' id='A'>
@@ -56,7 +56,7 @@
   <span class='lessonButton' id='btnSpeak'>Speak</span>
   <span class='lessonButton' id='btnListen'>Listen</span>
   </div>
-  <script src='Lessons/Say the correct word/Javascript.js?q=".$q."'></script>
+  <script src='../../Lessons/Say the correct word/Javascript.js?q=".$q."'></script>
   ";
 ?>
 

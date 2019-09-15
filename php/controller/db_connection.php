@@ -11,7 +11,7 @@
   class Connection{
     //Datos Conexion
     private static $dbHost = "localhost";             //Nombre del Host
-    private static $dbName = "prueba";          //Nombre de la Base de Datos
+    private static $dbName = "pruebaDNL";          //Nombre de la Base de Datos
     private static $dbUser = "root";               //Nombre de Usuario para el phpmyadmin
     private static $dbPass = "mysql";     //Contraseña para phpmyadmin
 

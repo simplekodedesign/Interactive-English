@@ -35,7 +35,7 @@
         $total++;
     }
   }
-  echo "<link rel='stylesheet' href='Lessons/Write the correct txt/style.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Write the correct txt/style.css?q=".$q."'>
 
   <div class='cont_abc' id='cont_all'>
     <div class='letra 0 active' id='number'></div>
@@ -50,7 +50,7 @@
     <span class='lessonButton' id='btnListen'>Listen</span>
     <span class='lessonButton' id='btncheck'>Check</span>
   </div>
-  <script type='text/javascript' src='Lessons/Write the correct txt/Javascript.js?q=".$q."'></script>";
+  <script type='text/javascript' src='../../Lessons/Write the correct txt/Javascript.js?q=".$q."'></script>";
 ?>
 
 <script type="text/javascript">

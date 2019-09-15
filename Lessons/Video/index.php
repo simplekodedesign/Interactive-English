@@ -35,7 +35,7 @@
 
   //generar html de video
   echo "
-    <link rel='stylesheet' href='Lessons/Video/style.css?q=".$q."'>
+    <link rel='stylesheet' href='../../Lessons/Video/style.css?q=".$q."'>
     <div class='cont_abc' id='cont_all'>
     <video width='90%' height='auto' controls autoplay controlsList='nodownload' onEnded='victoryMessage()'>
          <source src='".$urlVid."' type='video/mp4'>

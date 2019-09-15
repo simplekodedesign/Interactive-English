@@ -42,11 +42,11 @@
   <span class="lessonButton" id='pPicture'>Your picture</span>
 
   <div class='gallery'>
-    <img src="img/perfil/users/avatar1.svg" class='icons' width="auto" height="50px" alt="img/perfil/users/avatar1.svg">
-    <img src="img/perfil/users/avatar2.svg" class='icons' width="auto" height="50px" alt="img/perfil/users/avatar2.svg">
-    <img src="img/perfil/users/avatar3.webp" class='icons' width="auto" height="50px" alt="img/perfil/users/avatar3.webp">
-    <img src="img/perfil/users/avatar4.svg" class='icons' width="auto" height="50px" alt="img/perfil/users/avatar4.svg">
-    <img src="img/perfil/users/avatar5.svg" class='icons' width="auto" height="50px" alt="img/perfil/users/avatar5.svg">
+    <img src="../../img/perfil/users/avatar1.svg" class='icons' width="auto" height="50px" alt="../../img/perfil/users/avatar1.svg">
+    <img src="../../img/perfil/users/avatar2.svg" class='icons' width="auto" height="50px" alt="../../img/perfil/users/avatar2.svg">
+    <img src="../../img/perfil/users/avatar3.webp" class='icons' width="auto" height="50px" alt="../../img/perfil/users/avatar3.webp">
+    <img src="../../img/perfil/users/avatar4.svg" class='icons' width="auto" height="50px" alt="../../img/perfil/users/avatar4.svg">
+    <img src="../../img/perfil/users/avatar5.svg" class='icons' width="auto" height="50px" alt="../../img/perfil/users/avatar5.svg">
   </div>
 </div>
 
