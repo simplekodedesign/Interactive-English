@@ -128,6 +128,19 @@ header img{
   background-color: var(--pink);
 }
 
+.B_perfil {
+  background: none;
+}
+
+.B_perfil > ul > li:nth-child(1) {
+  background-color: var(--yellow);
+  color: black;
+}
+
+.B_perfil > ul > li:nth-child(2) {
+  background-color: var(--cyan);
+}
+
 .B_ayuda li:nth-child(1) {
   box-shadow: 0 0 0 100px inset rgba(0, 0, 0, 0.205);
 }
@@ -136,9 +149,14 @@ header img{
   box-shadow: 0 0 0 100px inset rgba(0, 0, 0, 0.410);
 }
 
+.B_herr:hover, .B_herr li {
+  background-color: var(--aquamarina);
+}
+
 .B_ayuda li:hover, .B_herr li:hover {
   box-shadow: none;
 }
+
 
 .avatar{
   align-self: center;

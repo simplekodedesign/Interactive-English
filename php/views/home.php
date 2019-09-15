@@ -65,16 +65,23 @@
       <img src="../../img/English21.svg" alt="Logo">
       <div class="navbar">
         <span class="button B_lecciones"><a href="home.php">LESSONS</a></span>
-        <span class="button B_ayuda">
-          <span>HELP</span>
-          <ul>
+        <span class="button B_herr">
+          <span>TRANSLATOR</span>
+          <!-- <ul>
             <li>INSTRUCTIONS</li>
             <li>TRANSLATOR</li>
+          </ul> -->
+        </span>
+        <span class="button B_ayuda"><a href="#">HELP</a> </span>
+
+        <span class="button B_perfil">
+          <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt="Profile Pic">
+          <ul>
+            <li>PROFILE</li>
+            <li class="B_exit">EXIT</li>
           </ul>
         </span>
-        <span class="button B_exit"><a href="#">EXIT</a> </span>
 
-        <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt="<?php echo $_SESSION["user_icon"]?>">
       </div>
     </header>
     <!-- <img src="../../img/C21logowhite.svg" alt="Logo"> -->
