@@ -32,12 +32,9 @@
         $lsig=$res["Les_Sig"];
       }
     }
-    $results=Connection::request("select Les_Ant from p070_orden where Co_Orden=".($_GET["co"]+1));
-    if($results->rowCount()>0){
-      while($res=$results->fetch(PDO::FETCH_ASSOC)){
-        $lact=$res["Les_Ant"];
-      }
-    }
+
+    $lact = $_SESSION["le_actual"];
+
     if(!isset($_SESSION["reto"])){
       $lsig=urlBtnSig($_GET["co"],$lsig);
     }else if(!empty($_GET["ini"])&&!empty($_GET["end"])){
@@ -152,6 +149,10 @@
       }
     ?>
     <?php $par="'".$_GET["url"]."',".$_GET["co"];?>
+    <script type="text/javascript">
+      var se_actual = <?php echo $_SESSION["se_actual"];?>;
+      var te_actual = <?php echo $_SESSION["te_actual"];?>;
+    </script>
     <script src="../../js/routing.js"></script>
   </body>
 </html>
