@@ -21,7 +21,7 @@ var evento = function  () {
     if(this != firstCard || c1 == undefined){
         c1 == undefined? c1 = this.lastElementChild.innerHTML : c2 = this.lastElementChild.innerHTML;
         firstCard = this;
-        aud.src="aud/categories/numbers/"+this.lastElementChild.innerHTML+"c.mp3";
+        aud.src="../../aud/categories/numbers/"+this.lastElementChild.innerHTML+"c.mp3";
         aud.play();
         if (c1 != undefined && c2 != undefined){
             container.lastElementChild.style.zIndex = "5";

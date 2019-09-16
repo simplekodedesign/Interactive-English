@@ -115,22 +115,22 @@ var victoryMessage = function() {
     var rand = (Math.random())*10;
 
     if (rand < 2.5) {
-        document.getElementById("victoryAud").src = "aud/congratulations/c1.mp3";
+        document.getElementById("victoryAud").src = "../../../../aud/congratulations/c1.mp3";
         document.getElementById("victoryAud").play();
     }
 
     if (rand > 2.5 && rand < 5) {
-        document.getElementById("victoryAud").src = "aud/congratulations/c2.mp3";
+        document.getElementById("victoryAud").src = "../../aud/congratulations/c2.mp3";
         document.getElementById("victoryAud").play();
     }
 
     if (rand > 5 && rand < 7.5) {
-        document.getElementById("victoryAud").src = "aud/congratulations/c3.mp3";
+        document.getElementById("victoryAud").src = "../../aud/congratulations/c3.mp3";
         document.getElementById("victoryAud").play();
     }
 
     if (rand > 7.5) {
-        document.getElementById("victoryAud").src = "aud/congratulations/c4.mp3";
+        document.getElementById("victoryAud").src = "../../aud/congratulations/c4.mp3";
         document.getElementById("victoryAud").play();
     }
 }

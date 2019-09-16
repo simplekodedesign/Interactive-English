@@ -36,7 +36,7 @@
       $total++;
     }
   }
-  echo "<link rel='stylesheet' href='Lessons/Vocabulary txt/style.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Vocabulary txt/style.css?q=".$q."'>
 
     <div class='cont_abc' id='cont_all'>
       <span class='vocabulary' id='en'></span>
@@ -48,7 +48,7 @@
     <span class='lessonButton' id='btnIzq'><</span>
     <span class='lessonButton' id='btnDer'>></span>
   </div>
-  <script type='text/javascript' src='Lessons/Vocabulary txt/Javascript.js?q=".$q."'></script>";
+  <script type='text/javascript' src='../../Lessons/Vocabulary txt/Javascript.js?q=".$q."'></script>";
 ?>
 
 <script type="text/javascript">

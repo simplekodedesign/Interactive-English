@@ -43,7 +43,7 @@
     }
   }
 
-  echo "<link rel='stylesheet' href='Lessons/Vocabulary/style.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Vocabulary/style.css?q=".$q."'>
 
   <span class='vocabulary' id='es'>Spanish</span>
   <div class='cont_abc' id='cont_all'>
@@ -56,7 +56,7 @@
   <span class='lessonButton' id='btnDer'>></span>
 
   </div>
-  <script type='text/javascript' src='Lessons/Vocabulary/Javascript.js?q=".$q."'></script>";
+  <script type='text/javascript' src='../../Lessons/Vocabulary/Javascript.js?q=".$q."'></script>";
 ?>
 
 <script type="text/javascript">

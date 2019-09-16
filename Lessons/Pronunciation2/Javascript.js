@@ -15,7 +15,7 @@ window.addEventListener("load",function(){
 
 		for(var i=0;i<letters.length;i++){
 			letters[i].addEventListener("click",function(let){
-				aud.src="aud/categories/abc/"+let.target.id.toLowerCase()+".mp3";
+				aud.src="../../aud/categories/abc/"+let.target.id.toLowerCase()+".mp3";
 				aud.play();
 			});
 		}

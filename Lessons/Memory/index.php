@@ -18,7 +18,7 @@
     }
   }
 
-  echo "<link rel='stylesheet' href='Lessons/Memory/style.css?q=".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Memory/style.css?q=".$q."'>
   <div class='playground' id='container'>";
 
   for($k=0;$k<2;$k++){
@@ -58,7 +58,7 @@
   echo "<div class='guardian'></div>
   </div>
   <audio src='' id='cardAud' style='display:none;'></audio>
-  <script type='text/javascript' src='Lessons/Memory/Javascript.js?q=".$q."'></script>
+  <script type='text/javascript' src='../../Lessons/Memory/Javascript.js?q=".$q."'></script>
   <script type='text/javascript'>
     var cord=".$_GET["co"].";
     var tot=".$total.";
