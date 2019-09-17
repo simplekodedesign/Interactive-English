@@ -4,12 +4,13 @@
   $url_img= [];
   $Nb_Lesson = [];
   //Buscar el nombre del tema
-  $results=Connection::request("select Nb_Tema,Tx_Url_Aud from p040_temas where Co_Tema=".$_GET["th"]);
+  $results=Connection::request("select Nb_Tema,Tx_Url_Img,Tx_Url_Aud from p040_temas where Co_Tema=".$_GET["th"]);
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<section>";
       echo "<link rel='stylesheet' href='../../css/lessons.css?q=<?php echo $q?'>";
       $aud=$res["Tx_Url_Aud"];
+      $imgTema = $res["Tx_Url_Img"];
     }
   }
 
@@ -82,6 +83,7 @@
     var co_juego = ".json_encode($co_juego).";
     var imagenes = ".json_encode($url_img).";
     var numero_leccion = ".$_GET["th"].";
+    var imgTema = '".$imgTema."';
     var nLessons = nombre_lecciones.length;
     console.log(numero_leccion);
   </script>";
