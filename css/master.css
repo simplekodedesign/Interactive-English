@@ -238,6 +238,35 @@ section h1{
   clip-path: polygon(0 0, 100% 50%, 0 100%);
 } */
 
+.navigationButtons {
+  bottom: 15vh;
+  position: fixed;
+}
+
+#lPrev {
+  transform: rotate(-90deg);
+  left: 50px;
+}
+
+#lPrev span {
+  border-bottom: 40px solid black;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-top: 0px solid black;
+}
+
+#lSigu {
+  transform: rotate(90deg);
+  right:50px;
+}
+
+#lSigu span {
+  border-bottom: 40px solid black;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-top: 0px solid black;
+}
+
 #logo{
   position: absolute;
   bottom: 5%;
