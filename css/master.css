@@ -293,7 +293,7 @@ footer p{
 
 /*-----------------------LESSONS----------------------------*/
 
-.lessonbutton{
+.lessonButton{
   background-color: var(--primary);
   color: white;
   -webkit-box-shadow: inset 1px -11px 15px -13px rgba(0,0,0,1);
