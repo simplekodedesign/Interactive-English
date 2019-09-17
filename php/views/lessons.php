@@ -83,8 +83,8 @@
     var imagenes = ".json_encode($url_img).";
     var numero_leccion = ".$_GET["th"].";
     var nLessons = nombre_lecciones.length;
-    alert(nLessons);
+    console.log(numero_leccion);
   </script>";
 
-  echo "<script type='text/javascript' src='../../js/lessons.js'></script>";
+  echo "<script type='text/javascript' src='../../js/lessons.js?q=<?php echo $q?>'></script>";
 ?>

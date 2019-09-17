@@ -52,7 +52,7 @@ function lessonsCreator () {
     title.classList.add("title");
     img.classList.add("img");
     img.classList.add(co_orden[i]);
-    img.src = "../../" + imagenes[i];
+    img.src = imagenes[i];
 
     span.innerHTML = (i < 9)? "0" + (i+1): i+1;
     p.innerHTML = nombre_lecciones[i];
