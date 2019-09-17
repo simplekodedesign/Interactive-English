@@ -41,14 +41,8 @@ video{
   video{
     width: 70%;
   }
-
-.titles{
-  font-size: 2em;
 }
 
 @media only screen and (min-width: 1020px) {
 
-  .titles{
-    font-size: 4em;
-  }
 }

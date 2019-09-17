@@ -44,17 +44,19 @@
   }
 
   echo "<link rel='stylesheet' href='../../Lessons/Vocabulary/style.css?q=".$q."'>
-
-  <span class='vocabulary' id='es'>Spanish</span>
-  <div class='cont_abc' id='cont_all'>
-  <div class='letra 0 active' id='A'><img id='img' src='' height='350px' width='350px' alt='image'><audio src='' id='aud'></audio>
-  </div>
-  </div>
-  <span class='vocabulary' id='en'>English</span>
-  <div class='buttons'>
-  <span class='lessonButton' id='btnIzq'><</span>
-  <span class='lessonButton' id='btnDer'>></span>
-
+  <div class='theme'>
+    <span class='vocabulary' id='es'>Spanish</span>
+    <div class='cont_abc' id='cont_all'>
+      <div class='letra 0 active' id='A'>
+        <img id='img' src='' height='350px' width='350px' alt='image'>
+        <audio src='' id='aud'></audio>
+      </div>
+    </div>
+    <span class='vocabulary' id='en'>English</span>
+    <div class='buttons'>
+      <span class='lessonButton' id='btnIzq'><</span>
+      <span class='lessonButton' id='btnDer'>></span>
+    </div>
   </div>
   <script type='text/javascript' src='../../Lessons/Vocabulary/Javascript.js?q=".$q."'></script>";
 ?>

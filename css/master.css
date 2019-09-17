@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 b{
   font-weight: 900;
 }
@@ -219,6 +223,11 @@ section{
   text-align: center;
 }
 
+.titles h1{
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
 section .roadTitle{
   transform: translate(-330px,0);
   color: var(--secondary);
@@ -339,7 +348,7 @@ footer p{
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   transition: .5s;
 }
 
@@ -381,6 +390,12 @@ footer p{
 .write {
   background-color: transparent;
   color: green;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1em;
+  margin: auto;
+  width: 30%;
   border-bottom: 1px solid var(--primary);
 }
 
