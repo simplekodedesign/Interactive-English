@@ -213,6 +213,10 @@ section{
   margin-bottom: 150px;
 }
 
+.main{
+  width: 100%;
+}
+
 .title{
   color: var(--primary);
 }

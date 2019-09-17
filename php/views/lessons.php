@@ -7,7 +7,7 @@
   $results=Connection::request("select Nb_Tema,Tx_Url_Img,Tx_Url_Aud from p040_temas where Co_Tema=".$_GET["th"]);
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
-      echo "<section>";
+      echo "<section class='main'>";
       echo "<link rel='stylesheet' href='../../css/lessons.css?q=<?php echo $q?'>";
       $aud=$res["Tx_Url_Aud"];
       $imgTema = $res["Tx_Url_Img"];

@@ -59,7 +59,7 @@
     <meta charset="utf-8">
     <title>Main</title>
     <link rel="stylesheet" href="../../css/master.css?q=<?php echo $q?>">
-    <link rel="stylesheet" href="../../css/second.css?q=<?php echo $q?>">
+    <link rel="stylesheet" href="../../css/home.css?q=<?php echo $q?>">
   </head>
   <body>
     <header>
@@ -78,7 +78,7 @@
         <span class="hButton B_perfil">
           <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt="Profile Pic">
           <ul>
-            <li>PROFILE</li>
+            <li><a href="profile.php">PROFILE</a></li>
             <li class="B_exit">EXIT</li>
           </ul>
         </span>
@@ -124,7 +124,7 @@
             <img src="../../img/lessons/background/Recorrido.svg" alt="camino" width="100%">
             </div>
           </div>
-        
+
         ';
         }else{
           include($_GET["url"]);
