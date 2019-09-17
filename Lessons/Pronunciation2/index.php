@@ -17,8 +17,8 @@
   }
   echo "
     <link rel='stylesheet' href='../../Lessons/Pronunciation2/style.css?q=".$q."'>
-    <span id='said'>Listen and talk</span>
     <div class='theme'>
+      <span id='said'>Listen and talk</span>
       <div class='cont_abc' id='cont_all'>
         <div class='letra 0 active' id='A'>A</div>
         <div class='letra 1' id='B'>B</div>
@@ -47,9 +47,9 @@
         <div class='letra 24' id='Y'>Y</div>
         <div class='letra 25' id='Z'>Z</div>
       </div>
-    </div>
-    <div class='buttons'>
+      <div class='buttons'>
         <a class='lessonButton' id='btnSpeak'>Speak</a>
+      </div>
     </div>
     <script type='text/javascript' src='../../Lessons/Pronunciation2/Javascript.js?q=".$q."'></script>
   ";

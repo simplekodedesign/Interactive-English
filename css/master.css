@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 b{
   font-weight: 900;
 }
@@ -71,7 +75,7 @@ header img{
 
 /*------------------------Botones------------------*/
 
-.button {
+.hButton {
   padding: 5px 20px;
   background-color: var(--primary);
   color: white;
@@ -81,11 +85,12 @@ header img{
   text-align: center;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
   width: 142px;
   height: 100%;
 }
 
-.button > ul {
+.hButton > ul {
   display: none;
   position: absolute;
   margin: 0;
@@ -95,20 +100,20 @@ header img{
   width: 100%;
 }
 
-.button a {
+.hButton a {
   text-decoration: none;
   color: white;
 }
 
-.button:hover > ul {
+.hButton:hover > ul {
   display: block;
 }
 
-.button:hover {
+.hButton:hover {
   border: none;
 }
 
-.button > ul > li {
+.hButton > ul > li {
   margin: 0;
   list-style: none;
   padding: 5px;
@@ -157,10 +162,10 @@ header img{
   box-shadow: none;
 }
 
-
 .avatar{
   align-self: center;
   margin-left: 10px;
+  height: 100%;
 }
 
 /* .navbar a:nth-child(7n+1){
@@ -192,24 +197,38 @@ header img{
 } */
 
 section{
+  align-self: center;
   position: relative;
   /* margin-top: 5vh; */
   min-height: 85vh;
-  width: 100%;
+  width: 80%;
   min-width: 300px;
   display: flex;
-  /* flex-direction: column;
-  flex-wrap: nowrap; */
+  /* flex-direction: column; */
+  /* flex-wrap: nowrap; */
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  margin-bottom: 150px;
 }
 
 .title{
   color: var(--primary);
 }
 
-section h1{
+.titles {
+  color: var(--primary);
+  width: 100%;
+  text-align: center;
+}
+
+.titles h1{
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+section .roadTitle{
   transform: translate(-330px,0);
   color: var(--secondary);
   font-size: 2em;
@@ -249,10 +268,10 @@ section h1{
 }
 
 #lPrev span {
-  border-bottom: 40px solid black;
+  border-bottom: 40px solid var(--aquamarina);
   border-right: 20px solid transparent;
   border-left: 20px solid transparent;
-  border-top: 0px solid black;
+  border-top: 0px solid var(--aquamarina);
 }
 
 #lSigu {
@@ -261,10 +280,10 @@ section h1{
 }
 
 #lSigu span {
-  border-bottom: 40px solid black;
+  border-bottom: 40px solid var(--aquamarina);
   border-right: 20px solid transparent;
   border-left: 20px solid transparent;
-  border-top: 0px solid black;
+  border-top: 0px solid var(--aquamarina);
 }
 
 #logo{
@@ -293,12 +312,44 @@ footer p{
 
 /*-----------------------LESSONS----------------------------*/
 
+.titles{
+  font-size: 1.7em;
+}
+
+.theme{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
 .lessonButton{
   background-color: var(--primary);
   color: white;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
   -webkit-box-shadow: inset 1px -11px 15px -13px rgba(0,0,0,1);
   -moz-box-shadow: -10px 7px 12px -10px rgb(0, 0, 0);
   box-shadow: -10px 7px 12px -10px rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 8px 8px;
+  margin: 0 5px;
+  height: auto;
+  width: 125px;
+  transition: .3s;
+}
+
+.buttons {
+  margin-bottom: 20px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
 }
 
 .letra{
@@ -339,6 +390,12 @@ footer p{
 .write {
   background-color: transparent;
   color: green;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1em;
+  margin: auto;
+  width: 30%;
   border-bottom: 1px solid var(--primary);
 }
 

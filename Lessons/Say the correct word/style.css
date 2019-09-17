@@ -24,6 +24,12 @@
 	transition: all 1s;
 }
 
+#message {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
 /* .NavButtons {
 	display: flex;
 } */

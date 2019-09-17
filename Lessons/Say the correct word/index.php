@@ -45,16 +45,18 @@
   }
 
   echo "<link rel='stylesheet' href='../../Lessons/Say the correct word/style.css?q=".$q."'>
-
-  <div class='cont_abc' id='cont_all'>
-  <div class='letra 0 active' id='A'>
-  <img src='' height='100%' width='100%' id='img'></div>
-  <audio src='' id='aud'></audio>
-  </div>
-  <span id='message'></span>
-  <div class='buttons'>
-  <span class='lessonButton' id='btnSpeak'>Speak</span>
-  <span class='lessonButton' id='btnListen'>Listen</span>
+  <div class='theme'>
+    <span id='message'></span>
+    <div class='cont_abc' id='cont_all'>
+      <div class='letra 0 active' id='A'>
+        <img src='' height='100%' width='100%' id='img'>
+      </div>
+      <audio src='' id='aud'></audio>
+    </div>
+    <div class='buttons'>
+      <span class='lessonButton' id='btnSpeak'>Speak</span>
+      <span class='lessonButton' id='btnListen'>Listen</span>
+    </div>
   </div>
   <script src='../../Lessons/Say the correct word/Javascript.js?q=".$q."'></script>
   ";

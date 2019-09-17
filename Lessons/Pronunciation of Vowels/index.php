@@ -17,8 +17,8 @@
   }
   echo "
   <link rel='stylesheet' href='../../Lessons/Pronunciation of Vowels/style.css?q=".$q."'>
-  <span id='said'>Listen and talk</span>
   <div class='theme'>
+    <span id='said'>Listen and talk</span>
     <div class='cont_abc' id='cont_all'>
       <div class='letra 0 active' id='A'>A</div>
       <div class='letra 1' id='E'>E</div>
@@ -26,9 +26,9 @@
       <div class='letra 3' id='O'>O</div>
       <div class='letra 4' id='U'>U</div>
     </div>
-  </div>
-  <div class='buttons'>
+    <div class='buttons'>
       <a class='lessonButton' id='btnSpeak'>Speak</a>
+    </div>
   </div>
   <audio src='' id='letterAud'></audio>
   <script type='text/javascript' src='../../Lessons/Pronunciation of Vowels/Javascript.js?q=".$q."'></script>
