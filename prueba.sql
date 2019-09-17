@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 15-09-2019 a las 21:48:49
+-- Tiempo de generación: 17-09-2019 a las 19:35:00
 -- Versión del servidor: 5.6.37
 -- Versión de PHP: 5.6.31
 
@@ -149,24 +149,24 @@ CREATE TABLE IF NOT EXISTS `p040_temas` (
 --
 
 INSERT INTO `p040_temas` (`Co_Tema`, `Co_Nivel`, `Nb_Tema`, `Tx_Url_Img`, `Tx_Url_Aud`) VALUES
-(1, 1, 'The Alphabet', '', '../../aud/themes/the_alphabet.mp3'),
-(2, 1, 'The Greetings', '', '../../aud/themes/the_greetings.mp3'),
-(3, 1, 'Numbers', '', '../../aud/themes/numbers.mp3'),
-(4, 1, 'Personal Information', '', '../../aud/themes/personal_information.mp3'),
-(5, 1, 'The Articles (A,An,The)', '', '../../aud/themes/the_articles.mp3'),
-(6, 1, 'Animals', '', '../../aud/themes/animals.mp3'),
-(7, 1, 'Food and Drinks', '', '../../aud/themes/food_and_drinks.mp3'),
-(8, 1, 'Parts of the Body', '', '../../aud/themes/the_body.mp3'),
-(9, 1, 'Plurals', '', '../../aud/themes/plurals.mp3'),
-(10, 1, 'This - These', '', '../../aud/themes/this_these.mp3'),
-(11, 1, 'That - Those', '', '../../aud/themes/that_those.mp3'),
-(12, 1, 'Colors', '', '../../aud/themes/colors.mp3'),
-(13, 1, 'To Be and Occupations', '', '../../aud/themes/to_be_and_occupations.mp3'),
-(14, 1, 'Sports', '', '../../aud/themes/sports.mp3'),
-(15, 1, 'Prepositions', '', '../../aud/themes/prepositions.mp3'),
-(16, 1, 'Locations', '', '../../aud/themes/directions.mp3'),
-(17, 1, 'Family', '', '../../aud/themes/family.mp3'),
-(18, 1, 'What time is it ?', '', '../../aud/themes/what_time_is_it.mp3');
+(1, 1, 'The Alphabet', '../../img/lessons/background/abc.svg', '../../aud/themes/the_alphabet.mp3'),
+(2, 1, 'The Greetings', '../../img/lessons/background/greetings.svg', '../../aud/themes/the_greetings.mp3'),
+(3, 1, 'Numbers', '../../img/lessons/background/thenumbers.svg', '../../aud/themes/numbers.mp3'),
+(4, 1, 'Personal Information', '../../img/lessons/background/personalinformation.svg', '../../aud/themes/personal_information.mp3'),
+(5, 1, 'The Articles (A,An,The)', '../../img/lessons/background/articles.svg', '../../aud/themes/the_articles.mp3'),
+(6, 1, 'Animals', '../../img/lessons/background/animals.svg', '../../aud/themes/animals.mp3'),
+(7, 1, 'Food and Drinks', '../../img/lessons/background/foodanddrinks.svg', '../../aud/themes/food_and_drinks.mp3'),
+(8, 1, 'Parts of the Body', '../../img/lessons/background/body.svg', '../../aud/themes/the_body.mp3'),
+(9, 1, 'Plurals', '../../img/lessons/background/plurals.svg', '../../aud/themes/plurals.mp3'),
+(10, 1, 'This - These', '../../img/lessons/background/thisthese.svg', '../../aud/themes/this_these.mp3'),
+(11, 1, 'That - Those', '../../img/lessons/background/thatthose.svg', '../../aud/themes/that_those.mp3'),
+(12, 1, 'Colors', '../../img/lessons/background/thecolors.svg', '../../aud/themes/colors.mp3'),
+(13, 1, 'To Be and Occupations', '../../img/lessons/background/occupations.svg', '../../aud/themes/to_be_and_occupations.mp3'),
+(14, 1, 'Sports', '../../img/lessons/background/sports.svg', '../../aud/themes/sports.mp3'),
+(15, 1, 'Prepositions', '../../img/lessons/background/prepositions.svg', '../../aud/themes/prepositions.mp3'),
+(16, 1, 'Locations', '../../img/lessons/background/directions.svg', '../../aud/themes/directions.mp3'),
+(17, 1, 'Family', '../../img/lessons/background/family.svg', '../../aud/themes/family.mp3'),
+(18, 1, 'What time is it ?', '../../img/lessons/background/hours.svg', '../../aud/themes/what_time_is_it.mp3');
 
 -- --------------------------------------------------------
 
