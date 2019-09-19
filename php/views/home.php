@@ -51,6 +51,10 @@
 
   //variable para recargar los js y css
   $q=rand();
+
+  if(isset($_GET["th"])){
+    echo "<script>const numero_leccion = ".$_GET["th"].";</script>";
+  }
 ?>
 
 <!DOCTYPE html>

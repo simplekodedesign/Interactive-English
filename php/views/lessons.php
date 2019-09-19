@@ -82,8 +82,7 @@
     var co_orden = ".json_encode($co_orden).";
     var co_juego = ".json_encode($co_juego).";
     var imagenes = ".json_encode($url_img).";
-    var imgTema = '".$imgTema."';
-    const numero_leccion = ".$_GET["th"].";
+    var imgTema = '".$imgTema."';    
     var nLessons = nombre_lecciones.length;
   </script>";
 
