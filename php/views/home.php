@@ -157,5 +157,6 @@
       var te_actual = <?php echo $_SESSION["te_actual"];?>;
     </script>
     <script src="../../js/routing.js"></script>
+    <script src="../../js/master.js"></script>
   </body>
 </html>

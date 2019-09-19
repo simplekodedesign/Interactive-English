@@ -1,3 +1,7 @@
+section{
+  width: 100%;
+}
+
 .lessoncontainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -86,7 +90,7 @@
 #images > object{
   width: 100%;
   position: absolute;
-  top: 0;
+  top: 0%;
   left: 0;
   z-index: 0;
 }

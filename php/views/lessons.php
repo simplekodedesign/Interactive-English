@@ -65,7 +65,7 @@
 
   echo "
   <div id='images'>
-    <img src='../../img/lessons/abc.svg' alt='The ABC'>
+    <img src='' alt='Lesson image' id='lessonImage'>
     <object type='image/svg+xml' data='../../img/lessons/lessonsb.svg' alt='Lessons' id='svg'></object>
   </div>
     <div class='lessoncontainer'>
@@ -82,10 +82,9 @@
     var co_orden = ".json_encode($co_orden).";
     var co_juego = ".json_encode($co_juego).";
     var imagenes = ".json_encode($url_img).";
-    var numero_leccion = ".$_GET["th"].";
     var imgTema = '".$imgTema."';
+    const numero_leccion = ".$_GET["th"].";
     var nLessons = nombre_lecciones.length;
-    console.log(numero_leccion);
   </script>";
 
   echo "<script type='text/javascript' src='../../js/lessons.js?q=<?php echo $q?>'></script>";
