@@ -1,4 +1,4 @@
-
+alert(numero_leccion + "lessons");
 var currentLesson = 10;
 
 window.addEventListener("load", function() {
