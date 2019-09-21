@@ -1,4 +1,3 @@
-  alert(numero_leccion + "master");
   const color = [
     "rgb(248, 206, 0)",
     "rgb(237, 112, 41)",
@@ -14,4 +13,4 @@
     svgcolor%= 7;
   }
 
-  document.documentElement.style.setProperty('--lesson', color[svgcolor]);
+  document.documentElement.style.setProperty('--lessons', color[svgcolor]);
