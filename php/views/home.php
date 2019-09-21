@@ -25,11 +25,12 @@
   $lact = "";
 
   if(!empty($_GET["co"])){
-    $results=Connection::request("select Les_Ant , Les_Sig from p070_orden where Co_Orden=".$_GET["co"]);
+    $results=Connection::request("select Co_Tema , Les_Ant , Les_Sig from p070_orden where Co_Orden=".$_GET["co"]);
     if($results->rowCount()>0){
       while($res=$results->fetch(PDO::FETCH_ASSOC)){
         $lant=$res["Les_Ant"];
         $lsig=$res["Les_Sig"];
+        $co_tema = $res["Co_Tema"];
       }
     }
 
@@ -54,6 +55,8 @@
 
   if(isset($_GET["th"])){
     echo "<script>const numero_leccion = ".$_GET["th"].";</script>";
+  }else if(isset($co_tema)){
+    echo "<script>const numero_leccion = ".$co_tema.";</script>";
   }
 ?>
 
@@ -80,9 +83,9 @@
         <a href="#"><span class="hButton B_ayuda">HELP</span></a>
 
         <span class="hButton B_perfil">
-          <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt="Profile Pic">
+          <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt=" Pic">
           <ul>
-            <li><a href="profile.php">PROFILE</a></li>
+            <li id="btnProfile">PROFILE</li>
             <li class="B_exit">EXIT</li>
           </ul>
         </span>
@@ -157,6 +160,7 @@
        $par="'".$_GET["url"]."',".$_GET["co"];
     ?>
     <script type="text/javascript">
+      alert(numero_leccion);
       var se_actual = <?php echo $_SESSION["se_actual"];?>;
       var te_actual = <?php echo $_SESSION["te_actual"];?>;
     </script>
