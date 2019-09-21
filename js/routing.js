@@ -1,4 +1,9 @@
 window.addEventListener("load",function(){
+  //direccionar profile
+  document.getElementById("btnProfile").addEventListener("click",function(){
+    location.href="?url=profile.php";
+  })
+
   //direccionamiento a lessons desde temas
   var btnTheme = document.querySelectorAll("div.roadicon");
   for(var i = 0;i < btnTheme.length; i++) btnTheme[i].addEventListener("click",function(e){
