@@ -1,4 +1,4 @@
-window.addEventListener("load", function() {
+  alert(numero_leccion + "master");
   const color = [
     "rgb(248, 206, 0)",
     "rgb(237, 112, 41)",
@@ -15,4 +15,3 @@ window.addEventListener("load", function() {
   }
 
   document.documentElement.style.setProperty('--lesson', color[svgcolor]);
-});
