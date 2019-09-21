@@ -160,7 +160,7 @@
        $par="'".$_GET["url"]."',".$_GET["co"];
     ?>
     <script type="text/javascript">
-      alert(numero_leccion);
+      if(numero_leccion)alert(numero_leccion);
       var se_actual = <?php echo $_SESSION["se_actual"];?>;
       var te_actual = <?php echo $_SESSION["te_actual"];?>;
     </script>
