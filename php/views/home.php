@@ -25,11 +25,12 @@
   $lact = "";
 
   if(!empty($_GET["co"])){
-    $results=Connection::request("select Les_Ant , Les_Sig from p070_orden where Co_Orden=".$_GET["co"]);
+    $results=Connection::request("select Co_Tema , Les_Ant , Les_Sig from p070_orden where Co_Orden=".$_GET["co"]);
     if($results->rowCount()>0){
       while($res=$results->fetch(PDO::FETCH_ASSOC)){
         $lant=$res["Les_Ant"];
         $lsig=$res["Les_Sig"];
+        $co_tema = $res["Co_Tema"];
       }
     }
 
@@ -54,13 +55,8 @@
 
   if(isset($_GET["th"])){
     echo "<script>const numero_leccion = ".$_GET["th"].";</script>";
-  }else if(isset($_GET["co"])){
-    $resultado = Connection::request("select Co_Tema from p070_orden where Co_Orden = ".$_GET["co"]);
-    if($resultado->rowCount()>0){
-      while($result = $resultado->fetch(PDO::FETCH_ASSOC)){
-        echo "<script>const numero_leccion = ".$result["Co_Tema"].";</script>";
-      }
-    }
+  }else if(isset($co_tema)){
+    echo "<script>const numero_leccion = ".$co_tema.";</script>";
   }
 ?>
 
