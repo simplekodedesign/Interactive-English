@@ -1,4 +1,4 @@
-
+alert(numero_leccion + "lessons");
 var currentLesson = 10;
 
 window.addEventListener("load", function() {
@@ -14,23 +14,14 @@ function lessonsCreator () {
   const svgC = svg.contentDocument;
   const papa = svgC.getElementById('papa');
 
-  let svgcolor = numero_leccion-1;
+  const image = document.getElementById('lessonImage');
 
-  if (svgcolor >= 7) {
-    svgcolor%= 7;
-  }
+  image.setAttribute('src', imgTema);
 
   let l = (nLessons % 2 == 0)? nLessons/2 : parseInt(nLessons/2) + 1;
-  let color = [
-    "rgb(248, 206, 0)",
-    "rgb(237, 112, 41)",
-    "rgb(233, 79, 136)",
-    "rgb(0, 184, 231)",
-    "rgb(0, 123, 191)",
-    "rgb(148, 145, 198)",
-    "rgb(0, 172, 146)"
-  ];
+
   papa.setAttribute('fill', color[svgcolor]);
+
   colorIndex = 0;
   for (let i = 0 ; i < nLessons; i++) {
     lesson = document.createElement("div");

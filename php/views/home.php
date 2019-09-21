@@ -51,6 +51,10 @@
 
   //variable para recargar los js y css
   $q=rand();
+
+  if(isset($_GET["th"])){
+    echo "<script>const numero_leccion = ".$_GET["th"].";</script>";
+  }
 ?>
 
 <!DOCTYPE html>
@@ -157,5 +161,6 @@
       var te_actual = <?php echo $_SESSION["te_actual"];?>;
     </script>
     <script src="../../js/routing.js"></script>
+    <script src="../../js/master.js"></script>
   </body>
 </html>
