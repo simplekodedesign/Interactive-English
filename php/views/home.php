@@ -99,7 +99,9 @@
         if(empty($_GET)){
           // .round((($_SESSION["te_actual"]*100)/18),0).
           echo '
-          <h1 class="roadTitle">LESSONS</h1>
+          <div class="titles">
+            <h1 class="roadTitle">LESSONS</h1>
+          </div>
           <!--<div class="navbar">
             <a hrhef="#" class="button">1 Instructions</a>
             <a hrhef="#" class="button">2 My ID</a>

@@ -2,6 +2,24 @@ section{
   width: 100%;
 }
 
+#retoImage{
+  min-width: 100px;
+}
+
+.titles{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0 50px;
+  margin-top: 50px;
+}
+
+.titles h1{
+  font-size: 2.5em;
+  font-weight: 600;
+  margin: 0;
+}
+
 .lessoncontainer {
   display: grid;
   grid-template-columns: 1fr 1fr;

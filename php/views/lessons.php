@@ -9,8 +9,9 @@
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<section class='main'>";
       echo "<link rel='stylesheet' href='../../css/lessons.css?q=<?php echo $q?'>";
-      $aud=$res["Tx_Url_Aud"];
+      $aud =$res["Tx_Url_Aud"];
       $imgTema = $res["Tx_Url_Img"];
+      $Nb_Tema = $res["Nb_Tema"];
     }
   }
 
@@ -64,6 +65,12 @@
   }
 
   echo "
+  <div class='titles'>
+    <h1>".$Nb_Tema."</h1>
+    <img src='../../img/lessons/reto.svg' alt='Reto' id='retoImage'>
+  </div>
+  <!--<div id='reto'>
+  </div>-->
   <div id='images'>
     <img src='' alt='Lesson image' id='lessonImage'>
     <object type='image/svg+xml' data='../../img/lessons/lessonsb.svg' alt='Lessons' id='svg'></object>
@@ -82,7 +89,7 @@
     var co_orden = ".json_encode($co_orden).";
     var co_juego = ".json_encode($co_juego).";
     var imagenes = ".json_encode($url_img).";
-    var imgTema = '".$imgTema."';    
+    var imgTema = '".$imgTema."';
     var nLessons = nombre_lecciones.length;
   </script>";
 
