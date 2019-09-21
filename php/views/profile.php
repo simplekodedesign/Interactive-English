@@ -33,6 +33,8 @@
     }
   }
 ?>
+<link rel='stylesheet' href='../../css/background.css'>
+<link rel='stylesheet' href='../../css/master.css'>
 <link rel='stylesheet' href='../../css/profile.css'>
 <div class="titles" id='titles'>
     <h1><?php echo $_SESSION["name"]." ".$_SESSION["surname"]?></h1>
@@ -50,7 +52,7 @@
   <div class='gallery'>
     <img src="../../img/perfil/users/avatar1.svg" class='icons' width="auto" height="50px" alt="../../img/perfil/users/avatar1.svg">
     <img src="../../img/perfil/users/avatar2.svg" class='icons' width="auto" height="50px" alt="../../img/perfil/users/avatar2.svg">
-    <img src="../../img/perfil/users/avatar3.webp" class='icons' width="auto" height="50px" alt="../../img/perfil/users/avatar3.webp">
+    <img src="../../img/perfil/users/avatar3.svg" class='icons' width="auto" height="50px" alt="../../img/perfil/users/avatar3.webp">
     <img src="../../img/perfil/users/avatar4.svg" class='icons' width="auto" height="50px" alt="../../img/perfil/users/avatar4.svg">
     <img src="../../img/perfil/users/avatar5.svg" class='icons' width="auto" height="50px" alt="../../img/perfil/users/avatar5.svg">
   </div>
