@@ -83,9 +83,9 @@
         <a href="#"><span class="hButton B_ayuda">HELP</span></a>
 
         <span class="hButton B_perfil">
-          <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt="Profile Pic">
+          <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt=" Pic">
           <ul>
-            <li><a href="profile.php">PROFILE</a></li>
+            <li id="btnProfile">PROFILE</li>
             <li class="B_exit">EXIT</li>
           </ul>
         </span>
