@@ -54,6 +54,13 @@
 
   if(isset($_GET["th"])){
     echo "<script>const numero_leccion = ".$_GET["th"].";</script>";
+  }else if(isset($_GET["co"])){
+    $resultado = Connection::request("select Co_Tema from p070_orden where Co_Orden = ".$_GET["co"]);
+    if($resultado->rowCount()>0){
+      while($result = $resultado->fetch(PDO::FETCH_ASSOC)){
+        echo "<script>const numero_leccion = ".$result["Co_Tema"].";</script>";
+      }
+    }
   }
 ?>
 
@@ -157,6 +164,7 @@
        $par="'".$_GET["url"]."',".$_GET["co"];
     ?>
     <script type="text/javascript">
+      alert(numero_leccion);
       var se_actual = <?php echo $_SESSION["se_actual"];?>;
       var te_actual = <?php echo $_SESSION["te_actual"];?>;
     </script>
