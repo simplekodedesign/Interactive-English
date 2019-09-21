@@ -1,18 +1,19 @@
-@import url("../myriad-pro-cufonfonts-webfont/font.css");
 
 * {
   box-sizing: border-box;
 }
 
-/*
-#FFFF00 Amarillo
-*/
+#titles {
+  color: black;
+  align-self: flex-start;
+}
 
 .container {
   height: 260px;
   width: 650px;
   display: grid;
   grid-template-columns: .25fr .75fr;
+  align-self: flex-start;
 }
 
 .profilePics {
@@ -23,9 +24,10 @@
 }
 
 .pic {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  /* background-color: gray; */
 
   display: flex;
   justify-content: center;
@@ -53,7 +55,7 @@
   width: 125px;
   height: 125px;
   top: 25px;
-  left: 5px;
+  left: 25px;
 }
 
 .profileInf > table {
@@ -61,12 +63,18 @@
 }
 
 .profileInf .variable {
+  font-family: "Myriad Pro Bold";
   text-align: end;
 }
 
 .profileInf .value > input {
+  font-family: "Myriad Pro Bold";
   border-radius: 5px;
   border: none;
   box-shadow: none;
   padding: 2px 5px;
+}
+
+.lessonButton {
+  color: black;
 }

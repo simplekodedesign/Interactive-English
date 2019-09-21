@@ -1,4 +1,4 @@
-var currentLesson = 10;
+// var currentLesson = 10;
 
 window.addEventListener("load", function() {
   lessonsCreator();
