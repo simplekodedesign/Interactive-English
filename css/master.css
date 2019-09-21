@@ -401,7 +401,7 @@ footer p{
   font-size: 1em;
   margin: auto;
   width: 30%;
-  border-bottom: 1px solid var(--lessons);
+  border-bottom: 2px solid var(--lessons);
 }
 
 .itemCon{

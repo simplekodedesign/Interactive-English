@@ -29,7 +29,7 @@
 	font-size: 4em;
 	font-weight: bold;
 	cursor: pointer;
-    text-align: center;
+  text-align: center;
 	transform: scale(0,0);
 	-webkit-transition: all 1s;
 	-o-transition: all 1s;
@@ -39,7 +39,6 @@
 
 .write{
 	text-align: center;
-	border: 0;
 	border-radius: 5px;
 	margin: auto;
 	width: 70%;
