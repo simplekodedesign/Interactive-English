@@ -4,6 +4,11 @@ window.addEventListener("load",function(){
     location.href="?url=profile.php";
   })
 
+  //direccionar a EXIT
+  document.getElementById("btnExit").addEventListener("click",function(){
+    location.href="../controller/exit.php";
+  })
+
   //direccionamiento a lessons desde temas
   var btnTheme = document.querySelectorAll("div.roadicon");
   for(var i = 0;i < btnTheme.length; i++) btnTheme[i].addEventListener("click",function(e){

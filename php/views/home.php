@@ -86,7 +86,7 @@
           <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt=" Pic">
           <ul>
             <li id="btnProfile">PROFILE</li>
-            <li class="B_exit">EXIT</li>
+            <li class="B_exit" id="btnExit">EXIT</li>
           </ul>
         </span>
 
