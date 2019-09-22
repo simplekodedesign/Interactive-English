@@ -61,13 +61,13 @@
   $url = "#";
   if($_SESSION["te_actual"]>$_GET["th"] || ($_SESSION["te_actual"]==$temaReto&&$_SESSION["se_actual"]>$totalLec&&$stReto=='A')){
       $op = 0;
-      $url = "php/views/challenge.php?ini=".$iniTema."&end=".$totalLec."&th=".$_GET["th"];
+      $url = "challenge.php?ini=".$iniTema."&end=".$totalLec."&th=".$_GET["th"];
   }
 
   echo "
   <div class='titles'>
     <h1>".$Nb_Tema."</h1>
-    <img src='../../img/lessons/reto.svg' alt='Reto' id='retoImage'>
+    <a href='".$url."'><img src='../../img/lessons/reto.svg' alt='Reto' id='retoImage'></a>
   </div>
   <!--<div id='reto'>
   </div>-->

@@ -39,7 +39,7 @@
     if(!isset($_SESSION["reto"])){
       $lsig=urlBtnSig($_GET["co"],$lsig);
     }else if(!empty($_GET["ini"])&&!empty($_GET["end"])){
-      $lsig="php/views/challenge.php?ini=".$_GET["ini"]."&end=".$_GET["end"]."&th=".$_GET["th"];
+      $lsig="challenge.php?ini=".$_GET["ini"]."&end=".$_GET["end"]."&th=".$_GET["th"];
     }else{
       if(isset($_SESSION["reto"]))unset($_SESSION["reto"]);
       if(isset($_SESSION["reto_aplicado"]))unset($_SESSION["reto_aplicado"]);
@@ -162,7 +162,6 @@
        $par="'".$_GET["url"]."',".$_GET["co"];
     ?>
     <script type="text/javascript">
-      // if(numero_leccion)alert(numero_leccion);
       var se_actual = <?php echo $_SESSION["se_actual"];?>;
       var te_actual = <?php echo $_SESSION["te_actual"];?>;
     </script>
