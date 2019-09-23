@@ -21,7 +21,7 @@
     }
     if($co==$end&&$_SESSION["se_actual"]>$end&&$_SESSION["te_actual"]==$coTema){
         if(!isset($_SESSION["reto"]))$_SESSION["reto"]=0;
-        return "php/views/challenge.php?ini=".$ini."&end=".$end."&th=".$coTema;
+        return "challenge.php?ini=".$ini."&end=".$end."&th=".$coTema;
     }else{
       return $lsig;
     }

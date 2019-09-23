@@ -24,7 +24,7 @@
     $results=Connection::request("select Les_Sig from p070_orden where Co_Orden=".($_SESSION["se_actual"]-1));
     if($results->rowCount()>0){
       while($res=$results->fetch(PDO::FETCH_ASSOC)){
-        echo "<script>location='../../home.php".$res["Les_Sig"]."'</script>";
+        echo "<script>location='home.php".$res["Les_Sig"]."'</script>";
       }
     }
   }else{
@@ -66,7 +66,7 @@
     $_SESSION["reto_aplicado"][]=$coa;
 
     echo "<script>
-        location='../../home.php?url=Lessons/".$nbJuego."/index.php&co=".$coa."&ini=".$_GET["ini"]."&end=".$_GET["end"]."&th=".$_GET["th"]."'
+        location='home.php?url=../../Lessons/".$nbJuego."/index.php&co=".$coa."&ini=".$_GET["ini"]."&end=".$_GET["end"]."&th=".$_GET["th"]."'
     </script>";
   }
 ?>
