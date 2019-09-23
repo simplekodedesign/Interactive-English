@@ -56,12 +56,14 @@
         if($results->rowCount()>0){
           $_SESSION["nu_lec_aprob"]=0;
         }
+
         $results=Connection::request("select Co_Bitacora from t010_bitacora where Co_Usuario=".$_SESSION["co_usuario"]);
         if($results->rowCount()>0){
           while($res=$results->fetch(PDO::FETCH_ASSOC)){
             $_SESSION["co_bit"]=$res["Co_Bitacora"];
           }
         }
+
         //Revisar si es necesario activar algun reto al usuario
         $results=Connection::request("select Fe_Ejecucion from t040_retos where Co_Usuario=".$_SESSION["co_usuario"]);
         if($results->rowCount()>0){
