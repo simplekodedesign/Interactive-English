@@ -36,53 +36,80 @@
         </div>
 
 
-
-        <div class='cont_abc' id='cont_all'>
-
-        <div class='pics' id='profilePic'>
-        <img src='".$photo."' width='auto' height='100px' alt='Profile picture' id='userIconProfile'>
-        <span class='lessonButton' id='pPicture'>Your picture</span>
-
-        <div class='gallery'>
-          <img src='../../img/perfil/users/man1.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/man1.svg'>
-          <img src='../../img/perfil/users/man2.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/man2.svg'>
-          <img src='../../img/perfil/users/man3.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/man3.webp'>
-          <img src='../../img/perfil/users/man4.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/man4.svg'>
-          <img src='../../img/perfil/users/woman1.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman1.svg'>
-          <img src='../../img/perfil/users/woman2.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman2.svg'>
-          <img src='../../img/perfil/users/woman3.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman3.svg'>
-          <img src='../../img/perfil/users/woman4.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman4.svg'>
-          <img src='../../img/perfil/users/woman5.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman5.svg'>
-          <img src='../../img/perfil/users/woman6.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman6.svg'>
-        </div>
-        </div>
-
-        <div class='Info'>
-        <div class='col'>
-            <label class='labels' for='firstname'>Firstname</label>
-            <label class='labels' for='lastname'>Lastname</label>
-            <label class='labels' for='parent'>Parent</label>
-            <label class='labels' for='birth'>Birth date</label>
-            <label class='labels' for='name'>Email</label>
-            <label class='labels' for='OldPassword'>Old password</label>
-            <label class='labels' for='NewPassword'>New password</label>
-            <label class='labels' for='RepeatNewPassword'>Repeat new password</label>
-        </div>
-        <div class='col' id='personalData'>
-            <div class= 'input'><input type='text' placeholder='Firstname' class='write' id='firstname' disabled value='".$_SESSION['name']."'></div>
-            <div class= 'input'><input type='text' placeholder='lastname' class='write' id='lastname' disabled value='".$_SESSION['surname']."'></div>
-            <div class= 'input'><input type='text' placeholder='Parent' class='write' id='parent' disabled value='".$parent."'></div>
-            <div class= 'input'><input type='text' placeholder='birth' class='write' id='birth' disabled value='".$birth."'></div>
-            <div class= 'input'><input type='email' placeholder='email' class='write' id='email' disabled value='".$email."'></div>
-            <div class= 'input'><input type='password' placeholder='Old password' class='write' id='OldPassword'></div>
-            <div class= 'input'><input type='password' placeholder='New password' class='write' id='NewPassword'></div>
-            <div class= 'input'><input type='password' placeholder='New password' class='write' id='RepeatNewPassword'></div>
-        </div>
-        </div>
-        </div>
-
-        <div class='buttons'>
-        <span class='lessonButton' id='save' onclick='updateProfile()'>save</span>
-        </div>
-
-        <script type='text/javascript' src='../../js/profile.js'></script>";
+          <div class='container'>
+            <div class='profilePics'>
+              <div class='pic'>
+                <img src='../../img/perfil/users/avatar1.svg' alt=''>
+              </div>
+              <div class='pic'>
+                <img src='../../img/perfil/users/avatar2.svg' alt=''>
+              </div>
+              <div class='pic'>
+                <img src='../../img/perfil/users/avatar3.svg' alt=''>
+              </div>
+              <div class='pic'>
+                <img src='../../img/perfil/users/avatar4.svg' alt=''>
+              </div>
+              <div class='pic'>
+                <img src='../../img/perfil/users/avatar5.svg' alt=''>
+              </div>
+              <div class='pic'>
+                <img src='../../img/perfil/users/avatar6.svg' alt=''>
+              </div>
+              <div class='pic'>
+                <img src='../../img/perfil/users/avatar7.svg' alt=''>
+              </div>
+              <div class='pic'>
+                <img src='../../img/perfil/users/avatar8.svg' alt=''>
+              </div>
+              <div class='pic'>
+                <img src='../../img/perfil/users/avatar9.svg' alt=''>
+              </div>
+              <div class='pic'>
+                <img src='../../img/perfil/users/avatar10.svg' alt=''>
+              </div>
+            </div>
+            <div class='profileInf'>
+              <div id='selectedPic' class='pic'>
+                <img src='".$photo."' alt=''>
+              </div>
+              <table>
+                <tr>
+                  <td class='variable'>First Name:</td>
+                  <td class='value'><input type='text' name='FirstName' id='firstname' disabled value='".$_SESSION['name']."'></td>
+                </tr>
+                <tr>
+                  <td class='variable'>Last Name:</td>
+                  <td class='value'><input type='text' name='LastName' id='lastname' disabled value='".$_SESSION['surname']."'></td>
+                </tr>
+                <tr>
+                  <td class='variable'>Parent:</td>
+                  <td class='value'><input type='text' name='Parent' id='parent' disabled value='".$parent."'></td>
+                </tr>
+                <tr>
+                  <td class='variable'>Birth Date:</td>
+                  <td class='value'><input type='text' name='Birth' id='birth' disabled value='".$birth."'></td>
+                </tr>
+                <tr>
+                  <td class='variable'>Email:</td>
+                  <td class='value'><input type='text' name='Email' id='email' disabled value='".$email."'></td>
+                </tr>
+                <tr>
+                  <td class='variable'>Old Password:</td>
+                  <td class='value'><input type='text' name='OldPassword' id='OldPassword'></td>
+                </tr>
+                <tr>
+                  <td class='variable'>New Password:</td>
+                  <td class='value'><input type='text' name='NewPassword' id='NewPassword'></td>
+                </tr>
+                <tr>
+                  <td class='variable'>Repeat Password:</td>
+                  <td class='value'><input type='text' name='RepeatPassword' id='RepeatNewPassword'></td>
+                </tr>
+              </table>
+            </div>
+            <div class='buttons'>
+              <span class='lessonButton' id='save' onclick='updateProfile()'>save</span>
+            </div>
+          </div>
+          <script type='text/javascript' src='../../js/profile.js'></script>";
