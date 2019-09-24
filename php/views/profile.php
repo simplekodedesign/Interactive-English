@@ -37,22 +37,23 @@
 
 
 
-        <!--<div class='cont_abc' id='cont_all'>
+        <div class='cont_abc' id='cont_all'>
 
         <div class='pics' id='profilePic'>
         <img src='".$photo."' width='auto' height='100px' alt='Profile picture' id='userIconProfile'>
         <span class='lessonButton' id='pPicture'>Your picture</span>
 
         <div class='gallery'>
-          <img src='../../img/perfil/users/avatar1.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/avatar1.svg'>
-          <img src='../../img/perfil/users/avatar2.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/avatar2.svg'>
-          <img src='../../img/perfil/users/avatar3.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/avatar3.webp'>
-          <img src='../../img/perfil/users/avatar4.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/avatar4.svg'>
-          <img src='../../img/perfil/users/avatar5.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/avatar5.svg'>
-          <img src='../../img/perfil/users/avatar6.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/avatar6.svg'>
-          <img src='../../img/perfil/users/avatar7.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/avatar7.svg'>
-          <img src='../../img/perfil/users/avatar9.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/avatar8.svg'>
-          <img src='../../img/perfil/users/avatar10.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/avatar9.svg'>
+          <img src='../../img/perfil/users/man1.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/man1.svg'>
+          <img src='../../img/perfil/users/man2.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/man2.svg'>
+          <img src='../../img/perfil/users/man3.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/man3.webp'>
+          <img src='../../img/perfil/users/man4.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/man4.svg'>
+          <img src='../../img/perfil/users/woman1.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman1.svg'>
+          <img src='../../img/perfil/users/woman2.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman2.svg'>
+          <img src='../../img/perfil/users/woman3.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman3.svg'>
+          <img src='../../img/perfil/users/woman4.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman4.svg'>
+          <img src='../../img/perfil/users/woman5.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman5.svg'>
+          <img src='../../img/perfil/users/woman6.svg' class='icons' width='auto' height='50px' alt='../../img/perfil/users/woman6.svg'>
         </div>
         </div>
 
