@@ -40,25 +40,25 @@
 
   <img src="img/C21logo.svg" alt="Logo" id="logo">
 
-  
+
   <section id="login">
     <form action="php/controller/login.php" method="post" autocomplete="off">
       <h1>Ingresa</h1>
       <div>
         <span class="barcolor"></span>
-        <input type="text" name="user" id="username" class="formInput">
+        <input type="text" name="user" id="username" placeholder="&nbsp;" class="formInput">
         <label for="username" id="usernameLabel" class="inputLabel">Usuario</label>
       </div>
       <div>
         <span class="barcolor"></span>
-        <input type="password" name="pass" id="password" class="formInput">
+        <input type="password" name="pass" id="password" placeholder="&nbsp;" class="formInput">
         <label for="password" id="usernamepass" class="inputLabel">Contraseña</label>
       </div>
       <input type="submit" value="Ingresar" id="submit">
     </form>
     <p id="forgot">¿Olvidaste tú contraseña?</p>
   </section>
-  
+
   <div id="forgotForm">
     <div class="mainLog forgotScreen">
       <h2 class="title">Has olvidado la contraseña</h2>
@@ -68,9 +68,9 @@
           <label for="usernamepassRec" id="usernamepassRecLabel" class="inputLabel">Nombre de Usuario</label>
           <span class="barcolor"></span>
         </div>
-        
+
         <span class="siguiente span">Aceptar</span>
-        
+
         <div>
           <input type="text" name="codigo" id="codigo" class="formInput" disabled>
           <label for="codigo" id="usernameLabel" class="inputLabel">Código de reactivación</label>

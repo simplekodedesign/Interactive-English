@@ -78,7 +78,7 @@ section{
   min-height: 90vh;
   z-index: 2;
 }
-  
+
 section form {
   background-color: hsla(0, 100%, 100%, 0.5);
   border-radius: 30px;
@@ -98,13 +98,13 @@ section form {
   /* max-width: 500px;
   max-height: 800px; */
 }
-  
+
 section p{
   width: 100%;
   color: var(--primary);
   text-align: center;
 }
-  
+
 form div {
   display: flex;
   flex-direction: column;
@@ -115,11 +115,11 @@ form div {
   position: relative;
   margin: 30px 0;
 }
-  
+
 form h1{
   margin: 0;
 }
-  
+
 .barcolor {
   display: block;
   position: absolute;
@@ -133,20 +133,20 @@ form h1{
   transform-origin: left bottom;
   transition: .3s ease;
 }
-  
+
 div label {
   font-size: 125%;
   width: 100%;
   position: absolute;
   bottom: 3px;
 }
-  
+
 label {
   margin: 0;
   display: block;
   cursor: pointer;
 }
-  
+
 .formInput {
   background-color: rgba(0, 0, 0, 0);
   border: none;
@@ -159,15 +159,19 @@ label {
   color: rgb(0, 0, 0);
   cursor: pointer;
 }
-  
+
 .inputLabel {
   transition: .3s ease;
 }
-  
+
 .formInput:focus + .inputLabel{
   transform: translate(0, -30px);
 }
-  
+
+.formInput:not(:placeholder-shown) + .inputLabel{
+  transform: translate(0, -30px);
+}
+
 #submit, .siguiente {
   text-align: center;
   width: 150px;
@@ -179,11 +183,11 @@ label {
   cursor: pointer;
   border: none;
 }
-  
+
 #submit:hover, .siguiente:hover {
   background-color: hsl(30, 80%, 60%);
 }
-  
+
 #submit:focus, .siguiente:focus {
   background-color: hsl(30, 100%, 40%);
 }

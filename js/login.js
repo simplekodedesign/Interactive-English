@@ -1,9 +1,9 @@
-var forgot = document.getElementById("forgot");
-var forgotForm = document.getElementById("forgotForm");
-var next = (document.getElementsByClassName("siguiente"))[0];
-var inputs = document.getElementsByClassName("formInput");
+const forgot = document.getElementById("forgot");
+const forgotForm = document.getElementById("forgotForm");
+const next = (document.getElementsByClassName("siguiente"))[0];
+const inputs = document.getElementsByClassName("formInput");
 var co_usuario=undefined;
-var comenzar = document.getElementById("comenzar");
+const comenzar = document.getElementById("comenzar");
 
 window.addEventListener("load", function() {
 
@@ -30,14 +30,6 @@ window.addEventListener("load", function() {
     xhttp.send();
   });
 
-    
-
-  for (var i = 0; i < inputs.length; i++) {
-    inputs[i].addEventListener("focusin", onfocus);
-    inputs[i].addEventListener("focusout", nonfocus);
-  }
-
-
   forgot.addEventListener("click", function() {
       forgotForm.style.display = "flex";
       (document.getElementsByTagName("body"))[0].style.overflow = "hidden";
@@ -55,20 +47,6 @@ window.addEventListener("load", function() {
     document.getElementById("login").style.setProperty("display", "flex");
   });
 });
-
-
-function onfocus () {
-  if(this.value == ""){
-    (this.parentElement.getElementsByClassName("inputLabel"))[0].style.transform = "translate(0, -30px)";
-  }
-  (this.parentElement.getElementsByClassName("barcolor"))[0].style.transform = "scale(1,1)";
-}
-
-var nonfocus = function () {
-  if(this.value == "")(this.parentElement.getElementsByClassName("inputLabel"))[0].style.transform = "translate(0, 0px)";
-  (this.parentElement.getElementsByClassName("barcolor"))[0].style.transform = "scale(0,1)";
-}
-
 
 // var remeb = function() {
 //   alert("bu");
