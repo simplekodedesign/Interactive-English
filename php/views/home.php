@@ -74,11 +74,14 @@
       <div class="navbar">
         <a href="home.php"><span class="hButton B_lecciones">LESSONS</span></a>
         <span class="hButton B_herr">
-          <span>TRANSLATOR</span>
-          <!-- <ul>
-            <li>INSTRUCTIONS</li>
-            <li>TRANSLATOR</li>
-          </ul> -->
+          <span id="translator">TRANSLATOR</span>
+
+        </span>
+        <span class="hButton B_ayuda">HELP
+          <ul>
+            <li>CONTACT</li>
+            <li id="gifButton">INSTRUCTIONS</li>
+          </ul>
         </span>
         <a href="#"><span class="hButton B_ayuda">HELP</span></a>
 
@@ -101,6 +104,7 @@
           echo '
           <div class="titles">
             <h1 class="roadTitle">LESSONS</h1>
+            <h1 class="roadTitle"></h1>
           </div>
           <!--<div class="navbar">
             <a hrhef="#" class="button">1 Instructions</a>

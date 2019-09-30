@@ -39,34 +39,34 @@
           <div class='container'>
             <div class='profilePics'>
               <div class='pic'>
-                <img src='../../img/perfil/users/avatar1.svg' alt=''>
+                <img src='../../img/perfil/users/man1.svg' alt=''>
               </div>
               <div class='pic'>
-                <img src='../../img/perfil/users/avatar2.svg' alt=''>
+                <img src='../../img/perfil/users/man2.svg' alt=''>
               </div>
               <div class='pic'>
-                <img src='../../img/perfil/users/avatar3.svg' alt=''>
+                <img src='../../img/perfil/users/man3.svg' alt=''>
               </div>
               <div class='pic'>
-                <img src='../../img/perfil/users/avatar4.svg' alt=''>
+                <img src='../../img/perfil/users/man4.svg' alt=''>
               </div>
               <div class='pic'>
-                <img src='../../img/perfil/users/avatar5.svg' alt=''>
+                <img src='../../img/perfil/users/woman1.svg' alt=''>
               </div>
               <div class='pic'>
-                <img src='../../img/perfil/users/avatar6.svg' alt=''>
+                <img src='../../img/perfil/users/woman2.svg' alt=''>
               </div>
               <div class='pic'>
-                <img src='../../img/perfil/users/avatar7.svg' alt=''>
+                <img src='../../img/perfil/users/woman3.svg' alt=''>
               </div>
               <div class='pic'>
-                <img src='../../img/perfil/users/avatar8.svg' alt=''>
+                <img src='../../img/perfil/users/woman4.svg' alt=''>
               </div>
               <div class='pic'>
-                <img src='../../img/perfil/users/avatar9.svg' alt=''>
+                <img src='../../img/perfil/users/woman5.svg' alt=''>
               </div>
               <div class='pic'>
-                <img src='../../img/perfil/users/avatar10.svg' alt=''>
+                <img src='../../img/perfil/users/woman6.svg' alt=''>
               </div>
             </div>
             <div class='profileInf'>

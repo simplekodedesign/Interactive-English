@@ -84,7 +84,7 @@
   </div>
 
   <footer>
-    <p><b>Capacitese 21 English</b> es una nueva forma fácil y sencilla que lo llevará de la mano a aprender inglés, le abrira muchas puertas en el futuro y lo paseará por nuevos mundos y posibilidades</p>
+    <p><b>C21 English</b> es una nueva forma fácil y sencilla que lo llevará de la mano a aprender inglés, le abrira muchas puertas en el futuro y lo paseará por nuevos mundos y posibilidades</p>
   </footer>
 
     <!-- <script src="mainJS.js"></script> -->
