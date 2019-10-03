@@ -74,13 +74,15 @@
       <div class="navbar">
         <a href="home.php"><span class="hButton B_lecciones">LESSONS</span></a>
         <span class="hButton B_herr">
-          <span>TRANSLATOR</span>
-          <!-- <ul>
-            <li>INSTRUCTIONS</li>
-            <li>TRANSLATOR</li>
-          </ul> -->
+          <span id="translator">TRANSLATOR</span>
+          
         </span>
-        <a href="#"><span class="hButton B_ayuda">HELP</span></a>
+        <span class="hButton B_ayuda">HELP
+          <ul>
+            <li>CONTACT</li>
+            <li id="gifButton">INSTRUCTIONS</li>
+          </ul>
+        </span>
 
         <span class="hButton B_perfil">
           <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt=" Pic">
@@ -137,15 +139,17 @@
         ';
         }else{
           include($_GET["url"]);
-          // echo "<div id='helpgif'>
-          //   <div class='x' id='close'>
-          //     <div class='line' id='b6'></div>
-          //     <div class='line' id='b7'></div>
-          //   </div>
-          //   <div class='flexcont'>
-          //     <img src='".$gift."' width='70%' height='auto' alt='Help'>
-          //   </div>
-          // </div>";
+          if($_GET["co"]) {
+            echo "<div class='helpgif' id='helpgif'>
+              <div class='exitButton' id='exitButtonGif'>
+                <div class='line'></div>
+                <div class='line'></div>
+              </div>
+              <div class='flexcont'>
+                <img src='".$gift."' width='70%' height='auto' alt='Help'>
+              </div>
+            </div>";
+          }
         }
       ?>
     </section>
@@ -161,6 +165,26 @@
       }
        $par="'".$_GET["url"]."',".$_GET["co"];
     ?>
+    <div class="translatorScreen" id="translatorScreen">
+      <div class="exitButton" id="exitButton">
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+
+      <div class="translateDiv">
+        <div class="areasContainer">
+          <textarea name="" id="txtFrom"></textarea>
+          <textarea name="" id="txtTo"></textarea>
+        </div>
+        <div class="radiobut">
+          <input type="radio" name="option" id="checkEsEn" value="es-en">Español a Inglés
+        </div>
+        <div class="radiobut">
+          <input type="radio" name="option" id="checkEnEs" value="en-es" checked>Inglés a Español
+        </div>
+        <button onclick="getTranslate()">Traducir/Translate</button>
+      </div>
+    </div>
     <script type="text/javascript">
       var se_actual = <?php echo $_SESSION["se_actual"];?>;
       var te_actual = <?php echo $_SESSION["te_actual"];?>;

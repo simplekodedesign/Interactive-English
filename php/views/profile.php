@@ -36,7 +36,7 @@
         </div>
 
 
-          <div class='container'>
+          <div class='container' id='profileScreen'>
             <div class='profilePics'>
               <div class='pic'>
                 <img src='../../img/perfil/users/man1.svg' alt=''>

@@ -164,6 +164,10 @@ header img{
   box-shadow: none;
 }
 
+#gifButton {
+  display: none;
+}
+
 .avatar{
   align-self: center;
   margin-left: 10px;
@@ -406,4 +410,121 @@ footer p{
 
 .itemCon{
   background-color: var(--lessons);
+}
+
+/*-------------------------------Translator Screen---------------------*/
+
+.translatorScreen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.459);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.translator-activated {
+  display: flex;
+}
+
+.translateDiv {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  background-color: hsl(205, 100%, 49%);
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.translateDiv button {
+  width: 150px;
+  margin-top: 30px;
+  border-radius: 12px;
+  background-color: #ff7700;
+  box-shadow: none;
+  align-self: center;
+  border: none;
+}
+
+.translateDiv button:hover {
+  background-color: hsl(30, 80%, 60%);
+}
+
+.translateDiv button:focus {
+  background-color: hsl(30, 100%, 40%);
+}
+
+.areasContainer {
+  width: 100%;
+  height: auto;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 15px;
+  margin-bottom: 30px;
+}
+
+.areasContainer textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  border-radius: 10px;
+}
+
+.exitButton {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  margin: 5px;
+  background-color: red;
+}
+.exitButton > .line:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 1px);
+}
+
+.exitButton > .line:nth-child(2) {
+  transform: rotate(-45deg) translate(7px, 2px);
+}
+
+
+/*-----------------------------GIF------------------------------------*/
+
+#helpgif{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  align-content: center;
+  justify-content: center;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.helpgif {
+  display: none;
+}
+
+.helpgif-activated {
+  display: flex;
+}
+
+.flexcont{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

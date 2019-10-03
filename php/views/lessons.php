@@ -85,7 +85,7 @@
   echo "</section>";
 
   echo "<script type='text/javascript'>
-    var nombre_lecciones = ".json_encode($Nb_Lesson).";
+    nombre_lecciones = ".json_encode($Nb_Lesson).";
     var co_orden = ".json_encode($co_orden).";
     var co_juego = ".json_encode($co_juego).";
     var imagenes = ".json_encode($url_img).";
