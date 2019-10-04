@@ -58,6 +58,13 @@
   }else if(isset($co_tema)){
     echo "<script>const numero_leccion = ".$co_tema.";</script>";
   }
+
+  //variable del reto recien activado
+  if(isset($_SESSION["reto_actual"])){
+    echo "<script>
+            var reto_actual = ".$_SESSION["reto_actual"]."
+          </script>";
+  }
 ?>
 
 <!DOCTYPE html>
