@@ -1,4 +1,4 @@
-var currentLesson = 10;
+
 
 window.addEventListener("load", function() {
   lessonsCreator();
@@ -33,6 +33,8 @@ function lessonsCreator () {
     lesson.classList.add("lesson");
     if(i >= currentLesson){
       lesson.classList.add("inactive");
+    } else {
+      lesson.addEventListener("click", rout);
     }
     if ((i+1) == currentLesson) {
       lesson.classList.add("current");
@@ -56,7 +58,9 @@ function lessonsCreator () {
     lesson.appendChild(img);
 
     lesson.style.setProperty("--color", color[colorIndex]);
-    lesson.addEventListener("click", rout);
+    // if(!(i >= currentLesson)){
+    //   lesson.addEventListener("click", rout);
+    // }
 
     if (i < l) {
       left.appendChild(lesson);
