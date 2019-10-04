@@ -231,6 +231,9 @@ section{
   color: var(--primary);
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
 }
 
 .titles h1{
@@ -239,7 +242,6 @@ section{
 }
 
 section .roadTitle{
-  transform: translate(-330px,0);
   color: var(--secondary);
   font-size: 2em;
 }
