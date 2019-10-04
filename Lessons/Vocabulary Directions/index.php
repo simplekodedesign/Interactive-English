@@ -11,7 +11,7 @@
     }
   }
   echo "
-  <link rel='stylesheet' href='Lessons\Vocabulary Directions\style.css?q=".$q."'>
+  <link rel='stylesheet' href='../../Lessons\Vocabulary Directions\style.css?q=".$q."'>
 
     <div class='playgroundContainer'>
         <div class='playground' id='container'>
@@ -237,7 +237,7 @@
             <img src='' alt='' id='eximg'>
         </div>
     </div>
-  <script type='text/javascript' src='Lessons\Vocabulary Directions\Javascript.js?q=".$q."'></script>
+  <script type='text/javascript' src='../../Lessons\Vocabulary Directions\Javascript.js?q=".$q."'></script>
   <script src='https://kit.fontawesome.com/4e8565b5f0.js'></script>
   ";
 ?>
