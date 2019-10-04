@@ -183,7 +183,7 @@ function validate_cord_48(){
 	if(text=="brewster")text="rooster";
 	if(text=="chad"||text=="shug"||text=="charter"||text=="sure")text="shark";
 	if(text=="warm"||text=="warren"||text=="quorum"||text=="war")text="worm";
-  if(text=="robbie"||text=="driving"||text=="private"||text=="ravi"||text=="gravid"||text=="crabby")text="rabbit";
+  	if(text=="robbie"||text=="driving"||text=="private"||text=="ravi"||text=="gravid"||text=="crabby")text="rabbit";
 	if(text=="miles")text="mouse";
 	if(text=="sia"||text=="co")text="seal";
 	if(text=="doug")text="duck";

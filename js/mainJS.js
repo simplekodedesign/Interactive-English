@@ -146,6 +146,7 @@ var translatescreen = document.getElementById("translatorScreen");
 
 //Functión para activar el traductor, cargada al evento load de Window
 var translate = function () {
+  alert("HIHIHIH");
   translatescreen.classList.toggle("translator-activated");
   if(translatescreen.classList[1] == 'translator-activated') {
     translatescreen.parentElement.style.overflow = "hidden";
