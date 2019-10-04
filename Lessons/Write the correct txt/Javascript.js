@@ -5,14 +5,16 @@ window.addEventListener("load",function(){
 	document.getElementById("btnListen").addEventListener("click",function(){
 		document.getElementById("aud").play();
 	})
-	document.getElementById("write").addEventListener("keyup",function(e){
-		if(e.keyCode == 13){
-			validate_with_split();
-		}
-	})
+	document.getElementById("write").addEventListener("keyup", key);
 
 	document.getElementById("btncheck").addEventListener("click",validate_with_split);
 })
+
+function key (e) {
+	if(e.keyCode == 13){
+		validate_with_split();
+	}
+}
 
 function actual(){
 	document.getElementById("number").innerHTML=text[pos];
@@ -29,6 +31,8 @@ function validate_with_split(){
 			pos++;
 			b=1;
 			if(pos>=text.length){
+				document.getElementById("write").removeEventListener("keyup", key);
+				document.getElementById("btncheck").removeEventListener("click",validate_with_split);
 				victoryMessage();
 			}else{
 				actual();

@@ -145,7 +145,7 @@ header img{
 }
 
 .B_perfil > ul > li:nth-child(2) {
-  background-color: var(--cyan);
+  background-color: var(--orange);
 }
 
 .B_ayuda li:nth-child(1) {
