@@ -62,7 +62,7 @@
   //variable del reto recien activado
   if(isset($_SESSION["reto_actual"])){
     echo "<script>
-            var reto_actual = ".$_SESSION["reto_actual"]."
+            var reto_actual = ".$_SESSION["reto_actual"].";
           </script>";
   }
 ?>
@@ -73,6 +73,7 @@
     <meta charset="utf-8">
     <title>Main</title>
     <link rel="stylesheet" href="../../css/master.css?q=<?php echo $q?>">
+    <link rel="stylesheet" href="../../css/lessons.css?q=<?php echo $q?>">
     <link rel="stylesheet" href="../../css/home.css?q=<?php echo $q?>">
   </head>
   <body>

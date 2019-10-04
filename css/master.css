@@ -479,8 +479,8 @@ footer p{
   flex-direction: column;
   flex-wrap: nowrap;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: calc(8vh + 10px);
+  right: 35px;
   cursor: pointer;
 }
 
@@ -491,7 +491,7 @@ footer p{
   background-color: red;
 }
 .exitButton > .line:nth-child(1) {
-  transform: rotate(45deg) translate(10px, 1px);
+  transform: rotate(45deg) translate(11px, 1px);
 }
 
 .exitButton > .line:nth-child(2) {
