@@ -30,20 +30,25 @@ function constWorld(){
     container.appendChild(img)
 
     let card = document.createElement("div")
+    let cardF = document.createElement("p")
     card.setAttribute("class", "itemField")
     card.setAttribute("id", source)
+    cardF.innerHTML= source
+    card.appendChild(cardF)
     field[0].appendChild(card)
+
+
   }
 }
 
 
 function dropItem() {
-  let src = this.target.firstElementChild.getAttribute("src")
+  let src = this.target.getAttribute("src")
   var boundsBefore, boundsAfter
   source = cleaningurl(src)
-  if (this.hitTest("#"+src[0])){
+  if (this.hitTest("#"+source)){
       boundsBefore = this.target.getBoundingClientRect();
-      $(this.target).appendTo('#'+src[0]);
+      $(this.target).appendTo('#'+source);
       boundsAfter = this.target.getBoundingClientRect();
       TweenMax.fromTo(this.target, 0.3, {
         x:"+=" + (boundsBefore.left - boundsAfter.left),
