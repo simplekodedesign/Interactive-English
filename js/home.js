@@ -3,8 +3,8 @@ const title = document.getElementById('lessonTitle')
 
 window.addEventListener("load", function () {
   for (let i = 0; i < lessons.length; i++) {
-    lessons[i].addEventListener("click", sound)
-    lessons[i].addEventListener("mouseenter", titles)
+    lessons[i].addEventListener("click", sound);
+    lessons[i].addEventListener("mouseenter", titles);
   }
 });
 
