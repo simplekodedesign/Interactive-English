@@ -72,7 +72,13 @@
           }
         }
         if(strtotime(date("d-m-Y",time()))>=strtotime(date($feEjecucion,time()))){
-          $results=Connection::request("update t040_retos set St_Reto='A' where Co_Usuario=".$_SESSION["co_usuario"]);
+          Connection::request("update t040_retos set St_Reto='A' where Co_Usuario=".$_SESSION["co_usuario"]);
+          $results = Connection::request("select Co_Reto from t040_retos where Co_Usuario = ".$_SESSION["co_usuario"]);
+          if($results->rowCount()>0){
+            while($result = $results->fetch(PDO::FETCH_ASSOC)){
+              $_SESSION["reto_actual"] = $result["Co_Reto"];
+            }
+          }
         }
 
         $results=Connection::request("update m210_usuario set St_Session=1 where Co_Usuario=".$_SESSION["co_usuario"]);
