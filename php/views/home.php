@@ -75,7 +75,7 @@
         <a href="home.php"><span class="hButton B_lecciones">LESSONS</span></a>
         <span class="hButton B_herr">
           <span id="translator">TRANSLATOR</span>
-          
+
         </span>
         <span class="hButton B_ayuda">HELP
           <ul>
@@ -103,6 +103,7 @@
           echo '
           <div class="titles">
             <h1 class="roadTitle">LESSONS</h1>
+            <h1 class="roadTitle"></h1>
           </div>
           <!--<div class="navbar">
             <a hrhef="#" class="button">1 Instructions</a>
