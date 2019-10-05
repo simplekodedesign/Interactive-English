@@ -1,4 +1,9 @@
 var pos=0;
+
+
+var buttons = document.getElementById("buttons");
+
+
 window.addEventListener("load",function(){
 	actual();
 });
@@ -16,20 +21,34 @@ function actual(){
 	option=options[pos].split("/",15);
 	var b=0;
 	document.getElementById("buttons").innerHTML="";
-	option.forEach(function(e){
-		document.getElementById("buttons").innerHTML+="<span class='lessonButton'>"+e.toLowerCase()+"</span>";
-	});
-	opt=document.getElementsByClassName("lessonButton");
-	for(var i=0;i<opt.length;i++){
-		opt[i].addEventListener("click",function(){
-			if(this.innerHTML==compare[pos].toLowerCase()){
-				pos++;
-				if(pos>=total){
-					victoryMessage();
-				}else{
-					 actual();
-				}
+	createButtons(option);
+}
+
+function  check () {
+	if(this.innerHTML.toLowerCase()==compare[pos].toLowerCase()){
+		pos++;
+		if(pos >= total){
+			var opt = document.getElementsByClassName("lessonButton");
+			var l = opt.length;
+			for (var i = 0; i < l; i++) {
+				opt[i].removeEventListener("click", check);
 			}
-		});
+			victoryMessage();
+		}else{
+			 actual();
+		}
 	}
+}
+
+function createButtons (arrayTexts) {
+	while(buttons.firstElementChild)buttons.removeChild(buttons.firstElementChild);
+	let l = arrayTexts.length;
+	let span;
+	for (var i = 0; i < l; i++) {
+		span = document.createElement("span");
+		span.classList.add("lessonButton");
+		span.innerHTML = arrayTexts[i];
+		span.addEventListener("click", check);
+		buttons.appendChild(span);
+	}	
 }

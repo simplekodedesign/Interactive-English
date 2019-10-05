@@ -84,7 +84,7 @@ function desanimar (data, n) {
             setTimeout(function() {
                 data.style.transform = "translate(0px, 0px)"
                 data.style.color = "white";
-                data.style.backgroundColor = "#1C89DB";
+                data.style.backgroundColor = "var(--lessons)";
             }, 250);
         }, 250);
 

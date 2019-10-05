@@ -265,7 +265,7 @@
 
         <div class='questionsContainer'>
             <div class='question' id='question'>
-                <img src='../../img/categories/places/market.webp' alt=''>
+                <img src='../../img/categories/places/supermarket.webp' alt=''>
                 <audio src='../../aud/categories/places/supermarket.mp3'></audio>
             </div>
 
@@ -296,4 +296,4 @@
         ?>];
   var cord=<?php echo $_GET["co"]?>;
 </script>
-<?php echo "<script type='text/javascript' src='../../Lessons/Directions/Javascript.js?q=".$q."'></script>;"?>
+<?php echo "<script type='text/javascript' src='../../Lessons/Directions/Javascript.js?q=".$q."'></script>";?>

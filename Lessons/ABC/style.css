@@ -41,8 +41,9 @@
 @media only screen and (min-width: 1020px) {
 
 	.cont_abc {
-		min-width: 1000px;
-		margin-top: 50px;
+		min-width: 750px;
+    margin-top: 50px;
+    width: calc(100% - 150px);
 	}
 
 	.letra {
