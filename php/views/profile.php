@@ -108,8 +108,8 @@
                 </tr>
               </table>
             </div>
-            <div class='buttons'>
-              <span class='lessonButton' id='save' onclick='updateProfile()'>save</span>
-            </div>
+          </div>
+          <div class='buttons'>
+            <span class='lessonButton' id='save' onclick='updateProfile()'>save</span>
           </div>
           <script type='text/javascript' src='../../js/profile.js'></script>";

@@ -45,7 +45,7 @@ section{
   display: inline-block;
   width: 100px;
   height: auto;
-  align-self: flex-end;
+  align-self: center;
 }
 
 .titles img {
@@ -188,5 +188,61 @@ section{
 
   50% {
     filter:brightness(50%);
+  }
+}
+
+
+
+@media screen and (max-width : 910px) {
+  .mainContainer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .titlesLessons a {
+   width: 75px;
+  }
+
+  #retoImage{
+    min-width: 75px;
+  }
+
+  #images {
+    height: auto;
+    margin: 50px 0;
+  }
+
+  #images > img {
+    width: 35%;
+    height: auto;
+  }
+
+  #images > object {
+    height: 100%;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1.5);
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .lessoncontainer {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0px;
+  }
+
+  .titlesLessons a {
+    width: 50px;
+   }
+ 
+   #retoImage{
+     min-width: 50px;
+   }
+}
+
+@media screen and (max-width : 400px) {
+  .titlesLessons {
+    flex-direction: column;
   }
 }

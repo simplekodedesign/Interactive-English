@@ -27,14 +27,17 @@ var extibutton = document.getElementById("exitButton");
 var extibuttonGif = document.getElementById("exitButtonGif");
 var helpgif = document.getElementById("helpgif");
 var gifButton = document.getElementById("gifButton");
-var menu = document.getElementById('showmenu')
-var navbar = document.getElementById('navbarNav')
+var menu = document.getElementById('showmenu');
+var navbar = document.getElementById('navbarNav');
+var translatebutton = document.getElementById("translatebutton");
 
 window.addEventListener("load", function () {
   if(translator) {
     translator.addEventListener("click", translate);
     extibutton.addEventListener("click", translate);
   }
+
+  translatebutton.addEventListener("click", getTranslate);
 
   menu.addEventListener("click", show)
 
@@ -45,7 +48,7 @@ window.addEventListener("load", function () {
   }
 });
 
-/*-----------------------------------Show menu----------------------------------*/
+/*--------------------------------------Show menu----------------------------------*/
 function show(){
   navbar.classList.toggle("show");
 }

@@ -84,9 +84,7 @@
         <span id="showmenu"></span>
         <span id="navbarNav">
           <a href="home.php"><span class="hButton B_lecciones">LESSONS</span></a>
-          <span class="hButton B_herr">
-            <span id="translator">TRANSLATOR</span>
-          </span>
+          <span class="hButton B_herr" id="translator">TRANSLATOR</span>
           <span class="hButton B_ayuda">HELP
             <ul>
               <li>CONTACT</li>
@@ -187,7 +185,7 @@
         <div class="radiobut">
           <input type="radio" name="option" id="checkEnEs" value="en-es" checked>Inglés a Español
         </div>
-        <button onclick="getTranslate()">Traducir/Translate</button>
+        <button id="translatebutton">Traducir/Translate</button>
       </div>
     </div>
     <script type="text/javascript">
