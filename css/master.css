@@ -58,7 +58,7 @@ header{
   align-items: center;
   width: 100%;
   height: 8vh;
-  z-index: 3;
+  z-index: 5;
 }
 
 header img{
@@ -213,7 +213,7 @@ section{
   color: var(--primary);
 }
 
-.titles {
+.titles, .titlesLessons {
   color: var(--primary);
   width: 100%;
   text-align: center;
@@ -258,6 +258,7 @@ section .roadTitle{
 .navigationButtons {
   bottom: 15vh;
   position: fixed;
+  z-index: 2;
 }
 
 #lPrev {
@@ -407,6 +408,7 @@ footer p{
   display: none;
   justify-content: center;
   align-items: center;
+  z-index: 4;
 }
 
 .translator-activated {
@@ -496,6 +498,7 @@ footer p{
   justify-content: center;
   transition: .5s ease;
   background-color: rgba(0, 0, 0, 0.192);
+  z-index: 4;
 }
 
 .helpgif {
@@ -542,7 +545,7 @@ footer p{
     display: none;
     position: absolute;
     bottom: -100%;
-    left: : -40%;
+    left: -40%;
   }
 
   #showmenu{

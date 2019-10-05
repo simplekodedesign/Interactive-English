@@ -10,7 +10,7 @@
   max-width: 1000px;
   display: grid;
   grid-template-columns: .25fr .75fr;
-  align-self: flex-start;
+  align-self: center;
   align-items: flex-start;
   grid-column-gap: 30px;
 }
@@ -44,6 +44,7 @@
   padding: 15px;
   position: relative;
   background-color: #FFFF00;
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -74,10 +75,42 @@
   padding: 2px 5px;
 }
 
-.buttons{
-  grid-column: 1/span2;
-}
+/* .buttons{
+  grid-column: 1/ span 2;
+} */
 
 .lessonButton {
   color: black;
+}
+
+@media screen and (max-width : 620px) {
+  .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 15px;
+  }
+
+  .profilePics {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 440px;
+  }
+}
+
+@media screen and (max-width : 450px) {
+  .profileInf {
+    min-width: unset;
+    flex-direction: column;
+  }
+
+  .profileInf > #selectedPic {
+    position: unset;
+    margin-bottom: 15px;
+  }
 }

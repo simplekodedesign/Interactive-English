@@ -1,30 +1,51 @@
 section{
   width: 100%;
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 
 #retoImage{
   min-width: 100px;
 }
 
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* width: 100%; */
+}
+
 .titles{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   padding: 0 50px;
   margin-top: 50px;
 }
 
-.titles h1{
-  margin: 0 0 25px 0;
+.titlesLessons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0 50px;
+  margin-top: 50px;
+  align-items: center;
 }
 
-.titles a {
+.titles h1, .titlesLessons h1{
+  font-size: 2.5em;
+  font-weight: 600;
+  margin: 0 0 25px 0;
+  width: 100%;
+  height: auto;
+}
+
+.titlesLessons a {
   display: inline-block;
   width: 100px;
   height: auto;
-  align-self: flex-end;
+  align-self: center;
 }
 
 .titles img {
@@ -107,6 +128,7 @@ section{
   height: 500px;
   width: 30%;
   max-width: 450px;
+  align-self: center;
 }
 
 #images > img{
@@ -166,5 +188,61 @@ section{
 
   50% {
     filter:brightness(50%);
+  }
+}
+
+
+
+@media screen and (max-width : 910px) {
+  .mainContainer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .titlesLessons a {
+   width: 75px;
+  }
+
+  #retoImage{
+    min-width: 75px;
+  }
+
+  #images {
+    height: auto;
+    margin: 50px 0;
+  }
+
+  #images > img {
+    width: 35%;
+    height: auto;
+  }
+
+  #images > object {
+    height: 100%;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1.5);
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .lessoncontainer {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0px;
+  }
+
+  .titlesLessons a {
+    width: 50px;
+   }
+
+   #retoImage{
+     min-width: 50px;
+   }
+}
+
+@media screen and (max-width : 400px) {
+  .titlesLessons {
+    flex-direction: column;
   }
 }

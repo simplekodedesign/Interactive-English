@@ -189,7 +189,7 @@
         <div class="radiobut">
           <input type="radio" name="option" id="checkEnEs" value="en-es" checked>Inglés a Español
         </div>
-        <button onclick="getTranslate()">Traducir/Translate</button>
+        <button id="translatebutton">Traducir/Translate</button>
       </div>
     </div>
     <script type="text/javascript">
