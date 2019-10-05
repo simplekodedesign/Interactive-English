@@ -96,10 +96,11 @@
   .profilePics {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     max-width: 440px;
+    padding: 0 15px;
   }
 }
 
@@ -112,5 +113,29 @@
   .profileInf > #selectedPic {
     position: unset;
     margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width : 370px) {
+  .profileInf {
+    width: 75%;
+  }
+
+  .profileInf > table {
+    width: 100%;
+  }
+
+  .profileInf > table  tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+
+  .profileInf > table  tr > .variable {
+    text-align: start;
+  }
+
+  .profileInf > table  tr > .value > input {
+    width: 100%;
   }
 }
