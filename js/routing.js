@@ -11,9 +11,19 @@ window.addEventListener("load",function(){
 
   //direccionamiento a lessons desde temas
   var btnTheme = document.querySelectorAll("div.roadicon");
-  for(var i = 0;i < btnTheme.length; i++) btnTheme[i].addEventListener("click",function(e){
-    location.href="?url=lessons.php&th="+e.target.parentElement.id.substr(5,6);
-  })
+  for(var i = 0;i < btnTheme.length; i++) {
+    if(i+1 <= te_actual) {
+      btnTheme[i].addEventListener("click",function(e){
+        location.href="?url=lessons.php&th="+e.target.parentElement.id.substr(5,6);
+      });
+      if(i+1 == te_actual) {
+        btnTheme[i].classList.add("current");  
+      }
+    } else {
+      btnTheme[i].classList.add("inactive");
+    }
+  }
+
 })
 
 //redireccionar a la leccion

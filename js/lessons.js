@@ -31,12 +31,12 @@ function lessonsCreator () {
     span = document.createElement("span");
 
     lesson.classList.add("lesson");
-    if(i >= currentLesson){
+    if(co_orden[i] > currentLesson){
       lesson.classList.add("inactive");
     } else {
       lesson.addEventListener("click", rout);
     }
-    if ((i+1) == currentLesson) {
+    if ((parseInt(co_orden[i])) == currentLesson) {
       lesson.classList.add("current");
     }
     inf.classList.add("inf");
