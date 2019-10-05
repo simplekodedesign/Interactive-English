@@ -24,13 +24,4 @@ window.addEventListener("load", function () {
       lessons[i].appendChild(soundE)
     }
   }
-
-  // var sound = function () {
-  //   this.lastElementChild.play()
-  // }
-
-  // var titles = function () {
-  //   console.log(this.firstElementChild.getAttribute("alt"));
-  //   title.innerHTML = this.firstElementChild.getAttribute("alt");
-  // }
 });
