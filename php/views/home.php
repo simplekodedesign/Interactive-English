@@ -70,6 +70,7 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Main</title>
     <link rel="stylesheet" href="../../css/master.css?q=<?php echo $q?>">
@@ -80,16 +81,18 @@
     <header>
       <img src="../../img/English21.svg" alt="Logo">
       <div class="navbar">
-        <a href="home.php"><span class="hButton B_lecciones">LESSONS</span></a>
-        <span class="hButton B_herr">
-          <span id="translator">TRANSLATOR</span>
-
-        </span>
-        <span class="hButton B_ayuda">HELP
-          <ul>
-            <li>CONTACT</li>
-            <li id="gifButton">INSTRUCTIONS</li>
-          </ul>
+        <span id="showmenu"></span>
+        <span id="navbarNav">
+          <a href="home.php"><span class="hButton B_lecciones">LESSONS</span></a>
+          <span class="hButton B_herr">
+            <span id="translator">TRANSLATOR</span>
+          </span>
+          <span class="hButton B_ayuda">HELP
+            <ul>
+              <li>CONTACT</li>
+              <li id="gifButton">INSTRUCTIONS</li>
+            </ul>
+          </span>
         </span>
 
         <span class="hButton B_perfil">
@@ -99,10 +102,8 @@
             <li class="B_exit" id="btnExit">EXIT</li>
           </ul>
         </span>
-
       </div>
     </header>
-    <!-- <img src="../../img/C21logowhite.svg" alt="Logo"> -->
 
     <section>
       <?php
@@ -124,7 +125,7 @@
               <div class="roadicon" id="theme6"><img src="../../img/lessons/background/animals.svg" height="100%" alt="Animals"></div>
               <div class="roadicon" id="theme7"><img src="../../img/lessons/background/foodanddrinks.svg" height="100%" alt="Food and drinks"></div>
               <div class="roadicon" id="theme8"><img src="../../img/lessons/background/body.svg" height="100%" alt="Parts of the body"></div>
-              <div class="roadicon" id="theme9"><img src="../../img/lessons/background/plurals.svg" height="100%" alt="plurals"></div>
+              <div class="roadicon" id="theme9"><img src="../../img/lessons/background/plurals.svg" height="100%" alt="Plurals"></div>
               <div class="roadicon" id="theme10"><img src="../../img/lessons/background/thisthese.svg" height="100%" alt="This-These"></div>
               <div class="roadicon" id="theme11"><img src="../../img/lessons/background/thatthose.svg" height="100%" alt="That-those"></div>
               <div class="roadicon" id="theme12"><img src="../../img/lessons/background/thecolors.svg" height="70%" alt="Colors"></div>
