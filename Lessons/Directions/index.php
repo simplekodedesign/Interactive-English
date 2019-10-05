@@ -265,7 +265,7 @@
 
         <div class='questionsContainer'>
             <div class='question' id='question'>
-                <img src='../../img/categories/places/market.webp' alt=''>
+                <img src='../../img/categories/places/supermarket.webp' alt=''>
                 <audio src='../../aud/categories/places/supermarket.mp3'></audio>
             </div>
 

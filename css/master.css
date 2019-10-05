@@ -210,8 +210,8 @@ section{
   width: 80%;
   min-width: 300px;
   display: flex;
-  /* flex-direction: column; */
-  /* flex-wrap: nowrap; */
+  flex-direction: column;
+  flex-wrap: nowrap;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -276,7 +276,7 @@ section .roadTitle{
 
 #lPrev {
   transform: rotate(-90deg);
-  left: 50px;
+  left: 15px;
 }
 
 #lPrev span {
@@ -288,7 +288,7 @@ section .roadTitle{
 
 #lSigu {
   transform: rotate(90deg);
-  right:50px;
+  right:15px;
 }
 
 #lSigu span {
@@ -353,7 +353,7 @@ footer p{
 }
 
 .buttons {
-  margin-bottom: 20px;
+  margin: 10px 0 20px 0;
   height: auto;
   width: 100%;
   display: flex;

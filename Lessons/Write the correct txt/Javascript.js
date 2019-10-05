@@ -27,7 +27,7 @@ function validate_with_split(){
 	comp=compare[pos].split("/",15);
 	var b=0;
 	comp.forEach(function(e){
-		if(e==document.getElementById("write").value&&document.getElementById("write").value!=""){
+		if(e.toLowerCase() == document.getElementById("write").value.toLowerCase() && document.getElementById("write").value!=""){
 			pos++;
 			b=1;
 			if(pos>=text.length){
