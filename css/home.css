@@ -1,13 +1,18 @@
 :root{
-  --firstline: 30px;
-  --secondline: 215px;
-  --thirdline: 395px;
+  --firstline: 60px;
+  --secondline: 245px;
+  --thirdline: 430px;
+}
+
+body{
+  background: linear-gradient(to top, #ffffff, #bddfec 50%, #add3e6 100%) top center/cover no-repeat fixed
 }
 
 #lessons{
   width: 800px;
   height: 600px;
   position: relative;
+  background: url(../img/lessons/background/Recorrido.svg) center/contain no-repeat;
 }
 
 .roadicon{
@@ -53,12 +58,12 @@
 
 .roadicon:nth-child(6){
   left: 677px;
-  top: 50px;
+  top: 80px;
 }
 
 .roadicon:nth-child(7){
   left: 693px;
-  top: 168px;
+  top: 198px;
 }
 
 .roadicon:nth-child(8){
@@ -88,12 +93,12 @@
 
 .roadicon:nth-child(13){
   left: 85px;
-  top: 235px;
+  top: 265px;
 }
 
 .roadicon:nth-child(14){
   left: 70px;
-  top: 345px;
+  top: 375px;
 }
 
 .roadicon:nth-child(15){
@@ -124,7 +129,6 @@
   position: absolute;
   width: 60px;
   height: 80px;
-  transition: .5s ease;
   left: 25px;
   top: var(--firstline);
 }
@@ -133,7 +137,119 @@
   position: absolute;
   width: 75px;
   height: 95px;
-  transition: .5s ease;
   left: 537px;
-  top: 383px;
+  top: calc( var(--thirdline) - (10px));
+}
+
+@media screen and (max-width : 710px){
+  #lessons{
+    width: 300px;
+    height: 500px;
+    background-image: url(../img/lessons/background/RecorridoCel.svg);
+  }
+
+  .roadicon, #start, #end{
+    width: 30px;
+    height: 50px;
+  }
+
+  .roadicon:nth-child(1){
+    left: 113px;
+    top: 19px;
+  }
+
+  .roadicon:nth-child(2){
+    left: 166px;
+    top: 19px;
+  }
+
+  .roadicon:nth-child(3){
+    left: 225px;
+    top: 29px;
+  }
+
+  .roadicon:nth-child(4){
+    left: 236px;
+    top: 94px;
+  }
+
+  .roadicon:nth-child(5){
+    left: 181px;
+    top: 120px;
+  }
+
+  .roadicon:nth-child(6){
+    left: 118px;
+    top: 120px;
+  }
+
+  .roadicon:nth-child(7){
+    left: 53px;
+    top: 130px;
+  }
+
+  .roadicon:nth-child(8){
+    left: 44px;
+    top: 192px;
+  }
+
+  .roadicon:nth-child(9){
+    left: 97px;
+    top: 219px;
+  }
+
+  .roadicon:nth-child(10){
+    left: 150px;
+    top: 219px;
+  }
+
+  .roadicon:nth-child(11){
+    left: 211px;
+    top: 229px;
+  }
+
+  .roadicon:nth-child(12){
+    left: 222px;
+    top: 294px;
+  }
+
+  .roadicon:nth-child(13){
+    left: 172px;
+    top: 319px;
+  }
+
+  .roadicon:nth-child(14){
+    left: 114px;
+    top: 322px;
+  }
+
+  .roadicon:nth-child(15){
+    left: 51px;
+    top: 334px;
+  }
+
+  .roadicon:nth-child(16){
+    left: 38px;
+    top: 391px;
+  }
+
+  .roadicon:nth-child(17){
+    left: 88px;
+    top: 425px;
+  }
+
+  .roadicon:nth-child(18){
+    left: 149px;
+    top: 425px;
+  }
+
+  #start{
+    left: 14px;
+    top: 26px;
+  }
+
+  #end{
+    left: 203px;
+    top: 425px;
+  }
 }

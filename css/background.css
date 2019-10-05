@@ -2,6 +2,7 @@
 
 body{
   background: linear-gradient(to top, #CCFFFF, #0099CC 73%, #006699 100%) top center/cover no-repeat fixed;
+  /* background: linear-gradient(to top, #ffffff, #bddfec 50%, #add3e6 100%) top center/cover no-repeat fixed; */
 }
 
 body::before{

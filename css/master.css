@@ -223,7 +223,7 @@ section{
 }
 
 .titles h1{
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 700;
 }
 
@@ -578,7 +578,7 @@ footer p{
     border-radius: 12px;
   }
 
-  /* #showmenu:hover + #navbarNav{
-    display: block;
-  } */
+  .titles h1{
+    font-size: 1.2em;
+  }
 }

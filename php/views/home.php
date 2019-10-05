@@ -140,7 +140,6 @@
               <div class="roadicon" id="theme18"><img src="../../img/lessons/background/hours.svg" height="70%" alt="The hours"></div>
               <div id="start"><img src="../../img/lessons/background/start.svg" height="100%" alt="Start"></div>
               <div id="end"><img src="../../img/lessons/background/end.svg" height="100%" alt="END"></div>
-              <img src="../../img/lessons/background/Recorrido.svg" alt="camino" width="100%">
             </div>
           </div>
 
