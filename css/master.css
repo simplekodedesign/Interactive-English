@@ -223,13 +223,13 @@ section{
 }
 
 .titles h1{
-  font-size: 1.5em;
+  font-size: 3em;
   font-weight: 700;
 }
 
 section .roadTitle{
   color: var(--secondary);
-  font-size: 2em;
+  font-size: 3em;
 }
 
 /* button, .button{
@@ -309,10 +309,6 @@ footer p{
 }
 
 /*-----------------------LESSONS----------------------------*/
-
-.titles{
-  font-size: 1.7em;
-}
 
 .theme{
   display: flex;

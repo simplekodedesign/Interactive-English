@@ -5,7 +5,7 @@
 }
 
 body{
-  background: linear-gradient(to top, #ffffff, #bddfec 50%, #add3e6 100%) top center/cover no-repeat fixed
+  background: linear-gradient(to top, #ffffff, #bddfec 50%, #add3e6 100%) top center/cover no-repeat fixed;
 }
 
 #lessons{
@@ -141,7 +141,7 @@ body{
   top: calc( var(--thirdline) - (10px));
 }
 
-@media screen and (max-width : 710px){
+@media screen and (max-width : 810px){
   #lessons{
     width: 300px;
     height: 500px;

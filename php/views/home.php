@@ -79,7 +79,7 @@
   </head>
   <body>
     <header>
-      <img src="../../img/English21.svg" alt="Logo">
+      <a href="home.php"><img src="../../img/English21.svg" alt="Logo"></a>
       <div class="navbar">
 
         <div class="barContainer">
