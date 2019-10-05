@@ -65,23 +65,24 @@
   }
 
   echo "
-  <div class='titlesLessons'>
-    <h1>".$Nb_Tema."</h1>
-    <a href='".$url."'><img src='../../img/lessons/reto.svg' alt='Reto' id='retoImage'></a>
-  </div>
-  <!--<div id='reto'>
-  </div>-->
-  <div id='images'>
-    <img src='' alt='Lesson image' id='lessonImage'>
-    <object type='image/svg+xml' data='../../img/lessons/lessonsb.svg' alt='Lessons' id='svg'></object>
-  </div>
-    <div class='lessoncontainer'>
-      <div class='column' id='left'></div>
+    <div class='titlesLessons'>
+      <h1>".$Nb_Tema."</h1>
+      <a href='".$url."'><img src='../../img/lessons/reto.svg' alt='Reto' id='retoImage'></a>
+    </div>
+    <!--<div id='reto'>
+    </div>-->
+    <div class='mainContainer'>
+      <div id='images'>
+        <img src='' alt='Lesson image' id='lessonImage'>
+        <object type='image/svg+xml' data='../../img/lessons/lessonsb.svg' alt='Lessons' id='svg'></object>
+      </div>
+      <div class='lessoncontainer'>
+        <div class='column' id='left'></div>
 
-      <div class='column' id='right'></div>
+        <div class='column' id='right'></div>
+      </div>
+    
     </div>";
-
-
   echo "</section>";
 
   echo "<script type='text/javascript'>

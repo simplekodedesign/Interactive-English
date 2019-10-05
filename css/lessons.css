@@ -1,10 +1,17 @@
 section{
   width: 100%;
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 
 #retoImage{
   min-width: 100px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* width: 100%; */
 }
 
 .titles{
@@ -121,6 +128,7 @@ section{
   height: 500px;
   width: 30%;
   max-width: 450px;
+  align-self: center;
 }
 
 #images > img{
