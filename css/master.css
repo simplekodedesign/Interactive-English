@@ -227,7 +227,7 @@ section{
   color: var(--primary);
 }
 
-.titles {
+.titles, .titlesLessons {
   color: var(--primary);
   width: 100%;
   text-align: center;
@@ -272,6 +272,7 @@ section .roadTitle{
 .navigationButtons {
   bottom: 15vh;
   position: fixed;
+  z-index: 2;
 }
 
 #lPrev {

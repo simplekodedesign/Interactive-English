@@ -11,18 +11,30 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   padding: 0 50px;
   margin-top: 50px;
 }
 
-.titles h1{
+.titlesLessons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0 50px;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.titles h1, .titlesLessons h1{
   font-size: 2.5em;
   font-weight: 600;
   margin: 0 0 25px 0;
+  width: 100%;
+  height: auto;
 }
 
-.titles a {
+.titlesLessons a {
   display: inline-block;
   width: 100px;
   height: auto;

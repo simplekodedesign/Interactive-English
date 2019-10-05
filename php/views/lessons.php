@@ -65,7 +65,7 @@
   }
 
   echo "
-  <div class='titles'>
+  <div class='titlesLessons'>
     <h1>".$Nb_Tema."</h1>
     <a href='".$url."'><img src='../../img/lessons/reto.svg' alt='Reto' id='retoImage'></a>
   </div>
