@@ -15,7 +15,7 @@ if (!road && !profileScreen) {
   if (svgcolor >= 7) {
     svgcolor%= 7;
   }
-  
+
   document.documentElement.style.setProperty('--lessons', color[svgcolor]);
 }
 
@@ -27,6 +27,8 @@ var extibutton = document.getElementById("exitButton");
 var extibuttonGif = document.getElementById("exitButtonGif");
 var helpgif = document.getElementById("helpgif");
 var gifButton = document.getElementById("gifButton");
+var menu = document.getElementById('showmenu')
+var navbar = document.getElementById('navbarNav')
 
 window.addEventListener("load", function () {
   if(translator) {
@@ -34,12 +36,20 @@ window.addEventListener("load", function () {
     extibutton.addEventListener("click", translate);
   }
 
+  menu.addEventListener("click", show)
+
   if(helpgif) {
     gifButton.style.setProperty("display", "inline-block");
     gifButton.addEventListener("click", showGif);
     extibuttonGif.addEventListener("click", showGif);
   }
 });
+
+/*-----------------------------------Show menu----------------------------------*/
+function show(){
+  navbar.classList.toggle("show");
+}
+
 
 /*---------------------------------------Translator----------------------------------*/
 

@@ -16,6 +16,7 @@
 /*--------------------------------WELCOME---------------------------------*/
 
 #welcome{
+  min-width: 300px;
   width: 60vw;
   height: auto;
   z-index: 1;
@@ -23,6 +24,7 @@
 
 #hi {
   display: flex;
+  position: relative;
 }
 
 button, .button{
@@ -36,6 +38,11 @@ button, .button{
   padding: 2px 30px;
   position: relative;
   cursor: pointer;
+}
+
+#comenzar{
+  bottom: 50px;
+  position: absolute;
 }
 
 #logo{
@@ -237,6 +244,20 @@ footer{
 }
 
 footer p{
-  width: 85ch;
+  width: 75ch;
   color: var(--primary);
+}
+
+@media screen and (max-width: 460px) {
+  #welcome{
+    width: 95vw;
+  }
+
+  #logo{
+    display: none;
+  }
+
+  footer p{
+    width: 40ch;
+  }
 }
