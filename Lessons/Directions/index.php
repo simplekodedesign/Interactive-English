@@ -296,4 +296,4 @@
         ?>];
   var cord=<?php echo $_GET["co"]?>;
 </script>
-<?php echo "<script type='text/javascript' src='../../Lessons/Directions/Javascript.js?q=".$q."'></script>;"?>
+<?php echo "<script type='text/javascript' src='../../Lessons/Directions/Javascript.js?q=".$q."'></script>";?>

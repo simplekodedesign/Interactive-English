@@ -145,7 +145,7 @@ function desanimar (data, n) {
             data.style.color = "black";
             data.style.backgroundColor = "#FF4545";
             setTimeout(function () {
-                data.style.backgroundColor = "#0093fc";
+                data.style.backgroundColor = "var(--lessons)";
                 data.style.color = "black";
                 data.parentElement.lastElementChild.style.display = "none";
             }, 1000);
