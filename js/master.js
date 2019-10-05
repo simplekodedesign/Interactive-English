@@ -36,20 +36,12 @@ window.addEventListener("load", function () {
     extibutton.addEventListener("click", translate);
   }
 
-  menu.addEventListener("click", show)
-
   if(helpgif) {
     gifButton.style.setProperty("display", "inline-block");
     gifButton.addEventListener("click", showGif);
     extibuttonGif.addEventListener("click", showGif);
   }
 });
-
-/*-----------------------------------Show menu----------------------------------*/
-function show(){
-  navbar.classList.toggle("show");
-}
-
 
 /*---------------------------------------Translator----------------------------------*/
 

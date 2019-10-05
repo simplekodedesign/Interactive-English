@@ -66,6 +66,12 @@ header img{
   width: auto;
 }
 
+.barContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
 .navbar{
   display: flex;
@@ -191,8 +197,8 @@ section{
   width: 80%;
   min-width: 300px;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
@@ -527,6 +533,15 @@ footer p{
     justify-content: flex-end;
   }
 
+  .barContainer{
+    width: 50px;
+    position: relative;
+  }
+
+  .barContainer:hover #navbarNav {
+    display: block;
+  }
+
   #navbarNav{
     display: none;
     position: absolute;
@@ -541,24 +556,18 @@ footer p{
     border-right: 2px solid white;
     cursor: pointer;
     transform: rotateZ(45deg);
+    margin-right: 15px;
   }
 
   .hButton ul{
-    left: -54%;
-  }
-
-  .show + .hButton ul{
-    display: none;
-  }
-
-  .show{
-    display: block !important;
+    left: -100%;
   }
 
   .B_perfil{
     width: auto;
     margin-right: 10px;
     position: relative;
+    padding-left: 0;
   }
 
   .B_perfil::before{

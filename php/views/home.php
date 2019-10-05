@@ -81,19 +81,22 @@
     <header>
       <img src="../../img/English21.svg" alt="Logo">
       <div class="navbar">
-        <span id="showmenu"></span>
-        <span id="navbarNav">
-          <a href="home.php"><span class="hButton B_lecciones">LESSONS</span></a>
-          <span class="hButton B_herr">
-            <span id="translator">TRANSLATOR</span>
+
+        <div class="barContainer">
+          <span id="showmenu"></span>
+          <span id="navbarNav">
+            <a href="home.php"><span class="hButton B_lecciones">LESSONS</span></a>
+            <span class="hButton B_herr">
+              <span id="translator">TRANSLATOR</span>
+            </span>
+            <span class="hButton B_ayuda">HELP
+              <ul>
+                <li>CONTACT</li>
+                <li id="gifButton">INSTRUCTIONS</li>
+              </ul>
+            </span>
           </span>
-          <span class="hButton B_ayuda">HELP
-            <ul>
-              <li>CONTACT</li>
-              <li id="gifButton">INSTRUCTIONS</li>
-            </ul>
-          </span>
-        </span>
+        </div>
 
         <span class="hButton B_perfil">
           <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt=" Pic">
