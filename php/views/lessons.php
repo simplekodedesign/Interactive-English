@@ -8,7 +8,7 @@
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<section class='main'>";
-      echo "<link rel='stylesheet' href='../../css/lessons.css?q=<?php echo $q?'>";
+      echo "<link rel='stylesheet' href='../../css/lessons.css?q=".$q."'>";
       $aud =$res["Tx_Url_Aud"];
       $imgTema = $res["Tx_Url_Img"];
       $Nb_Tema = $res["Nb_Tema"];
@@ -97,5 +97,5 @@
     var nLessons = nombre_lecciones.length;
   </script>";
 
-  echo "<script type='text/javascript' src='../../js/lessons.js?q=<?php echo $q?>'></script>";
+  echo "<script type='text/javascript' src='../../js/lessons.js?q=".$q."'></script>";
 ?>

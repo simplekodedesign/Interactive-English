@@ -1,0 +1,24 @@
+#bigFlame {
+  animation-timing-function: ease-in-out;
+  animation-duration: .2s;
+  animation-iteration-count: infinite;
+  animation-name: flameAnimation;
+}
+
+#smallFlame {
+  animation-timing-function: ease-in-out;
+  animation-duration: .2s;
+  animation-iteration-count: infinite;
+  animation-delay: .1s;
+  animation-name: flameAnimation;
+}
+
+@keyframes flameAnimation {
+  0% {
+    fill: #FFD900;
+  }
+
+  100% {
+    fill: #FF8C00;
+  }
+}
