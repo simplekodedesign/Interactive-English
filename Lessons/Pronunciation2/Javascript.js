@@ -71,6 +71,9 @@ window.addEventListener("load",function(){
 				document.getElementById("btnSpeak").innerHTML="Speak";
 			}
 	})
+	window.addEventListener("click", function() {
+		victoryMessage();
+	})
 })
 
 function validate(){

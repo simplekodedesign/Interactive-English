@@ -166,7 +166,11 @@
         echo "<div><a href='".$lact."'>Actual</a></div>";
       }
       if($lsig != "" && $lsig != "#"){
-        echo "<div class='navigationButtons' id='lSigu'><a href='".$lsig."'><span></span></a></div>";
+        if($_SESSION["se_actual"] > $_GET["co"]) {
+          echo "<div class='navigationButtons' id='lSigu'><a href='".$lsig."'><span></span></a></div>";
+        } else {
+          echo "<div class='navigationButtons' style='display: none;'id='lSigu'><a href='".$lsig."'><span></span></a></div>";          
+        }
       }
        $par="'".$_GET["url"]."',".$_GET["co"];
     ?>

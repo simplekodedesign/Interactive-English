@@ -99,16 +99,18 @@ function showGif () {
 //--------------------------------------VICTORY MESSAGE--------------------------
 
 var victoryMessage = function() {
+  alert("YOU WON");
   var xhttp = new XMLHttpRequest();
-  /*xhttp.onreadystatechange = function() {
+  xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     document.getElementById("main").innerHTML = this.responseText;
+    //  document.getElementById("main").innerHTML = this.responseText;
+     document.getElementById("rocket").style.setProperty("animation-name", "rocketAnimation");
+      document.getElementById("lSigu").style.display="flex";
     }
-  };*/
+  };
   xhttp.open("GET", "../controller/continue.php?co="+cord, true);
   xhttp.send();
-  document.getElementById("rocket").style.setProperty("animation-name", "rocketAnimation");
-  document.getElementById("lSigu").style.display="flex";
+  
 
   // var rand = (Math.random())*10;
 
