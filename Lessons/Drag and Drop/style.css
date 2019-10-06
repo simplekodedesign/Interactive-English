@@ -1,3 +1,12 @@
+:root{
+  --x : 50px;
+  --y : 50px;
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
 body{
   display: flex;
   justify-content: center;
@@ -21,13 +30,17 @@ section{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .item{
+  position: absolute;
   max-width: 100px;
   max-height: 100px;
+  left: var(--x);
+  top: var(--y);
 }
 
 .field{

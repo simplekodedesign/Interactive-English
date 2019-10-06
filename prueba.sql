@@ -2,10 +2,10 @@
 -- version 4.4.15.9
 -- https://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tiempo de generación: 17-09-2019 a las 19:45:43
--- Versión del servidor: 5.6.37
--- Versión de PHP: 5.6.31
+-- Host: localhost
+-- Generation Time: Oct 06, 2019 at 08:01 PM
+-- Server version: 5.6.37
+-- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,32 +17,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `prueba`
+-- Database: `prueba`
 --
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `m210_usuario`
---
-
-CREATE TABLE IF NOT EXISTS `m210_usuario` (
-  `Co_Usuario` bigint(20) NOT NULL,
-  `Co_Alumno` bigint(20) NOT NULL,
-  `Co_Rol` int(11) NOT NULL,
-  `Tx_Email` varchar(100) NOT NULL,
-  `Tx_Clave` varchar(300) NOT NULL,
-  `St_Session` int(11) NOT NULL DEFAULT '0',
-  `Tx_Url` varchar(200) NOT NULL,
-  `Fe_Status` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `m210_usuario`
+-- Dumping data for table `m210_usuario`
 --
 
 INSERT INTO `m210_usuario` (`Co_Usuario`, `Co_Alumno`, `Co_Rol`, `Tx_Email`, `Tx_Clave`, `St_Session`, `Tx_Url`, `Fe_Status`) VALUES
-(1, 1, 1, '1', '$2y$10$FcsUHeLIz6bAxUSkYDPmbOCq3jnKoI.N63mYK1kDzOW5IXnj7c8Ki', 1, '../../img/perfil/users/avatar3.svg', '2019-05-15'),
+(1, 1, 1, '1', '$2y$10$FcsUHeLIz6bAxUSkYDPmbOCq3jnKoI.N63mYK1kDzOW5IXnj7c8Ki', 0, 'https://www.c21english.com/img/perfil/users/man4.svg', '2019-05-15'),
 (2, 2, 1, '2', '$2y$10$Z8wGOuba/KgiFowQWF0aE.OEsLYXe87CcRKRZXEdHHHJUL9msFJb6', 1, '../../img/perfil/users/avatar3.svg', '2019-06-01'),
 (3, 3, 1, '3', '$2y$10$iPYV2TKwbEUd.1SyD9V2gOrqhr56Ixtr1BcJIqMeiGoH7O25JevUu', 1, '../../img/perfil/users/avatar3.svg', '2019-06-01'),
 (4, 4, 1, '4', '$2y$10$hho005hbnLWGTGSrGkgW/Odl2Q4/RrCu9kTCOXNOFKDfSAu/Pf632', 1, '../../img/perfil/users/avatar3.svg', '2019-06-01'),
@@ -52,27 +35,8 @@ INSERT INTO `m210_usuario` (`Co_Usuario`, `Co_Alumno`, `Co_Rol`, `Tx_Email`, `Tx
 (8, 8, 1, '8', '$2y$10$hho005hbnLWGTGSrGkgW/Odl2Q4/RrCu9kTCOXNOFKDfSAu/Pf632', 1, '../../img/perfil/users/avatar3.svg', '2019-07-01'),
 (9, 10, 1, '9', '$2y$10$eLD1AmFbn/hBV4FDVyoyL.ReJXkjhDQX94gPJz7Ltwy6xXwUsh2VG', 0, '../../img/perfil/users/avatar3.svg', '2019-08-19');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `m220_alumno`
---
-
-CREATE TABLE IF NOT EXISTS `m220_alumno` (
-  `Co_Alumno` bigint(20) NOT NULL,
-  `Nb_Apellido` varchar(50) NOT NULL,
-  `Nb_Alumno` varchar(50) NOT NULL,
-  `Nb_ApellidoRepre` varchar(50) NOT NULL,
-  `Nb_Representante` varchar(50) NOT NULL,
-  `Tx_Direccion` varchar(150) NOT NULL,
-  `Nu_Telefono_Fijo` varchar(20) NOT NULL,
-  `Nu_Telefono_Movil` varchar(20) NOT NULL,
-  `Fe_Nacimiento` date NOT NULL,
-  `St_Alumno` enum('A','I') DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `m220_alumno`
+-- Dumping data for table `m220_alumno`
 --
 
 INSERT INTO `m220_alumno` (`Co_Alumno`, `Nb_Apellido`, `Nb_Alumno`, `Nb_ApellidoRepre`, `Nb_Representante`, `Tx_Direccion`, `Nu_Telefono_Fijo`, `Nu_Telefono_Movil`, `Fe_Nacimiento`, `St_Alumno`) VALUES
@@ -87,65 +51,22 @@ INSERT INTO `m220_alumno` (`Co_Alumno`, `Nb_Apellido`, `Nb_Alumno`, `Nb_Apellido
 (9, 'Prueba Prueba', 'Prueba', 'Prueba uno', 'Prueba', 'Prueba', '123456', '7890', '2027-12-09', 'A'),
 (10, 'asdf', 'Ã±lkj', 'asdf', 'Ã±lkj', 'oiqewroiquweroiuqw', '8123948198', '8173294719349', '1990-01-11', 'A');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `p020_institucion`
---
-
-CREATE TABLE IF NOT EXISTS `p020_institucion` (
-  `Nu_Identificacion` varchar(20) NOT NULL,
-  `Nb_Institucion` varchar(120) NOT NULL,
-  `Img_Url` varchar(200) NOT NULL,
-  `Tx_Email` varchar(100) NOT NULL,
-  `Direccion` varchar(200) NOT NULL,
-  `Nu_Telefono` varchar(20) NOT NULL,
-  `Pag_Url` varchar(200) NOT NULL,
-  `St_Institucion` enum('A','I') DEFAULT NULL,
-  `Fe_ultimaData` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `p020_institucion`
+-- Dumping data for table `p020_institucion`
 --
 
 INSERT INTO `p020_institucion` (`Nu_Identificacion`, `Nb_Institucion`, `Img_Url`, `Tx_Email`, `Direccion`, `Nu_Telefono`, `Pag_Url`, `St_Institucion`, `Fe_ultimaData`) VALUES
 ('A0001I', 'Unet', '../../img/perfil/schools/unet.png', 'unet@gmail.com', 'SC', '0123456789', 'www.unet.com', 'A', '0000-00-00');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `p030_nivel`
---
-
-CREATE TABLE IF NOT EXISTS `p030_nivel` (
-  `Co_Nivel` int(11) NOT NULL,
-  `Nb_Nivel` varchar(120) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `p030_nivel`
+-- Dumping data for table `p030_nivel`
 --
 
 INSERT INTO `p030_nivel` (`Co_Nivel`, `Nb_Nivel`) VALUES
 (1, 'Level 1');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `p040_temas`
---
-
-CREATE TABLE IF NOT EXISTS `p040_temas` (
-  `Co_Tema` int(11) NOT NULL,
-  `Co_Nivel` int(11) NOT NULL,
-  `Nb_Tema` varchar(120) NOT NULL,
-  `Tx_Url_Img` varchar(200) NOT NULL,
-  `Tx_Url_Aud` varchar(200) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `p040_temas`
+-- Dumping data for table `p040_temas`
 --
 
 INSERT INTO `p040_temas` (`Co_Tema`, `Co_Nivel`, `Nb_Tema`, `Tx_Url_Img`, `Tx_Url_Aud`) VALUES
@@ -153,7 +74,7 @@ INSERT INTO `p040_temas` (`Co_Tema`, `Co_Nivel`, `Nb_Tema`, `Tx_Url_Img`, `Tx_Ur
 (2, 1, 'The Greetings', '../../img/lessons/background/greetings.svg', '../../aud/themes/the_greetings.mp3'),
 (3, 1, 'Numbers', '../../img/lessons/background/thenumbers.svg', '../../aud/themes/numbers.mp3'),
 (4, 1, 'Personal Information', '../../img/lessons/background/personalinformation.svg', '../../aud/themes/personal_information.mp3'),
-(5, 1, 'The Articles (A,An,The)', '../../img/lessons/background/articles.svg', '../../aud/themes/the_articles.mp3'),
+(5, 1, 'The Articles (A, An,The)', '../../img/lessons/background/articles.svg', '../../aud/themes/the_articles.mp3'),
 (6, 1, 'Animals', '../../img/lessons/background/animals.svg', '../../aud/themes/animals.mp3'),
 (7, 1, 'Food and Drinks', '../../img/lessons/background/foodanddrinks.svg', '../../aud/themes/food_and_drinks.mp3'),
 (8, 1, 'Parts of the Body', '../../img/lessons/background/body.svg', '../../aud/themes/the_body.mp3'),
@@ -164,25 +85,12 @@ INSERT INTO `p040_temas` (`Co_Tema`, `Co_Nivel`, `Nb_Tema`, `Tx_Url_Img`, `Tx_Ur
 (13, 1, 'To Be and Occupations', '../../img/lessons/background/occupations.svg', '../../aud/themes/to_be_and_occupations.mp3'),
 (14, 1, 'Sports', '../../img/lessons/background/sports.svg', '../../aud/themes/sports.mp3'),
 (15, 1, 'Prepositions', '../../img/lessons/background/prepositions.svg', '../../aud/themes/prepositions.mp3'),
-(16, 1, 'Locations', '../../img/lessons/background/directions.svg', '../../aud/themes/directions.mp3'),
+(16, 1, 'Directions', '../../img/lessons/background/directions.svg', '../../aud/themes/directions.mp3'),
 (17, 1, 'Family', '../../img/lessons/background/family.svg', '../../aud/themes/family.mp3'),
 (18, 1, 'What time is it ?', '../../img/lessons/background/hours.svg', '../../aud/themes/what_time_is_it.mp3');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `p050_juego`
---
-
-CREATE TABLE IF NOT EXISTS `p050_juego` (
-  `Co_Juego` int(11) NOT NULL,
-  `Nb_Juego` varchar(120) NOT NULL,
-  `Tx_Url_Img` varchar(200) NOT NULL,
-  `Tx_Help` varchar(200) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `p050_juego`
+-- Dumping data for table `p050_juego`
 --
 
 INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUES
@@ -193,11 +101,11 @@ INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUE
 (5, 'Say the correct word', '../../img/lessons/listenandrepeat.svg', '../../img/gif/say the correct word.gif'),
 (6, 'Pronunciation of Vowels', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
 (7, 'Pronunciation of Consonants', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
-(8, 'Vocabulary', '../../img/lessons/blackboard.webp', '../../img/gif/vocabulary_txt.gif'),
+(8, 'Vocabulary', '../../img/lessons/vocabulary.svg', '../../img/gif/vocabulary_txt.gif'),
 (9, 'Select the correct option', '../../img/lessons/correctoption.svg', '../../img/gif/abc.gif'),
 (10, 'Connect', '../../img/lessons/connect.svg', '../../img/gif/connect.gif'),
 (11, 'Translate into spanish', '../../img/lessons/write.svg', '../../img/gif/translate_into_spanish.gif'),
-(12, 'Vocabulary txt', '../../img/lessons/blackboard.webp', '../../img/gif/vocabulary_txt.gif'),
+(12, 'Vocabulary txt', '../../img/lessons/vocabulary.svg', '../../img/gif/vocabulary_txt.gif'),
 (13, 'Memory Numbers', '../../img/lessons/memory.svg', '../../img/gif/memory.gif'),
 (14, 'Write the correct txt', '../../img/lessons/write.svg', '../../img/gif/write the correct txt.gif'),
 (15, 'Say the correct txt', '../../img/lessons/listenandrepeat.svg', '../../img/gif/say the correct txt.gif'),
@@ -207,22 +115,11 @@ INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUE
 (19, 'Speak Memory', '../../img/lessons/memoryv.svg', '../../img/gif/speak memory.gif'),
 (20, 'Connect with Image', '../../img/lessons/connect.svg', '../../img/gif/conect with images.gif'),
 (21, 'Unscramble', '../../img/lessons/unscramble.svg', '../../img/gif/unscramble.gif'),
-(22, 'Vocabulary Directions', '../../img/lessons/blackboard.webp', '../../img/gif/abc.gif'),
+(22, 'Vocabulary Directions', '../../img/lessons/vocabulary.svg', '../../img/gif/abc.gif'),
 (23, 'Directions', '../../img/lessons/directions.svg', '../../img/gif/abc.gif');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `p060_multimedia`
---
-
-CREATE TABLE IF NOT EXISTS `p060_multimedia` (
-  `Co_Multimedia` int(11) NOT NULL,
-  `Nb_Multimedia` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `p060_multimedia`
+-- Dumping data for table `p060_multimedia`
 --
 
 INSERT INTO `p060_multimedia` (`Co_Multimedia`, `Nb_Multimedia`) VALUES
@@ -230,23 +127,8 @@ INSERT INTO `p060_multimedia` (`Co_Multimedia`, `Nb_Multimedia`) VALUES
 (2, 'Audios'),
 (3, 'Video');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `p070_orden`
---
-
-CREATE TABLE IF NOT EXISTS `p070_orden` (
-  `Co_Tema` int(11) NOT NULL,
-  `Co_Juego` int(11) NOT NULL,
-  `Co_Orden` int(11) NOT NULL,
-  `Nb_Lesson` varchar(120) NOT NULL,
-  `Les_Ant` varchar(200) NOT NULL,
-  `Les_Sig` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `p070_orden`
+-- Dumping data for table `p070_orden`
 --
 
 INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_Ant`, `Les_Sig`) VALUES
@@ -399,38 +281,15 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 (18, 18, 147, 'Memory', '?url=../../Lessons/Write the right option/index.php&co=146', '?url=../../Lessons/Select the correct option/index.php&co=148'),
 (18, 9, 148, 'Select the right hour', '?url=../../Lessons/Memory/index.php&co=147', '#');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `p080_rol`
---
-
-CREATE TABLE IF NOT EXISTS `p080_rol` (
-  `Co_Rol` int(11) NOT NULL,
-  `Nb_Rol` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `p080_rol`
+-- Dumping data for table `p080_rol`
 --
 
 INSERT INTO `p080_rol` (`Co_Rol`, `Nb_Rol`) VALUES
 (1, 'Estudiante');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `p090_imagenes`
---
-
-CREATE TABLE IF NOT EXISTS `p090_imagenes` (
-  `Co_Multimedia` int(11) NOT NULL,
-  `Nb_imagenes` varchar(100) NOT NULL,
-  `Tx_Url` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `p090_imagenes`
+-- Dumping data for table `p090_imagenes`
 --
 
 INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
@@ -948,20 +807,8 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'zipper', '../../img/categories/fonetic abc/zipper.webp'),
 (1, 'zoo', '../../img/categories/places/zoo.webp');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `p100_videos`
---
-
-CREATE TABLE IF NOT EXISTS `p100_videos` (
-  `Co_Multimedia` int(11) NOT NULL,
-  `Nb_videos` varchar(100) NOT NULL,
-  `Tx_Url` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `p100_videos`
+-- Dumping data for table `p100_videos`
 --
 
 INSERT INTO `p100_videos` (`Co_Multimedia`, `Nb_videos`, `Tx_Url`) VALUES
@@ -1027,20 +874,8 @@ INSERT INTO `p100_videos` (`Co_Multimedia`, `Nb_videos`, `Tx_Url`) VALUES
 (3, 'video94', '../../video/Theme 9/video94.webm'),
 (3, 'video95', '../../video/Theme 9/video95.webm');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `p110_audio`
---
-
-CREATE TABLE IF NOT EXISTS `p110_audio` (
-  `Co_Multimedia` int(11) NOT NULL,
-  `Nb_audio` varchar(100) NOT NULL,
-  `Tx_Url` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `p110_audio`
+-- Dumping data for table `p110_audio`
 --
 
 INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
@@ -1700,47 +1535,71 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'zipper', '../../aud/categories/fonetic abc/zipper.mp3'),
 (2, 'zoo', '../../aud/categories/places/zoo.mp3');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `t010_bitacora`
---
-
-CREATE TABLE IF NOT EXISTS `t010_bitacora` (
-  `Co_Bitacora` bigint(20) NOT NULL,
-  `Co_Usuario` bigint(20) NOT NULL,
-  `Fe_Ejecucion` date NOT NULL,
-  `Hr_Entrada` varchar(20) NOT NULL,
-  `Hr_Salida` varchar(20) NOT NULL,
-  `Nu_Lecciones` int(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `t010_bitacora`
+-- Dumping data for table `t010_bitacora`
 --
 
 INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_Entrada`, `Hr_Salida`, `Nu_Lecciones`) VALUES
-(1, 1, '2019-09-15', '09:35:08', '', 0);
-
--- --------------------------------------------------------
+(1, 1, '2019-09-15', '09:35:08', '', 0),
+(2, 1, '2019-09-19', '05:06:45', '', 0),
+(3, 1, '2019-09-19', '03:26:18', '', 0),
+(4, 1, '2019-09-20', '12:59:11', '', 0),
+(5, 1, '2019-09-20', '01:37:22', '', 0),
+(6, 1, '2019-09-20', '02:45:05', '', 0),
+(7, 1, '2019-09-21', '11:47:50', '', 0),
+(8, 1, '2019-09-22', '12:12:44', '', 0),
+(9, 1, '2019-09-22', '06:40:23', '', 0),
+(10, 1, '2019-09-22', '08:16:47', '', 0),
+(11, 1, '2019-09-22', '10:35:26', '10:37:55', 0),
+(12, 1, '2019-09-23', '09:34:02', '', 0),
+(13, 1, '2019-09-23', '07:05:59', '', 0),
+(14, 1, '2019-09-23', '11:24:56', '', 0),
+(15, 1, '2019-09-24', '12:25:37', '', 0),
+(16, 1, '2019-09-24', '01:10:12', '01:14:51', 0),
+(17, 1, '2019-09-24', '01:15:09', '', 0),
+(18, 1, '2019-09-25', '10:37:41', '', 0),
+(19, 1, '2019-09-25', '02:29:32', '', 0),
+(20, 1, '2019-09-25', '07:04:49', '', 0),
+(21, 1, '2019-09-26', '12:29:51', '', 0),
+(22, 1, '2019-09-26', '05:18:28', '', 0),
+(23, 1, '2019-09-26', '11:50:03', '', 0),
+(24, 1, '2019-09-26', '11:53:05', '', 0),
+(25, 1, '2019-09-26', '11:59:34', '12:05:37', 0),
+(26, 1, '2019-09-26', '02:57:31', '', 0),
+(27, 6, '2019-09-26', '03:40:27', '', 0),
+(28, 1, '2019-09-26', '04:36:09', '', 0),
+(29, 1, '2019-09-29', '10:36:21', '', 0),
+(30, 1, '2019-10-03', '02:54:30', '', 0),
+(31, 1, '2019-10-03', '02:55:06', '', 0),
+(32, 1, '2019-10-03', '02:55:06', '02:57:37', 0),
+(33, 1, '2019-10-03', '02:57:46', '', 0),
+(34, 1, '2019-10-03', '04:23:31', '', 0),
+(35, 1, '2019-10-03', '05:01:29', '', 0),
+(36, 1, '2019-10-03', '06:09:24', '', 0),
+(37, 1, '2019-10-04', '09:31:23', '10:07:16', 0),
+(38, 1, '2019-10-04', '10:15:36', '', 0),
+(39, 1, '2019-10-04', '10:43:55', '', 0),
+(40, 1, '2019-10-04', '11:35:44', '07:57:54', 0),
+(41, 1, '2019-10-04', '11:42:37', '', 0),
+(42, 1, '2019-10-04', '12:07:50', '07:58:57', 0),
+(43, 2, '2019-10-05', '12:18:43', '', 0),
+(44, 2, '2019-10-05', '03:17:47', '', 0),
+(45, 1, '2019-10-05', '04:40:28', '', 0),
+(46, 1, '2019-10-06', '08:36:30', '', 0),
+(47, 2, '2019-10-06', '10:25:15', '', 0),
+(48, 1, '2019-10-06', '10:25:53', '10:32:37', 0),
+(49, 1, '2019-10-06', '10:56:44', '', 0),
+(50, 1, '2019-10-06', '11:17:07', '11:17:29', 0),
+(51, 1, '2019-10-06', '11:17:51', '11:30:40', 0),
+(52, 1, '2019-10-06', '11:30:49', '', 0),
+(53, 1, '2019-10-06', '12:52:29', '', 0),
+(54, 1, '2019-10-06', '01:31:28', '01:59:22', 0),
+(55, 1, '2019-10-06', '02:02:04', '02:02:30', 0),
+(56, 1, '2019-10-06', '02:39:33', '', 0),
+(57, 1, '2019-10-06', '07:58:13', '07:58:48', 0);
 
 --
--- Estructura de tabla para la tabla `t020_juego_tema`
---
-
-CREATE TABLE IF NOT EXISTS `t020_juego_tema` (
-  `Co_Juego` int(11) NOT NULL,
-  `Co_Tema` int(11) NOT NULL,
-  `Co_Orden` int(11) NOT NULL,
-  `Nb_audio` varchar(100) DEFAULT NULL,
-  `Nb_videos` varchar(100) DEFAULT NULL,
-  `Nb_imagenes` varchar(100) DEFAULT NULL,
-  `Nb_Ask` varchar(500) NOT NULL,
-  `Nb_Comparar` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `t020_juego_tema`
+-- Dumping data for table `t020_juego_tema`
 --
 
 INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
@@ -1909,7 +1768,7 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (14, 3, 25, '88c', NULL, NULL, '88', 'eighty-eight'),
 (14, 3, 25, '91c', NULL, NULL, '91', 'ninety-one'),
 (14, 3, 25, '27c', NULL, NULL, '27', 'twenty-seven'),
-(14, 3, 25, '34c', NULL, NULL, '34', 'thirty-forur'),
+(14, 3, 25, '34c', NULL, NULL, '34', 'thirty-four'),
 (14, 3, 25, '21c', NULL, NULL, '21', 'twenty-one'),
 (14, 3, 25, '13c', NULL, NULL, '13', 'thirteen'),
 (14, 3, 25, '36c', NULL, NULL, '36', 'thirty-six'),
@@ -2613,7 +2472,6 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (17, 9, 73, 'jackets', NULL, 'jackets', '', 'jackets'),
 (17, 9, 73, 'sweaters', NULL, 'sweaters', '', 'sweaters'),
 (17, 9, 73, 'coats', NULL, 'coats', '', 'coats'),
-(17, 9, 73, 'eyelashes ', NULL, 'eyelashes ', '', 'eyelashes'),
 (17, 9, 73, 'leaves', NULL, 'leaves', '', 'leaves'),
 (17, 9, 73, 'buses', NULL, 'buses', '', 'buses'),
 (17, 9, 73, 'foxes', NULL, 'foxes', '', 'foxes'),
@@ -2624,10 +2482,10 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (10, 9, 74, NULL, NULL, NULL, 'Strawberries', 'Fresas'),
 (10, 9, 74, NULL, NULL, NULL, 'Boys', 'Niños'),
 (10, 9, 74, NULL, NULL, NULL, 'Donkeys', 'Burros'),
-(10, 9, 74, NULL, NULL, NULL, 'Monkeys', 'Monos');
-INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
+(10, 9, 74, NULL, NULL, NULL, 'Monkeys', 'Monos'),
 (10, 9, 74, NULL, NULL, NULL, 'Turkeys', 'Pavos'),
-(10, 9, 74, NULL, NULL, NULL, 'Toys', 'Juguetes'),
+(10, 9, 74, NULL, NULL, NULL, 'Toys', 'Juguetes');
+INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
 (10, 9, 74, NULL, NULL, NULL, 'Mosquitoes', 'Mosquitos'),
 (10, 9, 74, NULL, NULL, NULL, 'Mangoes', 'Mangos'),
 (10, 9, 74, NULL, NULL, NULL, 'Potatoes', 'Papas'),
@@ -3430,10 +3288,10 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (21, 17, 143, 'granddaughter', NULL, 'sister', 'D-D-G-H-T-E-N-R-G-A-A-U-E', 'granddaughter'),
 (21, 17, 143, 'son', NULL, 'i', 'O-N-S', 'son'),
 (21, 17, 143, 'daughter', NULL, 'sister', 'A-U-G-H-D-E-R-T', 'daughter'),
-(21, 17, 143, 'mother', NULL, 'mother', 'R-E-T-H-O-M', 'mother');
-INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
+(21, 17, 143, 'mother', NULL, 'mother', 'R-E-T-H-O-M', 'mother'),
 (21, 17, 143, 'father', NULL, 'father', 'T-H-A-F-E-R', 'father'),
-(21, 17, 143, 'uncle', NULL, 'uncle', 'C-L-U-E-N', 'uncle'),
+(21, 17, 143, 'uncle', NULL, 'uncle', 'C-L-U-E-N', 'uncle');
+INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
 (21, 17, 143, 'aunt', NULL, 'aunt', 'N-U-A-T', 'aunt'),
 (21, 17, 143, 'nephew', NULL, 'cousinh', 'W-E-P-E-N-H', 'nephew'),
 (21, 17, 143, 'niece', NULL, 'cousinm', 'C-E-E-I-N', 'niece'),
@@ -3480,12 +3338,12 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (17, 18, 146, 'what_time_is_it', NULL, '9_12', '', 'nine twelve'),
 (17, 18, 146, 'what_time_is_it', NULL, '2_59', '', 'two fifty nine'),
 (17, 18, 146, 'what_time_is_it', NULL, '3_15', '', 'three fifteen'),
-(17, 18, 146, 'what_time_is_it', NULL, '5_00', '', 'five o?clock'),
+(17, 18, 146, 'what_time_is_it', NULL, '5_00', '', 'five o''clock'),
 (17, 18, 146, 'what_time_is_it', NULL, '9_30', '', 'nine thirty'),
 (17, 18, 146, 'what_time_is_it', NULL, '7_35', '', 'seven thirty five'),
 (17, 18, 146, 'what_time_is_it', NULL, '2_50', '', 'two fifty'),
 (17, 18, 146, 'what_time_is_it', NULL, '6_08', '', 'six ou eight'),
-(17, 18, 146, 'what_time_is_it', NULL, '2_00', '', 'two o?clock'),
+(17, 18, 146, 'what_time_is_it', NULL, '2_00', '', 'two o''clock'),
 (17, 18, 146, 'what_time_is_it', NULL, '9_59', '', 'nine fifty nine'),
 (18, 18, 147, '5_21', NULL, '5_21', '', ''),
 (18, 18, 147, '6_01', NULL, '6_01', '', ''),
@@ -3531,37 +3389,8 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (9, 18, 148, '3_03', NULL, '88_88', '3:03/3:33', '3:03'),
 (9, 18, 148, '4_04', NULL, '88_88', '4:44/4:04', '4:04');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `t030_cobranza`
---
-
-CREATE TABLE IF NOT EXISTS `t030_cobranza` (
-  `Co_Cobranza` int(11) NOT NULL,
-  `Nu_Identificacion` varchar(20) NOT NULL,
-  `Co_Canon` float NOT NULL,
-  `Solvencia` char(2) DEFAULT NULL,
-  `Fe_ultimoPago` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `t040_retos`
---
-
-CREATE TABLE IF NOT EXISTS `t040_retos` (
-  `Co_Reto` int(11) NOT NULL,
-  `Co_Usuario` bigint(20) NOT NULL,
-  `Co_Tema` int(11) NOT NULL,
-  `Nu_Identificacion` varchar(20) NOT NULL,
-  `Fe_Ejecucion` varchar(120) NOT NULL,
-  `St_Reto` char(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `t040_retos`
+-- Dumping data for table `t040_retos`
 --
 
 INSERT INTO `t040_retos` (`Co_Reto`, `Co_Usuario`, `Co_Tema`, `Nu_Identificacion`, `Fe_Ejecucion`, `St_Reto`) VALUES
@@ -3574,20 +3403,8 @@ INSERT INTO `t040_retos` (`Co_Reto`, `Co_Usuario`, `Co_Tema`, `Nu_Identificacion
 (18, 7, 18, 'A0001I', '17-07-2019', 'A'),
 (18, 8, 18, 'A0001I', '20-07-2019', 'A');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `t080_usuario_institucion`
---
-
-CREATE TABLE IF NOT EXISTS `t080_usuario_institucion` (
-  `Co_Usuario` bigint(20) NOT NULL,
-  `Nu_Identificacion` varchar(20) NOT NULL,
-  `Fe_Ingreso` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `t080_usuario_institucion`
+-- Dumping data for table `t080_usuario_institucion`
 --
 
 INSERT INTO `t080_usuario_institucion` (`Co_Usuario`, `Nu_Identificacion`, `Fe_Ingreso`) VALUES
@@ -3601,24 +3418,8 @@ INSERT INTO `t080_usuario_institucion` (`Co_Usuario`, `Nu_Identificacion`, `Fe_I
 (8, 'A0001I', '2019-07-01'),
 (9, 'A0001I', '2019-08-18');
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `t090_usuario_nivel`
---
-
-CREATE TABLE IF NOT EXISTS `t090_usuario_nivel` (
-  `Co_Usuario` bigint(20) NOT NULL,
-  `Co_Nivel` int(11) NOT NULL,
-  `Progreso` int(11) NOT NULL,
-  `Se_Actual` int(11) NOT NULL,
-  `Te_Actual` int(11) NOT NULL,
-  `Horas` int(11) NOT NULL,
-  `Le_Actual` varchar(300) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `t090_usuario_nivel`
+-- Dumping data for table `t090_usuario_nivel`
 --
 
 INSERT INTO `t090_usuario_nivel` (`Co_Usuario`, `Co_Nivel`, `Progreso`, `Se_Actual`, `Te_Actual`, `Horas`, `Le_Actual`) VALUES
@@ -3631,260 +3432,6 @@ INSERT INTO `t090_usuario_nivel` (`Co_Usuario`, `Co_Nivel`, `Progreso`, `Se_Actu
 (7, 1, 100, 149, 18, 0, '#'),
 (8, 1, 100, 149, 18, 0, '#'),
 (9, 1, 0, 0, 0, 0, '');
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `m210_usuario`
---
-ALTER TABLE `m210_usuario`
-  ADD PRIMARY KEY (`Co_Usuario`),
-  ADD UNIQUE KEY `Tx_Email` (`Tx_Email`),
-  ADD KEY `FK_M210_M220_ALUMNO` (`Co_Alumno`),
-  ADD KEY `FK_M210_P080_ROL` (`Co_Rol`);
-
---
--- Indices de la tabla `m220_alumno`
---
-ALTER TABLE `m220_alumno`
-  ADD PRIMARY KEY (`Co_Alumno`);
-
---
--- Indices de la tabla `p020_institucion`
---
-ALTER TABLE `p020_institucion`
-  ADD PRIMARY KEY (`Nu_Identificacion`);
-
---
--- Indices de la tabla `p030_nivel`
---
-ALTER TABLE `p030_nivel`
-  ADD PRIMARY KEY (`Co_Nivel`);
-
---
--- Indices de la tabla `p040_temas`
---
-ALTER TABLE `p040_temas`
-  ADD PRIMARY KEY (`Co_Tema`),
-  ADD KEY `FK_P040_P030_Nivel` (`Co_Nivel`);
-
---
--- Indices de la tabla `p050_juego`
---
-ALTER TABLE `p050_juego`
-  ADD PRIMARY KEY (`Co_Juego`);
-
---
--- Indices de la tabla `p060_multimedia`
---
-ALTER TABLE `p060_multimedia`
-  ADD PRIMARY KEY (`Co_Multimedia`);
-
---
--- Indices de la tabla `p070_orden`
---
-ALTER TABLE `p070_orden`
-  ADD PRIMARY KEY (`Co_Orden`),
-  ADD KEY `FK_P070_P040_Temas` (`Co_Tema`);
-
---
--- Indices de la tabla `p080_rol`
---
-ALTER TABLE `p080_rol`
-  ADD PRIMARY KEY (`Co_Rol`);
-
---
--- Indices de la tabla `p090_imagenes`
---
-ALTER TABLE `p090_imagenes`
-  ADD PRIMARY KEY (`Nb_imagenes`),
-  ADD KEY `FK_P090_P060_Multimedia` (`Co_Multimedia`);
-
---
--- Indices de la tabla `p100_videos`
---
-ALTER TABLE `p100_videos`
-  ADD PRIMARY KEY (`Nb_videos`),
-  ADD KEY `FK_P100_P060_Multimedia` (`Co_Multimedia`);
-
---
--- Indices de la tabla `p110_audio`
---
-ALTER TABLE `p110_audio`
-  ADD PRIMARY KEY (`Nb_audio`),
-  ADD KEY `FK_P110_P060_Multimedia` (`Co_Multimedia`);
-
---
--- Indices de la tabla `t010_bitacora`
---
-ALTER TABLE `t010_bitacora`
-  ADD PRIMARY KEY (`Co_Bitacora`);
-
---
--- Indices de la tabla `t020_juego_tema`
---
-ALTER TABLE `t020_juego_tema`
-  ADD KEY `FK_P020_P050_Juego` (`Co_Juego`),
-  ADD KEY `FK_P020_P040_Temas` (`Co_Tema`),
-  ADD KEY `FK_P020_P070_Orden` (`Co_Orden`),
-  ADD KEY `FK_P020_P110_audio` (`Nb_audio`),
-  ADD KEY `FK_P020_P100_videos` (`Nb_videos`),
-  ADD KEY `FK_P020_P090_imagenes` (`Nb_imagenes`);
-
---
--- Indices de la tabla `t030_cobranza`
---
-ALTER TABLE `t030_cobranza`
-  ADD PRIMARY KEY (`Co_Cobranza`),
-  ADD KEY `FK_T030_P020_Institucion` (`Nu_Identificacion`);
-
---
--- Indices de la tabla `t040_retos`
---
-ALTER TABLE `t040_retos`
-  ADD PRIMARY KEY (`Co_Reto`,`Co_Usuario`),
-  ADD KEY `FK_t040_P040_Temas` (`Co_Tema`),
-  ADD KEY `FK_t040_t080_usuario_institucion_fk` (`Nu_Identificacion`);
-
---
--- Indices de la tabla `t080_usuario_institucion`
---
-ALTER TABLE `t080_usuario_institucion`
-  ADD PRIMARY KEY (`Co_Usuario`,`Nu_Identificacion`),
-  ADD KEY `FK_T080_M210_Usuario` (`Co_Usuario`),
-  ADD KEY `FK_T080_P020_Institucion` (`Nu_Identificacion`);
-
---
--- Indices de la tabla `t090_usuario_nivel`
---
-ALTER TABLE `t090_usuario_nivel`
-  ADD KEY `FK_T090_M210_Usuario` (`Co_Usuario`),
-  ADD KEY `FK_T090_P030_Nivel` (`Co_Nivel`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `m210_usuario`
---
-ALTER TABLE `m210_usuario`
-  MODIFY `Co_Usuario` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT de la tabla `m220_alumno`
---
-ALTER TABLE `m220_alumno`
-  MODIFY `Co_Alumno` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT de la tabla `p030_nivel`
---
-ALTER TABLE `p030_nivel`
-  MODIFY `Co_Nivel` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `p040_temas`
---
-ALTER TABLE `p040_temas`
-  MODIFY `Co_Tema` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
---
--- AUTO_INCREMENT de la tabla `p050_juego`
---
-ALTER TABLE `p050_juego`
-  MODIFY `Co_Juego` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
---
--- AUTO_INCREMENT de la tabla `p080_rol`
---
-ALTER TABLE `p080_rol`
-  MODIFY `Co_Rol` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `t010_bitacora`
---
-ALTER TABLE `t010_bitacora`
-  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `t030_cobranza`
---
-ALTER TABLE `t030_cobranza`
-  MODIFY `Co_Cobranza` int(11) NOT NULL AUTO_INCREMENT;
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `m210_usuario`
---
-ALTER TABLE `m210_usuario`
-  ADD CONSTRAINT `FK_M210_M220_ALUMNO` FOREIGN KEY (`Co_Alumno`) REFERENCES `m220_alumno` (`Co_Alumno`),
-  ADD CONSTRAINT `FK_M210_P080_ROL` FOREIGN KEY (`Co_Rol`) REFERENCES `p080_rol` (`Co_Rol`);
-
---
--- Filtros para la tabla `p040_temas`
---
-ALTER TABLE `p040_temas`
-  ADD CONSTRAINT `FK_P040_P030_Nivel` FOREIGN KEY (`Co_Nivel`) REFERENCES `p030_nivel` (`Co_Nivel`);
-
---
--- Filtros para la tabla `p070_orden`
---
-ALTER TABLE `p070_orden`
-  ADD CONSTRAINT `FK_P070_P040_Temas` FOREIGN KEY (`Co_Tema`) REFERENCES `p040_temas` (`Co_Tema`);
-
---
--- Filtros para la tabla `p090_imagenes`
---
-ALTER TABLE `p090_imagenes`
-  ADD CONSTRAINT `FK_P090_P060_Multimedia` FOREIGN KEY (`Co_Multimedia`) REFERENCES `p060_multimedia` (`Co_Multimedia`);
-
---
--- Filtros para la tabla `p100_videos`
---
-ALTER TABLE `p100_videos`
-  ADD CONSTRAINT `FK_P100_P060_Multimedia` FOREIGN KEY (`Co_Multimedia`) REFERENCES `p060_multimedia` (`Co_Multimedia`);
-
---
--- Filtros para la tabla `p110_audio`
---
-ALTER TABLE `p110_audio`
-  ADD CONSTRAINT `FK_P110_P060_Multimedia` FOREIGN KEY (`Co_Multimedia`) REFERENCES `p060_multimedia` (`Co_Multimedia`);
-
---
--- Filtros para la tabla `t020_juego_tema`
---
-ALTER TABLE `t020_juego_tema`
-  ADD CONSTRAINT `FK_P020_P040_Temas` FOREIGN KEY (`Co_Tema`) REFERENCES `p040_temas` (`Co_Tema`),
-  ADD CONSTRAINT `FK_P020_P050_Juego` FOREIGN KEY (`Co_Juego`) REFERENCES `p050_juego` (`Co_Juego`),
-  ADD CONSTRAINT `FK_P020_P070_Orden` FOREIGN KEY (`Co_Orden`) REFERENCES `p070_orden` (`Co_Orden`),
-  ADD CONSTRAINT `FK_P020_P090_imagenes` FOREIGN KEY (`Nb_imagenes`) REFERENCES `p090_imagenes` (`Nb_imagenes`),
-  ADD CONSTRAINT `FK_P020_P100_videos` FOREIGN KEY (`Nb_videos`) REFERENCES `p100_videos` (`Nb_videos`),
-  ADD CONSTRAINT `FK_P020_P110_audio` FOREIGN KEY (`Nb_audio`) REFERENCES `p110_audio` (`Nb_audio`);
-
---
--- Filtros para la tabla `t030_cobranza`
---
-ALTER TABLE `t030_cobranza`
-  ADD CONSTRAINT `FK_T030_P020_Institucion` FOREIGN KEY (`Nu_Identificacion`) REFERENCES `p020_institucion` (`Nu_Identificacion`);
-
---
--- Filtros para la tabla `t040_retos`
---
-ALTER TABLE `t040_retos`
-  ADD CONSTRAINT `FK_t040_P040_Temas` FOREIGN KEY (`Co_Tema`) REFERENCES `p040_temas` (`Co_Tema`),
-  ADD CONSTRAINT `FK_t040_t080_usuario_institucion_fk` FOREIGN KEY (`Nu_Identificacion`) REFERENCES `t080_usuario_institucion` (`Nu_Identificacion`);
-
---
--- Filtros para la tabla `t080_usuario_institucion`
---
-ALTER TABLE `t080_usuario_institucion`
-  ADD CONSTRAINT `FK_T080_M210_Usuario` FOREIGN KEY (`Co_Usuario`) REFERENCES `m210_usuario` (`Co_Usuario`),
-  ADD CONSTRAINT `FK_T080_P020_Institucion` FOREIGN KEY (`Nu_Identificacion`) REFERENCES `p020_institucion` (`Nu_Identificacion`);
-
---
--- Filtros para la tabla `t090_usuario_nivel`
---
-ALTER TABLE `t090_usuario_nivel`
-  ADD CONSTRAINT `FK_T090_M210_Usuario` FOREIGN KEY (`Co_Usuario`) REFERENCES `m210_usuario` (`Co_Usuario`),
-  ADD CONSTRAINT `FK_T090_P030_Nivel` FOREIGN KEY (`Co_Nivel`) REFERENCES `p030_nivel` (`Co_Nivel`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

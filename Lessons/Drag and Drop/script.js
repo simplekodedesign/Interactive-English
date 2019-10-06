@@ -1,5 +1,5 @@
 
-var src = ["../../img/C21logo.svg", "../../img/categories/a an the/cup.webp", "../../img/categories/a an the/eraser.webp"]
+var src = ["../../img/C21logo.svg", "../../img/categories/a an the/cup.webp", "../../img/categories/a an the/eraser.webp", "../../img/rocket.svg"]
 var ask = ["0", "1", "2", "3"]
 var compare = [...src];
 var container = document.getElementById('cont_all')
@@ -8,10 +8,21 @@ var field = document.getElementsByClassName('field')
 window.addEventListener("load", function () {
   constWorld()
 
-
   Draggable.create(".item",{
     type:"x,y",
+    edgeResistance:0.65,
+    bounds: container,
+    throwProps:true,
+    autoScroll:true,
     onRelease: dropItem,
+    snap: {
+        x: function(endValue) {
+            return Math.round(endValue / gridWidth) * gridWidth;
+        },
+        y: function(endValue) {
+            return Math.round(endValue / gridHeight) * gridHeight;
+        }
+    }
   })
 })
 
@@ -29,6 +40,8 @@ function constWorld(){
     img.setAttribute("class", "item")
     container.appendChild(img)
 
+    console.log(container);
+
     let card = document.createElement("div")
     let cardF = document.createElement("p")
     card.setAttribute("class", "itemField")
@@ -36,11 +49,8 @@ function constWorld(){
     cardF.innerHTML= source
     card.appendChild(cardF)
     field[0].appendChild(card)
-
-
   }
 }
-
 
 function dropItem() {
   let src = this.target.getAttribute("src")

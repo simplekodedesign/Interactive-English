@@ -120,9 +120,9 @@
             <div id="lessons">
               <div class="roadicon" id="theme1"><img src="../../img/lessons/background/abc.svg" width="100%" alt="The Alphabet"></div>
               <div class="roadicon" id="theme2"><img src="../../img/lessons/background/greetings.svg" height="100%" alt="The Greetings"></div>
-              <div class="roadicon" id="theme3"><img src="../../img/lessons/background/thenumbers.svg" height="100%" alt="The Numbers"></div>
+              <div class="roadicon" id="theme3"><img src="../../img/lessons/background/thenumbers.svg" height="100%" alt="Numbers"></div>
               <div class="roadicon" id="theme4"><img src="../../img/lessons/background/personalinformation.svg" height="60%" alt="Personal information"></div>
-              <div class="roadicon" id="theme5"><img src="../../img/lessons/background/articles.svg" height="100%" alt="Articles"></div>
+              <div class="roadicon" id="theme5"><img src="../../img/lessons/background/articles.svg" height="100%" alt="The articles"></div>
               <div class="roadicon" id="theme6"><img src="../../img/lessons/background/animals.svg" height="100%" alt="Animals"></div>
               <div class="roadicon" id="theme7"><img src="../../img/lessons/background/foodanddrinks.svg" height="100%" alt="Food and drinks"></div>
               <div class="roadicon" id="theme8"><img src="../../img/lessons/background/body.svg" height="100%" alt="Parts of the body"></div>
@@ -135,7 +135,7 @@
               <div class="roadicon" id="theme15"><img src="../../img/lessons/background/prepositions.svg" height="100%" alt="Prepositions"></div>
               <div class="roadicon" id="theme16"><img src="../../img/lessons/background/directions.svg" height="80%" alt="Directions"></div>
               <div class="roadicon" id="theme17"><img src="../../img/lessons/background/family.svg" height="80%" alt="Family"></div>
-              <div class="roadicon" id="theme18"><img src="../../img/lessons/background/hours.svg" height="70%" alt="The hours"></div>
+              <div class="roadicon" id="theme18"><img src="../../img/lessons/background/hours.svg" height="70%" alt="What time is it?"></div>
               <div id="start"><img src="../../img/lessons/background/start.svg" height="100%" alt="Start"></div>
               <div id="end"><img src="../../img/lessons/background/end.svg" height="100%" alt="END"></div>
             </div>
@@ -181,12 +181,12 @@
           <textarea name="" id="txtFrom"></textarea>
           <textarea name="" id="txtTo"></textarea>
         </div>
-        <div class="radiobut">
+        <!-- <div class="radiobut">
           <input type="radio" name="option" id="checkEsEn" value="es-en">Español a Inglés
         </div>
         <div class="radiobut">
           <input type="radio" name="option" id="checkEnEs" value="en-es" checked>Inglés a Español
-        </div>
+        </div> -->
         <button id="translatebutton">Traducir/Translate</button>
       </div>
     </div>

@@ -38,7 +38,7 @@
     <span class="button" id="comenzar">COMENZAR</span>
   </section>
 
-  <img src="img/C21logo.svg" alt="Logo" id="logo">
+  <!-- <img src="img/C21logo.svg" alt="Logo" id="logo"> -->
 
 
   <section id="login">
@@ -83,9 +83,9 @@
     </div>
   </div>
 
-  <footer>
+  <!-- <footer>
     <p><b>C21 English</b> es una nueva forma fácil y sencilla que lo llevará de la mano a aprender inglés, le abrira muchas puertas en el futuro y lo paseará por nuevos mundos y posibilidades</p>
-  </footer>
+  </footer> -->
 
     <!-- <script src="mainJS.js"></script> -->
     <script src="js/login.js?q=<?php echo $q?>"></script>

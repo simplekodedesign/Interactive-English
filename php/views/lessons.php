@@ -75,13 +75,14 @@
       <div id='images'>
         <img src='' alt='Lesson image' id='lessonImage'>
         <object type='image/svg+xml' data='../../img/lessons/lessonsb.svg' alt='Lessons' id='svg'></object>
+        <audio src = '' id='audio'></audio>
       </div>
       <div class='lessoncontainer'>
         <div class='column' id='left'></div>
 
         <div class='column' id='right'></div>
       </div>
-    
+
     </div>";
   echo "</section>";
 
@@ -92,6 +93,7 @@
     var co_juego = ".json_encode($co_juego).";
     var imagenes = ".json_encode($url_img).";
     var imgTema = '".$imgTema."';
+    var aud = '".$aud."';
     var nLessons = nombre_lecciones.length;
   </script>";
 
