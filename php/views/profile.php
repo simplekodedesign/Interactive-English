@@ -27,9 +27,8 @@
       $logoInst=$res["Img_Url"];
     }
   }
-
-  echo "<link rel='stylesheet' href='../../css/profile.css'>
-        <link rel='stylesheet' href='../../css/background.css'>
+  echo "<link rel='stylesheet' href='../../css/profile.css?q=".$q."'>
+        <link rel='stylesheet' href='../../css/background.css?q=".$q."'>
         <div class='titles' id='titles'>
             <h1>".$_SESSION['name']." ".$_SESSION['surname']."</h1>
             <span id='subtitle'>This is your personal information:</span>
@@ -112,4 +111,4 @@
           <div class='buttons'>
             <span class='lessonButton' id='save' onclick='updateProfile()'>save</span>
           </div>
-          <script type='text/javascript' src='../../js/profile.js'></script>";
+          <script type='text/javascript' src='../../js/profile.js?q=".$q."'></script>";

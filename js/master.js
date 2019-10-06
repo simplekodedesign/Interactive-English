@@ -30,8 +30,20 @@ var gifButton = document.getElementById("gifButton");
 var menu = document.getElementById('showmenu');
 var navbar = document.getElementById('navbarNav');
 var translatebutton = document.getElementById("translatebutton");
+var svgRocket;
+var linkElement;
 
 window.addEventListener("load", function () {
+
+  var rocket = document.getElementById("rocketSVG");
+  svgRocket = rocket.contentDocument;
+
+  linkElement = svgRocket.createElementNS("http://www.w3.org/1999/xhtml", "link");
+  linkElement.setAttribute("href", "../CSS/rocket.css");
+  linkElement.setAttribute("type", "text/css");
+  linkElement.setAttribute("rel", "stylesheet");
+  svgRocket.getElementById("Capa_1").appendChild(linkElement);
+
   if(translator) {
     translator.addEventListener("click", translate);
     extibutton.addEventListener("click", translate);
@@ -82,4 +94,41 @@ function getTranslate(){
 
 function showGif () {
   helpgif.classList.toggle("helpgif-activated");
+}
+
+//--------------------------------------VICTORY MESSAGE--------------------------
+
+var victoryMessage = function() {
+  var xhttp = new XMLHttpRequest();
+  /*xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("main").innerHTML = this.responseText;
+    }
+  };*/
+  xhttp.open("GET", "../controller/continue.php?co="+cord, true);
+  xhttp.send();
+  document.getElementById("rocket").style.setProperty("animation-name", "rocketAnimation");
+  document.getElementById("lSigu").style.display="flex";
+
+  // var rand = (Math.random())*10;
+
+  // if (rand < 2.5) {
+  //     document.getElementById("victoryAud").src = "../../../../aud/congratulations/c1.mp3";
+  //     document.getElementById("victoryAud").play();
+  // }
+
+  // if (rand > 2.5 && rand < 5) {
+  //     document.getElementById("victoryAud").src = "../../aud/congratulations/c2.mp3";
+  //     document.getElementById("victoryAud").play();
+  // }
+
+  // if (rand > 5 && rand < 7.5) {
+  //     document.getElementById("victoryAud").src = "../../aud/congratulations/c3.mp3";
+  //     document.getElementById("victoryAud").play();
+  // }
+
+  // if (rand > 7.5) {
+  //     document.getElementById("victoryAud").src = "../../aud/congratulations/c4.mp3";
+  //     document.getElementById("victoryAud").play();
+  // }
 }

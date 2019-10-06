@@ -86,9 +86,7 @@
           <span id="showmenu"></span>
           <span id="navbarNav">
             <a href="home.php"><span class="hButton B_lecciones">LESSONS</span></a>
-            <span class="hButton B_herr">
-              <span id="translator">TRANSLATOR</span>
-            </span>
+            <span class="hButton B_herr" id="translator">TRANSLATOR</span>
             <span class="hButton B_ayuda">HELP
               <ul>
                 <li>CONTACT</li>
@@ -192,11 +190,17 @@
         <button id="translatebutton">Traducir/Translate</button>
       </div>
     </div>
+
+    <div class="rocket" id="rocket">
+      <object data="../../img/rocket.svg" type="image/svg+xml" id="rocketSVG"></object>
+      <span id="rocketMessage">You Won</span>
+    </div>
+
     <script type="text/javascript">
       var se_actual = <?php echo $_SESSION["se_actual"];?>;
       var te_actual = <?php echo $_SESSION["te_actual"];?>;
     </script>
-    <script src="../../js/routing.js"></script>
-    <script src="../../js/master.js"></script>
+    <script src="../../js/routing.js?q=<?php echo $q?>"></script>
+    <script src="../../js/master.js?q=<?php echo $q?>"></script>
   </body>
 </html>
