@@ -124,7 +124,7 @@
               <div class="roadicon" id="theme2"><img src="../../img/lessons/background/greetings.svg" height="100%" alt="The Greetings"></div>
               <div class="roadicon" id="theme3"><img src="../../img/lessons/background/thenumbers.svg" height="100%" alt="Numbers"></div>
               <div class="roadicon" id="theme4"><img src="../../img/lessons/background/personalinformation.svg" height="60%" alt="Personal information"></div>
-              <div class="roadicon" id="theme5"><img src="../../img/lessons/background/articles.svg" height="100%" alt="Articles"></div>
+              <div class="roadicon" id="theme5"><img src="../../img/lessons/background/articles.svg" height="100%" alt="The articles"></div>
               <div class="roadicon" id="theme6"><img src="../../img/lessons/background/animals.svg" height="100%" alt="Animals"></div>
               <div class="roadicon" id="theme7"><img src="../../img/lessons/background/foodanddrinks.svg" height="100%" alt="Food and drinks"></div>
               <div class="roadicon" id="theme8"><img src="../../img/lessons/background/body.svg" height="100%" alt="Parts of the body"></div>

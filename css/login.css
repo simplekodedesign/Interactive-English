@@ -3,7 +3,7 @@
 :root{
   --primary: #007BBF;
   --secondary: #0B307F;
-  --green: #8EC134;
+  /* --green: #EE6F2A; */
 
   --yellow: #F9CF00;
   --orange: #EE6F2A;
@@ -28,20 +28,20 @@
 }
 
 button, .button{
-  background-color: var(--green);
+  background-color: var(--orange);
   border-radius: 12px;
-  border: 2px solid rgb(140, 140, 140);
+  /* border: 2px solid rgb(140, 140, 140); */
   color: white;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
-  padding: 2px 30px;
+  padding: 20px 30px;
   position: relative;
   cursor: pointer;
 }
 
 #comenzar{
-  bottom: 50px;
+  bottom: 48px;
   position: absolute;
 }
 
