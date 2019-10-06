@@ -8,13 +8,13 @@
   if(isset($_GET["e"])){
     switch($_GET["e"]){
       case 1:
-        echo "<script>alert('Su contraseña ha sido actualizada con exito')</script>";
+        echo "<script>loginHandler(1)</script>";
         break;
       case 2:
-        echo "<script>alert('Usuario o contraseña incorrectos')</script>";
+        echo "<script>loginHandler(2)</script>";
         break;
       case 3:
-        echo "<script>alert('Su usuario no se encuentra activo')</script>";
+        echo "<script>loginHandler(3)</script>";
         break;
     }
   }
@@ -83,11 +83,12 @@
     </div>
   </div>
 
-  <!-- <footer>
-    <p><b>C21 English</b> es una nueva forma fácil y sencilla que lo llevará de la mano a aprender inglés, le abrira muchas puertas en el futuro y lo paseará por nuevos mundos y posibilidades</p>
-  </footer> -->
+  <div class="message">
+    <p id="message">
+      ERROR ID10TA ID10TA ID10TA ID10TA
+    </p>
+  </div>
 
-    <!-- <script src="mainJS.js"></script> -->
     <script src="js/login.js?q=<?php echo $q?>"></script>
     <script type="text/javascript">
       history.pushState({ foo: "index" },"","index.php");

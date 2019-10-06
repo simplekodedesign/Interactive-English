@@ -25,6 +25,7 @@
 #hi {
   display: flex;
   position: relative;
+  min-height: 100vh;
 }
 
 button, .button{
@@ -71,6 +72,7 @@ body{
   width: 100%;
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 #login {
@@ -229,6 +231,28 @@ label {
 .form > div {
   margin: 10px 0;
   position: relative;
+}
+
+/*--------------------------------Message---------------------------------*/
+
+.message{
+  background: url(../img/tip.svg) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  position: absolute;
+  top: 200px;
+  right: 0;
+  width: 200px;
+  height: 210px;
+  transform: translateX(200px);
+}
+
+.message p{
+  color: var(--primary);
+  text-transform: capitalize;
+  text-align: center;
+  width: 80%;
 }
 
 /*--------------------------------Footer---------------------------------*/

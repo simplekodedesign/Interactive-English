@@ -2,8 +2,9 @@ const forgot = document.getElementById("forgot");
 const forgotForm = document.getElementById("forgotForm");
 const next = (document.getElementsByClassName("siguiente"))[0];
 const inputs = document.getElementsByClassName("formInput");
-var co_usuario=undefined;
 const comenzar = document.getElementById("comenzar");
+var co_usuario= undefined;
+var errorMessage = document.getElementById('message')
 
 window.addEventListener("load", function() {
 
@@ -20,7 +21,7 @@ window.addEventListener("load", function() {
         co_usuario = this.responseText;
 
         if(co_usuario!=undefined){
-            alert("Hemos enviado un código de reactivación a tu dirección de correo electrónico, ingrésalo en el siguiente espacio.");
+            loginHandler(4)
             document.getElementById("codigo").disabled = false;
             document.getElementById("usernamepassRec").disabled = true;
         }
@@ -35,10 +36,10 @@ window.addEventListener("load", function() {
       (document.getElementsByTagName("body"))[0].style.overflow = "hidden";
   });
   document.getElementById("btnAceptar").addEventListener("click",function(){
-    if(document.getElementById("codigo").value==document.getElementById("codigo_generado").value){
+    if(document.getElementById("codigo").value == document.getElementById("codigo_generado").value){
       location="php/views/newpassword.php?cu="+co_usuario;
     }else{
-      alert("Codigo de verificación incorrecto");
+      loginHandler(5);
     }
   });
 
@@ -47,6 +48,30 @@ window.addEventListener("load", function() {
     document.getElementById("login").style.setProperty("display", "flex");
   });
 });
+
+function loginHandler(handle){
+  switch (handle) {
+    case handle : 1;
+      errorMessage.innerHTML = 'Tu contraseña ha sido cambiada'
+      break;
+    case handle : 2;
+      errorMessage.innerHTML = 'Tienes un error con el usuario o la contraseña, vuelve a intentarlo'
+      break;
+    case handle : 3;
+      errorMessage.innerHTML = 'Tu usuario no se encuentra activo, contacta con el soporte'
+      break;
+    case handle : 4;
+      errorMessage.innerHTML = 'Hemos enviado un código de reactivación a tu dirección de correo electrónico, ingrésalo en el siguiente espacio.'
+      break;
+    case handle : 5;
+      errorMessage.innerHTML = "Codigo de verificación incorrecto";
+      break;
+    default:
+      errorMessage.innerHTML = 'Error inesperado, recarga la página y vuelve a intentarlo o contacta al soporte'
+      break;
+  }
+
+}
 
 // var remeb = function() {
 //   alert("bu");
