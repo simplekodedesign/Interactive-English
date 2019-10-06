@@ -1,5 +1,5 @@
 
-var src = ["../../img/C21logo.svg", "../../img/categories/a an the/cup.webp", "../../img/categories/a an the/eraser.webp"]
+var src = ["../../img/C21logo.svg", "../../img/categories/a an the/cup.webp", "../../img/categories/a an the/eraser.webp", "../../img/rocket.svg"]
 var ask = ["0", "1", "2", "3"]
 var compare = [...src];
 var container = document.getElementById('cont_all')
@@ -14,7 +14,7 @@ window.addEventListener("load", function () {
     bounds: container,
     throwProps:true,
     autoScroll:true,
-    // onRelease: dropItem,
+    onRelease: dropItem,
     snap: {
         x: function(endValue) {
             return Math.round(endValue / gridWidth) * gridWidth;
@@ -39,6 +39,8 @@ function constWorld(){
     img.setAttribute("src", src[i])
     img.setAttribute("class", "item")
     container.appendChild(img)
+
+    console.log(container);
 
     let card = document.createElement("div")
     let cardF = document.createElement("p")
