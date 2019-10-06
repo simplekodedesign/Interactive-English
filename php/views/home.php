@@ -191,6 +191,7 @@
         <div class="radiobut">
           <input type="radio" name="option" id="checkEnEs" value="en-es" checked>Inglés a Español
         </div> -->
+        <span class="hButton B_herr" id="from_toButton">ENG - ESP</span>
         <button id="translatebutton">Traducir/Translate</button>
       </div>
     </div>
