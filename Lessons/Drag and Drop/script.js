@@ -8,10 +8,21 @@ var field = document.getElementsByClassName('field')
 window.addEventListener("load", function () {
   constWorld()
 
-
   Draggable.create(".item",{
     type:"x,y",
-    onRelease: dropItem,
+    edgeResistance:0.65,
+    bounds: container,
+    throwProps:true,
+    autoScroll:true,
+    // onRelease: dropItem,
+    snap: {
+        x: function(endValue) {
+            return Math.round(endValue / gridWidth) * gridWidth;
+        },
+        y: function(endValue) {
+            return Math.round(endValue / gridHeight) * gridHeight;
+        }
+    }
   })
 })
 
@@ -36,11 +47,8 @@ function constWorld(){
     cardF.innerHTML= source
     card.appendChild(cardF)
     field[0].appendChild(card)
-
-
   }
 }
-
 
 function dropItem() {
   let src = this.target.getAttribute("src")

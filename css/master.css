@@ -416,13 +416,15 @@ footer p{
 }
 
 .translateDiv {
-  width: 300px;
-  height: auto;
+  min-width: 300px;
+  width: 50%;
+  min-height: 500px;
   border-radius: 15px;
-  background-color: hsl(205, 100%, 49%);
-  padding: 20px 15px;
+  background: url(../img/lessons/caja1.svg) center bottom/100% auto no-repeat;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-wrap: nowrap;
 }
 
@@ -445,7 +447,7 @@ footer p{
 }
 
 .areasContainer {
-  width: 100%;
+  width: 60%;
   height: auto;
   display: grid;
 

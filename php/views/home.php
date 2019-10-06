@@ -183,12 +183,12 @@
           <textarea name="" id="txtFrom"></textarea>
           <textarea name="" id="txtTo"></textarea>
         </div>
-        <div class="radiobut">
+        <!-- <div class="radiobut">
           <input type="radio" name="option" id="checkEsEn" value="es-en">Español a Inglés
         </div>
         <div class="radiobut">
           <input type="radio" name="option" id="checkEnEs" value="en-es" checked>Inglés a Español
-        </div>
+        </div> -->
         <button id="translatebutton">Traducir/Translate</button>
       </div>
     </div>
