@@ -83,8 +83,9 @@
         <div class='column' id='right'></div>
       </div>
 
-    </div>";
-  echo "</section>";
+    </div>
+
+    </section>";
 
   echo "<script type='text/javascript'>
     var currentLesson = ".$_SESSION["se_actual"].";
