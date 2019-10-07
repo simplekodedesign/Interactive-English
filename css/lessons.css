@@ -222,7 +222,8 @@ section{
     height: 100%;
     width: auto;
     left: 50%;
-    transform: translate(-50%, 0) scale(1.5);
+    bottom: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
   }
 }
 
