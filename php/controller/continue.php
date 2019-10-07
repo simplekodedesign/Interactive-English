@@ -3,11 +3,12 @@
   session_start();
   //Realizar conexion a base de datos
   Connection::connect();
+  //aumentar la cantidad de lecciones aprobadas en la seccion actual
+  $_SESSION["nu_lec_aprob"]++;
   /*
     Revisar que la secuencia actual del usuario sea igual a la coordenada de
     la leccion que acaba de aprobar para realizar el avance
   */
-  $_SESSION["nu_lec_aprob"]++;
   if($_SESSION["se_actual"]==$_GET["co"]){
     //Aumento en la secuencia del usuario
     $_SESSION["se_actual"]++;
@@ -18,6 +19,7 @@
         $_SESSION["le_actual"]=$res["Les_Sig"];
       }
     }
+
 
     $_SESSION["progreso"]+=0.68;
     //Actualizar el avance del usuario en base de datos

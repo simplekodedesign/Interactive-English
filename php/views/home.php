@@ -38,6 +38,7 @@
 
     if(!isset($_SESSION["reto"])){
       $lsig=urlBtnSig($_GET["co"],$lsig);
+      echo "<script>console.log(".$lsig.")</script>";
     }else if(!empty($_GET["ini"])&&!empty($_GET["end"])){
       $lsig="challenge.php?ini=".$_GET["ini"]."&end=".$_GET["end"]."&th=".$_GET["th"];
     }else{
@@ -159,18 +160,22 @@
       ?>
     </section>
     <?php
-      if($lant != "" && $lant != "#"){
-        echo "<div class='navigationButtons' id='lPrev'><a href='".$lant."'><span></span></a></div>";
-      }
-      if($lact != "" && $lact != "#"){
-        echo "<div><a href='".$lact."'>Actual</a></div>";
-      }
-      if($lsig != "" && $lsig != "#"){
-        if($_SESSION["se_actual"] > $_GET["co"]) {
-          echo "<div class='navigationButtons' id='lSigu'><a href='".$lsig."'><span></span></a></div>";
-        } else {
-          echo "<div class='navigationButtons' style='display: none;'id='lSigu'><a href='".$lsig."'><span></span></a></div>";          
+      if(empty($_GET["ini"])&&empty($_GET["end"])){
+        if($lant != "" && $lant != "#"){
+          echo "<div class='navigationButtons' id='lPrev'><a href='".$lant."'><span></span></a></div>";
         }
+        if($lact != "" && $lact != "#"){
+          echo "<div><a href='".$lact."'>Actual</a></div>";
+        }
+        if($lsig != "" && $lsig != "#"){
+          if($_SESSION["se_actual"] > $_GET["co"]) {
+            echo "<div class='navigationButtons' id='lSigu'><a href='".$lsig."'><span></span></a></div>";
+          } else {
+            echo "<div class='navigationButtons' style='display: none;'id='lSigu'><a href='".$lsig."'><span></span></a></div>";
+          }
+        }
+      }else{
+            echo "<div class='navigationButtons' style='display: none;'id='lSigu'><a href='".$lsig."'><span></span></a></div>";
       }
        $par="'".$_GET["url"]."',".$_GET["co"];
     ?>
