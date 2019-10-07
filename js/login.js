@@ -8,6 +8,10 @@ var errorMessage = document.getElementById('message')
 
 window.addEventListener("load", function() {
 
+  if (error) {
+    loginHandler(error)
+  }
+
   next.addEventListener("click", function() {
     var character = "abcdefghijkmnpqrtuvwxyzABCDEFGHJKMNPQRTUVWXYZ2346789";
     var cod = "";
@@ -43,34 +47,42 @@ window.addEventListener("load", function() {
     }
   });
 
+  document.getElementById("close").addEventListener("click", function() {
+    forgotForm.style.display = "none";
+  })
+
   comenzar.addEventListener("click", function () {
     document.getElementById("hi").style.setProperty("display", "none");
     document.getElementById("login").style.setProperty("display", "flex");
   });
+
+  document.getElementById('messageClose').addEventListener("click", function(){
+    this.parentElement.style.transform = "translate(200px)";
+  })
 });
 
 function loginHandler(handle){
   switch (handle) {
-    case handle : 1;
-      errorMessage.innerHTML = 'Tu contraseña ha sido cambiada'
+    case 1 :
+      errorMessage.innerHTML = 'Tu contraseña ha sido cambiada';
       break;
-    case handle : 2;
-      errorMessage.innerHTML = 'Tienes un error con el usuario o la contraseña, vuelve a intentarlo'
+    case 2 :
+      errorMessage.innerHTML = 'Tienes un error con el usuario o la contraseña, vuelve a intentarlo';
       break;
-    case handle : 3;
-      errorMessage.innerHTML = 'Tu usuario no se encuentra activo, contacta con el soporte'
+    case 3 :
+      errorMessage.innerHTML = 'Tu usuario no se encuentra activo, contacta con el soporte';
       break;
-    case handle : 4;
-      errorMessage.innerHTML = 'Hemos enviado un código de reactivación a tu dirección de correo electrónico, ingrésalo en el siguiente espacio.'
+    case 4 :
+      errorMessage.innerHTML = 'Hemos enviado un código de reactivación a tu correo electrónico';
       break;
-    case handle : 5;
+    case 5 :
       errorMessage.innerHTML = "Codigo de verificación incorrecto";
       break;
     default:
-      errorMessage.innerHTML = 'Error inesperado, recarga la página y vuelve a intentarlo o contacta al soporte'
+      errorMessage.innerHTML = 'Error inesperado, recarga la página y vuelve a intentarlo o contacta al soporte';
       break;
   }
-
+  document.getElementById("messageContainer").style.transform = "translate(0px)"
 }
 
 // var remeb = function() {

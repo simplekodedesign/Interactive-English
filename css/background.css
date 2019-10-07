@@ -2,34 +2,37 @@
 
 body{
   background: linear-gradient(to top, #CCFFFF, #0099CC 73%, #006699 100%) top center/cover no-repeat fixed;
+  position: relative;
   /* background: linear-gradient(to top, #ffffff, #bddfec 50%, #add3e6 100%) top center/cover no-repeat fixed; */
 }
 
 body::before{
   content: "";
   background: url(../img/cloud.svg) center center/contain no-repeat;
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   bottom: 30px;
-  left: -500px;
   width: 500px;
   height: 300px;
-  z-index: -1;
+  transform: translate(-100%);
   animation: cloud1 12s ease-in infinite 4s;
+  z-index: -1;
 }
 
 body::after{
   background: url(../img/cloud.svg) center center/contain no-repeat;
   content: "";
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   top: 30px;
   /* right: -150px; */
-  left: -500px;
   width: 500px;
   height: 300px;
-  z-index: -1;
   transition: 5s translate;
-  transform: translate(250px);
+  /* transform: translate(250px); */
+  transform: translate(-50%);
   animation: cloud1 12s ease-in infinite;
+  z-index: -1;
 }
 
 @keyframes cloud1 {
@@ -40,3 +43,9 @@ body::after{
     transform: translate(calc(100vw + 500px) , 0);
   }
 }
+
+@media screen and (max-width: 450px;) {
+  body::after, body:before{
+    width: 150px;
+    height: 50px;
+  }

@@ -8,13 +8,13 @@
   if(isset($_GET["e"])){
     switch($_GET["e"]){
       case 1:
-        echo "<script>loginHandler(1)</script>";
+        echo "<script> error = 1</script>";
         break;
       case 2:
-        echo "<script>loginHandler(2)</script>";
+        echo "<script> error = 2</script>";
         break;
       case 3:
-        echo "<script>loginHandler(3)</script>";
+        echo "<script> error = 3</script>";
         break;
     }
   }
@@ -60,6 +60,7 @@
   </section>
 
   <div id="forgotForm">
+    <span id="close">x</span>
     <div class="mainLog forgotScreen">
       <h2 class="title">Has olvidado la contraseña</h2>
       <div class="form">
@@ -83,14 +84,16 @@
     </div>
   </div>
 
-  <div class="message">
+  <div class="message" id="messageContainer">
     <p id="message">
-      ERROR ID10TA ID10TA ID10TA ID10TA
+      ERROR
     </p>
+    <span id="messageClose">x</span>
   </div>
 
     <script src="js/login.js?q=<?php echo $q?>"></script>
     <script type="text/javascript">
+      var error;
       history.pushState({ foo: "index" },"","index.php");
     </script>
 </body>
