@@ -27,7 +27,6 @@ var extibutton = document.getElementById("exitButton");
 var extibuttonGif = document.getElementById("exitButtonGif");
 var helpgif = document.getElementById("helpgif");
 var gifButton = document.getElementById("gifButton");
-var menu = document.getElementById('showmenu');
 var navbar = document.getElementById('navbarNav');
 var translatebutton = document.getElementById("translatebutton");
 var svgRocket;
@@ -46,6 +45,10 @@ window.addEventListener("load", function () {
   linkElement.setAttribute("rel", "stylesheet");
   svgRocket.getElementById("Capa_1").appendChild(linkElement);
 
+  if (document.getElementById("road")) {
+    navbarNav.firstElementChild.style.display = "none";
+  }
+
   if(translator) {
     translator.addEventListener("click", translate);
     extibutton.addEventListener("click", translate);
@@ -56,6 +59,7 @@ window.addEventListener("load", function () {
     gifButton.addEventListener("click", showGif);
     extibuttonGif.addEventListener("click", showGif);
   }
+  translatebutton.addEventListener("click", getTranslate)
   from_toButton.addEventListener("click", from_to_function);
 });
 
@@ -123,7 +127,7 @@ var victoryMessage = function() {
   };
   xhttp.open("GET", "../controller/continue.php?co="+cord, true);
   xhttp.send();
-  
+
 
   // var rand = (Math.random())*10;
 

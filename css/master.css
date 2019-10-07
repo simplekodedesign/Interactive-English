@@ -476,6 +476,10 @@ footer p{
   border-radius: 10px;
 }
 
+#from_toButton{
+  background-color: var(--green);
+}
+
 .exitButton {
   display: flex;
   flex-direction: column;
