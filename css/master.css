@@ -434,6 +434,7 @@ footer p{
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  background-color: gray;
 }
 
 .translateDiv button {

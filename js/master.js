@@ -32,6 +32,8 @@ var navbar = document.getElementById('navbarNav');
 var translatebutton = document.getElementById("translatebutton");
 var svgRocket;
 var linkElement;
+var from_toButton = document.getElementById("from_toButton"); // Button for translateScreen
+var from_to = 0; // Variable for translation
 
 window.addEventListener("load", function () {
 
@@ -54,6 +56,7 @@ window.addEventListener("load", function () {
     gifButton.addEventListener("click", showGif);
     extibuttonGif.addEventListener("click", showGif);
   }
+  from_toButton.addEventListener("click", from_to_function);
 });
 
 /*---------------------------------------Translator----------------------------------*/
@@ -69,12 +72,22 @@ function translate () {
   }
 }
 
+function from_to_function() {
+  if (from_to == 0) {
+    from_toButton.innerHTML = "ESP - ENG";
+    from_to = 1;
+  } else if (from_to == 1) {
+    from_toButton.innerHTML = "ENG - ESP";
+    from_to = 0;
+  }
+}
+
 function getTranslate(){
   var xhttp = new XMLHttpRequest();
-  if(document.getElementById("checkEnEs").checked){
+  if(from_to == 0){
     var from="en";
     var to="es";
-  }else if(document.getElementById("checkEsEn").checked){
+  }else if(from_to == 1){
     var from="es";
     var to="en";
   }
@@ -99,16 +112,18 @@ function showGif () {
 //--------------------------------------VICTORY MESSAGE--------------------------
 
 var victoryMessage = function() {
+  alert("YOU WON");
   var xhttp = new XMLHttpRequest();
-  /*xhttp.onreadystatechange = function() {
+  xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     document.getElementById("main").innerHTML = this.responseText;
+    //  document.getElementById("main").innerHTML = this.responseText;
+     document.getElementById("rocket").style.setProperty("animation-name", "rocketAnimation");
+      document.getElementById("lSigu").style.display="flex";
     }
-  };*/
+  };
   xhttp.open("GET", "../controller/continue.php?co="+cord, true);
   xhttp.send();
-  document.getElementById("rocket").style.setProperty("animation-name", "rocketAnimation");
-  document.getElementById("lSigu").style.display="flex";
+  
 
   // var rand = (Math.random())*10;
 

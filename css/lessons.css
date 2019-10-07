@@ -125,7 +125,7 @@ section{
   display: flex;
   justify-content: center;
   position: relative;
-  height: 500px;
+  height: auto;
   width: 30%;
   max-width: 450px;
   align-self: center;
@@ -142,9 +142,10 @@ section{
 #images > object{
   width: 100%;
   position: absolute;
-  top: 0%;
-  left: 0;
+  top: 50%;
+  left: 50%;
   z-index: 0;
+  transform: translate(-50%, -50%);
 }
 
 .inactive {
