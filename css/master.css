@@ -434,14 +434,14 @@ footer p{
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background-color: gray;
 }
 
 .translateDiv button {
-  width: 150px;
+  width: 50%;
   margin-top: 30px;
   border-radius: 12px;
-  background-color: #ff7700;
+  background-color: var(--yellow);
+  padding: 10px 5px;
   box-shadow: none;
   align-self: center;
   border: none;
@@ -457,16 +457,20 @@ footer p{
 
 .areasContainer {
   width: 60%;
+  /* min-width: 300px; */
   height: auto;
   display: grid;
 
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 15px;
-  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
 }
 
 .areasContainer textarea {
   width: 100%;
+  min-width: 100px;
   height: 100px;
   resize: none;
   border-radius: 10px;
@@ -625,5 +629,19 @@ footer p{
 
   .titles h1{
     font-size: 1.2em;
+  }
+
+  .areasContainer{
+    margin: 10px 0;
+  }
+
+  .areasContainer textarea {
+    height: 80px;
+    width: 100px;
+  }
+  .translateDiv button {
+    margin: 0;
+    margin-top: 5px;
+    padding: 8px 5px;
   }
 }
