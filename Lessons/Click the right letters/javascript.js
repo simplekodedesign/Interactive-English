@@ -4,7 +4,7 @@ var lettersLength = letters.length;
 var posLetter = 0;
 var mainLetter = document.getElementById("mainLetter");
 var optionsLetters = document.getElementById("optionsLetters");
-var appear;
+var appear, appearInit;
 
 var optionsLength = 20;
 
@@ -16,17 +16,11 @@ window.addEventListener("load", function() {
   createGame();
 });
 
-function key (e) {
-  let a = "a";
-  for (var i = 0; i < options.length; i++) {
-    console.log(options[i].charCodeAt(0));
-  }
-}
-
 function createGame () {
   var div;
   // mainLetter.innerHTML = letters[i].toUpperCase();
-  appear = parseInt(getRandomArbitrary(4, 7));
+  appearInit = parseInt(getRandomArbitrary(4, 7));
+  appear = appearInit;
   console.log(optionsLetters.firstElementChild);
   if(posLetter == 0) {
     for (let i = 0; i < optionsLength; i++) {
@@ -47,7 +41,7 @@ function createGame () {
   let i = 0;
 
   mainLetter.innerHTML =  letters[posLetter];
-  while (i < appear) {
+  while (i < appearInit) {
     let randPos = parseInt(getRandomArbitrary(0, optionsLength));
     console.log(randPos);
     if(optionsLetters[randPos].innerHTML == "0") {
@@ -59,7 +53,7 @@ function createGame () {
   }
 
   for (let k = 0; k < optionsLength; k++) {
-    var randPos, char;
+    var char;
     do {
       char = String.fromCharCode(parseInt(getRandomArbitrary(65, 91)));
     }while (char == mainLetter.innerHTML);
@@ -70,14 +64,23 @@ function createGame () {
   }
 }
 
+function clearGame () {
+  for (var j = 0; j < optionsLength; j++) {
+    optionsLetters[j].style.setProperty("color", "unset");
+  }
+  appear = appearInit;
+}
+
 function check () {
   if (mainLetter.innerHTML == this.innerHTML) {
-    console.log("CORRECT");
     this.style.setProperty("color", "green");
     appear--;
   } else {
-    console.log("NOPE");
     this.style.setProperty("color", "red");
+    setTimeout(function () {
+      clearGame();
+    }, 100);
+    return;
   }
   if(appear == 0) {
     posLetter++;
