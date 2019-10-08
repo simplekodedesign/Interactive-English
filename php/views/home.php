@@ -109,7 +109,6 @@
     <section>
       <?php
         if(empty($_GET)){
-          // .round((($_SESSION["te_actual"]*100)/18),0).
           echo '
           <script src="../../js/home.js"></script>
           <div class="titles">
