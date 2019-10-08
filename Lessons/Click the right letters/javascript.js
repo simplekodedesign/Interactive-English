@@ -7,6 +7,7 @@ var optionsLetters = document.getElementById("optionsLetters");
 var appear, appearInit;
 
 var optionsLength = 20;
+alert("HIHIHI");
 
 window.addEventListener("load", function() {
   for (let k = 0; k < optionsLength; k++) {
