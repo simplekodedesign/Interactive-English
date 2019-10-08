@@ -40,7 +40,7 @@ window.addEventListener("load", function () {
   svgRocket = rocket.contentDocument;
 
   linkElement = svgRocket.createElementNS("http://www.w3.org/1999/xhtml", "link");
-  linkElement.setAttribute("href", "../CSS/rocket.css");
+  linkElement.setAttribute("href", "../css/rocket.css");
   linkElement.setAttribute("type", "text/css");
   linkElement.setAttribute("rel", "stylesheet");
   svgRocket.getElementById("Capa_1").appendChild(linkElement);

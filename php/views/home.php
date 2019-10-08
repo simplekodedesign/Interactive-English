@@ -38,7 +38,6 @@
 
     if(!isset($_SESSION["reto"])){
       $lsig=urlBtnSig($_GET["co"],$lsig);
-      echo "<script>console.log(".$lsig.")</script>";
     }else if(!empty($_GET["ini"])&&!empty($_GET["end"])){
       $lsig="challenge.php?ini=".$_GET["ini"]."&end=".$_GET["end"]."&th=".$_GET["th"];
     }else{

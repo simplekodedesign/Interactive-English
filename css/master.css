@@ -508,7 +508,7 @@ footer p{
 /*-----------------------------GIF------------------------------------*/
 
 #helpgif{
-  width: 100%;
+  background-color: rgba(0, 0, 0, 0.192);
   height: 100vh;
   position: fixed;
   top: 0;
@@ -516,7 +516,7 @@ footer p{
   align-content: center;
   justify-content: center;
   transition: .5s ease;
-  background-color: rgba(0, 0, 0, 0.192);
+  width: 100%;
   z-index: 4;
 }
 
@@ -535,6 +535,13 @@ footer p{
   justify-content: center;
   align-items: center;
 }
+
+#helpgif img{
+  max-width: 1000px;
+  max-height: 80vh;
+}
+
+/*---------------------------------ROCKET---------------------------*/
 
 .rocket {
   position: fixed;
