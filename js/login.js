@@ -57,7 +57,7 @@ window.addEventListener("load", function() {
   });
 
   document.getElementById('messageClose').addEventListener("click", function(){
-    this.parentElement.style.transform = "translate(200px)";
+    this.parentElement.style.transform = "translate(150%)";
   })
 });
 
@@ -82,7 +82,7 @@ function loginHandler(handle){
       errorMessage.innerHTML = 'Error inesperado, recarga la página y vuelve a intentarlo o contacta al soporte';
       break;
   }
-  document.getElementById("messageContainer").style.transform = "translate(0px)"
+  document.getElementById("messageContainer").style.transform = "translate(0)"
 }
 
 // var remeb = function() {

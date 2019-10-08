@@ -18,10 +18,6 @@ body {
   align-items: center;
 }
 
-.titles {
-  width: 100%;
-}
-
 #optionsLetters {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -29,5 +25,8 @@ body {
 }
 
 .letter {
+  color: var(--lessons);
+  cursor: pointer;
+  font-family: 'Myriad Pro Bold';
   font-size: 150%;
 }

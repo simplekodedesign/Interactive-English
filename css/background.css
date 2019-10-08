@@ -9,8 +9,8 @@ body{
 body::before{
   content: "";
   background: url(../img/cloud.svg) center center/contain no-repeat;
-  /* position: fixed; */
-  position: absolute;
+  position: fixed;
+  /* position: absolute; */
   bottom: 30px;
   width: 500px;
   height: 300px;
@@ -22,8 +22,8 @@ body::before{
 body::after{
   background: url(../img/cloud.svg) center center/contain no-repeat;
   content: "";
-  /* position: fixed; */
-  position: absolute;
+  position: fixed;
+  /* position: absolute; */
   top: 30px;
   /* right: -150px; */
   width: 500px;
