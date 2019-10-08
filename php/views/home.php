@@ -85,12 +85,12 @@
         <div class="barContainer">
           <span id="showmenu"></span>
           <span id="navbarNav">
-            <a href="home.php"><span class="hButton B_lecciones">LESSONS</span></a>
-            <span class="hButton B_herr" id="translator">TRANSLATOR</span>
-            <span class="hButton B_ayuda">HELP
+            <a href="home.php"><span class="hButton B_lecciones">Lessons</span></a>
+            <span class="hButton B_herr" id="translator">Translator</span>
+            <span class="hButton B_ayuda">Help
               <ul>
-                <li>CONTACT</li>
-                <li id="gifButton">INSTRUCTIONS</li>
+                <li>Contact</li>
+                <li id="gifButton">Istructions</li>
               </ul>
             </span>
           </span>

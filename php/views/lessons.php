@@ -67,8 +67,8 @@
   echo "
     <div class='titlesLessons'>
       <h1>".$Nb_Tema."</h1>
-      <a href='".$url."'><img src='../../img/lessons/reto.svg' alt='Reto' id='retoImage'></a>
     </div>
+    <a href='".$url."'><img src='../../img/lessons/reto.svg' alt='Reto' id='retoImage'></a>
     <!--<div id='reto'>
     </div>-->
     <div class='mainContainer'>
