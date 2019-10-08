@@ -11,7 +11,6 @@ section{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  /* width: 100%; */
 }
 
 .titles{
@@ -61,7 +60,6 @@ section{
 }
 
 .lesson {
-  font-family: "Myriad Pro Bold";
   background-color: var(--color);
   color: white;
   width: 260px;
@@ -106,6 +104,9 @@ section{
   height: 100%;
   color: white;
 
+  font-family: 'Myriad Pro Condensed';
+  font-size: 1.2em;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -133,6 +134,7 @@ section{
 
 #images > img{
   width: 70%;
+  max-height: 350px;
   position: relative;
   /* top: 50%;
   left: 10%; */
@@ -144,8 +146,9 @@ section{
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 0;
+  min-height: 140px;
   transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 .inactive {
@@ -223,6 +226,8 @@ section{
     width: auto;
     left: 50%;
     bottom: 50%;
+    max-height: 400px;
+    max-width: 300px;
     transform: translate(-50%, -50%) scale(1.5);
   }
 }
@@ -238,13 +243,19 @@ section{
     width: 50px;
    }
 
-   #retoImage{
-     min-width: 50px;
+   #papa{
+     max-width: 150px;
    }
-}
 
-@media screen and (max-width : 400px) {
-  .titlesLessons {
-    flex-direction: column;
-  }
+   .titlesLessons {
+     padding: 0;
+   }
+
+   #retoImage{
+     width: 150px;
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translate(-50%, 100%);
+   }
 }
