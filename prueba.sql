@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 08, 2019 at 02:24 PM
+-- Generation Time: Oct 08, 2019 at 09:26 PM
 -- Server version: 5.6.37
 -- PHP Version: 5.6.31
 
@@ -1713,7 +1713,7 @@ CREATE TABLE IF NOT EXISTS `t010_bitacora` (
   `Hr_Entrada` varchar(20) NOT NULL,
   `Hr_Salida` varchar(20) NOT NULL,
   `Nu_Lecciones` int(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `t010_bitacora`
@@ -1778,7 +1778,10 @@ INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_En
 (56, 1, '2019-10-06', '02:39:33', '', 0),
 (57, 1, '2019-10-06', '07:58:13', '07:58:48', 0),
 (58, 1, '2019-10-06', '08:09:49', '', 0),
-(59, 1, '2019-10-06', '08:16:10', '', 0);
+(59, 1, '2019-10-06', '08:16:10', '', 0),
+(60, 1, '2019-10-08', '02:36:40', '06:11:13', 0),
+(61, 1, '2019-10-08', '05:39:55', '06:12:01', 0),
+(62, 1, '2019-10-08', '07:57:42', '', 0);
 
 -- --------------------------------------------------------
 
@@ -3858,7 +3861,7 @@ ALTER TABLE `p080_rol`
 -- AUTO_INCREMENT for table `t010_bitacora`
 --
 ALTER TABLE `t010_bitacora`
-  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=60;
+  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=63;
 --
 -- AUTO_INCREMENT for table `t030_cobranza`
 --
