@@ -84,12 +84,12 @@
     </div>
   </div>
 
-  <div class="message" id="messageContainer">
+  <!-- <div class="message" id="messageContainer">
     <p id="message">
       ERROR
     </p>
     <span id="messageClose">x</span>
-  </div>
+  </div> -->
 
     <script src="js/login.js?q=<?php echo $q?>"></script>
     <script type="text/javascript">

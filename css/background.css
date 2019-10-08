@@ -44,8 +44,9 @@ body::after{
   }
 }
 
-@media screen and (max-width: 450px;) {
+@media screen and (max-width: 450px) {
   body::after, body:before{
     width: 150px;
     height: 50px;
   }
+}
