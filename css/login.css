@@ -262,14 +262,15 @@ label {
 .message{
   background: url(../img/tip.svg) center/cover no-repeat;
   display: flex;
+  font-family: 'Myriad Pro Condensed';
   justify-content: center;
   padding-top: 15px;
-  position: absolute;
+  position: fixed;
   top: 200px;
   right: 0;
   width: 200px;
   height: 210px;
-  transform: translateX(200px);
+  transform: translateX(150%);
   transition: .5s ease;
   z-index: 3;
 }
@@ -292,6 +293,7 @@ label {
   text-align: center;
   width: 85%;
   margin: 0;
+  font-size: 1.2em;
 }
 
 /*--------------------------------Footer---------------------------------*/
