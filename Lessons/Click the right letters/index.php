@@ -20,7 +20,7 @@
 
 ?>
 <link rel="stylesheet" href="../../Lessons/Click the right letters/style.css?q=<?php echo $q;?>">
-<div class="container">
+<div class="cont_abc">
   <div class="mainLetter" id="mainLetter">
     <audio src="" id="mainAud"></audio>
   </div>

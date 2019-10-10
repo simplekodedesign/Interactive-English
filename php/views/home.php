@@ -205,10 +205,6 @@
       <span id="rocketMessage">You Won</span>
     </div>
 
-    <div class="testinLesson">
-      <a href="home.php?url=../../Lessons/Click the right letters/index.php">TRY ME!!!!!</a>
-    </div>
-
     <script type="text/javascript">
       var se_actual = <?php echo $_SESSION["se_actual"];?>;
       var te_actual = <?php echo $_SESSION["te_actual"];?>;
