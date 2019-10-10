@@ -1,24 +1,29 @@
 
-const container = document.getElementById('cont_all')
-const field = document.getElementsByClassName('field')
-var ask = ["A", "B", "C", "D"]
-var compare = ["vowel", "consonant", "consonant", "consonant"]
+const ask = ["A", "B", "C", "D"];
+const compare = ["vowel", "consonant", "consonant", "consonant"];
+var container = document.getElementById('cont_all');
+var field = document.getElementsByClassName('field');
+var boxContainer = document.getElementById("boxesContainer");
+var item = document.getElementById("item");
+var currentItem = 0;
+var arrayLength = ask.length;
 var type;
-var arrayLength = ask.length
+var words = [];
 
 window.addEventListener("load", function () {
-
-  var words = []
   words.push(compare[0]);
   for (let i = 0; i < arrayLength; i++) {
     if (words.indexOf(compare[i]) == -1) {
-      words.push(compare[i])
+      words.push(compare[i]);
     }
   }
 
-  constWorld()
+  item.innerHTML = ask[currentItem];
+  item.setAttribute("type", compare[currentItem]);
 
-  Draggable.create(".item",{
+  constWorld();
+
+  Draggable.create("#item",{
     type:"x,y",
     edgeResistance:0.65,
     bounds: container,
@@ -26,49 +31,56 @@ window.addEventListener("load", function () {
     autoScroll:true,
     onRelease: dropItem,
     snap: {
-        x: function(endValue) {
-            return Math.round(endValue / gridWidth) * gridWidth;
-        },
-        y: function(endValue) {
-            return Math.round(endValue / gridHeight) * gridHeight;
-        }
+      x: function(endValue) {
+          return Math.round(endValue / gridWidth) * gridWidth;
+      },
+      y: function(endValue) {
+          return Math.round(endValue / gridHeight) * gridHeight;
+      }
     }
   })
 })
 
-// function cleaningurl(these) {
-//   let src = these.split("/")
-//   let source =  src[src.length - 1].split(".")
-//   return source[0]
-// }
-
 function constWorld(){
+  let boxesLength = words.length;
+  let div, text;
   for (let i = 0; i < arrayLength; i++) {
     // var source = cleaningurl(src[i])
-    var img = document.createElement("img")
+    var img = document.createElement("img");
     // img.setAttribute("src", src[i])
-    img.setAttribute("class", "item")
-    container.appendChild(img)
-
-    console.log(container);
-
-    // let card = document.createElement("div")
-    // let cardF = document.createElement("p")
-    // card.setAttribute("class", "itemField")
-    // card.setAttribute("id", source)
-    // cardF.innerHTML= source
-    // card.appendChild(cardF)
-    // field[0].appendChild(card)
+    img.setAttribute("class", "item");
+    container.appendChild(img);
   }
+
+
+  for (let i = 0; i < boxesLength; i++) {
+    div = document.createElement("div");
+    div.classList.add("itemField");
+    div.id = words[i];
+    text = document.createElement("p");
+    text.innerHTML = words[i];
+
+    div.appendChild(text);
+    boxContainer.appendChild(div);
+  }
+
 }
 
 function dropItem() {
-  let src = this.this.getAttribute('Type')
-  var boundsBefore, boundsAfter
-  if (this.hitTest("#")){
-      boundsBefore = this.target.getBoundingClientRect();
+  let src = this.target.getAttribute('type');
+  var boundsBefore, boundsAfter;
+  if (this.hitTest("#" + src)){
+    currentItem++;
+    boundsBefore = this.target.getBoundingClientRect();
+    boundsAfter = this.target.getBoundingClientRect();
+    
+    if (currentItem < arrayLength) {
+      TweenMax.to(this.target,0.0,{x:0,y:0});
+      refreshgame();
+    } else {
       $(this.target).appendTo('#'+src);
-      boundsAfter = this.target.getBoundingClientRect();
+      alert("YOU WON");
+      // victoryMessage();
       TweenMax.fromTo(this.target, 0.3, {
         x:"+=" + (boundsBefore.left - boundsAfter.left),
         y:"+=" + (boundsBefore.top - boundsAfter.top)
@@ -76,7 +88,13 @@ function dropItem() {
         x:0,
         y:0
       });
+    }
   } else {
-      TweenMax.to(this.target,0.5,{x:0,y:0});
+    TweenMax.to(this.target,0.5,{x:0,y:0});
   }
+}
+
+function refreshgame () {
+  item.innerHTML = ask[currentItem];
+  item.setAttribute("type", compare[currentItem]);
 }
