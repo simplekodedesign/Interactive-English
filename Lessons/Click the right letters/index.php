@@ -21,7 +21,9 @@
 ?>
 <link rel="stylesheet" href="../../Lessons/Click the right letters/style.css?q=<?php echo $q;?>">
 <div class="container">
-  <div class="mainLetter" id="mainLetter"></div>
+  <div class="mainLetter" id="mainLetter">
+    <audio src="" id="mainAud"></audio>
+  </div>
   <div id="optionsLetters"></div>
 </div>
 
