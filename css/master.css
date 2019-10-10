@@ -14,7 +14,7 @@
   --aquamarina: #00AC92;
 }
 
-@import 'font.css';
+/* @import url("font.css"); */
 
 *{
   box-sizing: border-box;
@@ -29,7 +29,7 @@ b{
 }
 
 body{
-  font-family: 'Myriad Pro Regular', sans-serif;
+  font-family: 'Myriad Pro Regular';
   display: flex;
   flex-direction: column;
   font-style: normal;

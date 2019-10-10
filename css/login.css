@@ -262,17 +262,6 @@ label {
 .message{
   position: fixed;
   background: url(../img/tip.svg) center/cover no-repeat;
-<<<<<<< HEAD
-  /* display: flex;
-  justify-content: center; */
-  padding-top: 15px;
-  width: 200px;
-  height: 210px;
-
-  top: 200px;
-  right: 0;
-  
-=======
   display: flex;
   font-family: 'Myriad Pro Condensed';
   justify-content: center;
@@ -282,7 +271,6 @@ label {
   right: 0;
   width: 200px;
   height: 210px;
->>>>>>> 299a8d18891133f3559a01f90ef001108e4ad49f
   transform: translateX(150%);
   transition: .5s ease;
   /* z-index: 3; */

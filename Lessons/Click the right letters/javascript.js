@@ -1,13 +1,14 @@
 var mainLetter = document.getElementById("mainLetter");
-var letters = ["A", "B", "C", "D"];
-var lettersLength = letters.length;
-var posLetter = 0;
+const audioURL = "../../aud/categories/abc/";
+const lettersInit = 65;
+var lettersLength = lettersInit + 26;
+var posLetter = lettersInit;
 var mainLetter = document.getElementById("mainLetter");
 var optionsLetters = document.getElementById("optionsLetters");
 var appear, appearInit;
+var mainAud = document.getElementById("mainAud");
 
 var optionsLength = 20;
-alert("HIHIHI");
 
 window.addEventListener("load", function() {
   for (let k = 0; k < optionsLength; k++) {
@@ -22,8 +23,8 @@ function createGame () {
   // mainLetter.innerHTML = letters[i].toUpperCase();
   appearInit = parseInt(getRandomArbitrary(4, 7));
   appear = appearInit;
-  console.log(optionsLetters.firstElementChild);
-  if(posLetter == 0) {
+
+  if(posLetter == lettersInit) {
     for (let i = 0; i < optionsLength; i++) {
       div = document.createElement("div");
       div.classList.add("letter");
@@ -41,14 +42,14 @@ function createGame () {
 
   let i = 0;
 
-  mainLetter.innerHTML =  letters[posLetter];
+  mainLetter.innerHTML =  String.fromCharCode(posLetter);
+  mainAud.src = audioURL + (String.fromCharCode(posLetter)).toLowerCase() + ".mp3";
+  console.log(mainAud.src);
   while (i < appearInit) {
     let randPos = parseInt(getRandomArbitrary(0, optionsLength));
-    console.log(randPos);
     if(optionsLetters[randPos].innerHTML == "0") {
-      optionsLetters[randPos].innerHTML = letters[posLetter];
+      optionsLetters[randPos].innerHTML = mainLetter.innerHTML;
       // optionsLetters[randPos].style.setProperty("color", "red");
-      console.log(optionsLetters[randPos].innerHTML);
       i++;
     }
   }
@@ -75,6 +76,8 @@ function clearGame () {
 function check () {
   if (mainLetter.innerHTML == this.innerHTML) {
     this.style.setProperty("color", "green");
+    console.log(mainAud);
+    mainAud.play();
     appear--;
   } else {
     this.style.setProperty("color", "red");

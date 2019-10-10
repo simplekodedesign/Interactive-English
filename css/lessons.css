@@ -93,9 +93,13 @@ section{
   display: flex;
   justify-content: space-around;
   align-items: center;
+
 }
 
 .inf > span {
+  font-family: 'Myriad Pro Bold';
+  font-size: 1.2em;
+  font-weight: 900;
   margin: 0 0 0 5px;
 }
 
@@ -239,12 +243,18 @@ section{
     grid-gap: 0px;
   }
 
+  #images > object{
+    max-width: 105px;
+    max-height: 140px;
+  }
+
+  #images > #lessonImage{
+    max-height: 140px;
+    /* max-width: 105px; */
+  }
+
   .titlesLessons a {
     width: 50px;
-   }
-
-   #papa{
-     max-width: 150px;
    }
 
    .titlesLessons {

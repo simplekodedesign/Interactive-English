@@ -6,6 +6,7 @@
 
 body{
   background: linear-gradient(to top, #ffffff, #bddfec 50%, #add3e6 100%) top center/cover no-repeat fixed;
+  text-rendering: optimizeLegibility;
 }
 
 #lessons{
