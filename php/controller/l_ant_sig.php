@@ -41,7 +41,7 @@
     switch($game){
       case "1": return "Video";
       case "2": return "ABC";
-      case "3": return "Pronunciation";
+      case "3": return "Click the right letters";
       case "4": return "Pronunciation2";
       case "5": return "Say the correct word";
       case "6": return "Pronunciation of Vowels";

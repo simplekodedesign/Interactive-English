@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-10-2019 a las 01:05:37
+-- Tiempo de generación: 10-10-2019 a las 01:13:41
 -- Versión del servidor: 5.6.37
 -- Versión de PHP: 5.6.31
 
@@ -253,9 +253,9 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 (1, 1, 1, 'The Letters', '#', '?url=../../Lessons/Video/index.php&co=2'),
 (1, 1, 2, 'The Letters', '?url=../../Lessons/Video/index.php&co=1', '?url=../../Lessons/Video/index.php&co=3'),
 (1, 1, 3, 'Pronunciation of the Letters', '?url=../../Lessons/Video/index.php&co=2', '?url=../../Lessons/ABC/index.php&co=4'),
-(1, 2, 4, 'The ABC', '?url=../../Lessons/Video/index.php&co=3', '?url=../../Lessons/Pronunciation/index.php&co=5'),
+(1, 2, 4, 'The ABC', '?url=../../Lessons/Video/index.php&co=3', '?url=../../Lessons/Click the right letters/index.php&co=5'),
 (1, 3, 5, 'Click the right letters', '?url=../../Lessons/ABC/index.php&co=4', '?url=../../Lessons/Pronunciation2/index.php&co=6'),
-(1, 4, 6, 'Pronunciation of the ABC', '?url=../../Lessons/Pronunciation/index.php&co=5', '?url=../../Lessons/Video/index.php&co=7'),
+(1, 4, 6, 'Pronunciation of the ABC', '?url=../../Lessons/Click the right letters/index.php&co=5', '?url=../../Lessons/Video/index.php&co=7'),
 (1, 1, 7, 'Letter Sounds', '?url=../../Lessons/Pronunciation2/index.php&co=6', '?url=../../Lessons/Say the correct word/index.php&co=8'),
 (1, 5, 8, 'Sound Examples', '?url=../../Lessons/Video/index.php&co=7', '?url=../../Lessons/Video/index.php&co=9'),
 (1, 1, 9, 'The Vowels', '?url=../../Lessons/Say the correct word/index.php&co=8', '?url=../../Lessons/Video/index.php&co=10'),
@@ -1713,7 +1713,7 @@ CREATE TABLE IF NOT EXISTS `t010_bitacora` (
   `Hr_Entrada` varchar(20) NOT NULL,
   `Hr_Salida` varchar(20) NOT NULL,
   `Nu_Lecciones` int(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `t010_bitacora`
@@ -1781,7 +1781,8 @@ INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_En
 (59, 1, '2019-10-06', '08:16:10', '', 0),
 (60, 1, '2019-10-08', '02:36:40', '06:11:13', 0),
 (61, 1, '2019-10-08', '05:39:55', '06:12:01', 0),
-(62, 1, '2019-10-08', '07:57:42', '', 0);
+(62, 1, '2019-10-08', '07:57:42', '', 0),
+(63, 1, '2019-10-10', '01:11:17', '', 0);
 
 -- --------------------------------------------------------
 
@@ -3861,7 +3862,7 @@ ALTER TABLE `p080_rol`
 -- AUTO_INCREMENT de la tabla `t010_bitacora`
 --
 ALTER TABLE `t010_bitacora`
-  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=63;
+  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=64;
 --
 -- AUTO_INCREMENT de la tabla `t030_cobranza`
 --
