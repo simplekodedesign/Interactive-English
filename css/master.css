@@ -256,6 +256,11 @@ section{
   font-weight: 700;
 }
 
+.titles span{
+  color: var(--secondary);
+  font-size: 1.2em;
+}
+
 section .roadTitle{
   color: var(--secondary);
   font-size: 3em;
@@ -356,9 +361,6 @@ footer p{
   border-radius: 12px;
   text-align: center;
   text-decoration: none;
-  -webkit-box-shadow: inset 1px -11px 15px -13px rgba(0,0,0,1);
-  -moz-box-shadow: -10px 7px 12px -10px rgb(0, 0, 0);
-  box-shadow: -10px 7px 12px -10px rgb(0, 0, 0);
   cursor: pointer;
   padding: 8px;
   display: flex;

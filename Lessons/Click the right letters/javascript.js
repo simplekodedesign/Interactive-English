@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
   for (let k = 0; k < optionsLength; k++) {
     let randPos = parseInt(getRandomArbitrary(65, 91));
   }
-  
+
   createGame();
 });
 
@@ -35,7 +35,7 @@ function createGame () {
     optionsLetters = document.getElementsByClassName("letter");
   } else {
     for (var j = 0; j < optionsLength; j++) {
-      optionsLetters[j].style.setProperty("color", "unset");
+      optionsLetters[j].removeAttribute('style');
       optionsLetters[j].innerHTML = "0";
     }
   }
@@ -68,7 +68,7 @@ function createGame () {
 
 function clearGame () {
   for (var j = 0; j < optionsLength; j++) {
-    optionsLetters[j].style.setProperty("color", "unset");
+    optionsLetters[j].removeAttribute('style');
   }
   appear = appearInit;
 }
