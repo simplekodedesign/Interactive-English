@@ -7,37 +7,37 @@ body{
 }
 
 body::before{
+  --translateInitial: -100%;
   content: "";
   background: url(../img/cloud.svg) center center/contain no-repeat;
   position: fixed;
-  /* position: absolute; */
   bottom: 30px;
   width: 500px;
   height: 300px;
-  transform: translate(-100%);
-  animation: cloud1 12s ease-in infinite 4s;
+  transform: translate(var(--translateInitial));
+  animation: cloud1 8s linear infinite 4s;
   z-index: -1;
 }
 
 body::after{
+  --translateInitial: -500%;
   background: url(../img/cloud.svg) center center/contain no-repeat;
   content: "";
   position: fixed;
-  /* position: absolute; */
   top: 30px;
-  /* right: -150px; */
+  right: -150px;
   width: 500px;
   height: 300px;
   transition: 5s translate;
   /* transform: translate(250px); */
-  transform: translate(-50%);
-  animation: cloud1 12s ease-in infinite;
+  transform: translate(var(--translateInitial));
+  animation: cloud1 12s linear infinite;
   z-index: -1;
 }
 
 @keyframes cloud1 {
   from{
-    transform: translate(0,0);
+    transform: translate(var(--translateInitial));
   }
   to{
     transform: translate(calc(100vw + 500px) , 0);
