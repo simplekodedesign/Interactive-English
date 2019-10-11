@@ -30,7 +30,7 @@ function actual(dir){
 	if(pos==total-1){
 		document.getElementById("btnDer").innerHTML="Finish";
 	}else{
-		document.getElementById("btnDer").innerHTML=">";
+		
 	}
 	if(pos==total){
 		document.getElementById("btnDer").style.transform="scale(0,0)";

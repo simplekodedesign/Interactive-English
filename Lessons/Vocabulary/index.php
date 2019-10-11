@@ -54,8 +54,12 @@
     </div>
     <span class='vocabulary' id='en'>English</span>
     <div class='buttons'>
-      <span class='lessonButton' id='btnIzq'><</span>
-      <span class='lessonButton' id='btnDer'>></span>
+      <span class='lessonButton' id='btnIzq'>
+        <div class='navigationButtons'></div>
+      </span>
+      <span class='lessonButton' id='btnDer'>
+        <div class='navigationButtons'></div>
+      </span>
     </div>
   </div>
   <script type='text/javascript' src='../../Lessons/Vocabulary/Javascript.js?q=".$q."'></script>";

@@ -32,9 +32,9 @@
 
 }
 
-.buttons span {
+/* .buttons span {
 	width: 50px;
-}
+} */
 
 .active{
 	transform: scale(1,1);
@@ -45,4 +45,184 @@
 	grid-template-columns: auto auto;
 	justify-content: center;
 	height: 50px;
+}
+
+.lessonButton {
+	border-radius: 3px;
+	padding: 15px 45px;
+}
+
+#btnIzq > .navigationButtons {
+	border-bottom: 22px solid white;
+	border-right: 14px solid transparent;
+	border-left: 14px solid transparent;
+	border-top: 0px solid white;
+	transform: rotate(-90deg);
+	position: unset;
+	bottom: unset;
+}
+
+#btnDer > .navigationButtons {
+	border-bottom: 22px solid white;
+	border-right: 14px solid transparent;
+	border-left: 14px solid transparent;
+	border-top: 0px solid white;
+	transform: rotate(90deg);
+	position: unset;
+	bottom: unset;
+}
+
+/*---------------------------NB2------------------------------------------------*/
+
+#btnIzq > .navigationButtons1 {
+	width: 25px;
+	height: 5px;
+	background-color: white;
+	position: relative;
+	border-radius: 8px;
+}
+
+#btnDer > .navigationButtons1 {
+	width: 25px;
+	height: 5px;
+	background-color: white;
+	position: relative;
+	border-radius: 8px;
+}
+
+#btnDer > .navigationButtons1::before {
+	content: "";
+	position: absolute;
+	width: 75%;
+	height: 100%;
+	right: 1px;
+	background-color: white;
+	transform-origin: right center;
+	transform: rotate(-45deg);
+	border-radius: 8px;
+}
+
+#btnDer > .navigationButtons1::after {
+	content: "";
+	position: absolute;
+	width: 75%;
+	height: 100%;
+	right: 1px;
+	background-color: white;
+	transform-origin: right center;
+	transform: rotate(45deg);
+	border-radius: 8px;
+}
+
+#btnIzq > .navigationButtons1::before {
+	content: "";
+	position: absolute;
+	width: 75%;
+	height: 100%;
+	left: 1px;
+	background-color: white;
+	transform-origin: left center;
+	transform: rotate(-45deg);
+	border-radius: 8px;
+}
+
+#btnIzq > .navigationButtons1::after {
+	content: "";
+	position: absolute;
+	width:75%;
+	height: 100%;
+	left: 1px;
+	background-color: white;
+	transform-origin: left center;
+	transform: rotate(45deg);
+	border-radius: 8px;
+}
+/*--------------------------NB2-------------------------------------------------------*/
+
+#btnIzq > .navigationButtons2 {
+	width: 125px;
+	height: 29px;
+	background-color: var(--lessons);
+	position: relative;
+	/* border-radius: 8px; */
+}
+
+#btnDer > .navigationButtons2 {
+	width: 125px;
+	height: 29px;
+	background-color: var(--lessons);
+	position: relative;
+	/* border-radius: 8px; */
+}
+
+#btnDer > .navigationButtons2::before {
+	content: "";
+	position: absolute;
+	width: 75%;
+	height: 100%;
+	right: 1px;
+	background-color: var(--lessons);
+	transform-origin: right center;
+	transform: rotate(-45deg);
+	/* border-radius: 8px; */
+}
+
+#btnDer > .navigationButtons2::after {
+	content: "";
+	position: absolute;
+	width: 75%;
+	height: 100%;
+	right: 1px;
+	background-color: var(--lessons);
+	transform-origin: right center;
+	transform: rotate(45deg);
+	/* border-radius: 8px; */
+}
+
+#btnIzq > .navigationButtons2::before {
+	content: "";
+	position: absolute;
+	width: 75%;
+	height: 100%;
+	left: 1px;
+	background-color: var(--lessons);
+	transform-origin: left center;
+	transform: rotate(-45deg);
+	/* border-radius: 8px; */
+}
+
+#btnIzq > .navigationButtons2::after {
+	content: "";
+	position: absolute;
+	width:75%;
+	height: 100%;
+	left: 1px;
+	background-color: var(--lessons);
+	transform-origin: left center;
+	transform: rotate(45deg);
+	/* border-radius: 8px; */
+}
+
+.lessonButton2 {
+	/* background-color: var(--lessons); */
+	color: white;
+	border-radius: 12px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-box-shadow: inset 1px -11px 15px -13px rgba(0,0,0,1);
+	-moz-box-shadow: -10px 7px 12px -10px rgb(0, 0, 0);
+	box-shadow: -10px 7px 12px -10px rgb(0, 0, 0);
+	cursor: pointer;
+	padding: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: auto;
+	width: 125px;
+	transition: .3s;
+}
+
+.lessonButton2 {
+	padding: 0;
 }

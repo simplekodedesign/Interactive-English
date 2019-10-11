@@ -146,16 +146,28 @@ header > a img{
   height: 100%;
 }
 
-.B_lecciones:hover {
+.B_lecciones {
   background-color: var(--orange);
 }
 
-.B_exit:hover {
+.B_lecciones:hover {
+  background-color: var(--primary);
+}
+
+.B_exit {
   background-color: var(--cyan);
 }
 
-.B_ayuda:hover, .B_ayuda li {
+.B_exit:hover {
+  background-color: var(--primary);
+}
+
+.B_ayuda, .B_ayuda li {
   background-color: var(--pink);
+}
+
+.B_ayuda:hover, .B_ayuda li:hover {
+  background-color: var(--primary);
 }
 
 .B_perfil {
@@ -171,16 +183,20 @@ header > a img{
   background-color: var(--orange);
 }
 
-.B_ayuda li:nth-child(1) {
+.B_ayuda li:nth-child(1), .B_ayuda li:nth-child(1):hover {
   box-shadow: 0 0 0 100px inset rgba(0, 0, 0, 0.205);
 }
 
-.B_ayuda li:nth-child(2) {
+.B_ayuda li:nth-child(2), .B_ayuda li:nth-child(2):hover {
   box-shadow: 0 0 0 100px inset rgba(0, 0, 0, 0.410);
 }
 
-.B_herr:hover, .B_herr li {
+.B_herr, .B_herr li {
   background-color: var(--aquamarina);
+}
+
+.B_herr:hover, .B_herr li:hover {
+  background-color: var(--primary);
 }
 
 .B_ayuda li:hover, .B_herr li:hover {
@@ -269,7 +285,7 @@ section .roadTitle{
 } */
 
 .navigationButtons {
-  bottom: 15vh;
+  bottom: 42vh;
   position: fixed;
   z-index: 2;
 }
@@ -277,24 +293,26 @@ section .roadTitle{
 #lPrev {
   transform: rotate(-90deg);
   left: 15px;
+  transform-origin: left
 }
 
 #lPrev span {
-  border-bottom: 35px solid var(--aquamarina);
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
+  border-bottom: 45px solid var(--aquamarina);
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
   border-top: 0px solid var(--aquamarina);
 }
 
 #lSigu {
   transform: rotate(90deg);
-  right:15px;
+  right: 15px;
+  transform-origin: right;
 }
 
 #lSigu span {
-  border-bottom: 35px solid var(--aquamarina);
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
+  border-bottom: 45px solid var(--aquamarina);
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
   border-top: 0px solid var(--aquamarina);
 }
 
@@ -342,7 +360,10 @@ footer p{
   -moz-box-shadow: -10px 7px 12px -10px rgb(0, 0, 0);
   box-shadow: -10px 7px 12px -10px rgb(0, 0, 0);
   cursor: pointer;
-  padding: 8px 8px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 5px;
   height: auto;
   width: 125px;

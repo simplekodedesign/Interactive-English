@@ -91,7 +91,7 @@
             <span class="hButton B_ayuda">Help
               <ul>
                 <li>Contact</li>
-                <li id="gifButton">Istructions</li>
+                <li id="gifButton">Instructions</li>
               </ul>
             </span>
           </span>
