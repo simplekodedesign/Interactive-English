@@ -27,8 +27,8 @@
   <div id="optionsLetters"></div>
 </div>
 
-<script>
-// var numero_leccion = 1;
+<script type="text/javascript">
+  var cord=<?php echo $_GET["co"]?>;
 </script>
 
 <script src="../../Lessons/Click the right letters/Javascript.js?q=<?php echo $q;?>"></script>
