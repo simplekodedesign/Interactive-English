@@ -14,114 +14,147 @@
   --aquamarina: #00AC92;
 }
 /*--------------------------------WELCOME---------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Mali|Roboto&display=swap');
 
-#welcome{
-  min-width: 300px;
-  width: 60vw;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   height: auto;
-  z-index: 1;
+  font-family: myriad-pro, sans-serif;
 }
 
-#hi {
-  display: flex;
-  position: relative;
+.main {
+  width: 100%;
   min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
 }
 
-button, .button{
-  background-color: var(--orange);
-  border-radius: 12px;
-  /* border: 2px solid rgb(140, 140, 140); */
-  color: white;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  padding: 20px 30px;
+
+
+.c21English > .firstHalf {
+  padding: 0;
+  width: 0%;
+}
+
+.c21English > .firstHalf > img,
+.c21English > .firstHalf > .footer,
+.c21English > .firstHalf > .loginForm {
+  transform: scale(0);
+}
+
+ {
+  transform: scale(0);
+}
+
+.c21English > .welcome {
+  width: 100%;
+}
+
+.c21English > .welcome > img {
+  width: 60%;
+}
+
+
+.firstHalf {
+  --mainColor: #004a7d;
+  --secondColor: #fea400;
+  padding: 25px;
+  height: 100vh;
+  width: 30%;
+  background-color: rgb(255, 255, 255);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 1s ease-in-out;
+}
+
+.firstHalf > img {
+  height: 20%;
+  width: auto;
+  transition: .3s ease-in-out;
+}
+
+.loginForm {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(255, 255, 255); */
+  width: 80%;
+  max-width: 300px;
+  transition: .3s ease-in-out;
+}
+
+.loginForm > h3 {
+  text-align: center;
+}
+
+.loginForm > input {
+  margin: 10px;
+  padding: 7px 5px;
+}
+
+.loginForm > p {
+  margin: 10px;
+  padding: 7px 0px;
+}
+
+#submitButton {
+  background: var(--mainColor);
+  color: white;
+  box-shadow: none;
+  border: none;
   cursor: pointer;
 }
 
-#comenzar{
-  bottom: 48px;
+.firstHalf > .footer {
   position: absolute;
-}
-
-#logo{
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  width: 10%;
-  height: auto;
-  z-index: 1;
-}
-
-/*--------------------------------Login---------------------------------*/
-
-body {
-  font-family: myriad-pro, sans-serif;
-  display: flex;
-  flex-direction: column;
-  font-style: normal;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow-x: hidden;
-}
-
-#login {
-  display: none;
-}
-
-section{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 90vh;
-}
-
-section > form {
-  background-color: hsla(0, 100%, 100%, 0.5);
-  border-radius: 30px;
-  color: var(--primary);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 30%;
-  height: 60%;
-  min-height: 300px;
-  min-width: 320px;
-  margin-top: 10%;
-  /* max-width: 500px;
-  max-height: 800px; */
-}
-
-section > p{
-  width: 100%;
-  color: var(--primary);
+  bottom: 10px;
   text-align: center;
+  transition: .3s ease-in-out;
 }
 
-form > div {
+.welcome {
+  width: 70%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s ease-in-out;
+}
+
+.welcome > img {
+  width: 90%;
+  height: auto;
+  transition: .5s ease-in-out;
+}
+
+
+
+
+
+
+
+.loginForm > div {
+  display: flex;
+  padding: 0 10px;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 80%;
+  width: 100%;
   height: auto;
   align-self: center;
   position: relative;
-  margin: 30px 0;
+  margin: 30px 10px;
 }
 
-form h1{
-  margin: 0;
+.loginForm > h3{
+  margin: 10px 0;
 }
 
 .barcolor {
@@ -132,7 +165,7 @@ form h1{
   min-width: 230px;
   left: 0;
   bottom: -1px;
-  background-color: white;
+  background-color: var(--secondColor);
   transform: scale(0.0,1);
   transform-origin: left bottom;
   transition: .3s ease;
@@ -154,7 +187,7 @@ label {
 .formInput {
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--secondColor);
   position: relative;
   width: 100%;
   min-width: 230px;
@@ -194,136 +227,4 @@ label {
 
 #submit:focus, .siguiente:focus {
   background-color: hsl(30, 100%, 40%);
-}
-
-#close{
-  color: red;
-  position: absolute;
-  font-size: 30px;
-  font-weight: 900;
-  text-align: center;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-#forgot {
-  cursor: pointer;
-}
-
-#forgotForm {
-  color: white;
-  display: none;
-  position: fixed;
-  position: absolute;
-  width: 100%;
-  min-height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.671);
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  min-height: 300px;
-  padding: 10px;
-}
-
-.form input {
-  color: white;
-}
-
-.form > .span {
-  color: white;
-}
-
-.form > div {
-  margin: 10px 0;
-  position: relative;
-}
-
-.mainLog{
-  display: flex;
-  min-width: 300px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/*--------------------------------Message---------------------------------*/
-
-.message{
-  position: fixed;
-  background: url(../img/tip.svg) center/cover no-repeat;
-  display: flex;
-  font-family: 'Myriad Pro Condensed';
-  justify-content: center;
-  padding-top: 15px;
-  position: fixed;
-  top: 200px;
-  right: 0;
-  width: 200px;
-  height: 210px;
-  transform: translateX(150%);
-  transition: .5s ease;
-  /* z-index: 3; */
-}
-
-.message span{
-  color: red;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-size: 20px;
-  font-weight: 900;
-  /* position: absolute; */
-  right: 16px;
-  top: 0px;
-  text-align: center;
-  width: 20px;
-}
-
-.message p{
-  color: var(--primary);
-  text-align: center;
-  width: 85%;
-  margin: 0;
-  font-size: 1.2em;
-}
-
-/*--------------------------------Footer---------------------------------*/
-
-footer{
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  justify-content: center;
-  height: auto;
-  width: 100%;
-  text-align: center;
-}
-
-footer p{
-  width: 75ch;
-  color: var(--primary);
-}
-
-@media screen and (max-width: 460px) {
-  #welcome{
-    width: 95vw;
-  }
-
-  #logo{
-    display: none;
-  }
-
-  footer p{
-    width: 40ch;
-  }
 }

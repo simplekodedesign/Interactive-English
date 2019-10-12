@@ -1,8 +1,9 @@
 const forgot = document.getElementById("forgot");
 const forgotForm = document.getElementById("forgotForm");
 const next = (document.getElementsByClassName("siguiente"))[0];
-const inputs = document.getElementsByClassName("formInput");
-const comenzar = document.getElementById("comenzar");
+var mainSection = document.getElementById("main");
+// const inputs = document.getElementsByClassName("formInput");
+// const comenzar = document.getElementById("comenzar");
 var co_usuario= undefined;
 var errorMessage = document.getElementById('message')
 var form = document.getElementById("formLogin");
@@ -53,10 +54,10 @@ window.addEventListener("load", function() {
     forgotForm.style.display = "none";
   })
 
-  comenzar.addEventListener("click", function () {
-    document.getElementById("hi").style.setProperty("display", "none");
-    document.getElementById("login").style.setProperty("display", "flex");
-  });
+  // comenzar.addEventListener("click", function () {
+  //   document.getElementById("hi").style.setProperty("display", "none");
+  //   document.getElementById("login").style.setProperty("display", "flex");
+  // });
 
   document.getElementById('messageClose').addEventListener("click", function(){
     this.parentElement.style.transform = "translate(150%)";
@@ -69,14 +70,26 @@ window.addEventListener("load", function() {
       if(this.readyState == 4 && this.status == 200){
         response = JSON.parse(this.responseText);
         console.log(response);
+        if(response.status == 1){
+          beging(response);
+        }
       }
     }
     envio.preventDefault();
-    xhttp.open("POST","php/controller/login.php",false);
+    xhttp.open("POST","php/controller/login.php", true);
     xhttp.send(data);
     form.reset();
   })
 });
+
+function beging (data) {
+  console.log("HI");
+  // alert(data.redirect);
+  main.classList.add("c21English");
+  setTimeout(function() {
+    window.location = data.redirect;
+  }, 1500);
+}
 
 function loginHandler(handle){
   switch (handle) {
