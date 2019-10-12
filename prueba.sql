@@ -200,7 +200,7 @@ INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUE
 (2, 'ABC', '../../img/lessons/listenandrepeat.svg', '../../img/gif/abc.gif'),
 (3, 'Click the right letters', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
 (4, 'Pronunciation2', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
-(5, 'Say the correct word', '../../img/lessons/listenandrepeat.svg', '../../img/gif/say the correct word.gif'),
+(5, 'Vocabulary Body', '../../img/lessons/vocabulary.svg', '../../img/gif/say the correct word.gif'),
 (6, 'Pronunciation of Vowels', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
 (7, 'Pronunciation of Consonants', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
 (8, 'Vocabulary', '../../img/lessons/vocabulary.svg', '../../img/gif/vocabulary_txt.gif'),
@@ -320,7 +320,7 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 (7, 17, 55, 'Write the correct word', '?url=../../Lessons/Connect with image/index.php&co=54', '?url=../../Lessons/Say the correct word/index.php&co=56'),
 (7, 5, 56, 'Say the correct word', '?url=../../Lessons/Write the right option/index.php&co=55', '?url=../../Lessons/Video/index.php&co=57'),
 (8, 1, 57, 'Parts of the Body', '?url=../../Lessons/Say the correct word/index.php&co=56', '?url=../../Lessons/Vocabulary/index.php&co=58'),
-(8, 8, 58, 'Parts of the Body - Vocabulary', '?url=../../Lessons/Video/index.php&co=57', '?url=../../Lessons/Memory/index.php&co=59'),
+(8, 5, 58, 'Parts of the Body - Vocabulary', '?url=../../Lessons/Video/index.php&co=57', '?url=../../Lessons/Memory/index.php&co=59'),
 (8, 18, 59, 'Memory Game', '?url=../../Lessons/Vocabulary/index.php&co=58', '?url=../../Lessons/Speak Memory/index.php&co=60'),
 (8, 19, 60, 'Speak Memory', '?url=../../Lessons/Memory/index.php&co=59', '?url=../../Lessons/Connect with image/index.php&co=61'),
 (8, 20, 61, 'Match the image and text', '?url=../../Lessons/Speak Memory/index.php&co=60', '?url=../../Lessons/Write the right option/index.php&co=62'),
@@ -3737,6 +3737,181 @@ INSERT INTO `t090_usuario_nivel` (`Co_Usuario`, `Co_Nivel`, `Progreso`, `Se_Actu
 (8, 1, 100, 149, 18, 0, '#'),
 (9, 1, 0, 0, 0, 0, '');
 
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `m210_usuario`
+--
+ALTER TABLE `m210_usuario`
+  ADD PRIMARY KEY (`Co_Usuario`),
+  ADD UNIQUE KEY `Tx_Email` (`Tx_Email`),
+  ADD KEY `FK_M210_M220_ALUMNO` (`Co_Alumno`),
+  ADD KEY `FK_M210_P080_ROL` (`Co_Rol`);
+
+--
+-- Indices de la tabla `m220_alumno`
+--
+ALTER TABLE `m220_alumno`
+  ADD PRIMARY KEY (`Co_Alumno`);
+
+--
+-- Indices de la tabla `p020_institucion`
+--
+ALTER TABLE `p020_institucion`
+  ADD PRIMARY KEY (`Nu_Identificacion`);
+
+--
+-- Indices de la tabla `p030_nivel`
+--
+ALTER TABLE `p030_nivel`
+  ADD PRIMARY KEY (`Co_Nivel`);
+
+--
+-- Indices de la tabla `p040_temas`
+--
+ALTER TABLE `p040_temas`
+  ADD PRIMARY KEY (`Co_Tema`),
+  ADD KEY `FK_P040_P030_Nivel` (`Co_Nivel`);
+
+--
+-- Indices de la tabla `p050_juego`
+--
+ALTER TABLE `p050_juego`
+  ADD PRIMARY KEY (`Co_Juego`);
+
+--
+-- Indices de la tabla `p060_multimedia`
+--
+ALTER TABLE `p060_multimedia`
+  ADD PRIMARY KEY (`Co_Multimedia`);
+
+--
+-- Indices de la tabla `p070_orden`
+--
+ALTER TABLE `p070_orden`
+  ADD PRIMARY KEY (`Co_Orden`),
+  ADD KEY `FK_P070_P040_Temas` (`Co_Tema`);
+
+--
+-- Indices de la tabla `p080_rol`
+--
+ALTER TABLE `p080_rol`
+  ADD PRIMARY KEY (`Co_Rol`);
+
+--
+-- Indices de la tabla `p090_imagenes`
+--
+ALTER TABLE `p090_imagenes`
+  ADD PRIMARY KEY (`Nb_imagenes`),
+  ADD KEY `FK_P090_P060_Multimedia` (`Co_Multimedia`);
+
+--
+-- Indices de la tabla `p100_videos`
+--
+ALTER TABLE `p100_videos`
+  ADD PRIMARY KEY (`Nb_videos`),
+  ADD KEY `FK_P100_P060_Multimedia` (`Co_Multimedia`);
+
+--
+-- Indices de la tabla `p110_audio`
+--
+ALTER TABLE `p110_audio`
+  ADD PRIMARY KEY (`Nb_audio`),
+  ADD KEY `FK_P110_P060_Multimedia` (`Co_Multimedia`);
+
+--
+-- Indices de la tabla `t010_bitacora`
+--
+ALTER TABLE `t010_bitacora`
+  ADD PRIMARY KEY (`Co_Bitacora`);
+
+--
+-- Indices de la tabla `t020_juego_tema`
+--
+ALTER TABLE `t020_juego_tema`
+  ADD KEY `FK_P020_P050_Juego` (`Co_Juego`),
+  ADD KEY `FK_P020_P040_Temas` (`Co_Tema`),
+  ADD KEY `FK_P020_P070_Orden` (`Co_Orden`),
+  ADD KEY `FK_P020_P110_audio` (`Nb_audio`),
+  ADD KEY `FK_P020_P100_videos` (`Nb_videos`),
+  ADD KEY `FK_P020_P090_imagenes` (`Nb_imagenes`);
+
+--
+-- Indices de la tabla `t030_cobranza`
+--
+ALTER TABLE `t030_cobranza`
+  ADD PRIMARY KEY (`Co_Cobranza`),
+  ADD KEY `FK_T030_P020_Institucion` (`Nu_Identificacion`);
+
+--
+-- Indices de la tabla `t040_retos`
+--
+ALTER TABLE `t040_retos`
+  ADD PRIMARY KEY (`Co_Reto`,`Co_Usuario`),
+  ADD KEY `FK_t040_P040_Temas` (`Co_Tema`),
+  ADD KEY `FK_t040_t080_usuario_institucion_fk` (`Nu_Identificacion`);
+
+--
+-- Indices de la tabla `t080_usuario_institucion`
+--
+ALTER TABLE `t080_usuario_institucion`
+  ADD PRIMARY KEY (`Co_Usuario`,`Nu_Identificacion`),
+  ADD KEY `FK_T080_M210_Usuario` (`Co_Usuario`),
+  ADD KEY `FK_T080_P020_Institucion` (`Nu_Identificacion`);
+
+--
+-- Indices de la tabla `t090_usuario_nivel`
+--
+ALTER TABLE `t090_usuario_nivel`
+  ADD KEY `FK_T090_M210_Usuario` (`Co_Usuario`),
+  ADD KEY `FK_T090_P030_Nivel` (`Co_Nivel`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `m210_usuario`
+--
+ALTER TABLE `m210_usuario`
+  MODIFY `Co_Usuario` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT de la tabla `m220_alumno`
+--
+ALTER TABLE `m220_alumno`
+  MODIFY `Co_Alumno` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT de la tabla `p030_nivel`
+--
+ALTER TABLE `p030_nivel`
+  MODIFY `Co_Nivel` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT de la tabla `p040_temas`
+--
+ALTER TABLE `p040_temas`
+  MODIFY `Co_Tema` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+--
+-- AUTO_INCREMENT de la tabla `p050_juego`
+--
+ALTER TABLE `p050_juego`
+  MODIFY `Co_Juego` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+--
+-- AUTO_INCREMENT de la tabla `p080_rol`
+--
+ALTER TABLE `p080_rol`
+  MODIFY `Co_Rol` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT de la tabla `t010_bitacora`
+--
+ALTER TABLE `t010_bitacora`
+  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=66;
+--
+-- AUTO_INCREMENT de la tabla `t030_cobranza`
+--
+ALTER TABLE `t030_cobranza`
+  MODIFY `Co_Cobranza` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Restricciones para tablas volcadas
 --
