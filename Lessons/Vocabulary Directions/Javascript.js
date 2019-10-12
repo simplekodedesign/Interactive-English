@@ -10,7 +10,7 @@ window.addEventListener("load", function() {
 
     for (var i = 0; i < l; i++) {
         b.push(0);
-        rand = parseInt(getRandomArbitrary(0, 7));        
+        rand = parseInt(getRandomArbitrary(0, 7));
         shops[i].parentElement.style.setProperty("background-color", color[rand]);
 
         shops[i].addEventListener("click", setter);
@@ -24,11 +24,12 @@ window.addEventListener("load", function() {
 });
 
 function setter () {
-    b[this.parentElement.classList[2]]=1;
-    b2=1;
-    for(var j = 0; j < shops.length; j++)if(b[j] != 1)b2=0;
+    b[this.parentElement.classList[2]] = 1;
+    b2 = 1;
+    for(var j = 0; j < shops.length; j++)
+    if(b[j] != 1)b2=0;
     if(b2) {
-        for (var i = 0; i < l; i++) {    
+        for (var i = 0; i < l; i++) {
             shops[i].removeEventListener("click", setter);
         }
 

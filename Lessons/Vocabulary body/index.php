@@ -53,11 +53,17 @@ echo"
         <option value='1' selected>Front</option>
         <option value='2'>Back</option>
       </select>
-      <object type='image/svg+xml' data='../../img/categories/the body/front.svg' alt='The body' id='svg1'></object>
-      <object type='image/svg+xml' data='../../img/categories/the body/back.svg' alt='The body' id='svg2'></object>
+      <div class='object'>
+        <object type='image/svg+xml' data='../../img/categories/the body/front.svg' alt='The body' class='svg show' id='svg1'></object>
+        <object type='image/svg+xml' data='../../img/categories/the body/back.svg' alt='The body' class='svg' id='svg2'></object>
+      </div>
       <audio id='audio'></audio>
       <span class='vocabulary' id='en'></span>
       <span class='vocabulary' id='es'></span>
     </div>
     <script type='text/javascript' src='../../Lessons/Vocabulary Body/Javascript.js'></script>";
 ?>
+
+<script type="text/javascript">
+  var cord=<?php echo $_GET["co"]?>;
+</script>

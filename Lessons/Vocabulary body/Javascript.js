@@ -8,21 +8,19 @@ window.addEventListener("load", function () {
   var audio = document.getElementById('audio')
   var en = document.getElementById('en')
   var es = document.getElementById('es')
-  god(1)
+  svg = document.getElementsByClassName('svg')
+
+  for (let i = 0; i < svg.length; i++) {
+    god(i)
+  }
+
   select.addEventListener("change", function(){
-    god(this.value)
+    show(this.value)
   })
 })
 
-function god(who) {
-  if (svg) {
-    svg.classList.remove('show')
-  }
-  svg = document.getElementById('svg'+who)
-  let svgdoc = (svg.contentDocument.getElementsByTagName('svg'))[0]
-  svg.classList.add('show')
-
-  console.log(svgdoc);
+function god(who){
+  var svgdoc = (svg[who].contentDocument.getElementsByTagName('svg'))[0]
 
   var child = svgdoc.children
   const childLength = child.length
@@ -33,7 +31,8 @@ function god(who) {
     let id = child[i].getAttribute('id');
     if (id){
       if (id.indexOf('item') != -1) {
-        //La clase item por CSS tiene un filtro en el SVG, debe ser siempre "item"
+        //La clase item por CSS tiene un filtro en el SVG, colocar la clase de
+        //los elementos del SVG que se quieran usar
         child[i].classList.add('item')
       }
     }
@@ -47,9 +46,27 @@ function god(who) {
   }
 }
 
+function show(){
+  //Función para cambiar el display de cada SVG
+  svg[0].classList.toggle('show')
+  svg[1].classList.toggle('show')
+}
+
+function check(){
+  //Función para la condición victoria, se toman todos los elementos "item" de ambos SVG
+  var svg1 = svg[0].contentDocument.getElementsByClassName('item').length
+  var svg2 = svg[1].contentDocument.getElementsByClassName('item').length
+
+  if (svg1 && svg2 <= 1) {
+    return false
+  }else{
+    return true
+  }
+}
+
 function spotlight (e) {
   let root = document.documentElement
-  console.log(e);
+
   //seteando posición de los spans con variables css
   root.style.setProperty('--x', e.screenX + "px")
   root.style.setProperty('--y', e.clientY + "px")
@@ -68,4 +85,7 @@ function spotlight (e) {
 
   //Al remover el Cl se quita el filtro sin embargo no es bueno quitar el evento
   this.classList.remove("item")
+  if (check()) {
+    victoryMessage()
+  }
 }
