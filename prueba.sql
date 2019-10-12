@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-10-2019 a las 01:13:41
+-- Tiempo de generación: 12-10-2019 a las 15:54:57
 -- Versión del servidor: 5.6.37
 -- Versión de PHP: 5.6.31
 
@@ -190,7 +190,7 @@ INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUE
 (2, 'ABC', '../../img/lessons/listenandrepeat.svg', '../../img/gif/abc.gif'),
 (3, 'Click the right letters', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
 (4, 'Pronunciation2', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
-(5, 'Say the correct word', '../../img/lessons/listenandrepeat.svg', '../../img/gif/say the correct word.gif'),
+(5, 'Vocabulary Body', '../../img/lessons/vocabulary.svg', '../../img/gif/say the correct word.gif'),
 (6, 'Pronunciation of Vowels', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
 (7, 'Pronunciation of Consonants', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
 (8, 'Vocabulary', '../../img/lessons/vocabulary.svg', '../../img/gif/vocabulary_txt.gif'),
@@ -307,7 +307,7 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 (7, 17, 55, 'Write the correct word', '?url=../../Lessons/Connect with image/index.php&co=54', '?url=../../Lessons/Say the correct word/index.php&co=56'),
 (7, 5, 56, 'Say the correct word', '?url=../../Lessons/Write the right option/index.php&co=55', '?url=../../Lessons/Video/index.php&co=57'),
 (8, 1, 57, 'Parts of the Body', '?url=../../Lessons/Say the correct word/index.php&co=56', '?url=../../Lessons/Vocabulary/index.php&co=58'),
-(8, 8, 58, 'Parts of the Body - Vocabulary', '?url=../../Lessons/Video/index.php&co=57', '?url=../../Lessons/Memory/index.php&co=59'),
+(8, 5, 58, 'Parts of the Body - Vocabulary', '?url=../../Lessons/Video/index.php&co=57', '?url=../../Lessons/Memory/index.php&co=59'),
 (8, 18, 59, 'Memory Game', '?url=../../Lessons/Vocabulary/index.php&co=58', '?url=../../Lessons/Speak Memory/index.php&co=60'),
 (8, 19, 60, 'Speak Memory', '?url=../../Lessons/Memory/index.php&co=59', '?url=../../Lessons/Connect with image/index.php&co=61'),
 (8, 20, 61, 'Match the image and text', '?url=../../Lessons/Speak Memory/index.php&co=60', '?url=../../Lessons/Write the right option/index.php&co=62'),
@@ -1713,7 +1713,7 @@ CREATE TABLE IF NOT EXISTS `t010_bitacora` (
   `Hr_Entrada` varchar(20) NOT NULL,
   `Hr_Salida` varchar(20) NOT NULL,
   `Nu_Lecciones` int(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `t010_bitacora`
@@ -1782,7 +1782,9 @@ INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_En
 (60, 1, '2019-10-08', '02:36:40', '06:11:13', 0),
 (61, 1, '2019-10-08', '05:39:55', '06:12:01', 0),
 (62, 1, '2019-10-08', '07:57:42', '', 0),
-(63, 1, '2019-10-10', '01:11:17', '', 0);
+(63, 1, '2019-10-10', '01:11:17', '', 0),
+(64, 1, '2019-10-11', '08:09:38', '', 0),
+(65, 1, '2019-10-12', '02:17:59', '', 0);
 
 -- --------------------------------------------------------
 
@@ -3862,7 +3864,7 @@ ALTER TABLE `p080_rol`
 -- AUTO_INCREMENT de la tabla `t010_bitacora`
 --
 ALTER TABLE `t010_bitacora`
-  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=64;
+  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=66;
 --
 -- AUTO_INCREMENT de la tabla `t030_cobranza`
 --
