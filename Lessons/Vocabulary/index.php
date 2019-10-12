@@ -48,7 +48,7 @@
     <span class='vocabulary' id='es'>Spanish</span>
     <div class='cont_abc' id='cont_all'>
       <div class='letra 0 active' id='A'>
-        <img id='img' src='' height='350px' width='350px' alt='image'>
+        <img id='img' src='' alt='image'>
         <audio src='' id='aud'></audio>
       </div>
     </div>

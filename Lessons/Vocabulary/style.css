@@ -1,11 +1,11 @@
 .cont_abc{
 	display: flex;
 	justify-content: center;
-  	align-items: center;
+  align-items: center;
 	flex-wrap: wrap;
-  	height: 350px;
+  max-height: 400px;
+	max-width: 400px;
 	margin: 15px;
-	width: 350px;
 }
 
 .contain{
@@ -14,7 +14,7 @@
 
 .vocabulary{
 	width: 150px;
-	font-size: 16px;
+	font-size: 2em;
 	text-align: center;
 }
 
