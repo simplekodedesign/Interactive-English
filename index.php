@@ -42,7 +42,7 @@
 
 
   <section id="login">
-    <form action="php/controller/login.php" method="post" autocomplete="off">
+    <form autocomplete="off" id="formLogin">
       <h1>Ingresa</h1>
       <div>
         <span class="barcolor"></span>
