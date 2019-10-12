@@ -5,6 +5,8 @@
 :root{
   --x: 150px;
   --y: 200px;
+
+  --lessons: blue;
 }
 
 body{
@@ -13,7 +15,6 @@ body{
 }
 
 .theme{
-  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,6 +22,7 @@ body{
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  width: 100%;
 }
 
 .theme object{
@@ -28,13 +30,23 @@ body{
   height: 70vh;
   max-height: 1000px;
   width: auto;
+  transform: scale(0);
+}
+
+.theme .show{
+  transform: scale(1);
 }
 
 .vocabulary{
-  display: block;
+  background-color: var(--lessons);
+  color: white;
+  padding: 10px 15px;
+  display: none;
   top: var(--y);
-  left: var(--x);
+  left: calc(10px + var(--x));
+  text-align: center;
   position: absolute;
+  min-width: 15ch;
 }
 
 #es{
