@@ -5,6 +5,8 @@ const inputs = document.getElementsByClassName("formInput");
 const comenzar = document.getElementById("comenzar");
 var co_usuario= undefined;
 var errorMessage = document.getElementById('message')
+var form = document.getElementById("formLogin");
+var response;
 
 window.addEventListener("load", function() {
 
@@ -58,6 +60,21 @@ window.addEventListener("load", function() {
 
   document.getElementById('messageClose').addEventListener("click", function(){
     this.parentElement.style.transform = "translate(150%)";
+  })
+
+  form.addEventListener("submit",function(envio){
+    var xhttp = new XMLHttpRequest();
+    var data = new FormData(form);
+    xhttp.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200){
+        response = JSON.parse(this.responseText);
+        console.log(response);
+      }
+    }
+    envio.preventDefault();
+    xhttp.open("POST","php/controller/login.php",false);
+    xhttp.send(data);
+    form.reset();
   })
 });
 
