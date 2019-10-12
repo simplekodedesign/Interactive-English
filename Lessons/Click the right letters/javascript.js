@@ -91,8 +91,8 @@ function check () {
     if(posLetter < lettersLength) {
       createGame();
     } else {
-      alert("YOU WON");
-      // victoryMessage();
+      // alert("YOU WON");
+      victoryMessage();
     }
   }
 }
