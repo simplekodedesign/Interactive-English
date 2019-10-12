@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.9
--- https://www.phpmyadmin.net
+-- version 4.6.6deb5
+-- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 10-10-2019 a las 01:13:41
--- Versión del servidor: 5.6.37
--- Versión de PHP: 5.6.31
+-- Servidor: localhost:3306
+-- Tiempo de generación: 12-10-2019 a las 13:16:49
+-- Versión del servidor: 5.7.27-0ubuntu0.18.04.1
+-- Versión de PHP: 7.2.19-0ubuntu0.18.04.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `prueba`
+-- Base de datos: `dbc21english`
 --
 
 -- --------------------------------------------------------
@@ -27,14 +27,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `m210_usuario` (
-  `Co_Usuario` bigint(20) NOT NULL,
+  `Co_Usuario` bigint(20) NOT NULL AUTO_INCREMENT,
   `Co_Alumno` bigint(20) NOT NULL,
   `Co_Rol` int(11) NOT NULL,
   `Tx_Email` varchar(100) NOT NULL,
   `Tx_Clave` varchar(300) NOT NULL,
   `St_Session` int(11) NOT NULL DEFAULT '0',
   `Tx_Url` varchar(200) NOT NULL,
-  `Fe_Status` date NOT NULL
+  `Fe_Status` date NOT NULL,
+  PRIMARY KEY (`Co_Usuario`),
+  UNIQUE KEY `Tx_Email` (`Tx_Email`),
+  KEY `FK_M210_M220_ALUMNO` (`Co_Alumno`),
+  KEY `FK_M210_P080_ROL` (`Co_Rol`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
@@ -42,14 +46,14 @@ CREATE TABLE IF NOT EXISTS `m210_usuario` (
 --
 
 INSERT INTO `m210_usuario` (`Co_Usuario`, `Co_Alumno`, `Co_Rol`, `Tx_Email`, `Tx_Clave`, `St_Session`, `Tx_Url`, `Fe_Status`) VALUES
-(1, 1, 1, '1', '$2y$10$FcsUHeLIz6bAxUSkYDPmbOCq3jnKoI.N63mYK1kDzOW5IXnj7c8Ki', 1, 'https://www.c21english.com/img/perfil/users/man4.svg', '2019-05-15'),
-(2, 2, 1, '2', '$2y$10$Z8wGOuba/KgiFowQWF0aE.OEsLYXe87CcRKRZXEdHHHJUL9msFJb6', 1, '../../img/perfil/users/avatar3.svg', '2019-06-01'),
-(3, 3, 1, '3', '$2y$10$iPYV2TKwbEUd.1SyD9V2gOrqhr56Ixtr1BcJIqMeiGoH7O25JevUu', 1, '../../img/perfil/users/avatar3.svg', '2019-06-01'),
-(4, 4, 1, '4', '$2y$10$hho005hbnLWGTGSrGkgW/Odl2Q4/RrCu9kTCOXNOFKDfSAu/Pf632', 1, '../../img/perfil/users/avatar3.svg', '2019-06-01'),
+(1, 1, 1, '1', '$2y$10$6YGb2/gtfyCfxRdWSe83ruu/XmUqQONxND4k5pVPrXW7RaEaS5a5S', 0, 'https://www.c21english.com/img/perfil/users/man4.svg', '2019-05-15'),
+(2, 2, 1, '2', '$2y$10$drRc.jappUIWQ9RNkxx6wOGIOkrc.BsgY3hj4HiTqJ4KNsaUr0sF.', 0, 'https://c21english.com/img/perfil/users/man4.svg', '2019-06-01'),
+(3, 3, 1, '3', '$2y$10$dSK2OIzpTaKsTGXsYr3iPeoICsUCR5/x6iFoRl23SofQLqU53s/bi', 0, 'https://c21english.com/img/perfil/users/woman1.svg', '2019-06-01'),
+(4, 4, 1, '4', '$2y$10$PUPjszzIwY2p8VV/qxFluOjoGUtAHDaE4LaxazRvYftRv1fa0MK0G', 0, 'https://c21english.com/img/perfil/users/avatar3.svg', '2019-06-01'),
 (5, 5, 1, '5', '$2y$10$jemVdOLFGZQLjE/Bzuzm/.QreKuenqsB5QCCmXkbPQqmbrSxSg/9y', 0, '../../img/perfil/users/avatar3.svg', '2019-07-01'),
-(6, 6, 1, '6', '$2y$10$Z8wGOuba/KgiFowQWF0aE.OEsLYXe87CcRKRZXEdHHHJUL9msFJb6', 1, '../../img/perfil/users/avatar3.svg', '2019-07-01'),
-(7, 7, 1, '7', '$2y$10$hho005hbnLWGTGSrGkgW/Odl2Q4/RrCu9kTCOXNOFKDfSAu/Pf632', 1, '../../img/perfil/users/avatar3.svg', '2019-07-01'),
-(8, 8, 1, '8', '$2y$10$hho005hbnLWGTGSrGkgW/Odl2Q4/RrCu9kTCOXNOFKDfSAu/Pf632', 1, '../../img/perfil/users/avatar3.svg', '2019-07-01'),
+(6, 6, 1, '6', '$2y$10$q.IhTk0xCFonrfUQrW62KO0NNzDpHeu0x6i9ArV13OaVMH2wiU5YO', 0, 'https://www.c21english.com/img/perfil/users/woman2.svg', '2019-07-01'),
+(7, 7, 1, '7', '$2y$10$Sk8cFa9qgiYdk8f9dXqoJezY5LuSfHahtMr2/RuCeSvxCB/1CM6v6', 0, 'https://www.c21english.com/img/perfil/users/avatar3.svg', '2019-07-01'),
+(8, 8, 1, '8', '$2y$10$62S/1RjJrjwxlM0JcWlce.JnXgUuHb6kCZAFxf4Yg9SKRCQDFHEai', 0, 'https://www.c21english.com/img/perfil/users/avatar3.svg', '2019-07-01'),
 (9, 10, 1, '9', '$2y$10$eLD1AmFbn/hBV4FDVyoyL.ReJXkjhDQX94gPJz7Ltwy6xXwUsh2VG', 0, '../../img/perfil/users/avatar3.svg', '2019-08-19');
 
 -- --------------------------------------------------------
@@ -59,7 +63,7 @@ INSERT INTO `m210_usuario` (`Co_Usuario`, `Co_Alumno`, `Co_Rol`, `Tx_Email`, `Tx
 --
 
 CREATE TABLE IF NOT EXISTS `m220_alumno` (
-  `Co_Alumno` bigint(20) NOT NULL,
+  `Co_Alumno` bigint(20) NOT NULL AUTO_INCREMENT,
   `Nb_Apellido` varchar(50) NOT NULL,
   `Nb_Alumno` varchar(50) NOT NULL,
   `Nb_ApellidoRepre` varchar(50) NOT NULL,
@@ -68,7 +72,8 @@ CREATE TABLE IF NOT EXISTS `m220_alumno` (
   `Nu_Telefono_Fijo` varchar(20) NOT NULL,
   `Nu_Telefono_Movil` varchar(20) NOT NULL,
   `Fe_Nacimiento` date NOT NULL,
-  `St_Alumno` enum('A','I') DEFAULT NULL
+  `St_Alumno` enum('A','I') DEFAULT NULL,
+  PRIMARY KEY (`Co_Alumno`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
@@ -102,7 +107,8 @@ CREATE TABLE IF NOT EXISTS `p020_institucion` (
   `Nu_Telefono` varchar(20) NOT NULL,
   `Pag_Url` varchar(200) NOT NULL,
   `St_Institucion` enum('A','I') DEFAULT NULL,
-  `Fe_ultimaData` date NOT NULL
+  `Fe_ultimaData` date NOT NULL,
+  PRIMARY KEY (`Nu_Identificacion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -119,8 +125,9 @@ INSERT INTO `p020_institucion` (`Nu_Identificacion`, `Nb_Institucion`, `Img_Url`
 --
 
 CREATE TABLE IF NOT EXISTS `p030_nivel` (
-  `Co_Nivel` int(11) NOT NULL,
-  `Nb_Nivel` varchar(120) NOT NULL
+  `Co_Nivel` int(11) NOT NULL AUTO_INCREMENT,
+  `Nb_Nivel` varchar(120) NOT NULL,
+  PRIMARY KEY (`Co_Nivel`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
@@ -137,11 +144,13 @@ INSERT INTO `p030_nivel` (`Co_Nivel`, `Nb_Nivel`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `p040_temas` (
-  `Co_Tema` int(11) NOT NULL,
+  `Co_Tema` int(11) NOT NULL AUTO_INCREMENT,
   `Co_Nivel` int(11) NOT NULL,
   `Nb_Tema` varchar(120) NOT NULL,
   `Tx_Url_Img` varchar(200) NOT NULL,
-  `Tx_Url_Aud` varchar(200) NOT NULL
+  `Tx_Url_Aud` varchar(200) NOT NULL,
+  PRIMARY KEY (`Co_Tema`),
+  KEY `FK_P040_P030_Nivel` (`Co_Nivel`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
@@ -175,10 +184,11 @@ INSERT INTO `p040_temas` (`Co_Tema`, `Co_Nivel`, `Nb_Tema`, `Tx_Url_Img`, `Tx_Ur
 --
 
 CREATE TABLE IF NOT EXISTS `p050_juego` (
-  `Co_Juego` int(11) NOT NULL,
+  `Co_Juego` int(11) NOT NULL AUTO_INCREMENT,
   `Nb_Juego` varchar(120) NOT NULL,
   `Tx_Url_Img` varchar(200) NOT NULL,
-  `Tx_Help` varchar(200) NOT NULL
+  `Tx_Help` varchar(200) NOT NULL,
+  PRIMARY KEY (`Co_Juego`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
@@ -218,7 +228,8 @@ INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUE
 
 CREATE TABLE IF NOT EXISTS `p060_multimedia` (
   `Co_Multimedia` int(11) NOT NULL,
-  `Nb_Multimedia` varchar(150) NOT NULL
+  `Nb_Multimedia` varchar(150) NOT NULL,
+  PRIMARY KEY (`Co_Multimedia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -242,7 +253,9 @@ CREATE TABLE IF NOT EXISTS `p070_orden` (
   `Co_Orden` int(11) NOT NULL,
   `Nb_Lesson` varchar(120) NOT NULL,
   `Les_Ant` varchar(200) NOT NULL,
-  `Les_Sig` varchar(200) NOT NULL
+  `Les_Sig` varchar(200) NOT NULL,
+  PRIMARY KEY (`Co_Orden`),
+  KEY `FK_P070_P040_Temas` (`Co_Tema`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -406,8 +419,9 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 --
 
 CREATE TABLE IF NOT EXISTS `p080_rol` (
-  `Co_Rol` int(11) NOT NULL,
-  `Nb_Rol` varchar(100) NOT NULL
+  `Co_Rol` int(11) NOT NULL AUTO_INCREMENT,
+  `Nb_Rol` varchar(100) NOT NULL,
+  PRIMARY KEY (`Co_Rol`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
@@ -426,7 +440,9 @@ INSERT INTO `p080_rol` (`Co_Rol`, `Nb_Rol`) VALUES
 CREATE TABLE IF NOT EXISTS `p090_imagenes` (
   `Co_Multimedia` int(11) NOT NULL,
   `Nb_imagenes` varchar(100) NOT NULL,
-  `Tx_Url` varchar(300) NOT NULL
+  `Tx_Url` varchar(300) NOT NULL,
+  PRIMARY KEY (`Nb_imagenes`),
+  KEY `FK_P090_P060_Multimedia` (`Co_Multimedia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -957,7 +973,9 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 CREATE TABLE IF NOT EXISTS `p100_videos` (
   `Co_Multimedia` int(11) NOT NULL,
   `Nb_videos` varchar(100) NOT NULL,
-  `Tx_Url` varchar(300) NOT NULL
+  `Tx_Url` varchar(300) NOT NULL,
+  PRIMARY KEY (`Nb_videos`),
+  KEY `FK_P100_P060_Multimedia` (`Co_Multimedia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1036,7 +1054,9 @@ INSERT INTO `p100_videos` (`Co_Multimedia`, `Nb_videos`, `Tx_Url`) VALUES
 CREATE TABLE IF NOT EXISTS `p110_audio` (
   `Co_Multimedia` int(11) NOT NULL,
   `Nb_audio` varchar(100) NOT NULL,
-  `Tx_Url` varchar(300) NOT NULL
+  `Tx_Url` varchar(300) NOT NULL,
+  PRIMARY KEY (`Nb_audio`),
+  KEY `FK_P110_P060_Multimedia` (`Co_Multimedia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1707,13 +1727,14 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `t010_bitacora` (
-  `Co_Bitacora` bigint(20) NOT NULL,
+  `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,
   `Co_Usuario` bigint(20) NOT NULL,
   `Fe_Ejecucion` date NOT NULL,
   `Hr_Entrada` varchar(20) NOT NULL,
   `Hr_Salida` varchar(20) NOT NULL,
-  `Nu_Lecciones` int(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
+  `Nu_Lecciones` int(20) NOT NULL,
+  PRIMARY KEY (`Co_Bitacora`)
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `t010_bitacora`
@@ -1782,7 +1803,14 @@ INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_En
 (60, 1, '2019-10-08', '02:36:40', '06:11:13', 0),
 (61, 1, '2019-10-08', '05:39:55', '06:12:01', 0),
 (62, 1, '2019-10-08', '07:57:42', '', 0),
-(63, 1, '2019-10-10', '01:11:17', '', 0);
+(63, 1, '2019-10-10', '01:11:17', '', 0),
+(64, 1, '2019-10-12', '12:53:21', '12:54:06', 0),
+(65, 2, '2019-10-12', '12:54:16', '12:54:51', 0),
+(66, 3, '2019-10-12', '12:55:00', '12:55:37', 0),
+(67, 4, '2019-10-12', '12:55:46', '12:56:14', 0),
+(68, 6, '2019-10-12', '12:56:37', '12:57:26', 0),
+(69, 7, '2019-10-12', '12:57:39', '01:14:15', 0),
+(70, 8, '2019-10-12', '01:14:26', '01:14:47', 0);
 
 -- --------------------------------------------------------
 
@@ -1798,7 +1826,13 @@ CREATE TABLE IF NOT EXISTS `t020_juego_tema` (
   `Nb_videos` varchar(100) DEFAULT NULL,
   `Nb_imagenes` varchar(100) DEFAULT NULL,
   `Nb_Ask` varchar(500) NOT NULL,
-  `Nb_Comparar` varchar(500) NOT NULL
+  `Nb_Comparar` varchar(500) NOT NULL,
+  KEY `FK_P020_P050_Juego` (`Co_Juego`),
+  KEY `FK_P020_P040_Temas` (`Co_Tema`),
+  KEY `FK_P020_P070_Orden` (`Co_Orden`),
+  KEY `FK_P020_P110_audio` (`Nb_audio`),
+  KEY `FK_P020_P100_videos` (`Nb_videos`),
+  KEY `FK_P020_P090_imagenes` (`Nb_imagenes`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1859,9 +1893,9 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (12, 2, 16, 'fine', NULL, NULL, 'Fine!', 'Fine/Bien'),
 (12, 2, 16, 'very_well', NULL, NULL, 'Very Well!', 'Very Well!/Muy Bien'),
 (12, 2, 16, 'excellent', NULL, NULL, 'Excellent!', 'Excellent/Excelente'),
-(12, 2, 16, 'whats_up', NULL, NULL, 'What''s Up?', 'What''s Up?/¿Qué hay de nuevo?'),
-(12, 2, 16, 'whats_new', NULL, NULL, 'What''s New?', 'What''s New?/¿Qué hay de nuevo?'),
-(12, 2, 16, 'whats_going_on', NULL, NULL, 'What''s going on?', 'What''s going on?/¿Qué hay de nuevo?'),
+(12, 2, 16, 'whats_up', NULL, NULL, 'What\'s Up?', 'What\'s Up?/¿Qué hay de nuevo?'),
+(12, 2, 16, 'whats_new', NULL, NULL, 'What\'s New?', 'What\'s New?/¿Qué hay de nuevo?'),
+(12, 2, 16, 'whats_going_on', NULL, NULL, 'What\'s going on?', 'What\'s going on?/¿Qué hay de nuevo?'),
 (12, 2, 16, 'nothing', NULL, NULL, 'Nothing', 'Nothing/Nada'),
 (12, 2, 16, 'not_much', NULL, NULL, 'Not Much', 'Not Much/No Mucho'),
 (12, 2, 16, 'what_about_you', NULL, NULL, 'What about you?', 'What about you?/¿Qué hay de ti?'),
@@ -1885,9 +1919,9 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (15, 2, 19, 'fine', NULL, NULL, 'Fine!', 'fine'),
 (15, 2, 19, 'very_well', NULL, NULL, 'Very Well!', 'very well'),
 (15, 2, 19, 'excellent', NULL, NULL, 'Excellent!', 'excellent'),
-(15, 2, 19, 'whats_up', NULL, NULL, 'What''s Up?', 'what''s up'),
-(15, 2, 19, 'whats_new', NULL, NULL, 'What''s New?', 'what''s new'),
-(15, 2, 19, 'whats_going_on', NULL, NULL, 'What''s going on?', 'what''s going on'),
+(15, 2, 19, 'whats_up', NULL, NULL, 'What\'s Up?', 'what\'s up'),
+(15, 2, 19, 'whats_new', NULL, NULL, 'What\'s New?', 'what\'s new'),
+(15, 2, 19, 'whats_going_on', NULL, NULL, 'What\'s going on?', 'what\'s going on'),
 (15, 2, 19, 'nothing', NULL, NULL, 'Nothing', 'nothing'),
 (15, 2, 19, 'not_much', NULL, NULL, 'Not Much', 'not much'),
 (15, 2, 19, 'what_about_you', NULL, NULL, 'What about you?', 'what about you'),
@@ -1899,7 +1933,7 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (15, 2, 19, 'see_you', NULL, NULL, 'See You', 'see you'),
 (15, 2, 19, 'good_night', NULL, NULL, 'Good Night', 'good night'),
 (10, 2, 20, NULL, NULL, NULL, 'Hey, Luis!', 'Hola, Luis!'),
-(10, 2, 20, NULL, NULL, NULL, 'What''s up, Luis?', '¿Qué hay de nuevo Luis?'),
+(10, 2, 20, NULL, NULL, NULL, 'What\'s up, Luis?', '¿Qué hay de nuevo Luis?'),
 (10, 2, 20, NULL, NULL, NULL, 'Good morning, How are you?', 'Buenos dias, ¿Cómo estás?'),
 (10, 2, 20, NULL, NULL, NULL, 'Good-bye, Eva!', 'Adiós, Eva!'),
 (10, 2, 20, NULL, NULL, NULL, 'Hello, Diego!', 'Hola, Diego'),
@@ -1915,11 +1949,11 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (11, 2, 21, NULL, NULL, NULL, 'Good afternoon', 'buenas tardes'),
 (11, 2, 21, NULL, NULL, NULL, 'Good Evening', 'buenas noches'),
 (11, 2, 21, NULL, NULL, NULL, 'How are you?', '¿como estas?/como estas?/como estas'),
-(11, 2, 21, NULL, NULL, NULL, 'What''s Up?', '¿que hay de nuevo?/que hay de nuevo?/que hay de nuevo'),
+(11, 2, 21, NULL, NULL, NULL, 'What\'s Up?', '¿que hay de nuevo?/que hay de nuevo?/que hay de nuevo'),
 (11, 2, 21, NULL, NULL, NULL, 'Good to see you', 'Que bueno verte'),
 (11, 2, 21, NULL, NULL, NULL, 'How are you doing?', '¿como estas?/como estas?/como estas'),
 (11, 2, 21, NULL, NULL, NULL, 'Take Care', 'cuidate'),
-(11, 2, 21, NULL, NULL, NULL, 'What''s New?', '¿que hay de nuevo?/que hay de nuevo?/que hay de nuevo'),
+(11, 2, 21, NULL, NULL, NULL, 'What\'s New?', '¿que hay de nuevo?/que hay de nuevo?/que hay de nuevo'),
 (11, 2, 21, NULL, NULL, NULL, 'Bye', 'chao'),
 (11, 2, 21, NULL, NULL, NULL, 'What about you?', '¿que hay de ti?/que hay de ti?/que hay de ti'),
 (11, 2, 21, NULL, NULL, NULL, 'Good Night!', 'buenas noches/buenas noches despedida/buenas noches (despedida)'),
@@ -3334,7 +3368,7 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (17, 16, 134, 'university', NULL, 'university', '', 'university'),
 (17, 16, 134, 'school', NULL, 'school', '', 'school'),
 (17, 16, 134, 'bank', NULL, 'bank', '', 'bank'),
-(17, 16, 134, 'barber_shop', NULL, 'barber_shop', '', 'barber shop/barber''s shop'),
+(17, 16, 134, 'barber_shop', NULL, 'barber_shop', '', 'barber shop/barber\'s shop'),
 (17, 16, 134, 'beauty_salon', NULL, 'beauty_salon', '', 'beauty salon'),
 (17, 16, 134, 'cinema', NULL, 'cinema', '', 'cinema'),
 (17, 16, 134, 'bookstore', NULL, 'bookstore', '', 'bookstore'),
@@ -3348,7 +3382,7 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (17, 16, 134, 'supermarket', NULL, 'supermarket', '', 'supermarket'),
 (17, 16, 134, 'museum', NULL, 'museum', '', 'museum'),
 (17, 16, 134, 'park', NULL, 'park', '', 'park'),
-(17, 16, 134, 'pet_shop', NULL, 'pet_shop', '', 'pet shop/pet''s shop'),
+(17, 16, 134, 'pet_shop', NULL, 'pet_shop', '', 'pet shop/pet\'s shop'),
 (17, 16, 134, 'pharmacy', NULL, 'pharmacy', '', 'pharmacy'),
 (17, 16, 134, 'subway_station', NULL, 'station', '', 'subway station'),
 (17, 16, 134, 'ice_cream_shop', NULL, 'ice_cream_shop', '', 'ice cream shop'),
@@ -3387,14 +3421,14 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (23, 16, 136, 'whereis_bank', NULL, 'bank', 'In front of the park/In front of the toy store/Next to the restaurant', 'In front of the toy store'),
 (23, 16, 136, 'whereis_hotel', NULL, 'hotel', 'Between the zoo and the bus stop/Behind the beauty salon/Next to the gas station', 'Next to the gas station'),
 (23, 16, 136, 'whereis_barbersshop', NULL, 'barber_shop', 'In front of the school/Behind the coffe shop/Next to the cinema', 'In front of the school'),
-(23, 16, 136, 'whereis_beautysalon', NULL, 'beauty_salon', 'Next to the barber''s shop/In front of the park/Next to the gym', 'Next to the gym'),
+(23, 16, 136, 'whereis_beautysalon', NULL, 'beauty_salon', 'Next to the barber\'s shop/In front of the park/Next to the gym', 'Next to the gym'),
 (23, 16, 136, 'whereis_bookstore', NULL, 'bookstore', 'Next to the restaurant/In front of the park/Next to the gym', 'Next to the restaurant'),
 (23, 16, 136, 'whereis_church', NULL, 'church', 'Behind the bookstore/In front of the park/Next to the gym', 'Behind the bookstore'),
 (23, 16, 136, 'whereis_cinema', NULL, 'cinema', 'Between the zoo and the bus stop/Next to the bakery/Next to the gas station', 'Next to the bakery'),
 (23, 16, 136, 'whereis_coffeeshop', NULL, 'coffee_shop', 'Behind the bookstore/Next to the bank/Next to the gym', 'Next to the bank'),
 (23, 16, 136, 'whereis_firestation', NULL, 'fire_station', 'Next to the restaurant/In front of the park/Next to the toy store', 'Next to the toy store'),
 (23, 16, 136, 'whereis_gallery', NULL, 'gallery', 'Between the beauty salon and the bus stop/Behind the bakery/Next to the shopping mall', 'Next to the shopping mall'),
-(23, 16, 136, 'whereis_gasstation', NULL, 'gas_station', 'Next to the barber''s shop/In front of the library/Next to the toy store', 'In front of the library'),
+(23, 16, 136, 'whereis_gasstation', NULL, 'gas_station', 'Next to the barber\'s shop/In front of the library/Next to the toy store', 'In front of the library'),
 (23, 16, 136, 'whereis_gym', NULL, 'gym', 'Behind the bookstore/In front of the bakery/Next to the gym', 'In front of the bakery'),
 (23, 16, 136, 'whereis_hospital', NULL, 'hospital', 'Between the beauty salon and the bus stop/Behind the bakery/In front of the zoo', 'In front of the zoo'),
 (23, 16, 136, 'whereis_museum', NULL, 'museum', 'Between the hospital and the avenue/Behind the bakery/In front of the zoo', 'Between the hospital and the avenue'),
@@ -3541,12 +3575,12 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (17, 18, 146, 'what_time_is_it', NULL, '9_12', '', 'nine twelve'),
 (17, 18, 146, 'what_time_is_it', NULL, '2_59', '', 'two fifty nine'),
 (17, 18, 146, 'what_time_is_it', NULL, '3_15', '', 'three fifteen'),
-(17, 18, 146, 'what_time_is_it', NULL, '5_00', '', 'five o''clock'),
+(17, 18, 146, 'what_time_is_it', NULL, '5_00', '', 'five o\'clock'),
 (17, 18, 146, 'what_time_is_it', NULL, '9_30', '', 'nine thirty'),
 (17, 18, 146, 'what_time_is_it', NULL, '7_35', '', 'seven thirty five'),
 (17, 18, 146, 'what_time_is_it', NULL, '2_50', '', 'two fifty'),
 (17, 18, 146, 'what_time_is_it', NULL, '6_08', '', 'six ou eight'),
-(17, 18, 146, 'what_time_is_it', NULL, '2_00', '', 'two o''clock'),
+(17, 18, 146, 'what_time_is_it', NULL, '2_00', '', 'two o\'clock'),
 (17, 18, 146, 'what_time_is_it', NULL, '9_59', '', 'nine fifty nine'),
 (18, 18, 147, '5_21', NULL, '5_21', '', ''),
 (18, 18, 147, '6_01', NULL, '6_01', '', ''),
@@ -3599,11 +3633,13 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 --
 
 CREATE TABLE IF NOT EXISTS `t030_cobranza` (
-  `Co_Cobranza` int(11) NOT NULL,
+  `Co_Cobranza` int(11) NOT NULL AUTO_INCREMENT,
   `Nu_Identificacion` varchar(20) NOT NULL,
   `Co_Canon` float NOT NULL,
   `Solvencia` char(2) DEFAULT NULL,
-  `Fe_ultimoPago` date NOT NULL
+  `Fe_ultimoPago` date NOT NULL,
+  PRIMARY KEY (`Co_Cobranza`),
+  KEY `FK_T030_P020_Institucion` (`Nu_Identificacion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -3618,7 +3654,10 @@ CREATE TABLE IF NOT EXISTS `t040_retos` (
   `Co_Tema` int(11) NOT NULL,
   `Nu_Identificacion` varchar(20) NOT NULL,
   `Fe_Ejecucion` varchar(120) NOT NULL,
-  `St_Reto` char(1) NOT NULL
+  `St_Reto` char(1) NOT NULL,
+  PRIMARY KEY (`Co_Reto`,`Co_Usuario`),
+  KEY `FK_t040_P040_Temas` (`Co_Tema`),
+  KEY `FK_t040_t080_usuario_institucion_fk` (`Nu_Identificacion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -3644,7 +3683,10 @@ INSERT INTO `t040_retos` (`Co_Reto`, `Co_Usuario`, `Co_Tema`, `Nu_Identificacion
 CREATE TABLE IF NOT EXISTS `t080_usuario_institucion` (
   `Co_Usuario` bigint(20) NOT NULL,
   `Nu_Identificacion` varchar(20) NOT NULL,
-  `Fe_Ingreso` varchar(500) NOT NULL
+  `Fe_Ingreso` varchar(500) NOT NULL,
+  PRIMARY KEY (`Co_Usuario`,`Nu_Identificacion`),
+  KEY `FK_T080_M210_Usuario` (`Co_Usuario`),
+  KEY `FK_T080_P020_Institucion` (`Nu_Identificacion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -3675,7 +3717,9 @@ CREATE TABLE IF NOT EXISTS `t090_usuario_nivel` (
   `Se_Actual` int(11) NOT NULL,
   `Te_Actual` int(11) NOT NULL,
   `Horas` int(11) NOT NULL,
-  `Le_Actual` varchar(300) DEFAULT NULL
+  `Le_Actual` varchar(300) DEFAULT NULL,
+  KEY `FK_T090_M210_Usuario` (`Co_Usuario`),
+  KEY `FK_T090_P030_Nivel` (`Co_Nivel`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -3693,181 +3737,6 @@ INSERT INTO `t090_usuario_nivel` (`Co_Usuario`, `Co_Nivel`, `Progreso`, `Se_Actu
 (8, 1, 100, 149, 18, 0, '#'),
 (9, 1, 0, 0, 0, 0, '');
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `m210_usuario`
---
-ALTER TABLE `m210_usuario`
-  ADD PRIMARY KEY (`Co_Usuario`),
-  ADD UNIQUE KEY `Tx_Email` (`Tx_Email`),
-  ADD KEY `FK_M210_M220_ALUMNO` (`Co_Alumno`),
-  ADD KEY `FK_M210_P080_ROL` (`Co_Rol`);
-
---
--- Indices de la tabla `m220_alumno`
---
-ALTER TABLE `m220_alumno`
-  ADD PRIMARY KEY (`Co_Alumno`);
-
---
--- Indices de la tabla `p020_institucion`
---
-ALTER TABLE `p020_institucion`
-  ADD PRIMARY KEY (`Nu_Identificacion`);
-
---
--- Indices de la tabla `p030_nivel`
---
-ALTER TABLE `p030_nivel`
-  ADD PRIMARY KEY (`Co_Nivel`);
-
---
--- Indices de la tabla `p040_temas`
---
-ALTER TABLE `p040_temas`
-  ADD PRIMARY KEY (`Co_Tema`),
-  ADD KEY `FK_P040_P030_Nivel` (`Co_Nivel`);
-
---
--- Indices de la tabla `p050_juego`
---
-ALTER TABLE `p050_juego`
-  ADD PRIMARY KEY (`Co_Juego`);
-
---
--- Indices de la tabla `p060_multimedia`
---
-ALTER TABLE `p060_multimedia`
-  ADD PRIMARY KEY (`Co_Multimedia`);
-
---
--- Indices de la tabla `p070_orden`
---
-ALTER TABLE `p070_orden`
-  ADD PRIMARY KEY (`Co_Orden`),
-  ADD KEY `FK_P070_P040_Temas` (`Co_Tema`);
-
---
--- Indices de la tabla `p080_rol`
---
-ALTER TABLE `p080_rol`
-  ADD PRIMARY KEY (`Co_Rol`);
-
---
--- Indices de la tabla `p090_imagenes`
---
-ALTER TABLE `p090_imagenes`
-  ADD PRIMARY KEY (`Nb_imagenes`),
-  ADD KEY `FK_P090_P060_Multimedia` (`Co_Multimedia`);
-
---
--- Indices de la tabla `p100_videos`
---
-ALTER TABLE `p100_videos`
-  ADD PRIMARY KEY (`Nb_videos`),
-  ADD KEY `FK_P100_P060_Multimedia` (`Co_Multimedia`);
-
---
--- Indices de la tabla `p110_audio`
---
-ALTER TABLE `p110_audio`
-  ADD PRIMARY KEY (`Nb_audio`),
-  ADD KEY `FK_P110_P060_Multimedia` (`Co_Multimedia`);
-
---
--- Indices de la tabla `t010_bitacora`
---
-ALTER TABLE `t010_bitacora`
-  ADD PRIMARY KEY (`Co_Bitacora`);
-
---
--- Indices de la tabla `t020_juego_tema`
---
-ALTER TABLE `t020_juego_tema`
-  ADD KEY `FK_P020_P050_Juego` (`Co_Juego`),
-  ADD KEY `FK_P020_P040_Temas` (`Co_Tema`),
-  ADD KEY `FK_P020_P070_Orden` (`Co_Orden`),
-  ADD KEY `FK_P020_P110_audio` (`Nb_audio`),
-  ADD KEY `FK_P020_P100_videos` (`Nb_videos`),
-  ADD KEY `FK_P020_P090_imagenes` (`Nb_imagenes`);
-
---
--- Indices de la tabla `t030_cobranza`
---
-ALTER TABLE `t030_cobranza`
-  ADD PRIMARY KEY (`Co_Cobranza`),
-  ADD KEY `FK_T030_P020_Institucion` (`Nu_Identificacion`);
-
---
--- Indices de la tabla `t040_retos`
---
-ALTER TABLE `t040_retos`
-  ADD PRIMARY KEY (`Co_Reto`,`Co_Usuario`),
-  ADD KEY `FK_t040_P040_Temas` (`Co_Tema`),
-  ADD KEY `FK_t040_t080_usuario_institucion_fk` (`Nu_Identificacion`);
-
---
--- Indices de la tabla `t080_usuario_institucion`
---
-ALTER TABLE `t080_usuario_institucion`
-  ADD PRIMARY KEY (`Co_Usuario`,`Nu_Identificacion`),
-  ADD KEY `FK_T080_M210_Usuario` (`Co_Usuario`),
-  ADD KEY `FK_T080_P020_Institucion` (`Nu_Identificacion`);
-
---
--- Indices de la tabla `t090_usuario_nivel`
---
-ALTER TABLE `t090_usuario_nivel`
-  ADD KEY `FK_T090_M210_Usuario` (`Co_Usuario`),
-  ADD KEY `FK_T090_P030_Nivel` (`Co_Nivel`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `m210_usuario`
---
-ALTER TABLE `m210_usuario`
-  MODIFY `Co_Usuario` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT de la tabla `m220_alumno`
---
-ALTER TABLE `m220_alumno`
-  MODIFY `Co_Alumno` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT de la tabla `p030_nivel`
---
-ALTER TABLE `p030_nivel`
-  MODIFY `Co_Nivel` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `p040_temas`
---
-ALTER TABLE `p040_temas`
-  MODIFY `Co_Tema` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
---
--- AUTO_INCREMENT de la tabla `p050_juego`
---
-ALTER TABLE `p050_juego`
-  MODIFY `Co_Juego` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
---
--- AUTO_INCREMENT de la tabla `p080_rol`
---
-ALTER TABLE `p080_rol`
-  MODIFY `Co_Rol` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `t010_bitacora`
---
-ALTER TABLE `t010_bitacora`
-  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=64;
---
--- AUTO_INCREMENT de la tabla `t030_cobranza`
---
-ALTER TABLE `t030_cobranza`
-  MODIFY `Co_Cobranza` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Restricciones para tablas volcadas
 --
