@@ -42,22 +42,56 @@
       $total+=1; //total de elementos
     }
   }
-
+  // ?q=".$q."
+  // echo "";
+  // ?q=".$q."
 ?>
 
-<?php
-echo"
-    <link rel='stylesheet' href='../../Lessons/Vocabulary Body/style.css'>
-    <div class='theme'>
-      <select name='body' id='select'>
-        <option value='1' selected>Front</option>
-        <option value='2'>Back</option>
-      </select>
-      <object type='image/svg+xml' data='../../img/categories/the body/front.svg' alt='The body' id='svg1'></object>
-      <object type='image/svg+xml' data='../../img/categories/the body/back.svg' alt='The body' id='svg2'></object>
-      <audio id='audio'></audio>
-      <span class='vocabulary' id='en'></span>
-      <span class='vocabulary' id='es'></span>
-    </div>
-    <script type='text/javascript' src='../../Lessons/Vocabulary Body/Javascript.js'></script>";
-?>
+<script type="text/javascript">
+  // var total=<?php echo $total?>;
+  // var urlImg=<?php
+  //         echo "[";
+  //         for ($i = 0; $i < $total; $i++) {
+  //             if ($i != ($total - 1)) {
+  //                 echo '"' . $urlImg[$i] . '",';
+  //             } else {
+  //                 echo '"' . $urlImg[$i] . '"';
+  //             }
+  //         }
+  //         echo "]";
+  //         ?>;
+  // var urlAud=<?php
+  //         echo "[";
+  //         for ($i = 0; $i < $total; $i++) {
+  //             if ($i != ($total - 1)) {
+  //                 echo '"' . $urlAud[$i] . '",';
+  //             } else {
+  //                 echo '"' . $urlAud[$i] . '"';
+  //             }
+  //         }
+  //         echo "]";
+  //         ?>;
+  // var en=<?php
+  //         echo "[";
+  //         for ($i = 0; $i < $total; $i++) {
+  //             if ($i != ($total - 1)) {
+  //                 echo '"' . $en[$i] . '",';
+  //             } else {
+  //                 echo '"' . $en[$i] . '"';
+  //             }
+  //         }
+  //         echo "]";
+          // ?>;
+  // var es=<?php
+  //         echo "[";
+  //         for ($i = 0; $i < $total; $i++) {
+  //             if ($i != ($total - 1)) {
+  //                 echo '"' . $es[$i] . '",';
+  //             } else {
+  //                 echo '"' . $es[$i] . '"';
+  //             }
+  //         }
+  //         echo "]";
+  //         ?>;
+  // var cord=<?php echo $_GET["co"]?>;
+</script>
