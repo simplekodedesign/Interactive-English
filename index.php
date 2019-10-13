@@ -33,12 +33,12 @@
 </head>
 <body>
 
-  <section id="hi">
+  <!-- <section id="hi">
     <img src="img/welcome.svg" alt="Welcome" id="welcome">
     <span class="button" id="comenzar">COMENZAR</span>
   </section>
 
-  <!-- <img src="img/C21logo.svg" alt="Logo" id="logo"> -->
+   <img src="img/C21logo.svg" alt="Logo" id="logo"> 
 
 
   <section id="login">
@@ -57,7 +57,39 @@
       <input type="submit" value="Ingresar" id="submit">
     </form>
     <p id="forgot">¿Olvidaste tú contraseña?</p>
+  </section> -->
+
+  
+
+  <section class="main" id="main">
+    <div class="firstHalf">
+      <img src="descarga.png" alt="">
+
+      <form method="post" autocomplete="off" class="loginForm" id="formLogin">
+        <h3>COLEGIO LA SALLE - CÚCUTA</h3>
+        <div>
+          <span class="barcolor"></span>
+          <input type="text" name="user" id="username" placeholder="&nbsp;" class="formInput">
+          <label for="username" id="usernameLabel" class="inputLabel">Nombre de Usuario</label>
+        </div>
+        <div>
+          <span class="barcolor"></span>
+          <input type="password" name="pass" id="password" placeholder="&nbsp;" class="formInput">
+          <label for="password" id="usernamepass" class="inputLabel">Contraseña</label>
+        </div>
+        <input type="submit" value="Ingresar" id="submitButton">
+        <p id="forgot">¿Olvidaste tú contraseña?</p>
+      </form>
+
+      <div class="footer">
+        Aquí irá la información sobre C21, el texto sobre los derechos, etc
+      </div>
+    </div>
+    <div class="welcome">
+      <img src="img/welcome.svg" alt="Welcome" id="welcome">
+    </div>
   </section>
+
 
   <div id="forgotForm">
     <span id="close">x</span>
@@ -83,6 +115,25 @@
 
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="message" id="messageContainer">
     <p id="message">
