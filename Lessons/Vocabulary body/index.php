@@ -49,10 +49,10 @@
 echo"
     <link rel='stylesheet' href='../../Lessons/Vocabulary Body/style.css'>
     <div class='theme'>
-      <select name='body' id='select'>
-        <option value='1' selected>Front</option>
-        <option value='2'>Back</option>
-      </select>
+      <div class='buttonContainer'>
+        <div class='lessonButton color' value='1'>Front</div>
+        <div class='lessonButton' value='2'>Back</div>
+      </div>
       <div class='object'>
         <object type='image/svg+xml' data='../../img/categories/the body/front.svg' alt='The body' class='svg show' id='svg1'></object>
         <object type='image/svg+xml' data='../../img/categories/the body/back.svg' alt='The body' class='svg' id='svg2'></object>

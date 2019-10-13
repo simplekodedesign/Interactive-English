@@ -2,9 +2,9 @@
 // const side = svg[1].contentDocument
 // const back = svg[2].contentDocument
 var svg
+var select = document.getElementsByClassName('lessonButton')
 
 window.addEventListener("load", function () {
-  var select = document.getElementById('select')
   var audio = document.getElementById('audio')
   var en = document.getElementById('en')
   var es = document.getElementById('es')
@@ -14,9 +14,11 @@ window.addEventListener("load", function () {
     god(i)
   }
 
-  select.addEventListener("change", function(){
-    show(this.value)
-  })
+  for (var i = 0; i < select.length; i++) {
+    select[i].addEventListener("click", function(){
+      show()
+    })
+  }
 })
 
 function god(who){
@@ -49,7 +51,9 @@ function god(who){
 function show(){
   //Función para cambiar el display de cada SVG
   svg[0].classList.toggle('show')
+  select[0].classList.toggle('color')
   svg[1].classList.toggle('show')
+  select[1].classList.toggle('color')
 }
 
 function check(){
@@ -73,9 +77,11 @@ function spotlight (e) {
 
 
   //Retorna el id[1] = ingles, id[2] = español. id[0] realmente no importa
+  //Illustrator por defecto sustituye los espacios con _ por ello se limpia el string
   let id = this.id.split("-")
   en.innerHTML = id[1].replace(/_/g, " ")
   es.innerHTML = id[2].replace(/_/g, " ")
+
 
   en.style.display = 'block';
   es.style.display = 'block';
