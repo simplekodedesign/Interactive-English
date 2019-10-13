@@ -4,6 +4,7 @@ var text="";
 var aud=document.getElementById("letterAud");
 
 window.addEventListener("load",function(){
+	window.addEventListener("click", victoryMessage);
 	if(!("webkitSpeechRecognition" in window)){
 		alert("Su navegador no soporta la api para el reconocimiento de voz");
 	}else{

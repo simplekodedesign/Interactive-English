@@ -35,6 +35,9 @@ var from_toButton = document.getElementById("from_toButton"); // Button for tran
 var from_to = 0; // Variable for translation
 
 window.addEventListener("load", function () {
+  document.getElementById("reloadButton").addEventListener("click", function () {
+    location.reload();
+  })
 
   var rocket = document.getElementById("rocketSVG");
   svgRocket = rocket.contentDocument;
