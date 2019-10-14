@@ -1,6 +1,6 @@
 
-const ask = ["A", "B", "C", "D"];
-const compare = ["vowel", "consonant", "consonant", "consonant"];
+var ask = data.options;
+var compare = data.compare;
 var container = document.getElementById('cont_all');
 var field = document.getElementsByClassName('field');
 var boxContainer = document.getElementById("boxesContainer");
@@ -11,6 +11,12 @@ var type;
 var words = [];
 
 window.addEventListener("load", function () {
+
+  if(!data.urlImg[0] && !data.options[1] && !data.urlAud[0]) {
+    createForABC();
+    arrayLength = ask.length;
+  }
+  
   words.push(compare[0]);
   for (let i = 0; i < arrayLength; i++) {
     if (words.indexOf(compare[i]) == -1) {
@@ -38,7 +44,7 @@ window.addEventListener("load", function () {
           return Math.round(endValue / gridHeight) * gridHeight;
       }
     }
-  })
+  });
 })
 
 function constWorld(){
@@ -97,4 +103,26 @@ function dropItem() {
 function refreshgame () {
   item.innerHTML = ask[currentItem];
   item.setAttribute("type", compare[currentItem]);
+}
+
+function createForABC () {
+  ask = [];
+  compare = [];
+  let newChar;
+  for (var i = 0; i < 15; i++) {
+    newChar = parseInt(getRandomArbitrary(65, 91));
+    ask.push(String.fromCharCode(newChar));
+    if (newChar == 65 || newChar == 69 || newChar == 73 || newChar == 79 || newChar == 85) {
+      compare.push("Vowel");
+    } else {
+      compare.push("Consonant");
+    }
+  }
+
+  console.log(ask);
+  console.log(compare);
+}
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
 }
