@@ -53,7 +53,7 @@ function redirect(game){
     case "16": return "Select the right image";
     case "17": return "Write the right option";
     case "18": return "Memory";
-    case "19": return "Speak Memory";
+    case "19": return "Paint the draws";
     case "20": return "Connect with image";
     case "21": return "Unscramble";
     case "22": return "Vocabulary Directions";
