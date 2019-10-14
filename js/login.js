@@ -73,6 +73,8 @@ window.addEventListener("load", function() {
         console.log(response);
         if(response.status == 1){
           beging(response);
+        }else{
+          loginHandler(response.status)
         }
       }
     }
@@ -84,7 +86,6 @@ window.addEventListener("load", function() {
 });
 
 function beging (data) {
-  console.log("HI");
   // alert(data.redirect);
   main.classList.add("c21English");
   setTimeout(function() {
