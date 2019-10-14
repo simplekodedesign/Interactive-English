@@ -41,7 +41,7 @@ function redirect(game){
     case "4": return "Pronunciation2";
     case "5": return "Vocabulary Body";
     case "6": return "Pronunciation of Vowels";
-    case "7": return "Pronunciation of Consonants";
+    case "7": return "Drag to the box";
     case "8": return "Vocabulary";
     case "9": return "Select the correct option";
     case "10": return "Connect";
