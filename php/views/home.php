@@ -72,7 +72,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Main</title>
+    <title>C21 English</title>
     <link rel="stylesheet" href="../../css/font.css">
     <link rel="stylesheet" href="../../css/master.css?q=<?php echo $q?>">
     <link rel="stylesheet" href="../../css/lessons.css?q=<?php echo $q?>">

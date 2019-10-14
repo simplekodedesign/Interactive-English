@@ -29,7 +29,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/login.css?q=<?php echo $q?>">
     <link rel="stylesheet" href="css/background.css?q=<?php echo $q?>">
-    <title>Interactive English</title>
+    <title>C21 English</title>
 </head>
 <body>
 
