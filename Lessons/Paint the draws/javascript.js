@@ -30,7 +30,7 @@ const initialBackground = "rgb(58, 58, 58)"; // Setted with CSS
 
 const tableLength = lessonColors.length;
 const shapesLength = shapes.length;
-const itemsLength = 5;
+const itemsLength = tableLength*2;
 var items = [];
 var currentItems = 0;
 var itemsIndex = [];
@@ -65,12 +65,19 @@ function createTable () {
 
 function createShapes () {
   let div, num, text;
-  for (let i = 0; i < itemsLength; i++) {
-    num = parseInt(getRandomArbitrary(0, tableLength))
-    items.push(new ShapeItem(shapes[parseInt(getRandomArbitrary(0, shapesLength))],
-      lessonColors[num].rgb, lessonColors[num].name
-    ));
+  for (let i = 0; i < tableLength; i++) {
+    for (let k = 0; k < 2; k++) {
+      num = parseInt(getRandomArbitrary(0, tableLength))
+      items.push(new ShapeItem(shapes[parseInt(getRandomArbitrary(0, shapesLength))],
+        lessonColors[i].rgb, lessonColors[i].name
+      ));
+    }
   }
+
+  items.sort(function (a,b) {
+    return 0.5 - Math.random();
+  });
+  console.log(items);
 
   for (let j = 0; j < 3; j++) {
     div = document.createElement("div");
@@ -110,13 +117,16 @@ function select () {
 }
 
 function check () {
+  console.log(currentItems + " " + itemsLength);
   if (col1.getAttribute("colorName") == col2.firstElementChild.innerHTML) {
     col2.removeEventListener("click", select);
     col2.style.setProperty("background-color", col1.style.getPropertyValue("background-color"));
     currentItems++;
     if (currentItems < itemsLength + 2) {
       if(currentItems < itemsLength) {
-        setTimeout(statusRefresher, 500);
+        setTimeout(statusRefresher, 500, col1, col2);
+        col1 = undefined;
+        col2 = undefined;
         return;
       } else {
         col1 = undefined;
@@ -133,11 +143,9 @@ function check () {
   }
 }
   
-function statusRefresher () {
-  col2.classList.replace(col2.classList[1], items[currentItems].shape);
-  col2.firstElementChild.innerHTML = items[currentItems].name;
-  col2.style.setProperty("background-color", initialBackground);
-  col2.addEventListener("click", select);
-  col1 = undefined;
-  col2 = undefined;
+function statusRefresher (prevCol1, prevCol2) {
+  prevCol2.classList.replace(prevCol2.classList[1], items[currentItems].shape);
+  prevCol2.firstElementChild.innerHTML = items[currentItems].name;
+  prevCol2.style.setProperty("background-color", initialBackground);
+  prevCol2.addEventListener("click", select);
 }

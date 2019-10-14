@@ -41,7 +41,7 @@ function redirect(game){
     case "4": return "Pronunciation2";
     case "5": return "Vocabulary Body";
     case "6": return "Pronunciation of Vowels";
-    case "7": return "Pronunciation of Consonants";
+    case "7": return "Drag to the box";
     case "8": return "Vocabulary";
     case "9": return "Select the correct option";
     case "10": return "Connect";
@@ -53,7 +53,7 @@ function redirect(game){
     case "16": return "Select the right image";
     case "17": return "Write the right option";
     case "18": return "Memory";
-    case "19": return "Speak Memory";
+    case "19": return "Paint the draws";
     case "20": return "Connect with image";
     case "21": return "Unscramble";
     case "22": return "Vocabulary Directions";
