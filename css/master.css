@@ -596,8 +596,9 @@ footer p{
   height: 50px;
   left: 0;
   top: 0;
+  transition: .5s ease-in-out;
   transform: translate(-100%, 0);
-  background-color: red;
+  opacity: 0;
 }
 
 @keyframes rocketAnimation {

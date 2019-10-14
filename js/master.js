@@ -34,6 +34,10 @@ var svgRocket;
 var linkElement;
 var from_toButton = document.getElementById("from_toButton"); // Button for translateScreen
 var from_to = 0; // Variable for translation
+var rocket = document.getElementById("rocket");
+var rocketMessage = document.getElementById("rocketMessage");
+var congratsAudio = document.getElementById("congratsAudio");
+var durationRocket = 3;
 
 window.addEventListener("load", function () {
   if(reloadButton) {
@@ -67,6 +71,10 @@ window.addEventListener("load", function () {
   }
   translatebutton.addEventListener("click", getTranslate)
   from_toButton.addEventListener("click", from_to_function);
+
+  rocket.addEventListener("animationend", function() {
+    
+  });
 });
 
 /*---------------------------------------Translator----------------------------------*/
@@ -122,36 +130,48 @@ function showGif () {
 //--------------------------------------VICTORY MESSAGE--------------------------
 
 var victoryMessage = function() {
+  document.getElementById("victoryAudio").play();
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("rocket").style.setProperty("animation-name", "rocketAnimation");
+      rocket.style.setProperty("animation-duration", durationRocket + "s");
+      rocket.style.setProperty("animation-name", "rocketAnimation");
+      setTimeout(() => {
+        rocketMessage.style.setProperty("opacity", "1");
+        console.log("This is happening");
+        congratsMessage();
+      }, (durationRocket*1000) + 500);
       document.getElementById("lSigu").style.display="flex";
     }
   };
   xhttp.open("GET", "../controller/continue.php?co="+cord, true);
   xhttp.send();
+}
 
+function congratsMessage () {
+  var rand = (Math.random())*10;
 
-  // var rand = (Math.random())*10;
+  if (rand < 2.5) {
+      congratsAudio.src = "../../aud/congratulations/c1.mp3";
+      congratsAudio.play();
+      rocketMessage.innerHTML = "Excellent!";
+  }
 
-  // if (rand < 2.5) {
-  //     document.getElementById("victoryAud").src = "../../../../aud/congratulations/c1.mp3";
-  //     document.getElementById("victoryAud").play();
-  // }
+  if (rand > 2.5 && rand < 5) {
+      congratsAudio.src = "../../aud/congratulations/c2.mp3";
+      congratsAudio.play();
+      rocketMessage.innerHTML = "Good job!";
+  }
 
-  // if (rand > 2.5 && rand < 5) {
-  //     document.getElementById("victoryAud").src = "../../aud/congratulations/c2.mp3";
-  //     document.getElementById("victoryAud").play();
-  // }
+  if (rand > 5 && rand < 7.5) {
+      congratsAudio.src = "../../aud/congratulations/c3.mp3";
+      congratsAudio.play();
+      rocketMessage.innerHTML = "Very good!";
+  }
 
-  // if (rand > 5 && rand < 7.5) {
-  //     document.getElementById("victoryAud").src = "../../aud/congratulations/c3.mp3";
-  //     document.getElementById("victoryAud").play();
-  // }
-
-  // if (rand > 7.5) {
-  //     document.getElementById("victoryAud").src = "../../aud/congratulations/c4.mp3";
-  //     document.getElementById("victoryAud").play();
-  // }
+  if (rand > 7.5) {
+      congratsAudio.src = "../../aud/congratulations/c4.mp3";
+      congratsAudio.play();
+      rocketMessage.innerHTML = "We are learning!";
+  }
 }
