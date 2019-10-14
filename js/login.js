@@ -83,7 +83,6 @@ window.addEventListener("load", function() {
 });
 
 function beging (data) {
-  console.log("HI");
   // alert(data.redirect);
   main.classList.add("c21English");
   setTimeout(function() {

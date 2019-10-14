@@ -38,7 +38,7 @@
     <span class="button" id="comenzar">COMENZAR</span>
   </section>
 
-   <img src="img/C21logo.svg" alt="Logo" id="logo"> 
+   <img src="img/C21logo.svg" alt="Logo" id="logo">
 
 
   <section id="login">
@@ -59,7 +59,7 @@
     <p id="forgot">¿Olvidaste tú contraseña?</p>
   </section> -->
 
-  
+
 
   <section class="main" id="main">
     <div class="firstHalf">
@@ -115,26 +115,6 @@
 
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="message" id="messageContainer">
     <p id="message">
       ERROR

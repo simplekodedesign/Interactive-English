@@ -90,7 +90,7 @@
             <span class="hButton B_herr" id="translator">Translator</span>
             <span class="hButton B_ayuda">Help
               <ul>
-                <li>Contact</li>
+                <li><a href="#" data-api="smartsupp" data-operation="open">Contact</a></li>
                 <li id="gifButton">Instructions</li>
               </ul>
             </span>
@@ -211,5 +211,6 @@
     </script>
     <script src="../../js/routing.js?q=<?php echo $q?>"></script>
     <script src="../../js/master.js?q=<?php echo $q?>"></script>
+    <script src="../../js/smartsupp.js?q=<?php echo $q?>"></script>
   </body>
 </html>
