@@ -567,6 +567,16 @@ footer p{
   max-height: 80vh;
 }
 
+/*------------------------------RESTART BUTTON----------------------*/
+
+#reloadButton {
+  margin: 50px;
+  padding: 5px;
+  background-color: var(--yellow);
+  color: black;
+  cursor: pointer;
+}
+
 /*---------------------------------ROCKET---------------------------*/
 
 .rocket {

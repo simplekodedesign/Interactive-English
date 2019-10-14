@@ -154,6 +154,7 @@
                 <img src='".$gift."' width='70%' height='auto' alt='Help'>
               </div>
             </div>";
+            echo "<div id='reloadButton'>Reiniciar actividad</div>";
           }
         }
       ?>
