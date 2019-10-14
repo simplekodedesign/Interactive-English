@@ -26,6 +26,7 @@
         <div id='item'></div>
       </div>
       <div id='boxesContainer'></div>
+      <audio id='audio'></audio>
     </div>
   </div>";
 

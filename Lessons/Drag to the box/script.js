@@ -5,8 +5,9 @@ var container = document.getElementById('cont_all');
 var field = document.getElementsByClassName('field');
 var boxContainer = document.getElementById("boxesContainer");
 var item = document.getElementById("item");
+var audio = document.getElementById('audio')
 var currentItem = 0;
-var arrayLength = ask.length;
+var arrayLength;
 var type;
 var words = [];
 
@@ -15,8 +16,11 @@ window.addEventListener("load", function () {
   if(!data.urlImg[0] && !data.options[1] && !data.urlAud[0]) {
     createForABC();
     arrayLength = ask.length;
+  }else if(!data.urlImg[0] && !data.options[1]){
+    data.urlImg[0] = "../../img/default.svg"
+    arrayLength = compare.length
   }
-  
+
   words.push(compare[0]);
   for (let i = 0; i < arrayLength; i++) {
     if (words.indexOf(compare[i]) == -1) {
@@ -24,10 +28,10 @@ window.addEventListener("load", function () {
     }
   }
 
+  itemCreator();
+
   item.innerHTML = ask[currentItem];
   item.setAttribute("type", compare[currentItem]);
-
-  constWorld();
 
   Draggable.create("#item",{
     type:"x,y",
@@ -35,6 +39,7 @@ window.addEventListener("load", function () {
     bounds: container,
     throwProps:true,
     autoScroll:true,
+    onDrag: setAudio,
     onRelease: dropItem,
     snap: {
       x: function(endValue) {
@@ -47,17 +52,30 @@ window.addEventListener("load", function () {
   });
 })
 
-function constWorld(){
-  let boxesLength = words.length;
-  let div, text;
-  for (let i = 0; i < arrayLength; i++) {
-    // var source = cleaningurl(src[i])
-    var img = document.createElement("img");
-    // img.setAttribute("src", src[i])
-    img.setAttribute("class", "item");
-    container.appendChild(img);
-  }
+function cleaningurl(these) {
+  let src = these.split("/")
+  let source =  src[src.length - 1].split(".")
+  return source[0]
+}
 
+function setAudio() {
+  if (data.urlAud[0]) {
+    audio.src = data.urlAud[currentItem]
+  }
+}
+
+function itemCreator(){
+  let boxesLength = words.length;
+  var div, text;
+
+  if (data.urlImg[0] != undefined) {
+    item = document.createElement("img")
+    item.setAttribute("src", data.urlImg[0])
+  }else{
+    item = document.createElement("div")
+    item.setAttribute("class", "item")
+    item.innerHTML = ask[i]
+  }
 
   for (let i = 0; i < boxesLength; i++) {
     div = document.createElement("div");
@@ -69,17 +87,17 @@ function constWorld(){
     div.appendChild(text);
     boxContainer.appendChild(div);
   }
-
 }
 
 function dropItem() {
   let src = this.target.getAttribute('type');
   var boundsBefore, boundsAfter;
+  audio.play();
   if (this.hitTest("#" + src)){
     currentItem++;
     boundsBefore = this.target.getBoundingClientRect();
     boundsAfter = this.target.getBoundingClientRect();
-    
+
     if (currentItem < arrayLength) {
       TweenMax.to(this.target,0.0,{x:0,y:0});
       refreshgame();
@@ -101,8 +119,16 @@ function dropItem() {
 }
 
 function refreshgame () {
-  item.innerHTML = ask[currentItem];
+
+  if (data.url[0] == "../../img/default.svg") {
+
+  }else if(data.urlImg[0] != undefined){
+    item.src = data.urlImg[currentItem]
+  }else{
+    item.innerHTML = ask[currentItem];
+  }
   item.setAttribute("type", compare[currentItem]);
+
 }
 
 function createForABC () {
