@@ -202,8 +202,10 @@
     </div>
 
     <div class="rocket" id="rocket">
+      <audio src="../../aud/victoryAudio.mp3" id="victoryAudio"></audio>
       <object data="../../img/rocket.svg" type="image/svg+xml" id="rocketSVG"></object>
-      <span id="rocketMessage">You Won</span>
+      <audio src="" id="congratsAudio"></audio>
+      <span id="rocketMessage"></span>
     </div>
 
     <script type="text/javascript">

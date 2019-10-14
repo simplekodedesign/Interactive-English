@@ -23,6 +23,7 @@
 <div class="cont_abc">
   <div class="mainLetter" id="mainLetter">
     <audio src="" id="mainAud"></audio>
+    <audio src="../../aud/mistake.mp3" id="mistakeAud"></audio>
   </div>
   <div id="optionsLetters"></div>
 </div>

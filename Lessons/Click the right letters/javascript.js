@@ -1,6 +1,7 @@
 var mainLetter = document.getElementById("mainLetter");
 const audioURL = "../../aud/categories/abc/";
 const lettersInit = 65;
+const mistakeAud = document.getElementById("mistakeAud");
 var lettersLength = lettersInit + 26;
 var posLetter = lettersInit;
 var mainLetter = document.getElementById("mainLetter");
@@ -14,7 +15,6 @@ window.addEventListener("load", function() {
   for (let k = 0; k < optionsLength; k++) {
     let randPos = parseInt(getRandomArbitrary(65, 91));
   }
-
   createGame();
 });
 
@@ -79,6 +79,7 @@ function check () {
     appear--;
   } else {
     this.style.setProperty("color", "red");
+    mistakeAud.play();
     setTimeout(function () {
       clearGame();
     }, 100);
