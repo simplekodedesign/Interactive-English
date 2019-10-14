@@ -103,6 +103,10 @@ body {
 .loginForm > p {
   margin: 10px;
   padding: 7px 0px;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--secondColor);
+  cursor: pointer;
 }
 
 .formButton {
@@ -234,10 +238,42 @@ label {
   display: none;
 }
 
+#close{
+  width: 50px;
+  height: 50px;
+  top: 10%;
+  left: 20%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#closeA{
+  height: 5px;
+  width: 30px;
+  background-color: var(--mainColor);
+}
+
+#closeA::after, #closeA::before{
+  content: "";
+  background-color: var(--mainColor);
+  height: 5px;
+  width: 15px;
+  position: absolute;
+  left: 2.5px;
+  transform-origin: left;
+  transform: rotateZ(45deg);
+}
+
+#closeA::after{
+  transform: rotateZ(-45deg);
+}
+
 @media screen and (max-width : 650px) {
   body {
     font-size: 75%;
-  } 
+  }
 
   .firstHalf {
     min-width: 300px;
