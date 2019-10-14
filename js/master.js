@@ -29,15 +29,18 @@ var helpgif = document.getElementById("helpgif");
 var gifButton = document.getElementById("gifButton");
 var navbar = document.getElementById('navbarNav');
 var translatebutton = document.getElementById("translatebutton");
+var reloadButton = document.getElementById("reloadButton");
 var svgRocket;
 var linkElement;
 var from_toButton = document.getElementById("from_toButton"); // Button for translateScreen
 var from_to = 0; // Variable for translation
 
 window.addEventListener("load", function () {
-  document.getElementById("reloadButton").addEventListener("click", function () {
-    location.reload();
-  })
+  if(reloadButton) {
+    document.getElementById("reloadButton").addEventListener("click", function () {
+      location.reload();
+    });
+  }
 
   var rocket = document.getElementById("rocketSVG");
   svgRocket = rocket.contentDocument;

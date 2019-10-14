@@ -33,34 +33,6 @@
 </head>
 <body>
 
-  <!-- <section id="hi">
-    <img src="img/welcome.svg" alt="Welcome" id="welcome">
-    <span class="button" id="comenzar">COMENZAR</span>
-  </section>
-
-   <img src="img/C21logo.svg" alt="Logo" id="logo"> 
-
-
-  <section id="login">
-    <form autocomplete="off" id="formLogin">
-      <h1>Ingresa</h1>
-      <div>
-        <span class="barcolor"></span>
-        <input type="text" name="user" id="username" placeholder="&nbsp;" class="formInput">
-        <label for="username" id="usernameLabel" class="inputLabel">Usuario</label>
-      </div>
-      <div>
-        <span class="barcolor"></span>
-        <input type="password" name="pass" id="password" placeholder="&nbsp;" class="formInput">
-        <label for="password" id="usernamepass" class="inputLabel">Contraseña</label>
-      </div>
-      <input type="submit" value="Ingresar" id="submit">
-    </form>
-    <p id="forgot">¿Olvidaste tú contraseña?</p>
-  </section> -->
-
-  
-
   <section class="main" id="main">
     <div class="firstHalf">
       <img src="descarga.png" alt="">
@@ -77,13 +49,40 @@
           <input type="password" name="pass" id="password" placeholder="&nbsp;" class="formInput">
           <label for="password" id="usernamepass" class="inputLabel">Contraseña</label>
         </div>
-        <input type="submit" value="Ingresar" id="submitButton">
+        <input type="submit" value="Ingresar" id="submitButton" class="formButton">
         <p id="forgot">¿Olvidaste tú contraseña?</p>
       </form>
+
+      <div id="forgotForm" display="none">
+        
+        <div class="forgotScreen">
+          <div class="loginForm">
+            <h3 class="title">Has olvidado la contraseña</h3>
+            <div>
+              <span class="barcolor"></span>
+              <input type="text" name="user" id="usernamepassRec" class="formInput" placeholder="&nbsp;">
+              <label for="usernamepassRec" id="usernamepassRecLabel" class="inputLabel">Nombre de Usuario</label>
+            </div>
+
+            <span class="formButton" id="siguiente">Aceptar</span>
+
+            <div>
+              <input type="text" name="codigo_generado" id="codigo_generado" style="display:none;">
+              <span class="barcolor"></span>
+              <input type="text" name="codigo" id="codigo" class="formInput" disabled placeholder="&nbsp;">
+              <label for="codigo" id="usernameLabel" class="inputLabel">Código de reactivación</label>
+            </div>
+            <button class="formButton" id="btnAceptar">Introducir Código</button>
+            <span class="formButton" id="close">Atras</span>
+          </div>
+
+        </div>
+      </div>
 
       <div class="footer">
         Aquí irá la información sobre C21, el texto sobre los derechos, etc
       </div>
+
     </div>
     <div class="welcome">
       <img src="img/welcome.svg" alt="Welcome" id="welcome">
@@ -91,51 +90,9 @@
   </section>
 
 
-  <div id="forgotForm">
-    <span id="close">x</span>
-    <div class="mainLog forgotScreen">
-      <h2 class="title">Has olvidado la contraseña</h2>
-      <div class="form">
-        <div>
-          <input type="text" name="user" id="usernamepassRec" class="formInput">
-          <label for="usernamepassRec" id="usernamepassRecLabel" class="inputLabel">Nombre de Usuario</label>
-          <span class="barcolor"></span>
-        </div>
+  
 
-        <span class="siguiente span">Aceptar</span>
-
-        <div>
-          <input type="text" name="codigo" id="codigo" class="formInput" disabled>
-          <label for="codigo" id="usernameLabel" class="inputLabel">Código de reactivación</label>
-          <span class="barcolor"></span>
-          <input type="text" name="codigo_generado" id="codigo_generado" style="display:none;">
-        </div>
-        <button class="siguiente" id="btnAceptar">Introducir Código</button>
-      </div>
-
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="message" id="messageContainer">
+  <div class="message" id="messageContainer" display="none">
     <p id="message">
       ERROR
     </p>

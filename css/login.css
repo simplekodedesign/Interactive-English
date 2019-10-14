@@ -35,8 +35,6 @@ body {
   justify-content: flex-start;
 }
 
-
-
 .c21English > .firstHalf {
   padding: 0;
   width: 0%;
@@ -46,6 +44,10 @@ body {
 .c21English > .firstHalf > .footer,
 .c21English > .firstHalf > .loginForm {
   transform: scale(0);
+}
+
+.c21English > .firstHalf {
+  min-width: unset;
 }
 
 .c21English > .welcome {
@@ -62,6 +64,7 @@ body {
   --secondColor: #fea400;
   padding: 25px;
   height: 100vh;
+  min-width: 350px;
   width: 30%;
   background-color: rgb(255, 255, 255);
   position: relative;
@@ -102,12 +105,20 @@ body {
   padding: 7px 0px;
 }
 
-#submitButton {
+.formButton {
+  text-align: center;
   background: var(--mainColor);
   color: white;
   box-shadow: none;
   border: none;
   cursor: pointer;
+  margin: 10px;
+  padding: 7px 5px;
+}
+
+.forgotScreen > .loginForm {
+  margin: 0;
+  width: 100%;
 }
 
 .firstHalf > .footer {
@@ -130,12 +141,6 @@ body {
   height: auto;
   transition: .5s ease-in-out;
 }
-
-
-
-
-
-
 
 .loginForm > div {
   display: flex;
@@ -223,4 +228,45 @@ label {
 
 #submit:focus, .siguiente:focus {
   background-color: hsl(30, 100%, 40%);
+}
+
+#forgotForm {
+  display: none;
+}
+
+@media screen and (max-width : 650px) {
+  body {
+    font-size: 75%;
+  } 
+
+  .firstHalf {
+    min-width: 300px;
+    padding: 10px;
+  }
+}
+
+
+@media screen and (max-width : 400px) {
+
+  .main {
+    position: relative;
+  }
+
+  .firstHalf {
+    width: 100%;
+    min-width: 300px;
+    padding: 5px;
+    z-index: 2;
+  }
+
+  .footer {
+    padding: 8px;
+  }
+
+  .welcome {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
 }

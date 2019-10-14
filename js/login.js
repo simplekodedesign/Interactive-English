@@ -1,6 +1,6 @@
 const forgot = document.getElementById("forgot");
 const forgotForm = document.getElementById("forgotForm");
-const next = (document.getElementsByClassName("siguiente"))[0];
+const next = document.getElementById("siguiente");
 var mainSection = document.getElementById("main");
 // const inputs = document.getElementsByClassName("formInput");
 // const comenzar = document.getElementById("comenzar");
@@ -39,8 +39,8 @@ window.addEventListener("load", function() {
   });
 
   forgot.addEventListener("click", function() {
-      forgotForm.style.display = "flex";
-      (document.getElementsByTagName("body"))[0].style.overflow = "hidden";
+    form.style.setProperty("display", "none");
+    forgotForm.style.setProperty("display", "flex");
   });
   document.getElementById("btnAceptar").addEventListener("click",function(){
     if(document.getElementById("codigo").value == document.getElementById("codigo_generado").value){
@@ -51,7 +51,8 @@ window.addEventListener("load", function() {
   });
 
   document.getElementById("close").addEventListener("click", function() {
-    forgotForm.style.display = "none";
+    forgotForm.style.setProperty("display", "none");
+    form.style.setProperty("display", "flex");
   })
 
   // comenzar.addEventListener("click", function () {
