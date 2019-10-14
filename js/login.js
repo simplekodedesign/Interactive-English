@@ -72,6 +72,8 @@ window.addEventListener("load", function() {
         console.log(response);
         if(response.status == 1){
           beging(response);
+        }else{
+          loginHandler(response.status)
         }
       }
     }
