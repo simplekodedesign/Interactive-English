@@ -38,7 +38,7 @@
       <img src="descarga.png" alt="">
 
       <form method="post" autocomplete="off" class="loginForm" id="formLogin">
-        <h3>COLEGIO LA SALLE - CÚCUTA</h3>
+        <h3>C21 English</h3>
         <div>
           <span class="barcolor"></span>
           <input type="text" name="user" id="username" placeholder="&nbsp;" class="formInput">
@@ -54,7 +54,7 @@
       </form>
 
       <div id="forgotForm" display="none">
-        
+
         <div class="forgotScreen">
           <div class="loginForm">
             <h3 class="title">Has olvidado la contraseña</h3>
@@ -73,7 +73,10 @@
               <label for="codigo" id="usernameLabel" class="inputLabel">Código de reactivación</label>
             </div>
             <button class="formButton" id="btnAceptar">Introducir Código</button>
-            <span class="formButton" id="close">Atras</span>
+            <span id="close">
+              <span id="closeA"></span>
+            </span>
+            <!-- <img src="img/arrow-back.svg" alt="Atrás"> -->
           </div>
 
         </div>
@@ -90,7 +93,7 @@
   </section>
 
 
-  
+
 
   <div class="message" id="messageContainer" display="none">
     <p id="message">

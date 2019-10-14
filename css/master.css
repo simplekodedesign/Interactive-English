@@ -571,10 +571,19 @@ footer p{
 
 #reloadButton {
   margin: 50px;
-  padding: 5px;
-  background-color: var(--yellow);
-  color: black;
+  padding: 10px 15px 10px 30px;
+  background-color: var(--orange);
+  color: white;
   cursor: pointer;
+  position: relative;
+}
+
+#reloadButton::after {
+  content: url(../img/refresh.svg);
+  position: absolute;
+  left: 5px;
+  width: 20px;
+  height: auto;
 }
 
 /*---------------------------------ROCKET---------------------------*/
@@ -687,9 +696,26 @@ footer p{
     height: 80px;
     width: 100px;
   }
+
   .translateDiv button {
     margin: 0;
     margin-top: 5px;
     padding: 8px 5px;
+  }
+
+  .navigationButtons {
+    bottom: 10vh;
+  }
+
+  #lPrev span{
+    border-bottom: 35px solid var(--aquamarina);
+    border-right: 25px solid transparent;
+    border-left: 25px solid transparent;
+  }
+
+  #lSigu span{
+    border-bottom: 35px solid var(--aquamarina);
+    border-right: 25px solid transparent;
+    border-left: 25px solid transparent;
   }
 }

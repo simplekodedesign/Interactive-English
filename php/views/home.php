@@ -212,6 +212,7 @@
     </script>
     <script src="../../js/routing.js?q=<?php echo $q?>"></script>
     <script src="../../js/master.js?q=<?php echo $q?>"></script>
-    <script src="../../js/smartsupp.js?q=<?php echo $q?>"></script>
+    <!-- <script src="../../js/smartsupp.js?q=""></script> -->
+    <script src="//code.tidio.co/y7try67uhokxhv2cxamfxkk73fvae8wf.js"> </script>
   </body>
 </html>
