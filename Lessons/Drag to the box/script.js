@@ -4,22 +4,24 @@ var compare = data.compare;
 var container = document.getElementById('cont_all');
 var field = document.getElementsByClassName('field');
 var boxContainer = document.getElementById("boxesContainer");
-var audio = document.getElementById('audio')
-var itemContainer = (document.getElementsByClassName('itemContainer'))[0]
+var audio = document.getElementById('audio');
+var itemContainer = (document.getElementsByClassName('itemContainer'))[0];
 var currentItem = 0;
 var arrayLength;
 var type;
-var item
+var item;
+var constIMG = 0;
 var words = [];
 
 window.addEventListener("load", function () {
 
-  if(!data.urlImg[0] && !data.options[1] && !data.urlAud[0]) {
+  if(!data.options[1] && !data.urlImg[0]) {
     createForABC();
-    arrayLength = ask.length;
-  }else if(!data.urlImg[0] && !data.options[1]){
-    data.urlImg[0] = "../../img/default.svg"
-    arrayLength = compare.length
+    if (data.compare[0] != "") {
+      constIMG = 1;
+    }    
+  } else {
+    arrayLength = data.compare.length;    
   }
 
   words.push(compare[0]);
@@ -31,8 +33,9 @@ window.addEventListener("load", function () {
 
   itemCreator();
 
-  item.innerHTML = ask[currentItem];
+  if(constIMG == 0)item.innerHTML = ask[currentItem];
   item.setAttribute("type", compare[currentItem]);
+  audio.src = data.urlAud[currentItem];
 
   Draggable.create("#item",{
     type:"x,y",
@@ -40,7 +43,7 @@ window.addEventListener("load", function () {
     bounds: container,
     throwProps:true,
     autoScroll:true,
-    onDrag: setAudio,
+    onDragStart: setAudio,
     onRelease: dropItem,
     snap: {
       x: function(endValue) {
@@ -51,11 +54,12 @@ window.addEventListener("load", function () {
       }
     }
   });
+  document.getElementById("item").addEventListener("dragstart", setAudio);
 })
 
 function setAudio() {
   if (data.urlAud[0]) {
-    audio.src = data.urlAud[currentItem]
+    audio.play();
   }
 }
 
@@ -63,13 +67,17 @@ function itemCreator(){
   let boxesLength = words.length;
   var div, text;
 
-  if (data.urlImg[0] != undefined) {
+  if (data.urlImg[0] != undefined || constIMG) {
     item = document.createElement("img")
-    item.setAttribute("src", data.urlImg[0])
-    item.setAttribute("id", "item")
+    if (constIMG) {
+      item.setAttribute("src", data.compare[0]);
+    } else {
+      item.setAttribute("src", data.urlImg[0]);
+    }
+    item.setAttribute("id", "item");
   }else{
-    item = document.createElement("div")
-    item.setAttribute("id", "item")
+    item = document.createElement("div");
+    item.setAttribute("id", "item");
   }
 
   for (let i = 0; i < boxesLength; i++) {
@@ -82,13 +90,12 @@ function itemCreator(){
     div.appendChild(text);
     boxContainer.appendChild(div);
   }
-  itemContainer.appendChild(item)
+  itemContainer.appendChild(item);
 }
 
 function dropItem() {
   let src = this.target.getAttribute('type');
   var boundsBefore, boundsAfter;
-  audio.play();
   if (this.hitTest("#" + src)){
     currentItem++;
     boundsBefore = this.target.getBoundingClientRect();
@@ -114,29 +121,34 @@ function dropItem() {
 }
 
 function refreshgame () {
-
-  if(data.urlImg[0] != undefined){
-    if(data.urlImg != "../../img/default.svg"){
-      item.src = data.urlImg[currentItem]
-    }    
+  if(data.urlImg[1] != undefined){
+    item.src = data.urlImg[currentItem]
   }else{
     item.innerHTML = ask[currentItem];
   }
   item.setAttribute("type", compare[currentItem]);
+  audio.src = data.urlAud[currentItem];
 }
+
 function createForABC () {
   ask = [];
   compare = [];
   let newChar;
+  let url = data.options[0];
+  let letter;    
   for (var i = 0; i < 15; i++) {
     newChar = parseInt(getRandomArbitrary(65, 91));
-    ask.push(String.fromCharCode(newChar));
+    letter = String.fromCharCode(newChar);
+    ask.push(letter);
+    data.urlAud.push(url + letter.toLowerCase() + ".mp3");
     if (newChar == 65 || newChar == 69 || newChar == 73 || newChar == 79 || newChar == 85) {
       compare.push("Vowel");
     } else {
       compare.push("Consonant");
     }
   }
+
+  arrayLength = compare.length;
 }
 
 function getRandomArbitrary(min, max) {
