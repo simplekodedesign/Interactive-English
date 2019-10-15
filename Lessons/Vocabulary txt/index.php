@@ -44,10 +44,15 @@
       <audio src='' id='aud'></audio>
       <span class='vocabulary' id='es'></span>
     </div>
-  <div class='buttons'>
-    <span class='lessonButton' id='btnIzq'><</span>
-    <span class='lessonButton' id='btnDer'>></span>
-  </div>
+    <div class='buttons'>
+      <span class='lessonButton' id='btnIzq'>
+        <div class='navigationButtons'></div>
+      </span>
+      <span class='lessonButton' id='btnDer'>
+        <div class='navigationButtons'></div>
+      </span>
+    </div>
+
   <script type='text/javascript' src='../../Lessons/Vocabulary txt/Javascript.js?q=".$q."'></script>";
 ?>
 

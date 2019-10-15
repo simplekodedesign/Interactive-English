@@ -27,11 +27,11 @@ function actual(dir){
 			document.getElementById("es").innerHTML=text2[pos].split("/",2)[1];
 		}
 	}
-	if(pos==total-1){
-		document.getElementById("btnDer").innerHTML="Finish";
-	}else{
-		document.getElementById("btnDer").innerHTML=">";
-	}
+	// if(pos==total-1){
+	// 	document.getElementById("btnDer").innerHTML="Finish";
+	// }else{
+	// 	document.getElementById("btnDer").innerHTML=">";
+	// }
 	if(pos==total){
 		document.getElementById("btnDer").style.transform="scale(0,0)";
 		victoryMessage();
