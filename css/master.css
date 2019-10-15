@@ -570,13 +570,15 @@ footer p{
 /*------------------------------RESTART BUTTON----------------------*/
 
 #reloadButton {
-  margin: 50px;
+  margin: 0;
   padding: 10px 15px 10px 30px;
   background-color: var(--orange);
   color: white;
   cursor: pointer;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #reloadButton::after {
