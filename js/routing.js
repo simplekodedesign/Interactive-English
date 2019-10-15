@@ -39,9 +39,9 @@ function redirect(game){
     case "2": return "ABC";
     case "3": return "Click the right letters";
     case "4": return "Pronunciation2";
-    case "5": return "Vocabulary Body";
+    case "5": return "Drag to the box";
     case "6": return "Pronunciation of Vowels";
-    case "7": return "Drag to the box";
+    case "7": return "Vocabulary Body";
     case "8": return "Vocabulary";
     case "9": return "Select the correct option";
     case "10": return "Connect";

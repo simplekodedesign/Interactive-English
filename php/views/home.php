@@ -54,9 +54,9 @@
   $q=rand();
 
   if(isset($_GET["th"])){
-    echo "<script>const numero_leccion = ".$_GET["th"].";</script>";
+    echo "<script>var numero_leccion = ".$_GET["th"].";</script>";
   }else if(isset($co_tema)){
-    echo "<script>const numero_leccion = ".$co_tema.";</script>";
+    echo "<script>var numero_leccion = ".$co_tema.";</script>";
   }
 
   //variable del reto recien activado
@@ -154,12 +154,14 @@
                 <img src='".$gift."' width='70%' height='auto' alt='Help'>
               </div>
             </div>";
-            echo "<div id='reloadButton'>Reiniciar actividad</div>";
           }
         }
-      ?>
+        ?>
     </section>
     <?php
+      if($_GET["co"]) {
+        echo "<div id='reloadButton'>Reiniciar actividad</div>";
+      }
       if(empty($_GET["ini"])&&empty($_GET["end"])){
         if($lant != "" && $lant != "#"){
           echo "<div class='navigationButtons' id='lPrev'><a href='".$lant."'><span></span></a></div>";
@@ -215,6 +217,6 @@
     <script src="../../js/routing.js?q=<?php echo $q?>"></script>
     <script src="../../js/master.js?q=<?php echo $q?>"></script>
     <!-- <script src="../../js/smartsupp.js?q=""></script> -->
-    <script src="//code.tidio.co/y7try67uhokxhv2cxamfxkk73fvae8wf.js"> </script>
+    <!-- <script src="//code.tidio.co/y7try67uhokxhv2cxamfxkk73fvae8wf.js"> </script> -->
   </body>
 </html>
