@@ -44,6 +44,7 @@ function createGame () {
 
   mainLetter.innerHTML =  String.fromCharCode(posLetter);
   mainAud.src = audioURL + (String.fromCharCode(posLetter)).toLowerCase() + ".mp3";
+  console.log(mainAud.src);
   while (i < appearInit) {
     let randPos = parseInt(getRandomArbitrary(0, optionsLength));
     if(optionsLetters[randPos].innerHTML == "0") {
@@ -75,6 +76,7 @@ function clearGame () {
 function check () {
   if (mainLetter.innerHTML == this.innerHTML) {
     this.style.setProperty("color", "green");
+    console.log(mainAud);
     mainAud.play();
     appear--;
   } else {

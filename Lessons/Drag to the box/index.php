@@ -8,10 +8,8 @@
 
   $data = new Data();
 
-  echo "<link rel='stylesheet' href='../../Lessons/Drag to the box/style.css".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Drag to the box/style.css?".$q."'>
   <div class='cont_abc' id='cont_all'>
-    <!-- <img src='../../img/C21logo.svg' class='item' alt='icon'> -->
-
     <div class='field'>";
     $results=Connection::request("select Co_Juego,Nb_Lesson from p070_orden where Co_Orden=".$_GET["co"]);
     if($results->rowCount()>0){
@@ -23,7 +21,7 @@
       }
     }
       echo "<div class='itemContainer'>
-        <div id='item'></div>
+        
       </div>
       <div id='boxesContainer'></div>
       <audio id='audio'></audio>
