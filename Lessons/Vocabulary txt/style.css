@@ -28,10 +28,9 @@
 }
 
 .vocabulary{
-	width: 70%;
-	margin: 15px 0;
+	width: 300px;
+	font-size: 2em;
 	text-align: center;
-	border-radius: 15px;
 }
 
 .buttons span {
@@ -42,12 +41,36 @@
 	transform: scale(1,1);
 }
 
-
 .buttons{
 	display: grid;
 	grid-template-columns: auto auto;
 	justify-content: center;
 	height: 50px;
+}
+
+.lessonButton {
+	border-radius: 3px;
+	padding: 15px 45px;
+}
+
+#btnIzq > .navigationButtons {
+	border-bottom: 22px solid white;
+	border-right: 14px solid transparent;
+	border-left: 14px solid transparent;
+	border-top: 0px solid white;
+	transform: rotate(-90deg);
+	position: unset;
+	bottom: unset;
+}
+
+#btnDer > .navigationButtons {
+	border-bottom: 22px solid white;
+	border-right: 14px solid transparent;
+	border-left: 14px solid transparent;
+	border-top: 0px solid white;
+	transform: rotate(90deg);
+	position: unset;
+	bottom: unset;
 }
 
 /* .NavButtons {
