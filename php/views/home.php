@@ -54,9 +54,9 @@
   $q=rand();
 
   if(isset($_GET["th"])){
-    echo "<script>const numero_leccion = ".$_GET["th"].";</script>";
+    echo "<script>var numero_leccion = ".$_GET["th"].";</script>";
   }else if(isset($co_tema)){
-    echo "<script>const numero_leccion = ".$co_tema.";</script>";
+    echo "<script>var numero_leccion = ".$co_tema.";</script>";
   }
 
   //variable del reto recien activado
@@ -153,13 +153,15 @@
               <div class='flexcont'>
                 <img src='".$gift."' width='70%' height='auto' alt='Help'>
               </div>
-            </div>
-            <div id='reloadButton'>Reiniciar actividad</div>";
+            </div>";
           }
         }
-      ?>
+        ?>
     </section>
     <?php
+      if($_GET["co"]) {
+        echo "<div id='reloadButton'>Reiniciar actividad</div>";
+      }
       if(empty($_GET["ini"])&&empty($_GET["end"])){
         if($lant != "" && $lant != "#"){
           echo "<div class='navigationButtons' id='lPrev'><a href='".$lant."'><span></span></a></div>";

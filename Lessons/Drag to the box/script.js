@@ -4,11 +4,12 @@ var compare = data.compare;
 var container = document.getElementById('cont_all');
 var field = document.getElementsByClassName('field');
 var boxContainer = document.getElementById("boxesContainer");
-var item = document.getElementById("item");
 var audio = document.getElementById('audio')
+var itemContainer = (document.getElementsByClassName('itemContainer'))[0]
 var currentItem = 0;
 var arrayLength;
 var type;
+var item
 var words = [];
 
 window.addEventListener("load", function () {
@@ -52,12 +53,6 @@ window.addEventListener("load", function () {
   });
 })
 
-function cleaningurl(these) {
-  let src = these.split("/")
-  let source =  src[src.length - 1].split(".")
-  return source[0]
-}
-
 function setAudio() {
   if (data.urlAud[0]) {
     audio.src = data.urlAud[currentItem]
@@ -71,10 +66,10 @@ function itemCreator(){
   if (data.urlImg[0] != undefined) {
     item = document.createElement("img")
     item.setAttribute("src", data.urlImg[0])
+    item.setAttribute("id", "item")
   }else{
     item = document.createElement("div")
-    item.setAttribute("class", "item")
-    item.innerHTML = ask[i]
+    item.setAttribute("id", "item")
   }
 
   for (let i = 0; i < boxesLength; i++) {
@@ -87,6 +82,7 @@ function itemCreator(){
     div.appendChild(text);
     boxContainer.appendChild(div);
   }
+  itemContainer.appendChild(item)
 }
 
 function dropItem() {
@@ -102,9 +98,8 @@ function dropItem() {
       TweenMax.to(this.target,0.0,{x:0,y:0});
       refreshgame();
     } else {
-      $(this.target).appendTo('#'+src);
-      alert("YOU WON");
-      // victoryMessage();
+      $(this.target).appendTo('#' + src);
+      victoryMessage();
       TweenMax.fromTo(this.target, 0.3, {
         x:"+=" + (boundsBefore.left - boundsAfter.left),
         y:"+=" + (boundsBefore.top - boundsAfter.top)
@@ -120,17 +115,15 @@ function dropItem() {
 
 function refreshgame () {
 
-  if (data.url[0] == "../../img/default.svg") {
-
-  }else if(data.urlImg[0] != undefined){
-    item.src = data.urlImg[currentItem]
+  if(data.urlImg[0] != undefined){
+    if(data.urlImg != "../../img/default.svg"){
+      item.src = data.urlImg[currentItem]
+    }    
   }else{
     item.innerHTML = ask[currentItem];
   }
   item.setAttribute("type", compare[currentItem]);
-
 }
-
 function createForABC () {
   ask = [];
   compare = [];
@@ -144,9 +137,6 @@ function createForABC () {
       compare.push("Consonant");
     }
   }
-
-  console.log(ask);
-  console.log(compare);
 }
 
 function getRandomArbitrary(min, max) {

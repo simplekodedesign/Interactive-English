@@ -8,10 +8,8 @@
 
   $data = new Data();
 
-  echo "<link rel='stylesheet' href='../../Lessons/Drag to the box/style.css".$q."'>
+  echo "<link rel='stylesheet' href='../../Lessons/Drag to the box/style.css?".$q."'>
   <div class='cont_abc' id='cont_all'>
-    <!-- <img src='../../img/C21logo.svg' class='item' alt='icon'> -->
-
     <div class='field'>";
     $results=Connection::request("select Co_Juego,Nb_Lesson from p070_orden where Co_Orden=".$_GET["co"]);
     if($results->rowCount()>0){
@@ -23,7 +21,7 @@
       }
     }
       echo "<div class='itemContainer'>
-        <div id='item'></div>
+        
       </div>
       <div id='boxesContainer'></div>
       <audio id='audio'></audio>
@@ -47,14 +45,14 @@
       $results2=Connection::request("select Tx_Url from p090_imagenes where Nb_imagenes like '".$res["Nb_imagenes"]."'");
       if($results2->rowCount()>0){
         while($res2=$results2->fetch(PDO::FETCH_ASSOC)){
-          $new = array_push($data->urlImg, $res["Tx_Url"]); // Imágenes
+          $new = array_push($data->urlImg, $res2["Tx_Url"]); // Imágenes
           // $urlImg[]=$res2["Tx_Url"]; //imagenes
         }
       }
       $results2=Connection::request("select Tx_Url from p110_audio where Nb_audio like '".$res["Nb_audio"]."'");
       if($results2->rowCount()>0){
         while($res2=$results2->fetch(PDO::FETCH_ASSOC)){
-          $new = array_push($data->urlAud, $res["Tx_Url"]);
+          $new = array_push($data->urlAud, $res2["Tx_Url"]);
           // $urlAud[]=$res2["Tx_Url"]; //audios;
         }
       }
@@ -67,6 +65,7 @@
   echo "<script>
     var data = JSON.parse('".$datajson."');
     console.log(data);
+    var cord=  ".$_GET['co'].";
   </script>";
 
   echo "<script src='../../Lessons/Drag to the box/script.js?q=".$q."' type='text/javascript'></script>

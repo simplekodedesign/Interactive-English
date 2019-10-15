@@ -41,6 +41,11 @@ section{
 
 .itemContainer {
   position: relative;
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }
 
 #item{
