@@ -575,7 +575,8 @@ footer p{
   background-color: var(--orange);
   color: white;
   cursor: pointer;
-  position: relative;
+  position: absolute;
+  bottom: 0;
 }
 
 #reloadButton::after {
