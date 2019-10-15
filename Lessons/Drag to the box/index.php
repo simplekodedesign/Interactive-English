@@ -63,8 +63,7 @@
   $datajson = json_encode($data);
 
   echo "<script>
-    var data = JSON.parse('".$datajson."');
-    console.log(data);
+    var data = ".json_encode($data).";
     var cord=  ".$_GET['co'].";
   </script>";
 

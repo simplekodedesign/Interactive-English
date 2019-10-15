@@ -12,9 +12,9 @@ var mainAud = document.getElementById("mainAud");
 var optionsLength = 20;
 
 window.addEventListener("load", function() {
-  for (let k = 0; k < optionsLength; k++) {
-    let randPos = parseInt(getRandomArbitrary(65, 91));
-  }
+  // for (let k = 0; k < optionsLength; k++) {
+  //   let randPos = parseInt(getRandomArbitrary(65, 91));
+  // }
   createGame();
 });
 

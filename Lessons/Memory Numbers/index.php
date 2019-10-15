@@ -23,14 +23,26 @@
 
   $cards=array();
 
-  for($i=0;$i<15;$i++){
+  $initialValue;
+  $endingValue;
+
+  
+  if ($_GET["co"] == 6) {
+    $initialValue = 64;
+    $endingValue = 90;
+  } else {
+    $initialValue = 0;
+    $endingValue = 15;
+  }
+
+  for($i = $initialValue; $i < $endingValue; $i++){
     $cards[]="<div class='card'>
                     <div class='block'></div>
-                    <audio src='../../aud/categories/numbers/Cardinal Numbers/".($i+1).".mp3'></audio>
+                    <audio></audio>
                     <p>".($i+1)."</p>
                 </div>";
   }
-  for($i=0;$i<15;$i++){
+  for($i = $initialValue; $i < $endingValue; $i++){
     $cards[]="<div class='card'>
                     <div class='block'></div>
                     <audio src='../../aud/categories/numbers/Cardinal Numbers/".($i+1).".mp3'></audio>
@@ -40,7 +52,7 @@
 
   $b=true;
   while($b){
-    $r=rand(0,34);
+    $r=rand(0, ($endingValue - $initialValue)*2);
     echo $cards[$r];
     $cards[$r]="";
     $b=false;
@@ -48,10 +60,13 @@
   }
 
   echo "    <div class='guardian'></div>
-    </div>
+    </div>";
+    echo"
+    <script type='text/javascript'>
+      var cord = ".$_GET['co'].";
+      var tot = ". ($endingValue - $initialValue).";
+    </script>
     <audio src='' id='cardAud' style='display:none;'></audio>
     <script type='text/javascript' src='../../Lessons/Memory Numbers/Javascript.js?q=".$q."'></script>";
 ?>
-<script type="text/javascript">
-  var cord=<?php echo $_GET["co"]?>;
-</script>
+
