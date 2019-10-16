@@ -30,6 +30,7 @@
 
 <script type="text/javascript">
   var cord=<?php echo $_GET["co"]?>;
+  console.log(cord);
 </script>
 
 <script src="../../Lessons/Click the right letters/Javascript.js?q=<?php echo $q;?>"></script>
