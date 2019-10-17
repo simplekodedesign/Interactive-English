@@ -49,11 +49,16 @@ section{
 }
 
 #item{
-  position: absolute;
+  width: 75px;
+  height: 75px;
+  color: white;
+  background-color: var(--lessons);
+  position: relative;
+  border-radius: 2px;
   max-width: 100px;
   max-height: 100px;
-  left: var(--x);
-  top: var(--y);
+  padding: 15px 5px;
+  text-align: center;
 }
 
 .field{
@@ -77,12 +82,13 @@ section{
 }
 
 .itemField{
-  border: 2px solid green;
+  border: 2px solid var(--lessons);
   border-radius: 12px;
   width: 20%;
   min-height: 100px;
   min-width: 100px;
   display: flex;
+  color: white;
   align-items: center;
   justify-content: center;
   position: relative;

@@ -16,37 +16,27 @@
       $gift=$res["Tx_Help"];
     }
   }
-
-
-  class Data {
-    public $urlImg = [];
-    public $urlAud = [];
-    public $compare = [];
-    public $options = [];
-  }
-
-  $data = new Data();
-
+  //Buscar los elementos a iterar
+  $urlImg=array();
+  $urlAud=array();
+  $en=array();
+  $es=array();
   $total=0;
   $results=Connection::request("select Nb_audio , Nb_imagenes , Nb_Ask , Nb_Comparar from t020_juego_tema where Co_Orden=".$_GET["co"]);
-  if($results->rowCount() > 0){
+  if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
-      $new = array_push($data->options, $res["Nb_Ask"]); //Opciones
-      // $options[]=$res["Nb_Ask"]; //opciones
-      $new = array_push($data->compare, $res["Nb_Comparar"]); //Validaciones a comparar
-      // $compare[]=$res["Nb_Comparar"]; //validacion a comparar
+      $es[]=$res["Nb_Ask"]; //mensaje
+      $en[]=$res["Nb_Comparar"]; //validacion a comparar
       $results2=Connection::request("select Tx_Url from p090_imagenes where Nb_imagenes like '".$res["Nb_imagenes"]."'");
       if($results2->rowCount()>0){
         while($res2=$results2->fetch(PDO::FETCH_ASSOC)){
-          $new = array_push($data->urlImg, $res2["Tx_Url"]); // Imágenes
-          // $urlImg[]=$res2["Tx_Url"]; //imagenes
+          $urlImg[]=$res2["Tx_Url"]; //imagenes
         }
       }
       $results2=Connection::request("select Tx_Url from p110_audio where Nb_audio like '".$res["Nb_audio"]."'");
       if($results2->rowCount()>0){
         while($res2=$results2->fetch(PDO::FETCH_ASSOC)){
-          $new = array_push($data->urlAud, $res2["Tx_Url"]);
-          // $urlAud[]=$res2["Tx_Url"]; //audios;
+          $urlAud[]=$res2["Tx_Url"]; //audios;
         }
       }
       $total+=1; //total de elementos
@@ -58,23 +48,17 @@
 <?php
 echo"
     <link rel='stylesheet' href='../../Lessons/Vocabulary Body/style.css'>
-    <div class='theme' id='theme'>
-      <div class='buttonContainer' id='buttonContainer'>
-        <!--<div class='lessonButton color' value='1'>Front</div>
-        <div class='lessonButton' value='2'>Back</div>-->
-      </div>
+    <div class='theme'>
       <div class='object'>
-        <object type='image/svg+xml' data='../../img/categories/family/family.svg' alt='The body' class='svg show' id='svg1'></object>
-        <!--<object type='image/svg+xml' data='../../img/categories/the body/back.svg' alt='The body' class='svg' id='svg2'></object>-->
+        <object type='image/svg+xml' data='../../img/categories/family/family.svg' alt='The body' class='svg' id='svg1'></object>
       </div>
       <audio id='audio'></audio>
-      <!--<span class='vocabulary' id='en'></span>
-      <span class='vocabulary' id='es'></span>-->
+      <span class='vocabulary' id='en'></span>
+      <span class='vocabulary' id='es'></span>
     </div>
     <script type='text/javascript' src='../../Lessons/Vocabulary Body/Javascript.js'></script>";
 ?>
 
 <script type="text/javascript">
-  var data = <?php echo json_encode($data);?>
   var cord=<?php echo $_GET["co"]?>;
 </script>

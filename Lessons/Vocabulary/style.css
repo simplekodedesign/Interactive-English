@@ -13,18 +13,16 @@
 }
 
 .vocabulary{
-	width: 150px;
+	width: 300px;
 	font-size: 2em;
 	text-align: center;
 }
 
 .letra{
-	min-width: 200px;
-	width: 100%;
 	text-align: center;
 	cursor: pointer;
-	height: auto;
-	max-width: 400px;
+	height: 400px;
+	width: 400px;
 	transform: scale(0,0);
 	-webkit-transition: all 1s;
 	-o-transition: all 1s;
@@ -82,7 +80,7 @@
 	}
 
 	.letra {
-		max-width: 400px;
+		max-width: 300px;
 	}
 
 	.letra img{
