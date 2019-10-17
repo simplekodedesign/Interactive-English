@@ -36,7 +36,6 @@ function createGame (num) {
       img = document.createElement("img");
       mainLetter.insertBefore(img, mainLetter.firstElementChild);
       console.log(mainLetter);
-      alert(mainLetter.firstElementChild);
     
     for (let h = 0; h < optionsLength; h++) {
       div = document.createElement("div");
@@ -45,7 +44,6 @@ function createGame (num) {
       img.setAttribute("src", "nothing");
       img.setAttribute("alt", "0");
       console.log(img);
-      alert(img);
       div.appendChild(img);
       div.addEventListener("click", check);
       optionsLetters.appendChild(div);
@@ -53,7 +51,6 @@ function createGame (num) {
 
       optionsLetters = document.getElementsByClassName("letter");
       console.log(optionsLetters);
-      alert("You're out " + optionsLetters.length);
 
     } else {
       for (let i = 0; i < optionsLength; i++) {
@@ -63,7 +60,6 @@ function createGame (num) {
         div.addEventListener("click", check);
         optionsLetters.appendChild(div);
         console.log(div);
-        alert(div);
       }
       optionsLetters = document.getElementsByClassName("letter");
     }
@@ -131,10 +127,6 @@ function createGame (num) {
     mainLetter.firstElementChild.src =  data.urlImg[posLetter];
     mainLetter.firstElementChild.alt =  data.compare[posLetter];
     mainAud.src = data.urlAud;
-    console.log(optionsLetters);
-    console.log(optionsLetters[0]);
-    console.log(optionsLetters[optionsLength-1]);
-    alert("2");
     while (i < appearInit) {
       let randPos = parseInt(getRandomArbitrary(0, optionsLength));
       if(optionsLetters[randPos].firstElementChild.alt == "0") {
@@ -143,7 +135,6 @@ function createGame (num) {
         i++;
       }
     }
-    alert("3" + optionsLength);
     for (let k = 0; k < optionsLength; k++) {
       var char;
       do {
@@ -175,9 +166,18 @@ function clearGame () {
 }
 
 function check () {
-  if (mainLetter.innerHTML == this.innerHTML) {
-    if (type) {
+  console.log("CHECK");
+
+  if (type == 1) {
+    if (mainLetter.firstElementChild.alt == this,firstElementChild.alt) {
       this.firstElementChild.setProperty("opacity", ".7");
+    }
+  }
+
+  
+  if (mainLetter.innerHTML == this.innerHTML) {
+    if (type == 1) {
+      
     } else {
       this.style.setProperty("color", "green");
     }
@@ -185,7 +185,7 @@ function check () {
     mainAud.play();
     appear--;
   } else {
-    if (!type) {
+    if (type != 1) {
       this.style.setProperty("color", "red");
     }
     mistakeAud.play();
