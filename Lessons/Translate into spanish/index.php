@@ -17,6 +17,13 @@
     }
   }
 
+  class Data {
+    public $compare = [];
+    public $message = [];
+  }
+
+  $data = new Data();
+
   //Buscar los elementos a iterar
   $compare=array();
   $message=array();
@@ -24,8 +31,10 @@
   $results=Connection::request("select Nb_Ask , Nb_Comparar from t020_juego_tema where Co_Orden=".$_GET["co"]." order by rand()");
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
-      $message[]=$res["Nb_Ask"]; //mensaje
-      $compare[]=$res["Nb_Comparar"]; //validacion a comparar
+      $new = array_push($data->message, $res["Nb_Ask"]); // mensaje
+      $new = array_push($data->compare, $res["Nb_Comparar"]); // validacion a comparar
+      // $message[]=$res["Nb_Ask"]; 
+      // $compare[]=$res["Nb_Comparar"]; 
       $total+=1; //total de elementos
     }
   }
@@ -47,28 +56,8 @@
 ?>
 
 <script type="text/javascript">
-  var total=<?php echo $total?>;
-  var compare=<?php
-          echo "[";
-          for ($i = 0; $i < $total; $i++) {
-              if ($i != ($total - 1)) {
-                  echo '"' . $compare[$i] . '",';
-              } else {
-                  echo '"' . $compare[$i] . '"';
-              }
-          }
-          echo "]";
-          ?>;
-var message=<?php
-        echo "[";
-        for ($i = 0; $i < $total; $i++) {
-            if ($i != ($total - 1)) {
-                echo '"' . $message[$i] . '",';
-            } else {
-                echo '"' . $message[$i] . '"';
-            }
-        }
-        echo "]";
-        ?>;
+  var data = <?php echo json_encode($data)?>;
+  console.log(data);
+  var total = data.compare.length > 20 ? 20: data.compare.length;
   var cord=<?php echo $_GET["co"]?>;
 </script>

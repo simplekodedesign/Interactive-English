@@ -16,7 +16,7 @@ var optionsLetters = document.getElementById("optionsLetters");
 var appear, appearInit;
 var mainAud = document.getElementById("mainAud");
 
-var optionsLength = data.urlImg[0]? 10 : 20;
+var optionsLength = data.urlImg[0]? 15 : 20;
 
 window.addEventListener("load", function() {
   if(type == 1) {
@@ -29,13 +29,12 @@ window.addEventListener("load", function() {
 function createGame (num) {
   var div;
   var img;
-  appearInit = parseInt(getRandomArbitrary(4, 7));
+  appearInit = num == 2? parseInt(getRandomArbitrary(3, 5)) : parseInt(getRandomArbitrary(4, 7));
   appear = appearInit;
   if(posLetter == lettersInit) {
     if(num == 2) {
       img = document.createElement("img");
       mainLetter.insertBefore(img, mainLetter.firstElementChild);
-      console.log(mainLetter);
     
     for (let h = 0; h < optionsLength; h++) {
       div = document.createElement("div");
@@ -43,14 +42,12 @@ function createGame (num) {
       div.classList.add("letter");
       img.setAttribute("src", "nothing");
       img.setAttribute("alt", "0");
-      console.log(img);
       div.appendChild(img);
       div.addEventListener("click", check);
       optionsLetters.appendChild(div);
     }
 
       optionsLetters = document.getElementsByClassName("letter");
-      console.log(optionsLetters);
 
     } else {
       for (let i = 0; i < optionsLength; i++) {
@@ -59,17 +56,15 @@ function createGame (num) {
         div.innerHTML = "0";
         div.addEventListener("click", check);
         optionsLetters.appendChild(div);
-        console.log(div);
       }
       optionsLetters = document.getElementsByClassName("letter");
     }
   } else {
     if (num == 2) {
-      // for (var j = 0; j < optionsLength; j++) {
-      //   optionsLetters[j].firstElementChild.removeAttribute('style');
-      //   optionsLetters[j].firstElementChild.src = "";
-      //   optionsLetters[j].firstElementChild.alt = "0";
-      // }
+      for (var j = 0; j < optionsLength; j++) {
+        optionsLetters[j].firstElementChild.src = "";
+        optionsLetters[j].firstElementChild.alt = "0";
+      }
     } else {
       for (var j = 0; j < optionsLength; j++) {
         optionsLetters[j].removeAttribute('style');
@@ -126,7 +121,7 @@ function createGame (num) {
   } else if (num == 2) {
     mainLetter.firstElementChild.src =  data.urlImg[posLetter];
     mainLetter.firstElementChild.alt =  data.compare[posLetter];
-    mainAud.src = data.urlAud;
+    mainAud.src = data.urlAud[posLetter];
     while (i < appearInit) {
       let randPos = parseInt(getRandomArbitrary(0, optionsLength));
       if(optionsLetters[randPos].firstElementChild.alt == "0") {
@@ -151,55 +146,55 @@ function createGame (num) {
 }
 
 function clearGame () {
-  if (type == 1) {
-    for (var j = 0; j < optionsLength; j++) {
-      optionsLetters[j].firstElementChild.removeAttribute('style');
-      optionsLetters[j].addEventListener("click", check);
-    }
-  } else {
-    for (var j = 0; j < optionsLength; j++) {
-      optionsLetters[j].removeAttribute('style');
-      optionsLetters[j].addEventListener("click", check);
-    }
+  for (var j = 0; j < optionsLength; j++) {
+    optionsLetters[j].removeAttribute('style');
+    optionsLetters[j].addEventListener("click", check);
   }
   appear = appearInit;
 }
 
 function check () {
-  console.log("CHECK");
+  console.log(mainAud);
+
 
   if (type == 1) {
-    if (mainLetter.firstElementChild.alt == this,firstElementChild.alt) {
-      this.firstElementChild.setProperty("opacity", ".7");
-    }
-  }
-
-  
-  if (mainLetter.innerHTML == this.innerHTML) {
-    if (type == 1) {
-      
+    if (mainLetter.firstElementChild.alt == this.firstElementChild.alt) {
+      this.style.setProperty("opacity", ".7");
+      this.removeEventListener("click", check);
+      mainAud.play();
+      appear--;
     } else {
-      this.style.setProperty("color", "green");
+      mistakeAud.play();
+      setTimeout(function () {
+        clearGame();
+      }, 100);
+      return;
     }
-    this.removeEventListener("click", check);
-    mainAud.play();
-    appear--;
   } else {
-    if (type != 1) {
+    if (mainLetter.innerHTML == this.innerHTML) {
+      this.style.setProperty("color", "green");
+      this.removeEventListener("click", check);
+      mainAud.play();
+      appear--;
+    } else {
       this.style.setProperty("color", "red");
+      mistakeAud.play();
+      setTimeout(function () {
+        clearGame();
+      }, 100);
+      return;
     }
-    mistakeAud.play();
-    setTimeout(function () {
-      clearGame();
-    }, 100);
-    return;
-  }
+  }  
 
   if(appear == 0) {
     posLetter++;
     if(posLetter < lettersLength) {
       clearGame();
-      cord == 26? createGame(0) : createGame(1);
+      if(type == 1){
+        createGame(2);
+      } else {
+        cord == 26? createGame(0) : createGame(1);
+      }
     } else {
       // alert("YOU WON");
       victoryMessage();

@@ -47,12 +47,12 @@ function key (e) {
 }
 
 function actual(){
-	document.getElementById("phrase").innerHTML=message[pos];
+	document.getElementById("phrase").innerHTML = data.message[pos];
 	text.value="";
 }
 
 function validate_with_split () {
-	comp=compare[pos].split("/",15);
+	comp = data.compare[pos].split("/",15);
 	var b=0;
 	comp.forEach(function(e){
 		if(e.toLowerCase() == text.value.toLowerCase() && text.value != ""){
