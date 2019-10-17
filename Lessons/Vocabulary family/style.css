@@ -1,0 +1,81 @@
+*{
+  box-sizing: border-box;
+}
+
+:root{
+  --x: 150px;
+  --y: 200px;
+
+  --lessons: blue;
+}
+
+body{
+  min-height: 100vh;
+  margin: 0;
+}
+
+.theme{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+
+.theme .buttonContainer{
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 300px;
+}
+
+.theme .lessonButton{
+  padding: 10px 15px;
+  background-color: white;
+  color: var(--lessons);
+  border: 2px solid var(--lessons);
+  font-size: 1.2em;
+  border-radius: 0;
+}
+
+.theme object{
+  min-height: 600px;
+  height: 70vh;
+  max-height: 900px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+}
+
+.object{
+  position: relative;
+  width: 250px;
+  height: 700px;
+}
+
+/* .theme .color{
+  background-color: var(--lessons);
+  color: white;
+} */
+/*
+.vocabulary{
+  background-color: var(--lessons);
+  color: white;
+  padding: 10px 15px;
+  display: none;
+  top: var(--y);
+  left: calc(10px + var(--x));
+  text-align: center;
+  position: absolute;
+  min-width: 15ch;
+} */
+
+/* #es{
+  top: calc(var(--y) + 30px);
+} */

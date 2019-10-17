@@ -48,18 +48,13 @@
 <?php
 echo"
     <link rel='stylesheet' href='../../Lessons/Vocabulary Body/style.css'>
-    <div class='theme' id='theme'>
-      <div class='buttonContainer' id='buttonContainer'>
-        <!--<div class='lessonButton color' value='1'>Front</div>
-        <div class='lessonButton' value='2'>Back</div>-->
-      </div>
+    <div class='theme'>
       <div class='object'>
-        <object type='image/svg+xml' data='../../img/categories/family/family.svg' alt='The body' class='svg show' id='svg1'></object>
-        <!--<object type='image/svg+xml' data='../../img/categories/the body/back.svg' alt='The body' class='svg' id='svg2'></object>-->
+        <object type='image/svg+xml' data='../../img/categories/family/family.svg' alt='The body' class='svg' id='svg1'></object>
       </div>
       <audio id='audio'></audio>
-      <!--<span class='vocabulary' id='en'></span>
-      <span class='vocabulary' id='es'></span>-->
+      <span class='vocabulary' id='en'></span>
+      <span class='vocabulary' id='es'></span>
     </div>
     <script type='text/javascript' src='../../Lessons/Vocabulary Body/Javascript.js'></script>";
 ?>
