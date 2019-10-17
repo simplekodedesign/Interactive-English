@@ -1,15 +1,26 @@
 var cards = document.getElementsByClassName("card");
 var c1, c2 ;
 c1 = c2 = undefined;
-var tot = 15;
 var container = document.getElementById("container");
 var aud=document.getElementById("cardAud");
 var firstCard;
 
+
 window.addEventListener("load", function() {
-    for(var i = 0; i<cards.length; i++) {
+    var cardsLength = cards.length;
+
+    window.addEventListener("keyup", function(e) {
+    })
+    for(var i = 0; i < cardsLength; i++) {
         cards[i].addEventListener("click", audio);
         cards[i].addEventListener("click", evento);
+
+        if(cord == 6) {
+            cards[i].lastElementChild.innerHTML = String.fromCharCode(cards[i].lastElementChild.innerHTML);
+            cards[i].getElementsByTagName("audio")[0].src = "../../aud/categories/abc/"+cards[i].lastElementChild.innerHTML.toLowerCase()+".mp3";
+        } else {
+            cards[i].getElementsByTagName("audio")[0].src = "../../aud/categories/numbers/"+cards[i].lastElementChild.innerHTML+"c.mp3";
+        }
     }
 });
 
@@ -21,10 +32,11 @@ var evento = function  () {
     if(this != firstCard || c1 == undefined){
         c1 == undefined? c1 = this.lastElementChild.innerHTML : c2 = this.lastElementChild.innerHTML;
         firstCard = this;
-        aud.src="../../aud/categories/numbers/"+this.lastElementChild.innerHTML+"c.mp3";
+        if(cord != 6)aud.src="../../aud/categories/numbers/"+this.lastElementChild.innerHTML+"c.mp3";
+        if(cord == 6)aud.src="../../aud/categories/abc/"+this.lastElementChild.innerHTML.toLowerCase()+".mp3";
         aud.play();
         if (c1 != undefined && c2 != undefined){
-            container.lastElementChild.style.zIndex = "5";
+            container.lastElementChild.style.zIndex  = "5";
             setTimeout(check, 1500, c1, c2);
         }
     }

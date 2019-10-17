@@ -73,7 +73,7 @@
         }
 
         //Revisar si es necesario activar algun reto al usuario
-        $results=Connection::request("select Fe_Ejecucion from t040_retos where Co_Usuario=".$_SESSION["co_usuario"]);
+        /*$results=Connection::request("select Fe_Ejecucion from t040_retos where Co_Usuario=".$_SESSION["co_usuario"]);
         if($results->rowCount()>0){
           while($res=$results->fetch(PDO::FETCH_ASSOC)){
             $feEjecucion=$res["Fe_Ejecucion"];
@@ -87,7 +87,7 @@
               $_SESSION["reto_actual"] = $result["Co_Reto"];
             }
           }
-        }
+        }*/
 
         $results=Connection::request("update m210_usuario set St_Session=1 where Co_Usuario=".$_SESSION["co_usuario"]);
 

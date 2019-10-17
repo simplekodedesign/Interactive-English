@@ -1,7 +1,7 @@
 <?php
   function urlBtnSig($co,$lsig){
     //buscar el tema de la leccion actual
-    $results=Connection::request("select * from p070_orden where Co_Orden=".$co);
+    $results=Connection::request("select Co_Tema from p070_orden where Co_Orden=".$co);
     if($results->rowCount()>0){
       while($res=$results->fetch(PDO::FETCH_ASSOC)){
         $coTema=$res["Co_Tema"];
@@ -31,14 +31,11 @@
       if($results->rowCount()>0){
         $data = $results->fetch(PDO::FETCH_ASSOC);
         //saber si el reto esta activo
-        if($data["St_Reto"]=="A"){
-          //saber si el reto pertenece al tema que esta terminando
-          if($data["Co_Tema"]==$_SESSION["te_actual"]){
+        if($data["Co_Tema"]<$_SESSION["te_actual"]){ //saber si es un reto anterior
+          return $lsig;
+        }else if($data["Co_Tema"]==$_SESSION["te_actual"]){ //saber si el reto pertenece al tema que esta terminando
             if(!isset($_SESSION["reto"]))$_SESSION["reto"]=0;
             return "challenge.php?ini=".$ini."&end=".$end."&th=".$coTema;
-          }else if($data["Co_Tema"]<$_SESSION["te_actual"]){ //saber si es un reto anterior
-            return $lsig;
-          }
         }else{
           return "home.php?url=lessons.php&th=".$_SESSION["te_actual"];
         }

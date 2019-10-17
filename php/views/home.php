@@ -32,6 +32,7 @@
         $lsig=$res["Les_Sig"];
         $co_tema = $res["Co_Tema"];
       }
+      $lsig=urlBtnSig($_GET["co"],$lsig);
     }
 
     $lact = $_SESSION["le_actual"];
