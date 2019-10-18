@@ -127,6 +127,9 @@ function desanimar (data, n) {
             data.style.backgroundColor = "rgb(0, 255, 0)";
             setTimeout(function () {
                 data.style.transform = "scale(0,0)";
+                setTimeout(function () {
+                    data.style.display = "none";
+                }, 500);
                 data.parentElement.lastElementChild.style.display = "none";
             }, 1000);
         } else {
@@ -134,6 +137,9 @@ function desanimar (data, n) {
             data.firstElementChild.style.transform = "scale(1, 1)";
             setTimeout(function () {
                 data.firstElementChild.style.transform = "scale(0,0)";
+                setTimeout(function () {
+                    data.firstElementChild.style.display = "none";
+                }, 500);
                 data.parentElement.lastElementChild.style.display = "none";
             }, 1000);
         }

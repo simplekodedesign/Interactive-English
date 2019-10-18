@@ -15,16 +15,26 @@ function actual(dir){
 		if(pos<total){
 			document.getElementById("text").innerHTML=text[pos];
 			document.getElementById("aud").src=urlAud[pos];
-			document.getElementById("en").innerHTML=text2[pos].split("/",2)[0];
-			document.getElementById("es").innerHTML=text2[pos].split("/",2)[1];
+			if (isNaN(text[pos])) {
+				document.getElementById("en").innerHTML=text2[pos];
+				document.getElementById("es").innerHTML=text2[pos];
+			} else {
+				document.getElementById("en").innerHTML=text2[pos].split("/",2)[0];
+				document.getElementById("es").innerHTML=text2[pos].split("/",2)[1];
+			}
 		}
 	}else{
 		pos--;
 		if(pos>=0){
 			document.getElementById("text").innerHTML=text[pos];
 			document.getElementById("aud").src=urlAud[pos];
-			document.getElementById("en").innerHTML=text2[pos].split("/",2)[0];
-			document.getElementById("es").innerHTML=text2[pos].split("/",2)[1];
+			if (isNaN(text[pos])) {
+				document.getElementById("en").innerHTML=text2[pos];
+				document.getElementById("es").innerHTML=text2[pos];
+			} else {
+				document.getElementById("en").innerHTML=text2[pos].split("/",2)[0];
+				document.getElementById("es").innerHTML=text2[pos].split("/",2)[1];
+			}
 		}
 	}
 	// if(pos==total-1){

@@ -91,5 +91,8 @@ var text2=<?php
         }
         echo "]";
         ?>;
+
+  console.log(text);
+  console.log(text2);
   var cord=<?php echo $_GET["co"]?>;
 </script>
