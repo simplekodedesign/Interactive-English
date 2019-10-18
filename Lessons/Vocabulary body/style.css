@@ -43,25 +43,32 @@ body{
   border-radius: 0;
 }
 
-.theme object{
-  min-height: 600px;
-  height: 70vh;
-  max-height: 900px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: auto;
-  transform: scale(0);
+.object{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-width: 250px;
+  min-height: 700px;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 1000px;
 }
 
-.object{
-  position: relative;
-  width: 250px;
-  height: 700px;
+.theme object{
+  /* min-height: 600px; */
+  /* height: 70vh; */
+  max-height: 900px;
+  /* position: absolute; */
+  width: 100%;
+  /* top: 0; */
+  /* left: 0; */
+  transform: scale(0);
+  display: none;
 }
 
 .theme .show{
   transform: scale(1);
+  display: block;
 }
 
 .theme .color{
@@ -83,4 +90,17 @@ body{
 
 #es{
   top: calc(var(--y) + 30px);
+}
+
+@media screen and (max-width: 500px) {
+  .object{
+    min-width: 320px;
+    max-width: 300px;
+    max-height: 1200px;
+  }
+
+  .theme object{
+    min-width: 320px;
+    width: 100%;
+  }
 }
