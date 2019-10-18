@@ -54,18 +54,7 @@
   //variable para recargar los js y css
   $q=rand();
 
-  if(isset($_GET["th"])){
-    echo "<script>var numero_leccion = ".$_GET["th"].";</script>";
-  }else if(isset($co_tema)){
-    echo "<script>var numero_leccion = ".$co_tema.";</script>";
-  }
-
   //variable del reto recien activado
-  if(isset($_SESSION["reto_actual"])){
-    echo "<script>
-            var reto_actual = ".$_SESSION["reto_actual"].";
-          </script>";
-  }
 ?>
 
 <!DOCTYPE html>
@@ -210,6 +199,20 @@
       <audio src="" id="congratsAudio"></audio>
       <span id="rocketMessage"></span>
     </div>
+
+    <?php
+      if(isset($_GET["th"])){
+        echo "<script>var numero_leccion = ".$_GET["th"].";</script>";
+      }else if(isset($co_tema)){
+        echo "<script>var numero_leccion = ".$co_tema.";</script>";
+      }
+
+      if(isset($_SESSION["reto_actual"])){
+        echo "<script>
+                var reto_actual = ".$_SESSION["reto_actual"].";
+              </script>";
+      }
+     ?>
 
     <script type="text/javascript">
       var se_actual = <?php echo $_SESSION["se_actual"];?>;

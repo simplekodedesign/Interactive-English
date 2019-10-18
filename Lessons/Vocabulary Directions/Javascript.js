@@ -1,4 +1,8 @@
 
+const streetAudURL = "../../aud/categories/places/";
+var streetElements = document.getElementsByClassName("fas");
+var streetElementsAud = document.getElementById("streetElementsAud");
+var pedestrianElements = document.getElementsByClassName("pasoP");
 var shops = document.getElementsByClassName("img");
 var l = shops.length;
 var engname = document.getElementById("eng");
@@ -21,6 +25,16 @@ window.addEventListener("load", function() {
         engname.innerHTML = "Avenue";
         espname.innerHTML = "Avenida";
     });
+
+    var elementsLength = streetElements.length;
+    for (let j = 0; j < elementsLength; j++) {
+        streetElements[j].addEventListener("click", elementSound);
+    }
+
+    var pedestrianLength = pedestrianElements.length;
+    for (let k = 0; k < pedestrianLength; k++) {
+        pedestrianElements[k].addEventListener("click", elementSound);
+    }
 });
 
 function setter () {
@@ -40,6 +54,16 @@ function setter () {
     espname.innerHTML = (this.parentElement.getElementsByTagName("span"))[0].innerHTML;
 
     img.src = this.parentElement.firstElementChild.src;
+}
+
+function elementSound () {
+    if(this.classList[1]) {
+        streetElementsAud.src = streetAudURL + this.classList[this.classList.length-1] + ".mp3";
+        streetElementsAud.play();
+    } else {
+        streetElementsAud.src = streetAudURL + "pedestrian_crossing" + ".mp3";
+        streetElementsAud.play();
+    }
 }
 
 function getRandomArbitrary(min, max) {

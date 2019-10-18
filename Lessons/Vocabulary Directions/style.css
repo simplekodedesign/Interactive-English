@@ -122,6 +122,10 @@
     transform: scale(1.2, 1.2);
     /* z-index: 100; */
 }
+
+.fas {
+    cursor: pointer;
+}
 /*---------------------Pasos Peatonales-------------------*/
 
 #c1b1 .s3, #c1b2 .s3, #c1b3 .s3, #c2b1 .s4, #c2b2 .s3, #c2b3 .s3, #c1b1 .s2, #c2b3 .s1, #c1b4 .s4 {
@@ -151,6 +155,7 @@
     height: 10px;
     width: 50%;
     z-index: 2;
+    cursor: pointer;
 }
 
 #c1b1 .s2 .pasoP {
