@@ -37,8 +37,13 @@ var qaudplay = function () {
 var checkgame = function () {
   if (turns == options.length) {
     turns--;
-    for (var i = 0; i < 3; i++) {
-      resps[i].innerHTML = (options[turns])["op" + (i+1)];
+    options[turns].opc = options[turns].opc.split("/");
+    options[turns].opc.sort(function (a,b) {
+      return 0.5 - Math.random();
+    });
+    let opclength = options[turns].opc.length;
+    for (var i = 0; i < opclength; i++) {
+      resps[i].innerHTML = options[turns].opc[i];
     }
 
     question.firstElementChild.src = (options[turns]).img;
@@ -56,8 +61,13 @@ var checkgame = function () {
           return;
         }
         setTimeout(function() {
-          for (var i = 0; i < 3; i++) {
-            resps[i].innerHTML = (options[turns])["op" + (i+1)];
+          options[turns].opc = options[turns].opc.split("/");
+          options[turns].opc.sort(function (a,b) {
+            return 0.5 - Math.random();
+          });
+          let opclength = options[turns].opc.length;
+          for (var i = 0; i < opclength; i++) {
+            resps[i].innerHTML = options[turns].opc[i];
           }
           question.firstElementChild.src = (options[turns]).img;
           question.lastElementChild.src = (options[turns]).aud;

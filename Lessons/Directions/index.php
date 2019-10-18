@@ -285,11 +285,8 @@
   var options=[<?php
           for($i=0;$i<$total;$i++){
             $op=strtok($options[$i],"/");
-            echo '{img:"'.$urlImg[$i].'",aud:"'.$urlAud[$i].'",op1:"'.$op.'",';
-            $op=strtok("/");
-            echo 'op2: "'.$op.'",';
-            $op=strtok("/");
-            echo 'op3:"'.$op.'",rightop:"'.$compare[$i].'"}';
+            echo '{img:"'.$urlImg[$i].'",aud:"'.$urlAud[$i].'",opc:"'.$options[$i].'",
+            rightop:"'.$compare[$i].'"}';
             if($i<$total-1)echo ",";
           }
           $op=[];
