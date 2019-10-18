@@ -62,12 +62,12 @@ function desanimar (data, n) {
         setTimeout(function() {
             data.style.transform = "translate(0px, -20px)"
             setTimeout(function() {
-                data.style.transform = "translate(0px, 0px)"
-                // data.style.color = "black";
-                // data.style.backgroundColor = "rgba(12, 13, 104, 0)";
-
+                data.style.transform = "translate(0px, 0px)";
                 setTimeout(function() {
                     data.style.transform = "scale(0,0)";
+                    setTimeout(function () {
+                        data.style.display = "none";
+                    }, 500);
                 }, 1000);
             }, 250);
         }, 250);
