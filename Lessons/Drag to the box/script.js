@@ -19,9 +19,9 @@ window.addEventListener("load", function () {
     createForABC();
     if (data.compare[0] != "") {
       constIMG = 1;
-    }    
+    }
   } else {
-    arrayLength = data.compare.length;    
+    arrayLength = data.compare.length;
   }
 
   words.push(compare[0]);
@@ -66,6 +66,7 @@ function setAudio() {
 function itemCreator(){
   let boxesLength = words.length;
   var div, text;
+  let object
 
   if (data.urlImg[0] != undefined || constIMG) {
     item = document.createElement("img")
@@ -86,6 +87,12 @@ function itemCreator(){
     div.id = words[i];
     text = document.createElement("p");
     text.innerHTML = words[i];
+    // object = document.createElement("object")
+    // object.setAttribute("data", "../../img/box.svg")
+    // object.setAttribute("type", "image/svg+xml")
+    // object.setAttribute("alt", "svg")
+    // object.setAttribute("class", "box")
+    // div.appendChild(object)
 
     div.appendChild(text);
     boxContainer.appendChild(div);
@@ -102,21 +109,33 @@ function dropItem() {
     boundsAfter = this.target.getBoundingClientRect();
 
     if (currentItem < arrayLength) {
-      TweenMax.to(this.target,0.0,{x:0,y:0});
+      TweenMax.to(this.target,0.0,{
+        x:0,
+        y:0,
+      });
       refreshgame();
     } else {
       $(this.target).appendTo('#' + src);
       victoryMessage();
-      TweenMax.fromTo(this.target, 0.3, {
+      TweenMax.fromTo(this.target, 1, {
         x:"+=" + (boundsBefore.left - boundsAfter.left),
-        y:"+=" + (boundsBefore.top - boundsAfter.top)
+        y:"+=" + (boundsBefore.top - boundsAfter.top),
+        backgroundColor: "green"
       }, {
         x:0,
-        y:0
+        y:0,
+        backgroundColor: "transparent"
       });
     }
   } else {
-    TweenMax.to(this.target,0.5,{x:0,y:0});
+    TweenMax.to(this.target, 0.5, {
+      x:0,
+      y:0,
+      backgroundColor: "red"
+    });
+    TweenMax.to(this.target, 0.5, {
+      backgroundColor: "transparent"
+    });
   }
 }
 
@@ -135,7 +154,7 @@ function createForABC () {
   compare = [];
   let newChar;
   let url = data.options[0];
-  let letter;    
+  let letter;
   for (var i = 0; i < 15; i++) {
     newChar = parseInt(getRandomArbitrary(65, 91));
     letter = String.fromCharCode(newChar);
