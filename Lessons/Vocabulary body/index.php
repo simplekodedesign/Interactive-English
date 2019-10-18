@@ -63,18 +63,18 @@ echo"
         <!--<div class='lessonButton color' value='1'>Front</div>
         <div class='lessonButton' value='2'>Back</div>-->
       </div>
-      <div class='object'>
-        <object type='image/svg+xml' data='../../img/categories/family/family.svg' alt='The body' class='svg show' id='svg1'></object>
-        <!--<object type='image/svg+xml' data='../../img/categories/the body/back.svg' alt='The body' class='svg' id='svg2'></object>-->
+      <div class='object' id='object'>
+        <!--<object type='image/svg+xml' data='../../img/categories/family/family.svg' alt='The body' class='svg show' id='svg1'></object>
+        <object type='image/svg+xml' data='../../img/categories/the body/back.svg' alt='The body' class='svg' id='svg2'></object>-->
       </div>
       <audio id='audio'></audio>
-      <!--<span class='vocabulary' id='en'></span>
-      <span class='vocabulary' id='es'></span>-->
+      <span class='vocabulary' id='en'></span>
+      <span class='vocabulary' id='es'></span>
     </div>
     <script type='text/javascript' src='../../Lessons/Vocabulary Body/Javascript.js'></script>";
 ?>
 
 <script type="text/javascript">
-  var data = <?php echo json_encode($data);?>
-  var cord=<?php echo $_GET["co"]?>;
+   var data = <?php echo json_encode($data)?>;
+   var cord= <?php echo $_GET["co"]?>;
 </script>
