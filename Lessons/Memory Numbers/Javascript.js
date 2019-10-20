@@ -17,9 +17,9 @@ window.addEventListener("load", function() {
 
         if(cord == 6) {
             cards[i].lastElementChild.innerHTML = String.fromCharCode(cards[i].lastElementChild.innerHTML);
-            cards[i].getElementsByTagName("audio")[0].src = "../../aud/categories/abc/"+cards[i].lastElementChild.innerHTML.toLowerCase()+".mp3";
+            cards[i].getElementsByTagName("audio")[0].src = "../../aud/categories/abc/" + cards[i].lastElementChild.innerHTML.toLowerCase() + ".mp3";
         } else {
-            cards[i].getElementsByTagName("audio")[0].src = "../../aud/categories/numbers/"+cards[i].lastElementChild.innerHTML+"c.mp3";
+            cards[i].getElementsByTagName("audio")[0].src = "../../aud/categories/numbers/" + cards[i].lastElementChild.innerHTML + "c.mp3";
         }
     }
 });

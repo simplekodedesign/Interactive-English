@@ -64,6 +64,7 @@
 
   echo "<script>
     var data = ".json_encode($data).";
+    console.log(data);
     var cord=  ".$_GET['co'].";
   </script>";
 

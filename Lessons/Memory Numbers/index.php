@@ -45,7 +45,7 @@
   for($i = $initialValue; $i < $endingValue; $i++){
     $cards[]="<div class='card'>
                     <div class='block'></div>
-                    <audio src='../../aud/categories/numbers/Cardinal Numbers/".($i+1).".mp3'></audio>
+                    <audio></audio>
                     <p>".($i+1)."</p>
                 </div>";
   }

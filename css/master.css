@@ -113,6 +113,7 @@ header > a img{
   text-decoration: none;
   width: 142px;
   height: 100%;
+  font-size: 1.4em;
 }
 
 .hButton > ul {
@@ -241,7 +242,7 @@ section{
 
 .titles, .titlesLessons {
   color: var(--secondary);
-  font-family: 'Myriad Pro Condensed';
+  /* font-family: 'Myriad Pro Condensed'; */
   font-size: 1.2em;
   width: 100%;
   text-align: center;
@@ -302,10 +303,10 @@ section .roadTitle{
 }
 
 #lPrev span {
-  border-bottom: 45px solid var(--aquamarina);
-  border-right: 50px solid transparent;
-  border-left: 50px solid transparent;
-  border-top: 0px solid var(--aquamarina);
+  border-bottom: 25px solid var(--secondary);
+  border-right: 35px solid transparent;
+  border-left: 35px solid transparent;
+  border-top: 0px solid var( --aquamarina);
 }
 
 #lSigu {
@@ -315,10 +316,10 @@ section .roadTitle{
 }
 
 #lSigu span {
-  border-bottom: 45px solid var(--aquamarina);
-  border-right: 50px solid transparent;
-  border-left: 50px solid transparent;
-  border-top: 0px solid var(--aquamarina);
+  border-bottom: 25px solid var(--secondary);
+  border-right: 35px solid transparent;
+  border-left: 35px solid transparent;
+  border-top: 0px solid var( --aquamarina);
 }
 
 #logo{

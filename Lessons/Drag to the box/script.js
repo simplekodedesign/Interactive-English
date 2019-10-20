@@ -21,6 +21,9 @@ window.addEventListener("load", function () {
       constIMG = 1;
     }
   } else {
+    console.log("This is happening");
+    ask = data.options;
+    compare = data.compare;
     arrayLength = data.compare.length;
   }
 
@@ -65,7 +68,7 @@ function setAudio() {
 
 function itemCreator(){
   let boxesLength = words.length;
-  var div, text;
+  var div, text, innerText;
   let object
 
   if (data.urlImg[0] != undefined || constIMG) {
@@ -86,7 +89,11 @@ function itemCreator(){
     div.classList.add("itemField");
     div.id = words[i];
     text = document.createElement("p");
-    text.innerHTML = words[i];
+    innerText = words[i];
+    while (innerText.search("-") != -1) {
+      innerText = innerText.replace("-", " ");
+    }
+    text.innerHTML = innerText;
     // object = document.createElement("object")
     // object.setAttribute("data", "../../img/box.svg")
     // object.setAttribute("type", "image/svg+xml")
@@ -109,6 +116,7 @@ function dropItem() {
     boundsAfter = this.target.getBoundingClientRect();
 
     if (currentItem < arrayLength) {
+      console.log("HIHIHI");
       TweenMax.to(this.target,0.0,{
         x:0,
         y:0,
