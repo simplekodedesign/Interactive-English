@@ -1,6 +1,6 @@
 const color = [
   "rgb(248, 206, 0)",
-  "rgb(237, 112, 41)",
+  "rgb(237, 112, 42)",
   "rgb(233, 79, 136)",
   "rgb(0, 184, 231)",
   "rgb(0, 123, 191)",
@@ -73,7 +73,7 @@ window.addEventListener("load", function () {
   from_toButton.addEventListener("click", from_to_function);
 
   rocket.addEventListener("animationend", function() {
-    
+
   });
 });
 
