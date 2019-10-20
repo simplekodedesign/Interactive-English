@@ -21,7 +21,7 @@
               if(is_dir($ruta . $file)&&$file!="." && $file!=".."){
                 listar_directorios_ruta($ruta . $file . "/",$tmult);
               }else if ($file!="." && $file!=".."){
-                   echo "<p>".$tmult.";".explode(".",$file)[0].";".$ruta."".$file."</p>";
+                   echo "<div>".$tmult.";".explode(".",$file)[0].";".$ruta."".$file."</div>";
                 }
            }
         closedir($dh);
