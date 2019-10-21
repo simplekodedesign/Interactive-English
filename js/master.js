@@ -30,9 +30,9 @@ var gifButton = document.getElementById("gifButton");
 var navbar = document.getElementById('navbarNav');
 var translatebutton = document.getElementById("translatebutton");
 var reloadButton = document.getElementById("reloadButton");
+var from_toButton = document.getElementById("from_toButton"); // Button for translateScreen
 var svgRocket;
 var linkElement;
-var from_toButton = document.getElementById("from_toButton"); // Button for translateScreen
 var from_to = 0; // Variable for translation
 var rocket = document.getElementById("rocket");
 var rocketMessage = document.getElementById("rocketMessage");
@@ -80,6 +80,7 @@ window.addEventListener("load", function () {
   /*-------Animacion de avance de tema------*/
   win.addEventListener("click", () => {
     win.classList.remove("winactive")
+    document.getElementById("lSigu").firstElementChild.click()
   })
 });
 
