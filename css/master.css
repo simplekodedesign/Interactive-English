@@ -531,6 +531,52 @@ footer p{
   transform: rotate(-45deg) translate(7px, 2px);
 }
 
+/*------------------------WIN------------------------------*/
+
+.win{
+  height: 100%;
+  background: url(../img/confettiNS.svg) 0 0/1000px auto repeat rgba(0, 0, 0, 0.459);
+  position: fixed;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  display: none;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  animation: confetti 40s infinite linear;
+  display: none;
+  width: 100%;
+  z-index: 5;
+}
+
+.win img{
+  min-width: 320px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.winactive{
+  display: flex;
+}
+
+@keyframes confetti {
+  0%{
+    background-position: 0 0%;
+  }
+  50%{
+    background-position: 0 400%;
+  }
+  100%{
+    background-position: 0 800%;
+  }
+}
+
+.winMessage{
+
+}
+
 
 /*-----------------------------GIF------------------------------------*/
 

@@ -200,6 +200,13 @@
       <span id="rocketMessage"></span>
     </div>
 
+    <div class="win" id= "win" >
+      <audio src="../../aud/waiting.mp3" id="victoryAudio"></audio>
+      <img src="../../img/congratulations.svg" id="Congratulations"></img>
+      <audio src="" id="congratsAudio"></audio>
+      <span id="winMessage"></span>
+    </div>
+
     <?php
       if(isset($_GET["th"])){
         echo "<script>var numero_leccion = ".$_GET["th"].";</script>";

@@ -15,7 +15,7 @@
   listar_directorios_ruta("../../".$img,1);
 
   function listar_directorios_ruta($ruta,$tmult){
-     if (is_dir($ruta)) {
+     if (is_dir($ruta)){
         if ($dh = opendir($ruta)) {
            while (($file = readdir($dh)) !== false) {
               if(is_dir($ruta . $file)&&$file!="." && $file!=".."){

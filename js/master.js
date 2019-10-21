@@ -37,6 +37,7 @@ var from_to = 0; // Variable for translation
 var rocket = document.getElementById("rocket");
 var rocketMessage = document.getElementById("rocketMessage");
 var congratsAudio = document.getElementById("congratsAudio");
+var win = document.getElementById("win")
 var durationRocket = 3;
 
 window.addEventListener("load", function () {
@@ -75,6 +76,10 @@ window.addEventListener("load", function () {
   rocket.addEventListener("animationend", function() {
 
   });
+
+  win.addEventListener("click", () => {
+    win.classList.remove("winactive")
+  })
 });
 
 /*---------------------------------------Translator----------------------------------*/
@@ -141,6 +146,7 @@ var victoryMessage = function() {
         console.log("This is happening");
         congratsMessage();
       }, (durationRocket*1000) + 500);
+      win.classList.add("winactive")
       document.getElementById("lSigu").style.display="flex";
     }
   };
