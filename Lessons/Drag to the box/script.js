@@ -21,7 +21,6 @@ window.addEventListener("load", function () {
       constIMG = 1;
     }
   } else {
-    console.log("This is happening");
     ask = data.options;
     compare = data.compare;
     arrayLength = data.compare.length;
@@ -71,16 +70,15 @@ function itemCreator(){
   var div, text, innerText;
   let object
 
-  if (data.urlImg[0] != undefined || constIMG) {
+  if (data.urlImg[0] != undefined) {  //|| constIMG
     item = document.createElement("img")
-    if (constIMG) {
-      item.setAttribute("src", data.compare[0]);
-    } else {
-      item.setAttribute("src", data.urlImg[0]);
-    }
+    item.setAttribute("src", data.urlImg[0]);
     item.setAttribute("id", "item");
   }else{
     item = document.createElement("div");
+    if (constIMG) {
+      item.innerHTML = "?";
+    }
     item.setAttribute("id", "item");
   }
 
@@ -94,12 +92,6 @@ function itemCreator(){
       innerText = innerText.replace("-", " ");
     }
     text.innerHTML = innerText;
-    // object = document.createElement("object")
-    // object.setAttribute("data", "../../img/box.svg")
-    // object.setAttribute("type", "image/svg+xml")
-    // object.setAttribute("alt", "svg")
-    // object.setAttribute("class", "box")
-    // div.appendChild(object)
 
     div.appendChild(text);
     boxContainer.appendChild(div);
@@ -116,7 +108,6 @@ function dropItem() {
     boundsAfter = this.target.getBoundingClientRect();
 
     if (currentItem < arrayLength) {
-      console.log("HIHIHI");
       TweenMax.to(this.target,0.0,{
         x:0,
         y:0,
@@ -151,7 +142,11 @@ function refreshgame () {
   if(data.urlImg[1] != undefined){
     item.src = data.urlImg[currentItem]
   }else{
-    item.innerHTML = ask[currentItem];
+    if (constIMG) {
+      item.innerHTML = "?";
+    }else{
+      item.innerHTML = ask[currentItem];
+    }
   }
   item.setAttribute("type", compare[currentItem]);
   audio.src = data.urlAud[currentItem];

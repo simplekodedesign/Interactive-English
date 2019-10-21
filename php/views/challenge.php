@@ -7,7 +7,7 @@
   session_start();
 
   //en caso de ser el tercer reto realizar el avance de tema
-  if($_SESSION["reto"]>3){
+  if($_SESSION["reto"] > 3){
     unset($_SESSION["reto"]);
     unset($_SESSION["reto_aplicado"]);
     if($_GET["th"]>=$_SESSION["te_actual"]){
@@ -22,7 +22,7 @@
       $results=Connection::request("update t040_retos set Co_Reto=".$_SESSION["te_actual"].",Co_Tema=".$_SESSION["te_actual"].",Fe_Ejecucion='".date('d-m-Y', strtotime(date($feEjecucion))+(7*24*60*60*2))."',St_Reto='I' where Co_Usuario=".$_SESSION["co_usuario"]);
     }
     $results=Connection::request("select Les_Sig from p070_orden where Co_Orden=".($_SESSION["se_actual"]-1));
-    if($results->rowCount()>0){
+    if($results-> rowCount () > 0){
       while($res=$results->fetch(PDO::FETCH_ASSOC)){
         echo "<script>location='home.php".$res["Les_Sig"]."'</script>";
       }
@@ -65,15 +65,21 @@
 
     //establecer la variable que controla el reto que se esta haciendo
     if(!isset($_SESSION["reto"])){
-      $_SESSION["reto"]=1;
+      $_SESSION["reto"] = 1;
     }
     $_SESSION["reto"]++;
 
     //guardar las lecciones que ya salieron para que no se repitan
     $_SESSION["reto_aplicado"][]=$coa;
 
-    echo "<script>
-        location='home.php?url=../../Lessons/".$nbJuego."/index.php&co=".$coa."&ini=".$_GET["ini"]."&end=".$_GET["end"]."&th=".$_GET["th"]."'
-    </script>";
+    if ($_SESSION["reto"] > 3) {
+      echo "<script>
+      location='home.php?url=../../Lessons/".$nbJuego."/index.php&co=".$coa."&ini=".$_GET["ini"]."&end=".$_GET["end"]."&th=".$_GET["th"]."&aTema'
+      </script>";
+    }else{
+      echo "<script>
+      location='home.php?url=../../Lessons/".$nbJuego."/index.php&co=".$coa."&ini=".$_GET["ini"]."&end=".$_GET["end"]."&th=".$_GET["th"]."'
+      </script>";
+    }
   }
 ?>

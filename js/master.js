@@ -30,13 +30,14 @@ var gifButton = document.getElementById("gifButton");
 var navbar = document.getElementById('navbarNav');
 var translatebutton = document.getElementById("translatebutton");
 var reloadButton = document.getElementById("reloadButton");
+var from_toButton = document.getElementById("from_toButton"); // Button for translateScreen
 var svgRocket;
 var linkElement;
-var from_toButton = document.getElementById("from_toButton"); // Button for translateScreen
 var from_to = 0; // Variable for translation
 var rocket = document.getElementById("rocket");
 var rocketMessage = document.getElementById("rocketMessage");
 var congratsAudio = document.getElementById("congratsAudio");
+var win = document.getElementById("win")
 var durationRocket = 3;
 
 window.addEventListener("load", function () {
@@ -75,7 +76,16 @@ window.addEventListener("load", function () {
   rocket.addEventListener("animationend", function() {
 
   });
+
+  /*-------Animacion de avance de tema------*/
+  win.addEventListener("click", () => {
+    win.classList.remove("winactive")
+    document.getElementById("lSigu").firstElementChild.click()
+  })
 });
+
+
+
 
 /*---------------------------------------Translator----------------------------------*/
 
@@ -131,6 +141,9 @@ function showGif () {
 
 var victoryMessage = function() {
   document.getElementById("victoryAudio").play();
+  if (location.href.indexOf("aTema") != -1) {
+    win.classList.add("winactive")
+  }
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {

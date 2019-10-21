@@ -15,13 +15,13 @@
   listar_directorios_ruta("../../".$img,1);
 
   function listar_directorios_ruta($ruta,$tmult){
-     if (is_dir($ruta)) {
+     if (is_dir($ruta)){
         if ($dh = opendir($ruta)) {
            while (($file = readdir($dh)) !== false) {
               if(is_dir($ruta . $file)&&$file!="." && $file!=".."){
                 listar_directorios_ruta($ruta . $file . "/",$tmult);
               }else if ($file!="." && $file!=".."){
-                   echo "<p>".$tmult.";".explode(".",$file)[0].";".$ruta."".$file."</p>";
+                   echo "<div>".$tmult.";".explode(".",$file)[0].";".$ruta."".$file."</div>";
                 }
            }
         closedir($dh);
