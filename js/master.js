@@ -77,10 +77,14 @@ window.addEventListener("load", function () {
 
   });
 
+  /*-------Animacion de avance de tema------*/
   win.addEventListener("click", () => {
     win.classList.remove("winactive")
   })
 });
+
+
+
 
 /*---------------------------------------Translator----------------------------------*/
 
@@ -136,6 +140,9 @@ function showGif () {
 
 var victoryMessage = function() {
   document.getElementById("victoryAudio").play();
+  if (location.href.indexOf("aTema") != -1) {
+    win.classList.add("winactive")
+  }
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -146,7 +153,6 @@ var victoryMessage = function() {
         console.log("This is happening");
         congratsMessage();
       }, (durationRocket*1000) + 500);
-      win.classList.add("winactive")
       document.getElementById("lSigu").style.display="flex";
     }
   };
