@@ -594,12 +594,12 @@ footer p{
 
 .rocket {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  transform: translate(0, 100%);
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  transform: rotate(0deg) translate(calc(50vw - 50px), calc(50vh + 50px));
   animation-duration: 3s;
   animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
   animation-iteration-count: 1;
 }
 
@@ -625,6 +625,30 @@ footer p{
 
   100% {
     transform: translate(0, calc(-100vh + 8vh + 150px));
+  }
+}
+
+@keyframes rocketAnimation1 {
+  0% {
+    /* transform: rotate(0deg) translate(calc(50vw - 50px), calc(50vh + 50px)); */
+  }
+
+  25% {
+    transform: rotate(0deg) translate(calc(50vw - 50px), calc(50vh - 50px)) rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-45deg) translate(calc(20vw - 50px), calc(-20vh - 50px)) rotate(-45deg);
+    /* transform: rotate(-45deg) translate(calc(50vw - 50px), calc(-50vh + 50px)) rotate(0deg); */
+  }
+
+  80% {
+    transform: rotate(-270deg) translate(calc(20vw - 50px), calc(20vh - 50px)) rotate(-0deg);
+    /* transform: rotate(-180deg) translate(calc(15vw - 50px), calc(-15vh - 50px)) rotate(-90deg); */
+  }
+
+  100% {
+    transform: rotate(-360deg) translate(calc(50vw - 50px), calc(-50vh + 8vh + 150px)) rotate(0deg);
   }
 }
 
