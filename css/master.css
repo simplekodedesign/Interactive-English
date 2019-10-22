@@ -625,6 +625,7 @@ footer p{
   position: absolute;
   bottom: 10px;
   left: 50%;
+  min-width: 170px;
   transform: translate(-50%, -50%);
 }
 
@@ -643,7 +644,7 @@ footer p{
   left: calc(50% - 50px);
   top: calc(50% - 50px);
   transform: rotate(0deg) translate(calc(50vw - 50px), calc(50vh + 50px));
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
   animation-iteration-count: 1;
@@ -688,8 +689,8 @@ footer p{
     /* transform: rotate(-45deg) translate(calc(50vw - 50px), calc(-50vh + 50px)) rotate(0deg); */
   }
 
-  80% {
-    transform: rotate(-270deg) translate(calc(20vw - 50px), calc(20vh - 50px)) rotate(-0deg);
+  70% {
+    transform: rotate(-245deg) translate(calc(20vw - 50px), calc(20vh - 50px)) rotate(25deg);
     /* transform: rotate(-180deg) translate(calc(15vw - 50px), calc(-15vh - 50px)) rotate(-90deg); */
   }
 

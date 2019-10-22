@@ -9,8 +9,7 @@
   $data = new Data();
 
   echo "<link rel='stylesheet' href='../../Lessons/Drag to the box/style.css?".$q."'>
-  <div class='cont_abc' id='cont_all'>
-    <div class='field'>";
+  <div class='cont_abc' id='cont_all'>";
     $results=Connection::request("select Co_Juego,Nb_Lesson from p070_orden where Co_Orden=".$_GET["co"]);
     if($results->rowCount()>0){
       while($res=$results->fetch(PDO::FETCH_ASSOC)){
@@ -21,11 +20,10 @@
       }
     }
       echo "<div class='itemContainer'>
-        
+
       </div>
       <div id='boxesContainer'></div>
       <audio id='audio'></audio>
-    </div>
   </div>";
 
   $results=Connection::request("select Tx_Help from p050_juego where Co_Juego=".$co_juego);

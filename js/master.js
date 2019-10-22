@@ -38,7 +38,7 @@ var rocket = document.getElementById("rocket");
 var rocketMessage = document.getElementById("rocketMessage");
 var congratsAudio = document.getElementById("congratsAudio");
 var win = document.getElementById("win")
-var durationRocket = 3;
+var durationRocket = 5;
 
 window.addEventListener("load", function () {
   if(reloadButton) {

@@ -172,6 +172,11 @@ body{
     background-image: url(../img/lessons/background/RecorridoCel.svg);
   }
 
+  .roadicon img{
+    max-height: 50px;
+    max-width: 50px;
+  }
+
   .roadicon, #start, #end{
     width: 30px;
     height: 50px;
@@ -208,8 +213,8 @@ body{
   }
 
   .roadicon:nth-child(7){
-    left: 53px;
-    top: 136px;
+    left: 58px;
+    top: 142px;
   }
 
   .roadicon:nth-child(8){
