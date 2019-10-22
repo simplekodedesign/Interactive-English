@@ -22,14 +22,19 @@
   $q=rand();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/login.css?q=<?php echo $q?>">
     <link rel="stylesheet" href="css/background.css?q=<?php echo $q?>">
-    <title>C21 English</title>
+    <title>C21 English: Aprende inglés fácilmente</title>
+    <meta name="description" content="
+      C21 English es una herramienta de aprendizaje del idioma inglés mediante juegos e interactividad,
+      diseñada para divertirse mientras se aprende.
+      ">
+    <meta name="author" content="C21">
 </head>
 <body>
 
