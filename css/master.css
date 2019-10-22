@@ -625,6 +625,7 @@ footer p{
   position: absolute;
   bottom: 10px;
   left: 50%;
+  min-width: 170px;
   transform: translate(-50%, -50%);
 }
 
