@@ -56,7 +56,7 @@ window.addEventListener("load", function () {
       }
     }
   });
-  document.getElementById("item").addEventListener("dragstart", setAudio);
+  document.getElementById("item").addEventListener("click", setAudio);
 })
 
 function setAudio() {
