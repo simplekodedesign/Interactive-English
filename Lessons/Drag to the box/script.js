@@ -2,7 +2,6 @@
 var ask = data.options;
 var compare = data.compare;
 var container = document.getElementById('cont_all');
-var field = document.getElementsByClassName('field');
 var boxContainer = document.getElementById("boxesContainer");
 var audio = document.getElementById('audio');
 var itemContainer = (document.getElementsByClassName('itemContainer'))[0];
