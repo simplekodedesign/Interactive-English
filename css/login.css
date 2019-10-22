@@ -73,6 +73,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   transition: 1s ease-in-out;
+  min-height: 500px;
 }
 
 .firstHalf > img {
