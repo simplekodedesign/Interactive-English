@@ -2,10 +2,10 @@
 -- version 4.4.15.9
 -- https://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Oct 22, 2019 at 05:21 PM
--- Server version: 5.6.37
--- PHP Version: 5.6.31
+-- Servidor: localhost
+-- Tiempo de generación: 21-10-2019 a las 19:58:54
+-- Versión del servidor: 5.6.37
+-- Versión de PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `prueba`
+-- Base de datos: `prueba`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `m210_usuario`
+-- Estructura de tabla para la tabla `m210_usuario`
 --
 
 CREATE TABLE IF NOT EXISTS `m210_usuario` (
@@ -38,14 +38,14 @@ CREATE TABLE IF NOT EXISTS `m210_usuario` (
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `m210_usuario`
+-- Volcado de datos para la tabla `m210_usuario`
 --
 
 INSERT INTO `m210_usuario` (`Co_Usuario`, `Co_Alumno`, `Co_Rol`, `Tx_Email`, `Tx_Clave`, `St_Session`, `Tx_Url`, `Fe_Status`) VALUES
 (1, 1, 1, '1', '$2y$10$6YGb2/gtfyCfxRdWSe83ruu/XmUqQONxND4k5pVPrXW7RaEaS5a5S', 1, 'https://www.c21english.com/img/perfil/users/man4.svg', '2019-05-15'),
 (2, 2, 1, '2', '$2y$10$drRc.jappUIWQ9RNkxx6wOGIOkrc.BsgY3hj4HiTqJ4KNsaUr0sF.', 0, 'https://c21english.com/img/perfil/users/man4.svg', '2019-06-01'),
 (3, 3, 1, '3', '$2y$10$dSK2OIzpTaKsTGXsYr3iPeoICsUCR5/x6iFoRl23SofQLqU53s/bi', 0, 'https://c21english.com/img/perfil/users/woman1.svg', '2019-06-01'),
-(4, 4, 1, '4', '$2y$10$PUPjszzIwY2p8VV/qxFluOjoGUtAHDaE4LaxazRvYftRv1fa0MK0G', 0, 'https://c21english.com/img/perfil/users/avatar3.svg', '2019-06-01'),
+(4, 4, 1, '4', '$2y$10$PUPjszzIwY2p8VV/qxFluOjoGUtAHDaE4LaxazRvYftRv1fa0MK0G', 1, 'https://c21english.com/img/perfil/users/avatar3.svg', '2019-06-01'),
 (5, 5, 1, '5', '$2y$10$jemVdOLFGZQLjE/Bzuzm/.QreKuenqsB5QCCmXkbPQqmbrSxSg/9y', 0, '../../img/perfil/users/avatar3.svg', '2019-07-01'),
 (6, 6, 1, '6', '$2y$10$q.IhTk0xCFonrfUQrW62KO0NNzDpHeu0x6i9ArV13OaVMH2wiU5YO', 0, 'https://www.c21english.com/img/perfil/users/woman2.svg', '2019-07-01'),
 (7, 7, 1, '7', '$2y$10$Sk8cFa9qgiYdk8f9dXqoJezY5LuSfHahtMr2/RuCeSvxCB/1CM6v6', 0, 'https://www.c21english.com/img/perfil/users/avatar3.svg', '2019-07-01'),
@@ -55,7 +55,7 @@ INSERT INTO `m210_usuario` (`Co_Usuario`, `Co_Alumno`, `Co_Rol`, `Tx_Email`, `Tx
 -- --------------------------------------------------------
 
 --
--- Table structure for table `m220_alumno`
+-- Estructura de tabla para la tabla `m220_alumno`
 --
 
 CREATE TABLE IF NOT EXISTS `m220_alumno` (
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `m220_alumno` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `m220_alumno`
+-- Volcado de datos para la tabla `m220_alumno`
 --
 
 INSERT INTO `m220_alumno` (`Co_Alumno`, `Nb_Apellido`, `Nb_Alumno`, `Nb_ApellidoRepre`, `Nb_Representante`, `Tx_Direccion`, `Nu_Telefono_Fijo`, `Nu_Telefono_Movil`, `Fe_Nacimiento`, `St_Alumno`) VALUES
@@ -90,7 +90,7 @@ INSERT INTO `m220_alumno` (`Co_Alumno`, `Nb_Apellido`, `Nb_Alumno`, `Nb_Apellido
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p020_institucion`
+-- Estructura de tabla para la tabla `p020_institucion`
 --
 
 CREATE TABLE IF NOT EXISTS `p020_institucion` (
@@ -106,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `p020_institucion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p020_institucion`
+-- Volcado de datos para la tabla `p020_institucion`
 --
 
 INSERT INTO `p020_institucion` (`Nu_Identificacion`, `Nb_Institucion`, `Img_Url`, `Tx_Email`, `Direccion`, `Nu_Telefono`, `Pag_Url`, `St_Institucion`, `Fe_ultimaData`) VALUES
@@ -115,7 +115,7 @@ INSERT INTO `p020_institucion` (`Nu_Identificacion`, `Nb_Institucion`, `Img_Url`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p030_nivel`
+-- Estructura de tabla para la tabla `p030_nivel`
 --
 
 CREATE TABLE IF NOT EXISTS `p030_nivel` (
@@ -124,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `p030_nivel` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p030_nivel`
+-- Volcado de datos para la tabla `p030_nivel`
 --
 
 INSERT INTO `p030_nivel` (`Co_Nivel`, `Nb_Nivel`) VALUES
@@ -133,7 +133,7 @@ INSERT INTO `p030_nivel` (`Co_Nivel`, `Nb_Nivel`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p040_temas`
+-- Estructura de tabla para la tabla `p040_temas`
 --
 
 CREATE TABLE IF NOT EXISTS `p040_temas` (
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `p040_temas` (
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p040_temas`
+-- Volcado de datos para la tabla `p040_temas`
 --
 
 INSERT INTO `p040_temas` (`Co_Tema`, `Co_Nivel`, `Nb_Tema`, `Tx_Url_Img`, `Tx_Url_Aud`) VALUES
@@ -171,7 +171,7 @@ INSERT INTO `p040_temas` (`Co_Tema`, `Co_Nivel`, `Nb_Tema`, `Tx_Url_Img`, `Tx_Ur
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p050_juego`
+-- Estructura de tabla para la tabla `p050_juego`
 --
 
 CREATE TABLE IF NOT EXISTS `p050_juego` (
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `p050_juego` (
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p050_juego`
+-- Volcado de datos para la tabla `p050_juego`
 --
 
 INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUES
@@ -213,7 +213,7 @@ INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p060_multimedia`
+-- Estructura de tabla para la tabla `p060_multimedia`
 --
 
 CREATE TABLE IF NOT EXISTS `p060_multimedia` (
@@ -222,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `p060_multimedia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p060_multimedia`
+-- Volcado de datos para la tabla `p060_multimedia`
 --
 
 INSERT INTO `p060_multimedia` (`Co_Multimedia`, `Nb_Multimedia`) VALUES
@@ -233,7 +233,7 @@ INSERT INTO `p060_multimedia` (`Co_Multimedia`, `Nb_Multimedia`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p070_orden`
+-- Estructura de tabla para la tabla `p070_orden`
 --
 
 CREATE TABLE IF NOT EXISTS `p070_orden` (
@@ -246,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `p070_orden` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p070_orden`
+-- Volcado de datos para la tabla `p070_orden`
 --
 
 INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_Ant`, `Les_Sig`) VALUES
@@ -288,7 +288,7 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 (5, 1, 36, 'Here - There', '?url=../../Lessons/Video/index.php&co=35', '?url=../../Lessons/Video/index.php&co=37'),
 (5, 1, 37, 'The Preposition A', '?url=../../Lessons/Video/index.php&co=36', '?url=../../Lessons/Video/index.php&co=38'),
 (5, 1, 38, 'The Preprosition An', '?url=../../Lessons/Video/index.php&co=37', '?url=../../Lessons/Write the right option/index.php&co=39'),
-(5, 17, 39, 'Complete with a or an', '?url=../../Lessons/Video/index.php&co=38', '?url=../../Lessons/Video/index.php&co=40'),
+(5, 17, 39, 'Complete with  "A"  or  "An"', '?url=../../Lessons/Video/index.php&co=38', '?url=../../Lessons/Video/index.php&co=40'),
 (5, 1, 40, 'The and H', '?url=../../Lessons/Write the right option/index.php&co=39', '?url=../../Lessons/Say the correct word/index.php&co=41'),
 (5, 10, 41, 'Connect with', '?url=../../Lessons/Video/index.php&co=40', '?url=../../Lessons/Video/index.php&co=42'),
 (6, 1, 42, 'Animals', '?url=../../Lessons/Say the correct word/index.php&co=41', '?url=../../Lessons/Vocabulary/index.php&co=43'),
@@ -383,26 +383,26 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 (16, 18, 131, 'Memory Game', '?url=../../Lessons/Vocabulary Directions/index.php&co=130', '?url=../../Lessons/Select the correct option/index.php&co=132'),
 (16, 9, 132, 'Select the correct option', '?url=../../Lessons/Memory/index.php&co=131', '?url=../../Lessons/Connect with image/index.php&co=133'),
 (16, 20, 133, 'Connect the image with the correct word', '?url=../../Lessons/Select the correct option/index.php&co=132', '?url=../../Lessons/Write the right option/index.php&co=134'),
-(16, 17, 134, 'Write the correct place', '?url=../../Lessons/Connect with image/index.php&co=133', '?url=../../Lessons/Write the correct option/index.php&co=135'),
+(16, 17, 134, 'Write the correct place', '?url=../../Lessons/Connect with image/index.php&co=133', '?url=../../Lessons/Write the right option/index.php&co=135'),
 (16, 17, 135, 'Translate to spanish', '?url=../../Lessons/Write the right option/index.php&co=134', '?url=../../Lessons/Directions/index.php&co=136'),
-(16, 23, 136, 'Where is ?', '?url=../../Lessons/Write the correct option/index.php&co=135', '?url=../../Lessons/Video/index.php&co=137'),
+(16, 23, 136, 'Where is ?', '?url=../../Lessons/Write the right option/index.php&co=135', '?url=../../Lessons/Video/index.php&co=137'),
 (17, 1, 137, 'Family', '?url=../../Lessons/Directions/index.php&co=136', '?url=../../Lessons/Vocabulary body/index.php&co=138'),
 (17, 7, 138, 'Family', '?url=../../Lessons/Video/index.php&co=137', '?url=../../Lessons/Memory/index.php&co=139'),
 (17, 18, 139, 'Memory Game', '?url=../../Lessons/Vocabulary body/index.php&co=138', '?url=../../Lessons/Connect with image/index.php&co=140'),
-(17, 20, 140, 'Connect the image with the text', '?url=../../Lessons/Memory/index.php&co=139', '?url=../../Lessons/Say the correct word/index.php&co=141'),
-(17, 5, 141, 'Pronunciation', '?url=../../Lessons/Connect with image/index.php&co=140', '?url=../../Lessons/Write the right option/index.php&co=142'),
-(17, 17, 142, 'Write the correct name of the family member', '?url=../../Lessons/Say the correct word/index.php&co=141', '?url=../../Lessons/Unscramble/index.php&co=143'),
+(17, 20, 140, 'Connect the image with the text', '?url=../../Lessons/Memory/index.php&co=139', '?url=../../Lessons/Select the correct option/index.php&co=141'),
+(17, 9, 141, 'Select the correct option', '?url=../../Lessons/Connect with image/index.php&co=140', '?url=../../Lessons/Write the right option/index.php&co=142'),
+(17, 17, 142, 'Write the correct name of the family member', '?url=../../Lessons/Select the correct option/index.php&co=141', '?url=../../Lessons/Unscramble/index.php&co=143'),
 (17, 21, 143, 'Unscramble the words', '?url=../../Lessons/Write the right option/index.php&co=142', '?url=../../Lessons/Video/index.php&co=144'),
-(18, 1, 144, 'What time is it?', '?url=../../Lessons/Unscramble/index.php&co=143', '?url=../../Lessons/Say the correct word/index.php&co=145'),
-(18, 5, 145, 'Say the correct hour', '?url=../../Lessons/Video/index.php&co=144', '?url=../../Lessons/Write the right option/index.php&co=146'),
-(18, 17, 146, 'Write the right hour', '?url=../../Lessons/Say the correct word/index.php&co=145', '?url=../../Lessons/Memory/index.php&co=147'),
+(18, 1, 144, 'What time is it?', '?url=../../Lessons/Unscramble/index.php&co=143', '?url=../../Lessons/Drag to the box/index.php&co=145'),
+(18, 5, 145, 'Drag to the correct greeting', '?url=../../Lessons/Video/index.php&co=144', '?url=../../Lessons/Write the right option/index.php&co=146'),
+(18, 17, 146, 'Write the right hour', '?url=../../Lessons/Drag to the box/index.php&co=145', '?url=../../Lessons/Memory/index.php&co=147'),
 (18, 18, 147, 'Memory', '?url=../../Lessons/Write the right option/index.php&co=146', '?url=../../Lessons/Select the correct option/index.php&co=148'),
 (18, 9, 148, 'Select the right hour', '?url=../../Lessons/Memory/index.php&co=147', '#');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p080_rol`
+-- Estructura de tabla para la tabla `p080_rol`
 --
 
 CREATE TABLE IF NOT EXISTS `p080_rol` (
@@ -411,7 +411,7 @@ CREATE TABLE IF NOT EXISTS `p080_rol` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p080_rol`
+-- Volcado de datos para la tabla `p080_rol`
 --
 
 INSERT INTO `p080_rol` (`Co_Rol`, `Nb_Rol`) VALUES
@@ -420,7 +420,7 @@ INSERT INTO `p080_rol` (`Co_Rol`, `Nb_Rol`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p090_imagenes`
+-- Estructura de tabla para la tabla `p090_imagenes`
 --
 
 CREATE TABLE IF NOT EXISTS `p090_imagenes` (
@@ -430,7 +430,7 @@ CREATE TABLE IF NOT EXISTS `p090_imagenes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p090_imagenes`
+-- Volcado de datos para la tabla `p090_imagenes`
 --
 
 INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
@@ -532,7 +532,7 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'armchair', '../../img/categories/house/armchair.svg'),
 (1, 'asia', '../../img/categories/fonetic abc/asia.webp'),
 (1, 'athletics', '../../img/categories/sports/athletics.svg'),
-(1, 'aunt', '../../img/categories/family/aunt.svg'),
+(1, 'aunt', '../../img/categories/family/aunt.webp'),
 (1, 'avenue', '../../img/categories/places/avenue.webp'),
 (1, 'babies', '../../img/categories/plurals/babies.webp'),
 (1, 'baby', '../../img/categories/plurals/baby.webp'),
@@ -554,14 +554,14 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'bee', '../../img/categories/animals/bee.webp'),
 (1, 'behind', '../../img/categories/prepositions/behind.webp'),
 (1, 'belly', '../../img/categories/the body/belly.svg'),
-(1, 'belly button', '../../img/categories/the body/belly button.svg'),
+(1, 'belly_button', '../../img/categories/the body/belly_button.svg'),
 (1, 'belt', '../../img/categories/plurals/belt.webp'),
 (1, 'belts', '../../img/categories/plurals/belts.webp'),
 (1, 'between', '../../img/categories/prepositions/between.webp'),
 (1, 'bird', '../../img/categories/animals/bird.webp'),
-(1, 'black', '../../img/categories/colors/black.svg'),
+(1, 'black', '../../img/categories/colors/black.webp'),
 (1, 'block', '../../img/categories/places/block.webp'),
-(1, 'blue', '../../img/categories/colors/blue.svg'),
+(1, 'blue', '../../img/categories/colors/blue.webp'),
 (1, 'book', '../../img/categories/this these/book.webp'),
 (1, 'bookcase', '../../img/categories/house/bookcase.svg'),
 (1, 'books', '../../img/categories/this these/books.webp'),
@@ -574,8 +574,8 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'boy', '../../img/categories/plurals/boy.webp'),
 (1, 'boys', '../../img/categories/plurals/boys.webp'),
 (1, 'bread', '../../img/categories/food and drinks/bread.svg'),
-(1, 'brother', '../../img/categories/family/brother.svg'),
-(1, 'brown', '../../img/categories/colors/brown.svg'),
+(1, 'brother', '../../img/categories/family/brother.webp'),
+(1, 'brown', '../../img/categories/colors/brown.webp'),
 (1, 'brush', '../../img/categories/plurals/brush.webp'),
 (1, 'brushes', '../../img/categories/plurals/brushes.webp'),
 (1, 'bull', '../../img/categories/animals/bull.webp'),
@@ -603,10 +603,11 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'cheese', '../../img/categories/food and drinks/cheese.svg'),
 (1, 'cherries', '../../img/categories/fruits/cherries.webp'),
 (1, 'cherry', '../../img/categories/fruits/cherry.webp'),
-(1, 'chest', '../../img/categories/the body/chest.svg'),
+(1, 'chest', '../../img/categories/the body/chest.webp'),
 (1, 'chicken', '../../img/categories/animals/chicken.webp'),
 (1, 'chickenf', '../../img/categories/food and drinks/chickenf.svg'),
 (1, 'child', '../../img/categories/plurals/child.webp'),
+(1, 'children', '../../img/categories/family/children.webp'),
 (1, 'chin', '../../img/categories/the body/chin.svg'),
 (1, 'chocolate', '../../img/categories/food and drinks/chocolate.svg'),
 (1, 'church', '../../img/categories/places/church.webp'),
@@ -620,12 +621,13 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'computers', '../../img/categories/this these/computers.webp'),
 (1, 'confused', '../../img/categories/feelings/confused.webp'),
 (1, 'cookies', '../../img/categories/food and drinks/cookies.svg'),
-(1, 'cousin', '../../img/categories/family/cousin.svg'),
+(1, 'cousinh', '../../img/categories/family/cousinh.webp'),
+(1, 'cousinm', '../../img/categories/family/cousinm.webp'),
 (1, 'crackers', '../../img/categories/food and drinks/crackers.svg'),
 (1, 'crocodile', '../../img/categories/animals/crocodile.webp'),
 (1, 'croissant', '../../img/categories/food and drinks/croissant.svg'),
 (1, 'cucumber', '../../img/categories/food and drinks/cucumber.svg'),
-(1, 'cup', '../../img/categories/a an the/cup.svg'),
+(1, 'cup', '../../img/categories/a an the/cup.webp'),
 (1, 'cupcake', '../../img/categories/food and drinks/cupcake.svg'),
 (1, 'curtains', '../../img/categories/house/curtains.webp'),
 (1, 'cycling', '../../img/categories/sports/cycling.webp'),
@@ -647,7 +649,8 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'drinks', '../../img/categories/food and drinks/drinks.svg'),
 (1, 'duck', '../../img/categories/animals/duck.webp'),
 (1, 'eagle', '../../img/categories/animals/eagle.webp'),
-(1, 'ear', '../../img/categories/the body/ear.svg'),
+(1, 'ear', '../../img/categories/the body/ear.webp'),
+(1, 'ears', '../../img/categories/the body/ears.svg'),
 (1, 'egg', '../../img/categories/food and drinks/egg.svg'),
 (1, 'elbow', '../../img/categories/the body/elbow.svg'),
 (1, 'elephant', '../../img/categories/animals/elephant.webp'),
@@ -655,14 +658,14 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'elves', '../../img/categories/plurals/elves.webp'),
 (1, 'embarrassed', '../../img/categories/feelings/embarrassed.webp'),
 (1, 'engineer', '../../img/categories/ocupations/engineer.webp'),
-(1, 'eraser', '../../img/categories/a an the/eraser.svg'),
+(1, 'eraser', '../../img/categories/a an the/eraser.webp'),
 (1, 'erasers', '../../img/categories/this these/erasers.webp'),
-(1, 'eye', '../../img/categories/the body/eye.svg'),
 (1, 'eyebrows', '../../img/categories/the body/eyebrows.svg'),
 (1, 'eyelashes', '../../img/categories/the body/eyelashes.svg'),
+(1, 'eyes', '../../img/categories/the body/eyes.svg'),
 (1, 'family', '../../img/categories/family/family.svg'),
 (1, 'farmer', '../../img/categories/ocupations/farmer.webp'),
-(1, 'father', '../../img/categories/family/father.svg'),
+(1, 'father', '../../img/categories/family/father.webp'),
 (1, 'feet', '../../img/categories/the body/feet.svg'),
 (1, 'fingers', '../../img/categories/the body/fingers.svg'),
 (1, 'fire_fighter', '../../img/categories/ocupations/fire_fighter.webp'),
@@ -674,6 +677,7 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'fly', '../../img/categories/animals/fly.webp'),
 (1, 'foot', '../../img/categories/the body/foot.svg'),
 (1, 'football', '../../img/categories/sports/football.webp'),
+(1, 'forehead', '../../img/categories/the body/forehead.svg'),
 (1, 'fox', '../../img/categories/animals/fox.webp'),
 (1, 'foxes', '../../img/categories/animals/foxes.webp'),
 (1, 'fries', '../../img/categories/food and drinks/fries.svg'),
@@ -686,15 +690,17 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'giraffe', '../../img/categories/animals/giraffe.webp'),
 (1, 'girl', '../../img/categories/plurals/girl.webp'),
 (1, 'glad', '../../img/categories/feelings/glad.webp'),
-(1, 'glass', '../../img/categories/a an the/glass.svg'),
+(1, 'glass', '../../img/categories/a an the/glass.webp'),
 (1, 'glasses', '../../img/categories/fruits/glasses.svg'),
 (1, 'goat', '../../img/categories/animals/goat.webp'),
 (1, 'golf', '../../img/categories/sports/golf.webp'),
 (1, 'goose', '../../img/categories/animals/goose.webp'),
-(1, 'grandfather', '../../img/categories/family/grandfather.svg'),
-(1, 'grandmother', '../../img/categories/family/grandmother.svg'),
-(1, 'gray', '../../img/categories/colors/gray.svg'),
-(1, 'green', '../../img/categories/colors/green.svg'),
+(1, 'grandchildren', '../../img/categories/family/grandchildren.webp'),
+(1, 'grandfather', '../../img/categories/family/grandfather.webp'),
+(1, 'grandmother', '../../img/categories/family/grandmother.webp'),
+(1, 'grandson', '../../img/categories/family/grandson.webp'),
+(1, 'gray', '../../img/categories/colors/gray.webp'),
+(1, 'green', '../../img/categories/colors/green.webp'),
 (1, 'gym', '../../img/categories/places/gym.webp'),
 (1, 'hair', '../../img/categories/the body/hair.svg'),
 (1, 'hairdresser', '../../img/categories/ocupations/hairdresser.webp'),
@@ -705,7 +711,8 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'hat', '../../img/categories/plurals/hat.webp'),
 (1, 'hats', '../../img/categories/plurals/hats.webp'),
 (1, 'he', '../../img/categories/personal pronouns/he.webp'),
-(1, 'head', '../../img/categories/the body/head.svg'),
+(1, 'head', '../../img/categories/the body/head.webp'),
+(1, 'hip', '../../img/categories/the body/hip.svg'),
 (1, 'hippopotamus', '../../img/categories/animals/hippopotamus.webp'),
 (1, 'hockey', '../../img/categories/sports/hockey.svg'),
 (1, 'horse', '../../img/categories/animals/horse.webp'),
@@ -713,18 +720,19 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'hot', '../../img/categories/feelings/hot.webp'),
 (1, 'hotdog', '../../img/categories/food and drinks/hotdog.svg'),
 (1, 'hotel', '../../img/categories/places/hotel.webp'),
-(1, 'hour', '../../img/categories/a an the/hour.svg'),
-(1, 'house', '../../img/categories/a an the/house.svg'),
+(1, 'hour', '../../img/categories/a an the/hour.webp'),
+(1, 'house', '../../img/categories/a an the/house.webp'),
 (1, 'hungry', '../../img/categories/feelings/hungry.webp'),
 (1, 'i', '../../img/categories/personal pronouns/i.webp'),
 (1, 'ice', '../../img/categories/fonetic abc/ice.webp'),
-(1, 'iceberg', '../../img/categories/a an the/iceberg.svg'),
+(1, 'iceberg', '../../img/categories/a an the/iceberg.webp'),
 (1, 'ice_cream', '../../img/categories/food and drinks/ice_cream.svg'),
 (1, 'ice_cream_shop', '../../img/categories/places/ice_cream_shop.webp'),
 (1, 'in', '../../img/categories/prepositions/in.webp'),
 (1, 'insect', '../../img/categories/fonetic abc/insect.webp'),
 (1, 'inside', '../../img/categories/prepositions/inside.webp'),
 (1, 'in_front_of', '../../img/categories/prepositions/in_front_of.webp'),
+(1, 'iris', '../../img/categories/the body/iris.svg'),
 (1, 'it', '../../img/categories/personal pronouns/it.webp'),
 (1, 'jacket', '../../img/categories/plurals/jacket.webp'),
 (1, 'jackets', '../../img/categories/plurals/jackets.webp'),
@@ -741,15 +749,17 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'laundry', '../../img/categories/places/laundry.webp'),
 (1, 'leaf', '../../img/categories/plurals/leaf.webp'),
 (1, 'leaves', '../../img/categories/plurals/leaves.webp'),
-(1, 'leg', '../../img/categories/the body/leg.svg'),
+(1, 'leg', '../../img/categories/the body/leg.webp'),
 (1, 'lemonade', '../../img/categories/food and drinks/lemonade.svg'),
 (1, 'lettuce', '../../img/categories/food and drinks/lettuce.svg'),
 (1, 'library', '../../img/categories/places/library.webp'),
 (1, 'lion', '../../img/categories/animals/lion.webp'),
 (1, 'mad', '../../img/categories/feelings/mad.webp'),
+(1, 'mall', '../../img/categories/places/mall.webp'),
 (1, 'man', '../../img/categories/plurals/man.webp'),
 (1, 'mango', '../../img/categories/fruits/mango.webp'),
 (1, 'mangoes', '../../img/categories/fruits/mangoes.webp'),
+(1, 'market', '../../img/categories/places/market.webp'),
 (1, 'martial_arts', '../../img/categories/sports/martial_arts.svg'),
 (1, 'match', '../../img/categories/plurals/match.webp'),
 (1, 'matches', '../../img/categories/fruits/matches.webp'),
@@ -762,13 +772,13 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'monkeys', '../../img/categories/animals/monkeys.webp'),
 (1, 'mosquito', '../../img/categories/animals/mosquito.webp'),
 (1, 'mosquitoes', '../../img/categories/animals/mosquitoes.webp'),
-(1, 'mother', '../../img/categories/family/mother.svg'),
+(1, 'mother', '../../img/categories/family/mother.webp'),
 (1, 'mouse', '../../img/categories/animals/mouse.webp'),
 (1, 'mouth', '../../img/categories/the body/mouth.svg'),
 (1, 'museum', '../../img/categories/places/museum.webp'),
 (1, 'nails', '../../img/categories/the body/nails.svg'),
 (1, 'neck', '../../img/categories/the body/neck.svg'),
-(1, 'next to', '../../img/categories/prepositions/next to.webp'),
+(1, 'next_to', '../../img/categories/prepositions/next_to.webp'),
 (1, 'nose', '../../img/categories/the body/nose.svg'),
 (1, 'notebook', '../../img/categories/this these/notebook.webp'),
 (1, 'notebooks', '../../img/categories/this these/notebooks.webp'),
@@ -777,7 +787,7 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'octopus', '../../img/categories/animals/octopus.webp'),
 (1, 'on', '../../img/categories/prepositions/on.webp'),
 (1, 'orange', '../../img/categories/fruits/orange.webp'),
-(1, 'orangec', '../../img/categories/colors/orangec.svg'),
+(1, 'orangec', '../../img/categories/colors/orangec.webp'),
 (1, 'ostrich', '../../img/categories/animals/ostrich.webp'),
 (1, 'owl', '../../img/categories/animals/owl.webp'),
 (1, 'painting', '../../img/categories/house/painting.svg'),
@@ -791,7 +801,7 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'pedestrian_bridge', '../../img/categories/places/pedestrian_bridge.webp'),
 (1, 'pedestrian_crossing', '../../img/categories/places/pedestrian_crossing.webp'),
 (1, 'pedrestrian', '../../img/categories/places/pedrestrian.webp'),
-(1, 'pencil', '../../img/categories/a an the/pencil.svg'),
+(1, 'pencil', '../../img/categories/a an the/pencil.webp'),
 (1, 'pencils', '../../img/categories/this these/pencils.webp'),
 (1, 'penguin', '../../img/categories/animals/penguin.webp'),
 (1, 'people', '../../img/categories/fruits/people.webp'),
@@ -801,7 +811,7 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'pie', '../../img/categories/food and drinks/pie.svg'),
 (1, 'pig', '../../img/categories/animals/pig.webp'),
 (1, 'pilot', '../../img/categories/ocupations/pilot.webp'),
-(1, 'pink', '../../img/categories/colors/pink.svg'),
+(1, 'pink', '../../img/categories/colors/pink.webp'),
 (1, 'pizza', '../../img/categories/food and drinks/pizza.svg'),
 (1, 'police_officer', '../../img/categories/ocupations/police_officer.webp'),
 (1, 'police_station', '../../img/categories/places/police_station.webp'),
@@ -809,12 +819,13 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'potato', '../../img/categories/food and drinks/potato.svg'),
 (1, 'potatoes', '../../img/categories/food and drinks/potatoes.webp'),
 (1, 'pudding', '../../img/categories/food and drinks/pudding.svg'),
-(1, 'purple', '../../img/categories/colors/purple.svg'),
+(1, 'pupil', '../../img/categories/the body/pupil.svg'),
+(1, 'purple', '../../img/categories/colors/purple.webp'),
 (1, 'quick', '../../img/categories/fonetic abc/quick.webp'),
 (1, 'quiet', '../../img/categories/fonetic abc/quiet.webp'),
 (1, 'rabbit', '../../img/categories/animals/rabbit.webp'),
 (1, 'rat', '../../img/categories/animals/rat.webp'),
-(1, 'red', '../../img/categories/colors/red.svg'),
+(1, 'red', '../../img/categories/colors/red.webp'),
 (1, 'restaurant', '../../img/categories/places/restaurant.webp'),
 (1, 'rice', '../../img/categories/food and drinks/rice.svg'),
 (1, 'rooster', '../../img/categories/animals/rooster.webp'),
@@ -845,11 +856,9 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'shoes', '../../img/categories/plurals/shoes.webp'),
 (1, 'shopping_mall', '../../img/categories/places/shopping_mall.webp'),
 (1, 'shoulder', '../../img/categories/the body/shoulder.svg'),
+(1, 'sibblings', '../../img/categories/family/sibblings.webp'),
 (1, 'sick', '../../img/categories/feelings/sick.webp'),
-(1, 'side', '../../img/categories/the body/side.svg'),
-(1, 'sideold', '../../img/categories/the body/sideold.svg'),
-(1, 'sister', '../../img/categories/family/sister.svg'),
-(1, 'sister1', '../../img/categories/family/sister1.svg'),
+(1, 'sister', '../../img/categories/family/sister.webp'),
 (1, 'skating', '../../img/categories/sports/skating.svg'),
 (1, 'skiing', '../../img/categories/sports/skiing.webp'),
 (1, 'skirt', '../../img/categories/plurals/skirt.webp'),
@@ -882,27 +891,31 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'taxi', '../../img/categories/house/taxi.webp'),
 (1, 'tea', '../../img/categories/food and drinks/tea.svg'),
 (1, 'teacher', '../../img/categories/ocupations/teacher.webp'),
-(1, 'teeth', '../../img/categories/the body/teeth.svg'),
+(1, 'teeth', '../../img/categories/the body/teeth.webp'),
 (1, 'tennis', '../../img/categories/sports/tennis.webp'),
 (1, 'they', '../../img/categories/personal pronouns/they.webp'),
 (1, 'thirsty', '../../img/categories/feelings/thirsty.webp'),
+(1, 'thumb', '../../img/categories/the body/thumb.svg'),
 (1, 'tiger', '../../img/categories/animals/tiger.webp'),
 (1, 'tired', '../../img/categories/feelings/tired.webp'),
+(1, 'toes', '../../img/categories/the body/toes.svg'),
 (1, 'tomato', '../../img/categories/food and drinks/tomato.svg'),
 (1, 'tomatoes', '../../img/categories/food and drinks/tomatoes.webp'),
+(1, 'tooth', '../../img/categories/the body/tooth.webp'),
 (1, 'toy', '../../img/categories/plurals/toy.webp'),
 (1, 'toys', '../../img/categories/plurals/toys.webp'),
 (1, 'toy_store', '../../img/categories/places/toy_store.webp'),
+(1, 'to_the_left', '../../img/categories/prepositions/to_the_left.webp'),
 (1, 'to_the_right', '../../img/categories/prepositions/to_the_right.webp'),
 (1, 'traffic_light', '../../img/categories/places/traffic_light.webp'),
-(1, 'tree', '../../img/categories/a an the/tree.svg'),
+(1, 'tree', '../../img/categories/a an the/tree.webp'),
 (1, 'tuna', '../../img/categories/food and drinks/tuna.webp'),
 (1, 'turkey', '../../img/categories/animals/turkey.webp'),
 (1, 'turkeys', '../../img/categories/animals/turkeys.webp'),
 (1, 'turtle', '../../img/categories/animals/turtle.webp'),
-(1, 'umbrella', '../../img/categories/a an the/umbrella.svg'),
+(1, 'umbrella', '../../img/categories/a an the/umbrella.webp'),
 (1, 'umbrellas', '../../img/categories/fruits/umbrellas.webp'),
-(1, 'uncle', '../../img/categories/family/uncle.svg'),
+(1, 'uncle', '../../img/categories/family/uncle.webp'),
 (1, 'under', '../../img/categories/prepositions/under.webp'),
 (1, 'unhappy', '../../img/categories/feelings/unhappy.webp'),
 (1, 'university', '../../img/categories/places/university.webp'),
@@ -912,10 +925,10 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'watch', '../../img/categories/plurals/watch.webp'),
 (1, 'watches', '../../img/categories/plurals/watches.webp'),
 (1, 'water', '../../img/categories/food and drinks/water.svg'),
-(1, 'waterfall', '../../img/categories/a an the/waterfall.svg'),
+(1, 'waterfall', '../../img/categories/a an the/waterfall.webp'),
 (1, 'we', '../../img/categories/personal pronouns/we.webp'),
 (1, 'whale', '../../img/categories/animals/whale.webp'),
-(1, 'white', '../../img/categories/colors/white.svg'),
+(1, 'white', '../../img/categories/colors/white.webp'),
 (1, 'window', '../../img/categories/this these/window.webp'),
 (1, 'windows', '../../img/categories/this these/windows.webp'),
 (1, 'wing', '../../img/categories/fonetic abc/wing.webp'),
@@ -928,7 +941,7 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'wrist', '../../img/categories/the body/wrist.svg'),
 (1, 'write', '../../img/categories/can/write.webp'),
 (1, 'xylophone', '../../img/categories/fonetic abc/xylophone.webp'),
-(1, 'yellow', '../../img/categories/colors/yellow.svg'),
+(1, 'yellow', '../../img/categories/colors/yellow.webp'),
 (1, 'yoga', '../../img/categories/sports/yoga.svg'),
 (1, 'yogurt', '../../img/categories/food and drinks/yogurt.svg'),
 (1, 'you', '../../img/categories/personal pronouns/you.webp'),
@@ -940,7 +953,7 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p100_videos`
+-- Estructura de tabla para la tabla `p100_videos`
 --
 
 CREATE TABLE IF NOT EXISTS `p100_videos` (
@@ -950,7 +963,7 @@ CREATE TABLE IF NOT EXISTS `p100_videos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p100_videos`
+-- Volcado de datos para la tabla `p100_videos`
 --
 
 INSERT INTO `p100_videos` (`Co_Multimedia`, `Nb_videos`, `Tx_Url`) VALUES
@@ -1019,7 +1032,7 @@ INSERT INTO `p100_videos` (`Co_Multimedia`, `Nb_videos`, `Tx_Url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p110_audio`
+-- Estructura de tabla para la tabla `p110_audio`
 --
 
 CREATE TABLE IF NOT EXISTS `p110_audio` (
@@ -1029,7 +1042,7 @@ CREATE TABLE IF NOT EXISTS `p110_audio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p110_audio`
+-- Volcado de datos para la tabla `p110_audio`
 --
 
 INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
@@ -1692,7 +1705,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t010_bitacora`
+-- Estructura de tabla para la tabla `t010_bitacora`
 --
 
 CREATE TABLE IF NOT EXISTS `t010_bitacora` (
@@ -1702,10 +1715,10 @@ CREATE TABLE IF NOT EXISTS `t010_bitacora` (
   `Hr_Entrada` varchar(20) NOT NULL,
   `Hr_Salida` varchar(20) NOT NULL,
   `Nu_Lecciones` int(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `t010_bitacora`
+-- Volcado de datos para la tabla `t010_bitacora`
 --
 
 INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_Entrada`, `Hr_Salida`, `Nu_Lecciones`) VALUES
@@ -1779,20 +1792,14 @@ INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_En
 (68, 6, '2019-10-12', '12:56:37', '12:57:26', 0),
 (69, 7, '2019-10-12', '12:57:39', '01:14:15', 0),
 (70, 8, '2019-10-12', '01:14:26', '01:14:47', 0),
-(71, 1, '2019-10-20', '08:27:28', '', 0),
-(72, 1, '2019-10-21', '08:03:21', '08:09:03', 0),
-(73, 4, '2019-10-21', '08:09:11', '08:13:49', 10),
-(74, 1, '2019-10-21', '08:14:01', '', 0),
-(75, 1, '2019-10-21', '09:12:36', '10:05:31', 3),
-(76, 1, '2019-10-21', '10:05:40', '10:07:12', 2),
-(77, 1, '2019-10-21', '10:07:21', '', 0),
-(78, 1, '2019-10-22', '04:54:15', '05:20:04', 1),
-(79, 1, '2019-10-22', '05:20:11', '', 0);
+(71, 1, '2019-10-21', '07:02:26', '', 0),
+(72, 1, '2019-10-21', '07:02:27', '', 0),
+(73, 4, '2019-10-21', '07:35:31', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t020_juego_tema`
+-- Estructura de tabla para la tabla `t020_juego_tema`
 --
 
 CREATE TABLE IF NOT EXISTS `t020_juego_tema` (
@@ -1807,7 +1814,7 @@ CREATE TABLE IF NOT EXISTS `t020_juego_tema` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `t020_juego_tema`
+-- Volcado de datos para la tabla `t020_juego_tema`
 --
 
 INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
@@ -3419,26 +3426,26 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (20, 17, 140, 'uncle', NULL, 'uncle', '', 'Uncle'),
 (20, 17, 140, 'aunt', NULL, 'aunt', '', 'Aunt'),
 (20, 17, 140, 'nephew', NULL, 'cousinh', '', 'Nephew'),
-(5, 17, 141, 'grandmother', NULL, 'grandmother', 'Grandmother', 'grandmother'),
-(5, 17, 141, 'grandfather', NULL, 'grandfather', 'Grandfather', 'grandfather'),
-(5, 17, 141, 'grandchildren', NULL, 'grandchildren', 'Grandchildren', 'grandchildren'),
-(5, 17, 141, 'grandson', NULL, 'grandson', 'Grandson', 'grandson'),
-(5, 17, 141, 'granddaughter', NULL, 'sister', 'Granddaughter', 'granddaughter'),
-(5, 17, 141, 'son', NULL, 'i', 'Son', 'son'),
-(5, 17, 141, 'daughter', NULL, 'sister', 'Daughter', 'daughter'),
-(5, 17, 141, 'mother', NULL, 'mother', 'Mother', 'mother'),
-(5, 17, 141, 'father', NULL, 'father', 'Father', 'father'),
-(5, 17, 141, 'uncle', NULL, 'uncle', 'Uncle', 'uncle'),
-(5, 17, 141, 'aunt', NULL, 'aunt', 'Aunt', 'aunt'),
-(5, 17, 141, 'nephew', NULL, 'cousinh', 'Nephew', 'nephew'),
-(5, 17, 141, 'niece', NULL, 'cousinm', 'Niece', 'niece'),
-(5, 17, 141, 'cousin', NULL, 'cousinm', 'Cousin', 'cousin'),
-(5, 17, 141, 'brother', NULL, 'brother', 'Brother', 'brother'),
-(5, 17, 141, 'sister', NULL, 'sister', 'Sister', 'sister'),
-(5, 17, 141, 'sibblings', NULL, 'sibblings', 'Siblings', 'siblings'),
-(5, 17, 141, 'children', NULL, 'children', 'Children', 'children'),
-(5, 17, 141, 'husband', NULL, 'father', 'Husband', 'husband'),
-(5, 17, 141, 'wife', NULL, 'mother', 'Wife', 'wife'),
+(9, 17, 141, 'grandmother', NULL, 'grandmother', 'Grandmother/Granddaughter', 'Grandmother'),
+(9, 17, 141, 'grandfather', NULL, 'grandfather', 'Grandfather/Uncle', 'Grandfather'),
+(9, 17, 141, 'grandchildren', NULL, 'grandchildren', 'Grandchildren/Brother', 'Grandchildren'),
+(9, 17, 141, 'grandson', NULL, 'grandson', 'Grandson/Father', 'Grandson'),
+(9, 17, 141, 'granddaughter', NULL, 'sister', 'Granddaughter/Cousin', 'Granddaughter'),
+(9, 17, 141, 'son', NULL, 'i', 'Son/Wife', 'Son'),
+(9, 17, 141, 'daughter', NULL, 'sister', 'Daughter/Aunt', 'Daughter'),
+(9, 17, 141, 'mother', NULL, 'mother', 'Mother/Grandmother', 'Mother'),
+(9, 17, 141, 'father', NULL, 'father', 'Father/Cousin', 'Father'),
+(9, 17, 141, 'uncle', NULL, 'uncle', 'Uncle/Grandfather', 'Uncle'),
+(9, 17, 141, 'aunt', NULL, 'aunt', 'Aunt/Niece', 'Aunt'),
+(9, 17, 141, 'nephew', NULL, 'cousinh', 'Nephew/Sister', 'Nephew'),
+(9, 17, 141, 'niece', NULL, 'cousinm', 'Niece/Sister', 'Niece'),
+(9, 17, 141, 'cousin', NULL, 'cousinm', 'Cousin/Brother', 'Cousin'),
+(9, 17, 141, 'brother', NULL, 'brother', 'Brother/Cousin', 'Brother'),
+(9, 17, 141, 'sister', NULL, 'sister', 'Sister/Aunt', 'Sister'),
+(9, 17, 141, 'sibblings', NULL, 'sibblings', 'Siblings/Nephew', 'Siblings'),
+(9, 17, 141, 'children', NULL, 'children', 'Children/Siblings', 'Children'),
+(9, 17, 141, 'husband', NULL, 'father', 'Husband/Grandson', 'Husband'),
+(9, 17, 141, 'wife', NULL, 'mother', 'Wife/Granddaughter', 'Wife'),
 (17, 17, 142, 'grandmother', NULL, 'grandmother', '', 'grandmother/grandma'),
 (17, 17, 142, 'grandfather', NULL, 'grandfather', '', 'grandfather'),
 (17, 17, 142, 'grandchildren', NULL, 'grandchildren', '', 'grandchildren'),
@@ -3480,40 +3487,40 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (21, 17, 143, 'husband', NULL, 'father', 'B-A-N-D-S-H-U', 'husband'),
 (21, 17, 143, 'wife', NULL, 'mother', 'E-W-I-F', 'wife'),
 (1, 18, 144, NULL, 'video181', NULL, '', ''),
-(5, 18, 145, '2_29', NULL, '2_29', '', '2:29'),
-(5, 18, 145, '4_52', NULL, '4_52', '', '4:52'),
-(5, 18, 145, '7_33', NULL, '7_33', '', '7:33'),
-(5, 18, 145, '5_21', NULL, '5_21', '', '5:21'),
-(5, 18, 145, '6_01', NULL, '6_01', '', '6:01'),
-(5, 18, 145, '2_06', NULL, '2_06', '', '2:06'),
-(5, 18, 145, '4_15', NULL, '4_15', '', '4:15'),
-(5, 18, 145, '11_00', NULL, '11_00', '', '11:00'),
-(5, 18, 145, '8_45', NULL, '8_45', '', '8:45'),
-(5, 18, 145, '1_30', NULL, '1_30', '', '1:30'),
-(5, 18, 145, '10_54', NULL, '10_54', '', '10:54'),
-(5, 18, 145, '8_11', NULL, '8_11', '', '8:11'),
-(5, 18, 145, '1_55', NULL, '1_55', '', '1:55'),
-(5, 18, 145, '3_03', NULL, '3_03', '', '3:03'),
-(5, 18, 145, '6_00', NULL, '6_00', '', '6:00'),
-(5, 18, 145, '7_30', NULL, '7_30', '', '7:30'),
-(5, 18, 145, '4_30', NULL, '4_30', '', '4:30'),
-(5, 18, 145, '2_50', NULL, '2_50', '', '2:50'),
-(5, 18, 145, '5_05', NULL, '5_05', '', '5:05'),
-(5, 18, 145, '3_00', NULL, '3_00', '', '3:00'),
-(5, 18, 145, '11_59', NULL, '11_59', '', '11:59'),
+(5, 18, 145, '2_29', NULL, NULL, '2:29pm', 'Good-afternoon'),
+(5, 18, 145, '4_52', NULL, NULL, '4:52pm', 'Good-afternoon'),
+(5, 18, 145, '7_33', NULL, NULL, '7:33pm', 'Good-evening'),
+(5, 18, 145, '5_21', NULL, NULL, '5:21pm', 'Good-afternoon'),
+(5, 18, 145, '6_01', NULL, NULL, '6:01pm', 'Good-afternoon'),
+(5, 18, 145, '2_06', NULL, NULL, '2:06pm', 'Good-afternoon'),
+(5, 18, 145, '4_15', NULL, NULL, '4:15pm', 'Good-afternoon'),
+(5, 18, 145, '11_00', NULL, NULL, '11:00am', 'Good-morning'),
+(5, 18, 145, '8_45', NULL, NULL, '8:45am', 'Good-morning'),
+(5, 18, 145, '1_30', NULL, NULL, '1:30pm', 'Good-afternoon'),
+(5, 18, 145, '10_54', NULL, NULL, '10:54pm', 'Good-night'),
+(5, 18, 145, '8_11', NULL, NULL, '8:11am', 'Good-morning'),
+(5, 18, 145, '1_55', NULL, NULL, '1:55pm', 'Good-afternoon'),
+(5, 18, 145, '3_03', NULL, NULL, '3:03pm', 'Good-afternoon'),
+(5, 18, 145, '6_00', NULL, NULL, '6:00pm', 'Good-afternoon'),
+(5, 18, 145, '7_30', NULL, NULL, '7:30am', 'Good-morning'),
+(5, 18, 145, '4_30', NULL, NULL, '4:30pm', 'Good-afternoon'),
+(5, 18, 145, '2_50', NULL, NULL, '2:50pm', 'Good-afternoon'),
+(5, 18, 145, '5_05', NULL, NULL, '5:05pm', 'Good-afternoon'),
+(5, 18, 145, '3_00', NULL, NULL, '3:00pm', 'Good-afternoon'),
+(5, 18, 145, '11_59', NULL, NULL, '11:59pm', 'Good-night'),
 (17, 18, 146, 'what_time_is_it', NULL, '3_30', '', 'three thirty'),
 (17, 18, 146, 'what_time_is_it', NULL, '5_51', '', 'five fifty one'),
 (17, 18, 146, 'what_time_is_it', NULL, '8_32', '', 'eight thirty two'),
 (17, 18, 146, 'what_time_is_it', NULL, '4_20', '', 'four twenty'),
 (17, 18, 146, 'what_time_is_it', NULL, '7_02', '', 'seven ou two'),
-(17, 18, 146, 'what_time_is_it', NULL, '1_05', '', 'one ou five'),
+(17, 18, 146, 'what_time_is_it', NULL, '1_05', '', 'one ou five');
+INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
 (17, 18, 146, 'what_time_is_it', NULL, '5_16', '', 'five sixteen'),
 (17, 18, 146, 'what_time_is_it', NULL, '10_58', '', 'ten fifty eight'),
 (17, 18, 146, 'what_time_is_it', NULL, '9_46', '', 'nine forty six'),
 (17, 18, 146, 'what_time_is_it', NULL, '12_32', '', 'twelve thirty two'),
 (17, 18, 146, 'what_time_is_it', NULL, '11_55', '', 'eleven fifty five'),
-(17, 18, 146, 'what_time_is_it', NULL, '9_12', '', 'nine twelve');
-INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
+(17, 18, 146, 'what_time_is_it', NULL, '9_12', '', 'nine twelve'),
 (17, 18, 146, 'what_time_is_it', NULL, '2_59', '', 'two fifty nine'),
 (17, 18, 146, 'what_time_is_it', NULL, '3_15', '', 'three fifteen'),
 (17, 18, 146, 'what_time_is_it', NULL, '5_00', '', 'five o''clock'),
@@ -3570,7 +3577,7 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t030_cobranza`
+-- Estructura de tabla para la tabla `t030_cobranza`
 --
 
 CREATE TABLE IF NOT EXISTS `t030_cobranza` (
@@ -3584,7 +3591,7 @@ CREATE TABLE IF NOT EXISTS `t030_cobranza` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t040_retos`
+-- Estructura de tabla para la tabla `t040_retos`
 --
 
 CREATE TABLE IF NOT EXISTS `t040_retos` (
@@ -3597,7 +3604,7 @@ CREATE TABLE IF NOT EXISTS `t040_retos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `t040_retos`
+-- Volcado de datos para la tabla `t040_retos`
 --
 
 INSERT INTO `t040_retos` (`Co_Reto`, `Co_Usuario`, `Co_Tema`, `Nu_Identificacion`, `Fe_Ejecucion`, `St_Reto`) VALUES
@@ -3613,7 +3620,7 @@ INSERT INTO `t040_retos` (`Co_Reto`, `Co_Usuario`, `Co_Tema`, `Nu_Identificacion
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t080_usuario_institucion`
+-- Estructura de tabla para la tabla `t080_usuario_institucion`
 --
 
 CREATE TABLE IF NOT EXISTS `t080_usuario_institucion` (
@@ -3623,7 +3630,7 @@ CREATE TABLE IF NOT EXISTS `t080_usuario_institucion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `t080_usuario_institucion`
+-- Volcado de datos para la tabla `t080_usuario_institucion`
 --
 
 INSERT INTO `t080_usuario_institucion` (`Co_Usuario`, `Nu_Identificacion`, `Fe_Ingreso`) VALUES
@@ -3640,7 +3647,7 @@ INSERT INTO `t080_usuario_institucion` (`Co_Usuario`, `Nu_Identificacion`, `Fe_I
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t090_usuario_nivel`
+-- Estructura de tabla para la tabla `t090_usuario_nivel`
 --
 
 CREATE TABLE IF NOT EXISTS `t090_usuario_nivel` (
@@ -3654,7 +3661,7 @@ CREATE TABLE IF NOT EXISTS `t090_usuario_nivel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `t090_usuario_nivel`
+-- Volcado de datos para la tabla `t090_usuario_nivel`
 --
 
 INSERT INTO `t090_usuario_nivel` (`Co_Usuario`, `Co_Nivel`, `Progreso`, `Se_Actual`, `Te_Actual`, `Horas`, `Le_Actual`) VALUES
@@ -3669,11 +3676,11 @@ INSERT INTO `t090_usuario_nivel` (`Co_Usuario`, `Co_Nivel`, `Progreso`, `Se_Actu
 (9, 1, 0, 0, 0, 0, '');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `m210_usuario`
+-- Indices de la tabla `m210_usuario`
 --
 ALTER TABLE `m210_usuario`
   ADD PRIMARY KEY (`Co_Usuario`),
@@ -3682,84 +3689,84 @@ ALTER TABLE `m210_usuario`
   ADD KEY `FK_M210_P080_ROL` (`Co_Rol`);
 
 --
--- Indexes for table `m220_alumno`
+-- Indices de la tabla `m220_alumno`
 --
 ALTER TABLE `m220_alumno`
   ADD PRIMARY KEY (`Co_Alumno`);
 
 --
--- Indexes for table `p020_institucion`
+-- Indices de la tabla `p020_institucion`
 --
 ALTER TABLE `p020_institucion`
   ADD PRIMARY KEY (`Nu_Identificacion`);
 
 --
--- Indexes for table `p030_nivel`
+-- Indices de la tabla `p030_nivel`
 --
 ALTER TABLE `p030_nivel`
   ADD PRIMARY KEY (`Co_Nivel`);
 
 --
--- Indexes for table `p040_temas`
+-- Indices de la tabla `p040_temas`
 --
 ALTER TABLE `p040_temas`
   ADD PRIMARY KEY (`Co_Tema`),
   ADD KEY `FK_P040_P030_Nivel` (`Co_Nivel`);
 
 --
--- Indexes for table `p050_juego`
+-- Indices de la tabla `p050_juego`
 --
 ALTER TABLE `p050_juego`
   ADD PRIMARY KEY (`Co_Juego`);
 
 --
--- Indexes for table `p060_multimedia`
+-- Indices de la tabla `p060_multimedia`
 --
 ALTER TABLE `p060_multimedia`
   ADD PRIMARY KEY (`Co_Multimedia`);
 
 --
--- Indexes for table `p070_orden`
+-- Indices de la tabla `p070_orden`
 --
 ALTER TABLE `p070_orden`
   ADD PRIMARY KEY (`Co_Orden`),
   ADD KEY `FK_P070_P040_Temas` (`Co_Tema`);
 
 --
--- Indexes for table `p080_rol`
+-- Indices de la tabla `p080_rol`
 --
 ALTER TABLE `p080_rol`
   ADD PRIMARY KEY (`Co_Rol`);
 
 --
--- Indexes for table `p090_imagenes`
+-- Indices de la tabla `p090_imagenes`
 --
 ALTER TABLE `p090_imagenes`
   ADD PRIMARY KEY (`Nb_imagenes`),
   ADD KEY `FK_P090_P060_Multimedia` (`Co_Multimedia`);
 
 --
--- Indexes for table `p100_videos`
+-- Indices de la tabla `p100_videos`
 --
 ALTER TABLE `p100_videos`
   ADD PRIMARY KEY (`Nb_videos`),
   ADD KEY `FK_P100_P060_Multimedia` (`Co_Multimedia`);
 
 --
--- Indexes for table `p110_audio`
+-- Indices de la tabla `p110_audio`
 --
 ALTER TABLE `p110_audio`
   ADD PRIMARY KEY (`Nb_audio`),
   ADD KEY `FK_P110_P060_Multimedia` (`Co_Multimedia`);
 
 --
--- Indexes for table `t010_bitacora`
+-- Indices de la tabla `t010_bitacora`
 --
 ALTER TABLE `t010_bitacora`
   ADD PRIMARY KEY (`Co_Bitacora`);
 
 --
--- Indexes for table `t020_juego_tema`
+-- Indices de la tabla `t020_juego_tema`
 --
 ALTER TABLE `t020_juego_tema`
   ADD KEY `FK_P020_P050_Juego` (`Co_Juego`),
@@ -3770,14 +3777,14 @@ ALTER TABLE `t020_juego_tema`
   ADD KEY `FK_P020_P090_imagenes` (`Nb_imagenes`);
 
 --
--- Indexes for table `t030_cobranza`
+-- Indices de la tabla `t030_cobranza`
 --
 ALTER TABLE `t030_cobranza`
   ADD PRIMARY KEY (`Co_Cobranza`),
   ADD KEY `FK_T030_P020_Institucion` (`Nu_Identificacion`);
 
 --
--- Indexes for table `t040_retos`
+-- Indices de la tabla `t040_retos`
 --
 ALTER TABLE `t040_retos`
   ADD PRIMARY KEY (`Co_Reto`,`Co_Usuario`),
@@ -3785,7 +3792,7 @@ ALTER TABLE `t040_retos`
   ADD KEY `FK_t040_t080_usuario_institucion_fk` (`Nu_Identificacion`);
 
 --
--- Indexes for table `t080_usuario_institucion`
+-- Indices de la tabla `t080_usuario_institucion`
 --
 ALTER TABLE `t080_usuario_institucion`
   ADD PRIMARY KEY (`Co_Usuario`,`Nu_Identificacion`),
@@ -3793,53 +3800,53 @@ ALTER TABLE `t080_usuario_institucion`
   ADD KEY `FK_T080_P020_Institucion` (`Nu_Identificacion`);
 
 --
--- Indexes for table `t090_usuario_nivel`
+-- Indices de la tabla `t090_usuario_nivel`
 --
 ALTER TABLE `t090_usuario_nivel`
   ADD KEY `FK_T090_M210_Usuario` (`Co_Usuario`),
   ADD KEY `FK_T090_P030_Nivel` (`Co_Nivel`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `m210_usuario`
+-- AUTO_INCREMENT de la tabla `m210_usuario`
 --
 ALTER TABLE `m210_usuario`
   MODIFY `Co_Usuario` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT for table `m220_alumno`
+-- AUTO_INCREMENT de la tabla `m220_alumno`
 --
 ALTER TABLE `m220_alumno`
   MODIFY `Co_Alumno` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
--- AUTO_INCREMENT for table `p030_nivel`
+-- AUTO_INCREMENT de la tabla `p030_nivel`
 --
 ALTER TABLE `p030_nivel`
   MODIFY `Co_Nivel` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `p040_temas`
+-- AUTO_INCREMENT de la tabla `p040_temas`
 --
 ALTER TABLE `p040_temas`
   MODIFY `Co_Tema` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
--- AUTO_INCREMENT for table `p050_juego`
+-- AUTO_INCREMENT de la tabla `p050_juego`
 --
 ALTER TABLE `p050_juego`
   MODIFY `Co_Juego` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 --
--- AUTO_INCREMENT for table `p080_rol`
+-- AUTO_INCREMENT de la tabla `p080_rol`
 --
 ALTER TABLE `p080_rol`
   MODIFY `Co_Rol` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `t010_bitacora`
+-- AUTO_INCREMENT de la tabla `t010_bitacora`
 --
 ALTER TABLE `t010_bitacora`
-  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=80;
+  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
 --
--- AUTO_INCREMENT for table `t030_cobranza`
+-- AUTO_INCREMENT de la tabla `t030_cobranza`
 --
 ALTER TABLE `t030_cobranza`
   MODIFY `Co_Cobranza` int(11) NOT NULL AUTO_INCREMENT;
