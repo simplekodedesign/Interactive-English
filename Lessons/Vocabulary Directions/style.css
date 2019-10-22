@@ -195,6 +195,10 @@
     /* z-index: 3; */
 }
 
+.pasoP > span {
+    display: none;
+}
+
 /*----------------------Elementos de calles-------------------*/
 /*BUSES*/
 
@@ -308,6 +312,7 @@ i {
     background-color: rgb(136, 189, 233);
     text-align: center;
     width: auto;
+    text-transform: capitalize;
 }
 
 #esp::before {
