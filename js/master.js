@@ -148,7 +148,7 @@ var victoryMessage = function() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       rocket.style.setProperty("animation-duration", durationRocket + "s");
-      rocket.style.setProperty("animation-name", "rocketAnimation");
+      rocket.style.setProperty("animation-name", "rocketAnimation1");
       setTimeout(() => {
         rocketMessage.style.setProperty("opacity", "1");
         console.log("This is happening");

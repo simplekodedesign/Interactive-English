@@ -25,17 +25,18 @@
     }
 
     //saber si se debe revisar un reto
-    if($_SESSION["te_actual"]==$coTema&&$co==$end&&$_SESSION["se_actual"]>=$end){
+    if($_SESSION["te_actual"] == $coTema && $co == $end && $_SESSION["se_actual"] >= $end){
       //buscar la informacion del reto actual del usuario
       $results = Connection::request("select St_Reto,Co_Tema from t040_retos where Co_Usuario = ".$_SESSION["co_usuario"]);
-      if($results->rowCount()>0){
+      if($results->rowCount() > 0){
         $data = $results->fetch(PDO::FETCH_ASSOC);
         //saber si el reto esta activo
-        if($data["Co_Tema"]<$_SESSION["te_actual"]){ //saber si es un reto anterior
+        if($data["Co_Tema"] < $_SESSION["te_actual"]){ //saber si es un reto anterior
           return $lsig;
-        }else if($data["Co_Tema"]==$_SESSION["te_actual"]){ //saber si el reto pertenece al tema que esta terminando
-            if(!isset($_SESSION["reto"]))$_SESSION["reto"]=0;
-            return "challenge.php?ini=".$ini."&end=".$end."&th=".$coTema;
+        }else if($data["Co_Tema"] == $_SESSION["te_actual"]){ //saber si el reto pertenece al tema que esta terminando
+          if(!isset($_SESSION["reto"]))$_SESSION["reto"] = 0;
+          // return "challenge.php?ini=".$ini."&end=".$end."&th=".$coTema;
+          return "home.php?url=lessons.php&th=".$_SESSION["te_actual"];
         }else{
           return "home.php?url=lessons.php&th=".$_SESSION["te_actual"];
         }

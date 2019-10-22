@@ -59,16 +59,20 @@
 
   $op = 80;
   $url = "#";
-  if($_SESSION["te_actual"]>$_GET["th"] || ($_SESSION["te_actual"]==$temaReto&&$_SESSION["se_actual"]>$totalLec&&$stReto=='A')){
+  $currentClass = "";
+  if($_SESSION["te_actual"] > $_GET["th"] || ($_SESSION["te_actual"] == $temaReto && $_SESSION["se_actual"] > $totalLec && $stReto=='A')){
       $op = 0;
       $url = "challenge.php?ini=".$iniTema."&end=".$totalLec."&th=".$_GET["th"];
+      if($_SESSION["te_actual"] == $_GET["th"]) {
+        $currentClass = "current";
+      }
   }
 
   echo "
     <div class='titlesLessons'>
       <h1>".$Nb_Tema."</h1>
     </div>
-    <a href='".$url."'><img src='../../img/lessons/reto.svg' alt='Reto' id='retoImage'></a>
+    <a href='".$url."' class='".$currentClass."'><img src='../../img/lessons/reto.svg' alt='Reto' id='retoImage'></a>
     <!--<div id='reto'>
     </div>-->
     <div class='mainContainer'>

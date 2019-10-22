@@ -29,11 +29,11 @@
     }
   }else{
     //juegos que no se tomaran en encuentra
-    $deny=[1,2,8];
+    $deny=[1, 2, 8, 12, 23, 22, 7];
 
     //generar leccion aleatoria
     do{
-      $coa=rand($_GET["ini"],$_GET["end"]);
+      $coa = rand($_GET["ini"],$_GET["end"]);
 
       //buscar el codigo de juego de la leccion seleccionada
       $results=Connection::request("select Co_Juego from p070_orden where Co_Orden=".$coa);
@@ -43,16 +43,23 @@
         }
       }
       $b=false;
-      for($i=0;$i<count($deny);$i++)if($coJuego==$deny[$i])$b=true;
+      for($i = 0; $i < count($deny); $i++) {
+        if($coJuego == $deny[$i])$b=true;
+      }
       $b2=false;
-      if(isset($_SESSION["reto_aplicado"]))for($i=0;$i<count($_SESSION["reto_aplicado"]);$i++)if($coa==$_SESSION["reto_aplicado"][$i])$b2=true;
-    }while($b||$b2);
+
+      if (isset($_SESSION["reto_aplicado"])) {
+        for($i = 0; $i < count($_SESSION["reto_aplicado"]); $i++) {
+          if($coa == $_SESSION["reto_aplicado"][$i])$b2 = true;
+        }
+      }
+    }while($b || $b2);
 
     //buscar el nombre del juego para redireccionar
     $results=Connection::request("select Nb_Juego from p050_juego where Co_Juego=".$coJuego);
-    if($results->rowCount()>0){
+    if($results->rowCount() > 0){
       while($res=$results->fetch(PDO::FETCH_ASSOC)){
-        $nbJuego=$res["Nb_Juego"];
+        $nbJuego = $res["Nb_Juego"];
       }
     }
 

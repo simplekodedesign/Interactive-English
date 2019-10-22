@@ -7,13 +7,13 @@
 
   //Asegurarse del https
   /*if( !isset($_SERVER['HTTPS'] ) )
-      echo "<script>location = 'https://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]."'</script>";*/
+    echo "<script>location = 'https://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]."'</script>";*/
 
   //Realizar conexion a base de datos
   Connection::connect();
 
 
-//  echo "<script>alert('".$_SESSION["user"]."')</script>";
+  // echo "<script>alert('".$_SESSION["user"]."')</script>";
 
   if (!isset($_SESSION['user'])){
     echo "<script>window.location='index.php'</script>";
@@ -38,10 +38,10 @@
     $lact = $_SESSION["le_actual"];
 
     if(!isset($_SESSION["reto"])){
-      $lsig=urlBtnSig($_GET["co"],$lsig);
-    }else if(!empty($_GET["ini"])&&!empty($_GET["end"])){
-      $lsig="challenge.php?ini=".$_GET["ini"]."&end=".$_GET["end"]."&th=".$_GET["th"];
-    }else{
+      $lsig = urlBtnSig($_GET["co"],$lsig);
+    }else if(!empty($_GET["ini"]) && !empty($_GET["end"])) {
+      $lsig = "challenge.php?ini=".$_GET["ini"]."&end=".$_GET["end"]."&th=".$_GET["th"];
+    }else {
       if(isset($_SESSION["reto"]))unset($_SESSION["reto"]);
       if(isset($_SESSION["reto_aplicado"]))unset($_SESSION["reto_aplicado"]);
     }
@@ -52,7 +52,7 @@
   }
 
   //variable para recargar los js y css
-  $q=rand();
+  $q = rand();
 
   //variable del reto recien activado
 ?>
