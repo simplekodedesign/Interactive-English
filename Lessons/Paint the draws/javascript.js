@@ -7,8 +7,8 @@ class ShapeItem {
 }
 
 const lessonColors = [
-  {rgb: "rgb(128, 128 ,128)", name: "gray"},
-  {rgb: "rgb(255, 0, 0)", name: "red"},
+  {rgb: "#808080", name: "gray"},
+  {rgb: "#ff0000", name: "red"},
   {rgb: "rgb(255, 146, 0)", name: "orange"},
   {rgb: "rgb(255, 255, 255)", name: "white"},
   {rgb: "rgb(0, 255, 0)", name: "green"},
@@ -51,12 +51,25 @@ window.addEventListener("load", function () {
 
 function createTable () {
   let div;
-  for (var i = 0; i < tableLength; i++) {
-    div = document.createElement("div");
+  for (let i = 0; i < tableLength; i++) {
+    div = document.createElement("object");
+    div.setAttribute("data", "../../img/categories/colors/color.svg")
+    div.setAttribute("type", "image/svg+xml")
+    div.setAttribute("colorchote", lessonColors[i].rgb)
+
     div.classList.add("tableItem");
-    div.style.setProperty("background-color", lessonColors[i].rgb);
     div.setAttribute("colorName", lessonColors[i].name);
-    div.addEventListener("click", select);
+
+    div.addEventListener("load", function () {
+      let divC = this.contentDocument.getElementsByTagName("svg")[0]
+      let color = this.getAttribute("colorchote")
+      let colorName = this.getAttribute("colorName")
+
+      divC.setAttribute("colorName", colorName);
+      divC.addEventListener("click", select);
+      divC.getElementsByClassName('color')[0].setAttribute("fill", color);
+      divC.getElementsByClassName('color')[1].setAttribute("fill", color);
+    })
 
     tableContainer.appendChild(div);
   }
@@ -77,7 +90,6 @@ function createShapes () {
   items.sort(function (a,b) {
     return 0.5 - Math.random();
   });
-  console.log(items);
 
   for (let j = 0; j < 3; j++) {
     div = document.createElement("div");
@@ -88,7 +100,7 @@ function createShapes () {
     div.addEventListener("click", select);
 
     div.appendChild(text);
-    
+
     drawsContainer.appendChild(div);
     currentItems++;
   }
@@ -100,18 +112,21 @@ function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-
-
-function select () {
-  if(this.parentElement == tableContainer) {
-    col1 = this;
+function select (){
+  console.log(this.getAttribute("id"))
+  if(this.getAttribute("id") == "Capa_1") {
+    col1 = this
     // col1 = this.getAttribute("colorName");
+    console.log("parent1");
   } else if (this.parentElement == drawsContainer) {
     col2 = this;
     // col2 = this.firstElementChild.innerHTML;
+    console.log("parent2");
   }
 
-  if(col1 && col2) { 
+  console.log(col1, col2);
+
+  if(col1 && col2) {
     check();
   }
 }
@@ -120,7 +135,7 @@ function check () {
   console.log(currentItems + " " + itemsLength);
   if (col1.getAttribute("colorName") == col2.firstElementChild.innerHTML) {
     col2.removeEventListener("click", select);
-    col2.style.setProperty("background-color", col1.style.getPropertyValue("background-color"));
+    col2.style.setProperty("background-color", col1.getElementsByClassName('color')[0].getAttribute("fill"));
     currentItems++;
     if (currentItems < itemsLength + 2) {
       if(currentItems < itemsLength) {
@@ -134,15 +149,15 @@ function check () {
         return;
       }
     } else {
-      alert("You Won");
+      victoryMessage()
     }
-    
+
   } else {
     col1 = undefined;
     col2 = undefined;
   }
 }
-  
+
 function statusRefresher (prevCol1, prevCol2) {
   prevCol2.classList.replace(prevCol2.classList[1], items[currentItems].shape);
   prevCol2.firstElementChild.innerHTML = items[currentItems].name;

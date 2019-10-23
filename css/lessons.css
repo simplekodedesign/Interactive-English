@@ -9,8 +9,8 @@ section{
 
 .mainContainer {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .titles{
@@ -57,6 +57,7 @@ section{
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
   padding: 20px;
+  padding-right: 0;
 }
 
 .lesson {
@@ -140,8 +141,6 @@ section{
   width: 70%;
   max-height: 350px;
   position: relative;
-  /* top: 50%;
-  left: 10%; */
   z-index: 1;
 }
 
@@ -201,11 +200,6 @@ section{
 
 
 @media screen and (max-width : 910px) {
-  .mainContainer {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
   .titlesLessons a {
    width: 75px;
   }
