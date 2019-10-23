@@ -67,6 +67,7 @@
         $currentClass = "current";
       }
   }
+  // alert('".$url."  ".$_SESSION["te_actual"]." ".$temaReto." ".$totalLec."')
 
   echo "
     <div class='titlesLessons'>
