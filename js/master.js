@@ -150,8 +150,7 @@ var victoryMessage = function() {
       rocket.style.setProperty("animation-duration", durationRocket + "s");
       rocket.style.setProperty("animation-name", "rocketAnimation1");
       setTimeout(() => {
-        rocketMessage.style.setProperty("opacity", "1");
-        console.log("This is happening");
+        // rocketMessage.style.setProperty("opacity", "1");
         congratsMessage();
       }, (durationRocket*1000) + 500);
       document.getElementById("lSigu").style.display="flex";
