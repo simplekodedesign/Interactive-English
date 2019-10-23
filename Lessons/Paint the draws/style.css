@@ -29,11 +29,16 @@ body {
 }
 
 #colorsContainer {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   column-gap: 5px;
-  row-gap: 10px;
-  width: auto;
+  row-gap: 10px; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 650px;
+  width: 100%;
+  min-width: 320px;
   height: auto;
 }
 
