@@ -67,13 +67,13 @@
         $currentClass = "current";
       }
   }
-  // alert('".$url."  ".$_SESSION["te_actual"]." ".$temaReto." ".$totalLec."')
-
   echo "
     <div class='titlesLessons'>
       <h1>".$Nb_Tema."</h1>
     </div>
-    <a href='".$url."' class='".$currentClass."'><img src='../../img/lessons/reto.svg' alt='Reto' id='retoImage'></a>
+    <a href='".$url."' class='".$currentClass."' id='retoImage'>
+      <img src='../../img/lessons/reto.svg' alt='Reto'>
+    </a>
     <!--<div id='reto'>
     </div>-->
     <div class='mainContainer'>

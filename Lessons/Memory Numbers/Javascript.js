@@ -34,7 +34,7 @@ var evento = function  () {
         firstCard = this;
         if(cord != 6)aud.src="../../aud/categories/numbers/"+this.lastElementChild.innerHTML+"c.mp3";
         if(cord == 6)aud.src="../../aud/categories/abc/"+this.lastElementChild.innerHTML.toLowerCase()+".mp3";
-        aud.play();
+        // aud.play();
         if (c1 != undefined && c2 != undefined){
             container.lastElementChild.style.zIndex  = "5";
             setTimeout(check, 1500, c1, c2);

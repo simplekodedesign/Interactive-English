@@ -26,6 +26,10 @@
 	margin: 7px auto;
 }
 
+.write {
+	min-width: 200px;
+}
+
 .letra{
 	width: 100%;
 	font-size: 3em;

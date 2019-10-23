@@ -19,6 +19,9 @@
 }
 
 .letra{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 	cursor: pointer;
 	height: 400px;

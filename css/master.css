@@ -701,6 +701,22 @@ footer p{
 
 /*-----------------------------Responsive------------------------------------*/
 
+@media screen and (max-width : 900px){
+  @keyframes rocketAnimation1 {
+    0% {
+
+    }
+  
+    80% {
+      transform: rotate(0deg) translate(calc(50vw - 50px), calc(50vh - 50px)) rotate(0deg);    }
+  
+    100% {
+      transform: rotate(0deg) translate(calc(50vw - 50px), calc(-50vh + 8vh + 150px)) rotate(0deg);
+    }
+  }
+}
+
+
 @media screen and (max-width : 710px){
   header{
     justify-content: space-between;
@@ -743,6 +759,7 @@ footer p{
 
   .hButton ul{
     left: -100%;
+    top: 0;
   }
 
   .B_perfil{
@@ -750,6 +767,10 @@ footer p{
     margin-right: 10px;
     position: relative;
     padding-left: 0;
+  }
+
+  .B_perfil ul {
+    top: 100%;
   }
 
   .B_perfil::before{
@@ -784,13 +805,13 @@ footer p{
   }
 
   #lPrev span{
-    border-bottom: 35px solid var(--aquamarina);
+    border-bottom: 35px solid var(--secondary);
     border-right: 25px solid transparent;
     border-left: 25px solid transparent;
   }
 
   #lSigu span{
-    border-bottom: 35px solid var(--aquamarina);
+    border-bottom: 35px solid var(--secondary);
     border-right: 25px solid transparent;
     border-left: 25px solid transparent;
   }
