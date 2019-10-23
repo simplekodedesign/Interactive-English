@@ -207,6 +207,8 @@
       <span id="winMessage"></span>
     </div>
 
+    <audio src="" id="mAudio"></audio>
+
     <?php
       if(isset($_GET["th"])){
         echo "<script>var numero_leccion = ".$_GET["th"].";</script>";

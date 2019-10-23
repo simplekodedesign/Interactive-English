@@ -113,18 +113,13 @@ function getRandomArbitrary(min, max) {
 }
 
 function select (){
-  console.log(this.getAttribute("id"))
   if(this.getAttribute("id") == "Capa_1") {
     col1 = this
     // col1 = this.getAttribute("colorName");
-    console.log("parent1");
   } else if (this.parentElement == drawsContainer) {
     col2 = this;
     // col2 = this.firstElementChild.innerHTML;
-    console.log("parent2");
   }
-
-  console.log(col1, col2);
 
   if(col1 && col2) {
     check();
@@ -153,14 +148,19 @@ function check () {
     }
 
   } else {
+    mistake();
     col1 = undefined;
     col2 = undefined;
   }
 }
 
 function statusRefresher (prevCol1, prevCol2) {
-  prevCol2.classList.replace(prevCol2.classList[1], items[currentItems].shape);
-  prevCol2.firstElementChild.innerHTML = items[currentItems].name;
-  prevCol2.style.setProperty("background-color", initialBackground);
-  prevCol2.addEventListener("click", select);
+  prevCol2.style.setProperty("opacity", "0");
+  setTimeout(() => {
+    prevCol2.classList.replace(prevCol2.classList[1], items[currentItems].shape);
+    prevCol2.firstElementChild.innerHTML = items[currentItems].name;
+    prevCol2.style.setProperty("background-color", initialBackground);
+    prevCol2.addEventListener("click", select);    
+    prevCol2.style.setProperty("opacity", "1");
+  }, 500);
 }

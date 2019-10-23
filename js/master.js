@@ -39,6 +39,7 @@ var rocketMessage = document.getElementById("rocketMessage");
 var congratsAudio = document.getElementById("congratsAudio");
 var win = document.getElementById("win")
 var durationRocket = 5;
+var mistakeAudio = document.getElementById("mAudio");
 
 window.addEventListener("load", function () {
   if(reloadButton) {
@@ -46,6 +47,8 @@ window.addEventListener("load", function () {
       location.reload();
     });
   }
+
+  mistakeAudio.src = "../../aud/mistake.mp3";
 
   var rocket = document.getElementById("rocketSVG");
   svgRocket = rocket.contentDocument;
@@ -158,6 +161,10 @@ var victoryMessage = function() {
   };
   xhttp.open("GET", "../controller/continue.php?co="+cord, true);
   xhttp.send();
+}
+
+function mistake () {
+  mistakeAudio.play();
 }
 
 function congratsMessage () {
