@@ -79,4 +79,4 @@ echo "
     console.log(data);
   </script>";
 ?>
-<script src="../../Lessons/Click the right letters/Javascript.js?q=<?php echo $q;?>"></script>
+<script src="../../Lessons/Click the right letters/javascript.js?q=<?php echo $q;?>"></script>
