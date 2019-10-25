@@ -573,9 +573,9 @@ footer p{
   }
 }
 
-.winMessage{
+/* .winMessage{
 
-}
+} */
 
 
 /*-----------------------------GIF------------------------------------*/
@@ -702,6 +702,9 @@ footer p{
 /*-----------------------------Responsive------------------------------------*/
 
 @media screen and (max-width : 900px){
+  .rocket {
+    transform: rotate(0deg) translate(calc(50vw - 50px), calc(50vh + 100px));
+  }
   @keyframes rocketAnimation1 {
     0% {
 

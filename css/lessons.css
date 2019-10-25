@@ -200,6 +200,10 @@ section{
 
 
 @media screen and (max-width : 910px) {
+  .titles {
+    margin: 50px 0;
+  }
+
   .titlesLessons a {
    width: 75px;
   }
@@ -250,9 +254,9 @@ section{
     width: 50px;
    }
 
-   .titlesLessons {
-     padding: 0;
-   }
+  .titlesLessons {
+    padding: 0;
+  }
 
    #retoImage{
      width: 150px;
