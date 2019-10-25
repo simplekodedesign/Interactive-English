@@ -76,6 +76,7 @@ function desanimar (data, n) {
     }
 
     if(n == 0) {
+        mistake();
         data.style.backgroundColor = "red";
         data.style.transform = "translate(20px, 0px)";
 

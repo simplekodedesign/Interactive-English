@@ -67,6 +67,8 @@ function validate_with_split(){
 			}else{
 				actual();
 			}
-		}
+		} else {
+      mistake();
+    }
 	});
 }

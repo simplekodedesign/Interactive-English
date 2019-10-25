@@ -75,6 +75,7 @@ var checkgame = function () {
           data.style.backgroundColor = "rgb(136, 189, 233)";
         }, 500);
       } else {
+        mistake();
         data.style.backgroundColor = "red";
         data.style.transform = "translate(20px, 0px)";
         setTimeout(function () {

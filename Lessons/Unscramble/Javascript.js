@@ -26,6 +26,8 @@ function validate(){
 			document.getElementById("check").removeEventListener("click",validate);
 			victoryMessage();
 		}
+	} else {
+		mistake();
 	}
 	document.getElementById("write").value="";
 }

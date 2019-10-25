@@ -40,6 +40,8 @@ function  check () {
 		}else{
 			 actual();
 		}
+	} else {
+		mistake();
 	}
 }
 
