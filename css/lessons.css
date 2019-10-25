@@ -200,6 +200,10 @@ section{
 
 
 @media screen and (max-width : 910px) {
+  .titles {
+    margin: 50px 0;
+  }
+
   .titlesLessons a {
    width: 75px;
   }
@@ -236,6 +240,14 @@ section{
     grid-gap: 0px;
   }
 
+  #left > .lesson:nth-last-child(1) {
+    margin-bottom: 7.5px;
+  }
+
+  #right > .lesson:nth-child(1) {
+    margin-top: 7.5px;
+  }
+
   #images > object{
     max-width: 105px;
     max-height: 140px;
@@ -250,9 +262,9 @@ section{
     width: 50px;
    }
 
-   .titlesLessons {
-     padding: 0;
-   }
+  .titlesLessons {
+    padding: 0;
+  }
 
    #retoImage{
      width: 150px;

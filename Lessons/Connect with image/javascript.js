@@ -146,7 +146,7 @@ function desanimar (data, n) {
     }
 
     if(n == 0) {
-
+        mistake();
         if(data.parentElement.id == "txts") {
             data.style.color = "black";
             data.style.backgroundColor = "#FF4545";

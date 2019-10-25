@@ -3,38 +3,38 @@
 }
 
 .playground {
-    margin-top: 40px;
-    min-width: 250px;
-    max-width: 1024px;
-    min-height: 80vh;
-    width: 80%;
-    height: auto;
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  margin-top: 40px;
+  min-width: 250px;
+  max-width: 1024px;
+  min-height: 80vh;
+  width: 80%;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card {
-    margin: 0 2px 15px;
-    display: flex;
-    width: 75px;
-    height: 75px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1em;
+  margin: 0 2px 15px;
+  display: flex;
+  width: 75px;
+  height: 75px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5em;
 }
 
 .block {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: .5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
 }
 
 .card p {
@@ -48,20 +48,20 @@
 }
 
 .guardian {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
 }
 
 /*------------RESPONSIVE----------------*/
 @media only screen and (min-width: 650px){
   .card {
-      margin: 0 10px 15px;
-      height: 100px;
-      width: 100px;
+    margin: 0 10px 15px;
+    height: 100px;
+    width: 100px;
   }
 }
 

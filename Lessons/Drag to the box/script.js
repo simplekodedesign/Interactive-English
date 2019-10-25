@@ -126,6 +126,7 @@ function dropItem() {
       });
     }
   } else {
+    mistake();
     TweenMax.to(this.target, 0.5, {
       x:0,
       y:0,

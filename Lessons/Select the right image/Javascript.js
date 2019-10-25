@@ -10,6 +10,8 @@ window.addEventListener("load",function(){
 				}else{
 					victoryMessage();
 				}
+			} else {
+				mistake();
 			}
 		})
 	}
