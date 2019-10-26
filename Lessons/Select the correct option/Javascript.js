@@ -18,7 +18,7 @@ function actual(){
 		}
 	});
 
-	option=options[pos].split("/",15);
+	option = options[pos].split("/",15);
 	option.sort(function (a, b) {
 		return 0.5 - Math.random();
 	});
