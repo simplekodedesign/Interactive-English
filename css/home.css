@@ -171,18 +171,17 @@ body{
     height: 500px;
     background-image: url(../img/lessons/background/RecorridoCel.svg);
     transform: scale(1.2);
+    background-size: contain;
   }
 
   .roadicon img{
     height: 50px;
     width: 50px;
-    transform: scale(1.1);
   }
 
   .roadicon, #start, #end{
     width: 30px;
     height: 50px;
-    transform: scale(1.1);
   }
 
   .roadicon:nth-child(1){

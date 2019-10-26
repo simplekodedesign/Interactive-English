@@ -80,7 +80,7 @@
             <span class="hButton B_herr" id="translator">Translator</span>
             <span class="hButton B_ayuda">Help
               <ul>
-                <li><a href="#" data-api="smartsupp" data-operation="open">Contact</a></li>
+                <li id="contactButton">Contact</li>
                 <li id="gifButton">Instructions</li>
               </ul>
             </span>
@@ -191,6 +191,35 @@
         </div> -->
         <button id="translatebutton">Traducir/Translate</button>
       </div>
+    </div>
+
+    <div class="translatorScreen" id="contact">
+      <div class="exitButton" id="exitButtonContact">
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+
+      <form method="post" autocomplete="off" class="loginForm" id="formLogin">
+        <div>
+          <span class="barcolor"></span>
+          <input type="email" name="email" id="email" placeholder="&nbsp;" class="formInput" disabled>
+          <label for="email" id="email" class="inputLabel">Dirección de zoho</label>
+        </div>
+        <div>
+          <span class="barcolor"></span>
+          <select name="categorie" id="categorie" placeholder="&nbsp;" class="formInput">
+            <option value="Support">Soporte técnico</option>
+            <option value="Teacher">Consulta</option>
+          </select>
+          <label for="password" id="usernamepass" class="inputLabel">Contraseña</label>
+        </div>
+        <div>
+          <span class="barcolor"></span>
+          <textarea name="pass" id="password" placeholder="&nbsp;" class="formInput"></textarea>
+          <label for="password" id="usernamepass" class="inputLabel">¿Con que te podemos ayudar?</label>
+        </div>
+        <input type="submit" value="enviar" id="submitButton" class="formButton">
+      </form>
     </div>
 
     <div class="rocket" id="rocket">
