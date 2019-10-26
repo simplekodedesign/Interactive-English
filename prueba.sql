@@ -188,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `p050_juego` (
 INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUES
 (1, 'Video', '../../img/lessons/video.svg', '../../img/gif/video.gif'),
 (2, 'ABC', '../../img/lessons/listenandrepeat.svg', '../../img/gif/abc.gif'),
-(3, 'Click the right letters', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
+(3, 'Click the right letters', '../../img/lessons/correctoption.svg', '../../img/gif/pronunciation of vowels.gif'),
 (4, 'Pronunciation2', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
 (5, 'Drag to the Box', '../../img/lessons/dragtothebox.svg', '../../img/gif/dragtothebox.gif'),
 (6, 'Pronunciation of Vowels', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),

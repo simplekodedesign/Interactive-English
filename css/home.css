@@ -170,16 +170,19 @@ body{
     width: 300px;
     height: 500px;
     background-image: url(../img/lessons/background/RecorridoCel.svg);
+    transform: scale(1.2);
   }
 
   .roadicon img{
-    max-height: 50px;
-    max-width: 50px;
+    height: 50px;
+    width: 50px;
+    transform: scale(1.1);
   }
 
   .roadicon, #start, #end{
     width: 30px;
     height: 50px;
+    transform: scale(1.1);
   }
 
   .roadicon:nth-child(1){
@@ -280,5 +283,19 @@ body{
   #end{
     left: 214px;
     top: 412px;
+  }
+}
+
+@media screen and (max-width : 400px){
+  #lessons{
+    transform: scale(1);
+  }
+
+  .roadicon img{
+    transform: scale(1);
+  }
+
+  .roadicon, #start, #end{
+    transform: scale(1);
   }
 }
