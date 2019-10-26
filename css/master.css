@@ -614,6 +614,108 @@ footer p{
   max-height: 80vh;
 }
 
+/*------------------------------Support---------------------------------*/
+
+.contact-activated{
+  display: flex;
+}
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  min-width: 320px;
+  max-width: 600px;
+  background-color: rgb(255, 255, 255);
+}
+
+
+.loginForm > div {
+  display: flex;
+  padding: 0 10px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: auto;
+  align-self: center;
+  position: relative;
+  margin: 30px 10px;
+}
+
+.barcolor {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  min-width: 230px;
+  left: 0;
+  bottom: -1px;
+  background-color: var(--secondary);
+  transform: scale(0.0,1);
+  transform-origin: left bottom;
+  transition: .3s ease;
+}
+
+div label {
+  font-size: 125%;
+  width: 100%;
+  position: absolute;
+  bottom: 3px;
+}
+
+label {
+  margin: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.formInput {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 2px solid var(--secondary);
+  position: relative;
+  width: 100%;
+  min-width: 230px;
+  font-size: 110%;
+  padding: 0 0 5px 5px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.inputLabel {
+  transition: .3s ease;
+}
+
+.formInput:focus + .inputLabel{
+  transform: translate(0, -30px);
+}
+
+.formInput:not(:placeholder-shown) + .inputLabel{
+  transform: translate(0, -30px);
+}
+
+#submit, .siguiente {
+  text-align: center;
+  width: 150px;
+  height: 25px;
+  padding: 0 10px;
+  border-radius: 12px;
+  align-self: center;
+  background-color: var(--secondary);
+  cursor: pointer;
+  border: none;
+}
+
+#submit:hover, .siguiente:hover {
+  background-color: hsl(30, 80%, 60%);
+}
+
+#submit:focus, .siguiente:focus {
+  background-color: hsl(30, 100%, 40%);
+}
+
 /*------------------------------RESTART BUTTON----------------------*/
 
 #reloadButton {
@@ -709,10 +811,10 @@ footer p{
     0% {
 
     }
-  
+
     80% {
       transform: rotate(0deg) translate(calc(50vw - 50px), calc(50vh - 50px)) rotate(0deg);    }
-  
+
     100% {
       transform: rotate(0deg) translate(calc(50vw - 50px), calc(-50vh + 8vh + 150px)) rotate(0deg);
     }
