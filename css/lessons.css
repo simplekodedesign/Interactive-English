@@ -269,7 +269,7 @@ section{
    #retoImage{
      width: 150px;
      position: absolute;
-     bottom: -100px;
+     bottom: -150px;
      left: calc(50% - 75px);
      /* transform: translate(-50%, 100%); */
    }
