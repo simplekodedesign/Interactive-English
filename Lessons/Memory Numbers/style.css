@@ -38,13 +38,13 @@
 }
 
 .card p {
-    width: auto;
-    height: 100%;
-    margin: 0;
-    text-align: center;
-    font-size: 2.5em;
-    display: flex;
-    align-items: center;
+  width: auto;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
 }
 
 .guardian {
