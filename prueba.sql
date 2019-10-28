@@ -2,10 +2,10 @@
 -- version 4.4.15.9
 -- https://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tiempo de generación: 21-10-2019 a las 19:58:54
--- Versión del servidor: 5.6.37
--- Versión de PHP: 5.6.31
+-- Host: localhost
+-- Generation Time: Oct 28, 2019 at 11:04 PM
+-- Server version: 5.6.37
+-- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `prueba`
+-- Database: `prueba`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `m210_usuario`
+-- Table structure for table `m210_usuario`
 --
 
 CREATE TABLE IF NOT EXISTS `m210_usuario` (
@@ -38,12 +38,12 @@ CREATE TABLE IF NOT EXISTS `m210_usuario` (
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `m210_usuario`
+-- Dumping data for table `m210_usuario`
 --
 
 INSERT INTO `m210_usuario` (`Co_Usuario`, `Co_Alumno`, `Co_Rol`, `Tx_Email`, `Tx_Clave`, `St_Session`, `Tx_Url`, `Fe_Status`) VALUES
 (1, 1, 1, '1', '$2y$10$6YGb2/gtfyCfxRdWSe83ruu/XmUqQONxND4k5pVPrXW7RaEaS5a5S', 1, 'https://www.c21english.com/img/perfil/users/man4.svg', '2019-05-15'),
-(2, 2, 1, '2', '$2y$10$drRc.jappUIWQ9RNkxx6wOGIOkrc.BsgY3hj4HiTqJ4KNsaUr0sF.', 0, 'https://c21english.com/img/perfil/users/man4.svg', '2019-06-01'),
+(2, 2, 1, '2', '$2y$10$drRc.jappUIWQ9RNkxx6wOGIOkrc.BsgY3hj4HiTqJ4KNsaUr0sF.', 1, 'https://c21english.com/img/perfil/users/man4.svg', '2019-06-01'),
 (3, 3, 1, '3', '$2y$10$dSK2OIzpTaKsTGXsYr3iPeoICsUCR5/x6iFoRl23SofQLqU53s/bi', 0, 'https://c21english.com/img/perfil/users/woman1.svg', '2019-06-01'),
 (4, 4, 1, '4', '$2y$10$PUPjszzIwY2p8VV/qxFluOjoGUtAHDaE4LaxazRvYftRv1fa0MK0G', 1, 'https://c21english.com/img/perfil/users/avatar3.svg', '2019-06-01'),
 (5, 5, 1, '5', '$2y$10$jemVdOLFGZQLjE/Bzuzm/.QreKuenqsB5QCCmXkbPQqmbrSxSg/9y', 0, '../../img/perfil/users/avatar3.svg', '2019-07-01'),
@@ -55,7 +55,7 @@ INSERT INTO `m210_usuario` (`Co_Usuario`, `Co_Alumno`, `Co_Rol`, `Tx_Email`, `Tx
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `m220_alumno`
+-- Table structure for table `m220_alumno`
 --
 
 CREATE TABLE IF NOT EXISTS `m220_alumno` (
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `m220_alumno` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `m220_alumno`
+-- Dumping data for table `m220_alumno`
 --
 
 INSERT INTO `m220_alumno` (`Co_Alumno`, `Nb_Apellido`, `Nb_Alumno`, `Nb_ApellidoRepre`, `Nb_Representante`, `Tx_Direccion`, `Nu_Telefono_Fijo`, `Nu_Telefono_Movil`, `Fe_Nacimiento`, `St_Alumno`) VALUES
@@ -90,7 +90,7 @@ INSERT INTO `m220_alumno` (`Co_Alumno`, `Nb_Apellido`, `Nb_Alumno`, `Nb_Apellido
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `p020_institucion`
+-- Table structure for table `p020_institucion`
 --
 
 CREATE TABLE IF NOT EXISTS `p020_institucion` (
@@ -106,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `p020_institucion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `p020_institucion`
+-- Dumping data for table `p020_institucion`
 --
 
 INSERT INTO `p020_institucion` (`Nu_Identificacion`, `Nb_Institucion`, `Img_Url`, `Tx_Email`, `Direccion`, `Nu_Telefono`, `Pag_Url`, `St_Institucion`, `Fe_ultimaData`) VALUES
@@ -115,7 +115,7 @@ INSERT INTO `p020_institucion` (`Nu_Identificacion`, `Nb_Institucion`, `Img_Url`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `p030_nivel`
+-- Table structure for table `p030_nivel`
 --
 
 CREATE TABLE IF NOT EXISTS `p030_nivel` (
@@ -124,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `p030_nivel` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `p030_nivel`
+-- Dumping data for table `p030_nivel`
 --
 
 INSERT INTO `p030_nivel` (`Co_Nivel`, `Nb_Nivel`) VALUES
@@ -133,7 +133,7 @@ INSERT INTO `p030_nivel` (`Co_Nivel`, `Nb_Nivel`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `p040_temas`
+-- Table structure for table `p040_temas`
 --
 
 CREATE TABLE IF NOT EXISTS `p040_temas` (
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `p040_temas` (
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `p040_temas`
+-- Dumping data for table `p040_temas`
 --
 
 INSERT INTO `p040_temas` (`Co_Tema`, `Co_Nivel`, `Nb_Tema`, `Tx_Url_Img`, `Tx_Url_Aud`) VALUES
@@ -171,7 +171,7 @@ INSERT INTO `p040_temas` (`Co_Tema`, `Co_Nivel`, `Nb_Tema`, `Tx_Url_Img`, `Tx_Ur
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `p050_juego`
+-- Table structure for table `p050_juego`
 --
 
 CREATE TABLE IF NOT EXISTS `p050_juego` (
@@ -182,13 +182,13 @@ CREATE TABLE IF NOT EXISTS `p050_juego` (
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `p050_juego`
+-- Dumping data for table `p050_juego`
 --
 
 INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUES
 (1, 'Video', '../../img/lessons/video.svg', '../../img/gif/video.gif'),
 (2, 'ABC', '../../img/lessons/listenandrepeat.svg', '../../img/gif/abc.gif'),
-(3, 'Click the right letters', '../../img/lessons/correctoption.svg', '../../img/gif/pronunciation of vowels.gif'),
+(3, 'Click the right letters', '../../img/lessons/correctoption.svg', '../../img/gif/click the right letters.gif'),
 (4, 'Pronunciation2', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
 (5, 'Drag to the Box', '../../img/lessons/dragtothebox.svg', '../../img/gif/dragtothebox.gif'),
 (6, 'Pronunciation of Vowels', '../../img/lessons/listenandrepeat.svg', '../../img/gif/pronunciation of vowels.gif'),
@@ -213,7 +213,7 @@ INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `p060_multimedia`
+-- Table structure for table `p060_multimedia`
 --
 
 CREATE TABLE IF NOT EXISTS `p060_multimedia` (
@@ -222,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `p060_multimedia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `p060_multimedia`
+-- Dumping data for table `p060_multimedia`
 --
 
 INSERT INTO `p060_multimedia` (`Co_Multimedia`, `Nb_Multimedia`) VALUES
@@ -233,7 +233,7 @@ INSERT INTO `p060_multimedia` (`Co_Multimedia`, `Nb_Multimedia`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `p070_orden`
+-- Table structure for table `p070_orden`
 --
 
 CREATE TABLE IF NOT EXISTS `p070_orden` (
@@ -246,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `p070_orden` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `p070_orden`
+-- Dumping data for table `p070_orden`
 --
 
 INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_Ant`, `Les_Sig`) VALUES
@@ -288,10 +288,10 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 (5, 1, 36, 'Here - There', '?url=../../Lessons/Video/index.php&co=35', '?url=../../Lessons/Video/index.php&co=37'),
 (5, 1, 37, 'The Preposition A', '?url=../../Lessons/Video/index.php&co=36', '?url=../../Lessons/Video/index.php&co=38'),
 (5, 1, 38, 'The Preprosition An', '?url=../../Lessons/Video/index.php&co=37', '?url=../../Lessons/Write the right option/index.php&co=39'),
-(5, 17, 39, 'Complete with  "A"  or  "An"', '?url=../../Lessons/Video/index.php&co=38', '?url=../../Lessons/Select the correct option/index.php&co=40'),
-(5, 9, 40, 'Select the correct preposition', '?url=../../Lessons/Write the right option/index.php&co=39', '?url=../../Lessons/Select the right image/index.php&co=41'),
-(5, 10, 41, 'Select the right preposition', '?url=../../Lessons/Select the correct option/index.php&co=40', '?url=../../Lessons/Video/index.php&co=42'),
-(6, 1, 42, 'Animals', '?url=../../Lessons/Select the right image/index.php&co=41', '?url=../../Lessons/Vocabulary/index.php&co=43'),
+(5, 17, 39, 'Complete with  "A"  or  "An"', '?url=../../Lessons/Video/index.php&co=38', '?url=../../Lessons/Video/index.php&co=40'),
+(5, 1, 40, 'The and H', '?url=../../Lessons/Write the right option/index.php&co=39', '?url=../../Lessons/Say the correct word/index.php&co=41'),
+(5, 10, 41, 'Connect with', '?url=../../Lessons/Video/index.php&co=40', '?url=../../Lessons/Video/index.php&co=42'),
+(6, 1, 42, 'Animals', '?url=../../Lessons/Say the correct word/index.php&co=41', '?url=../../Lessons/Vocabulary/index.php&co=43'),
 (6, 8, 43, 'Animals', '?url=../../Lessons/Video/index.php&co=42', '?url=../../Lessons/Video/index.php&co=44'),
 (6, 1, 44, 'Animals', '?url=../../Lessons/Vocabulary/index.php&co=43', '?url=../../Lessons/Memory/index.php&co=45'),
 (6, 18, 45, 'Memory Game', '?url=../../Lessons/Video/index.php&co=44', '?url=../../Lessons/Select the correct option/index.php&co=46'),
@@ -402,7 +402,7 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `p080_rol`
+-- Table structure for table `p080_rol`
 --
 
 CREATE TABLE IF NOT EXISTS `p080_rol` (
@@ -411,7 +411,7 @@ CREATE TABLE IF NOT EXISTS `p080_rol` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `p080_rol`
+-- Dumping data for table `p080_rol`
 --
 
 INSERT INTO `p080_rol` (`Co_Rol`, `Nb_Rol`) VALUES
@@ -420,7 +420,7 @@ INSERT INTO `p080_rol` (`Co_Rol`, `Nb_Rol`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `p090_imagenes`
+-- Table structure for table `p090_imagenes`
 --
 
 CREATE TABLE IF NOT EXISTS `p090_imagenes` (
@@ -430,7 +430,7 @@ CREATE TABLE IF NOT EXISTS `p090_imagenes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `p090_imagenes`
+-- Dumping data for table `p090_imagenes`
 --
 
 INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
@@ -521,439 +521,424 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, '9_46', '../../img/categories/hours/9_46.svg'),
 (1, '9_49', '../../img/categories/hours/9_49.svg'),
 (1, '9_59', '../../img/categories/hours/9_59.svg'),
-(1, 'above', '../../img/categories/prepositions/above.webp'),
-(1, 'afraid', '../../img/categories/feelings/afraid.webp'),
+(1, 'above', '../../img/categories/Prepositions/above.svg'),
+(1, 'afraid', '../../img/categories/feelings/afraid.svg'),
 (1, 'alligator', '../../img/categories/animals/alligator.webp'),
-(1, 'angry', '../../img/categories/feelings/angry.webp'),
+(1, 'angry', '../../img/categories/feelings/angry.svg'),
 (1, 'ankle', '../../img/categories/the body/ankle.svg'),
-(1, 'apple', '../../img/categories/fruits/apple.webp'),
-(1, 'archery', '../../img/categories/sports/archery.webp'),
+(1, 'ant', '../../img/categories/animals/ant.webp'),
+(1, 'apple', '../../img/categories/fruits/apple.svg'),
+(1, 'archery', '../../img/categories/sports/archery.svg'),
 (1, 'arm', '../../img/categories/the body/arm.svg'),
 (1, 'armchair', '../../img/categories/house/armchair.svg'),
-(1, 'asia', '../../img/categories/fonetic abc/asia.webp'),
+(1, 'asia', '../../img/categories/fonetic abc/asia.svg'),
 (1, 'athletics', '../../img/categories/sports/athletics.svg'),
-(1, 'aunt', '../../img/categories/family/aunt.webp'),
-(1, 'avenue', '../../img/categories/places/avenue.webp'),
-(1, 'babies', '../../img/categories/plurals/babies.webp'),
-(1, 'baby', '../../img/categories/plurals/baby.webp'),
+(1, 'aunt', '../../img/categories/family/aunt.svg'),
+(1, 'avenue', '../../img/categories/places/avenue.svg'),
+(1, 'babies', '../../img/categories/plurals/babies.svg'),
+(1, 'baby', '../../img/categories/plurals/baby.svg'),
 (1, 'back', '../../img/categories/the body/back.svg'),
 (1, 'bacon', '../../img/categories/food and drinks/bacon.svg'),
-(1, 'bag', '../../img/categories/plurals/bag.webp'),
-(1, 'bags', '../../img/categories/plurals/bags.webp'),
-(1, 'baker', '../../img/categories/ocupations/baker.webp'),
-(1, 'bakery', '../../img/categories/places/bakery.webp'),
-(1, 'bank', '../../img/categories/places/bank.webp'),
+(1, 'bag', '../../img/categories/plurals/bag.svg'),
+(1, 'bags', '../../img/categories/plurals/bags.svg'),
+(1, 'baker', '../../img/categories/ocupations/baker.svg'),
+(1, 'bakery', '../../img/categories/places/bakery.svg'),
+(1, 'bank', '../../img/categories/places/bank.svg'),
 (1, 'bar', '../../img/categories/places/bar.webp'),
 (1, 'barber_shop', '../../img/categories/places/barber_shop.webp'),
-(1, 'baseball', '../../img/categories/sports/baseball.webp'),
-(1, 'basketball', '../../img/categories/sports/basketball.webp'),
-(1, 'bat', '../../img/categories/animals/bat.webp'),
+(1, 'baseball', '../../img/categories/sports/baseball.svg'),
+(1, 'basketball', '../../img/categories/sports/basketball.svg'),
+(1, 'bat', '../../img/categories/animals/bat.svg'),
 (1, 'beans', '../../img/categories/food and drinks/beans.svg'),
-(1, 'bear', '../../img/categories/animals/bear.webp'),
-(1, 'beauty_salon', '../../img/categories/places/beauty_salon.webp'),
-(1, 'bee', '../../img/categories/animals/bee.webp'),
-(1, 'behind', '../../img/categories/prepositions/behind.webp'),
+(1, 'bear', '../../img/categories/animals/bear.svg'),
+(1, 'beauty_salon', '../../img/categories/places/beauty_salon.svg'),
+(1, 'bee', '../../img/categories/animals/bee.svg'),
+(1, 'behind', '../../img/categories/Prepositions/behind.svg'),
 (1, 'belly', '../../img/categories/the body/belly.svg'),
-(1, 'belly_button', '../../img/categories/the body/belly_button.svg'),
-(1, 'belt', '../../img/categories/plurals/belt.webp'),
-(1, 'belts', '../../img/categories/plurals/belts.webp'),
-(1, 'between', '../../img/categories/prepositions/between.webp'),
-(1, 'bird', '../../img/categories/animals/bird.webp'),
-(1, 'black', '../../img/categories/colors/black.webp'),
-(1, 'block', '../../img/categories/places/block.webp'),
-(1, 'blue', '../../img/categories/colors/blue.webp'),
-(1, 'book', '../../img/categories/this these/book.webp'),
+(1, 'belly button', '../../img/categories/the body/belly button.svg'),
+(1, 'belt', '../../img/categories/plurals/belt.svg'),
+(1, 'belts', '../../img/categories/plurals/belts.svg'),
+(1, 'between', '../../img/categories/Prepositions/between.svg'),
+(1, 'bird', '../../img/categories/animals/bird.svg'),
+(1, 'black', '../../img/categories/colors/black.svg'),
+(1, 'blue', '../../img/categories/colors/blue.svg'),
+(1, 'book', '../../img/categories/this these/book.svg'),
 (1, 'bookcase', '../../img/categories/house/bookcase.svg'),
-(1, 'books', '../../img/categories/this these/books.webp'),
-(1, 'bookstore', '../../img/categories/places/bookstore.webp'),
-(1, 'bored', '../../img/categories/feelings/bored.webp'),
-(1, 'boutique', '../../img/categories/places/boutique.webp'),
-(1, 'box', '../../img/categories/plurals/box.webp'),
-(1, 'boxes', '../../img/categories/plurals/boxes.webp'),
+(1, 'books', '../../img/categories/this these/books.svg'),
+(1, 'bookstore', '../../img/categories/places/bookstore.svg'),
+(1, 'bored', '../../img/categories/feelings/bored.svg'),
+(1, 'boutique', '../../img/categories/places/boutique.svg'),
+(1, 'box', '../../img/categories/plurals/box.svg'),
+(1, 'boxes', '../../img/categories/plurals/boxes.svg'),
 (1, 'boxing', '../../img/categories/sports/boxing.svg'),
-(1, 'boy', '../../img/categories/plurals/boy.webp'),
-(1, 'boys', '../../img/categories/plurals/boys.webp'),
+(1, 'boy', '../../img/categories/plurals/boy.svg'),
+(1, 'boys', '../../img/categories/plurals/boys.svg'),
 (1, 'bread', '../../img/categories/food and drinks/bread.svg'),
-(1, 'brother', '../../img/categories/family/brother.webp'),
-(1, 'brown', '../../img/categories/colors/brown.webp'),
-(1, 'brush', '../../img/categories/plurals/brush.webp'),
-(1, 'brushes', '../../img/categories/plurals/brushes.webp'),
-(1, 'bull', '../../img/categories/animals/bull.webp'),
-(1, 'bumblebee', '../../img/categories/animals/bumblebee.webp'),
-(1, 'bus', '../../img/categories/plurals/bus.webp'),
-(1, 'buses', '../../img/categories/plurals/buses.webp'),
-(1, 'bush', '../../img/categories/plurals/bush.webp'),
-(1, 'bushes', '../../img/categories/plurals/bushes.webp'),
+(1, 'brother', '../../img/categories/family/brother.svg'),
+(1, 'brown', '../../img/categories/colors/brown.svg'),
+(1, 'brush', '../../img/categories/plurals/brush.svg'),
+(1, 'brushes', '../../img/categories/plurals/brushes.svg'),
+(1, 'bull', '../../img/categories/animals/bull.svg'),
+(1, 'bumblebee', '../../img/categories/animals/bumblebee.svg'),
+(1, 'bus', '../../img/categories/plurals/bus.svg'),
+(1, 'buses', '../../img/categories/plurals/buses.svg'),
+(1, 'bush', '../../img/categories/plurals/bush.svg'),
+(1, 'bushes', '../../img/categories/plurals/bushes.svg'),
 (1, 'bus_stop', '../../img/categories/places/bus_stop.webp'),
-(1, 'butcher', '../../img/categories/ocupations/butcher.webp'),
+(1, 'butcher', '../../img/categories/ocupations/butcher.svg'),
 (1, 'butter', '../../img/categories/food and drinks/butter.svg'),
-(1, 'butterfly', '../../img/categories/animals/butterfly.webp'),
+(1, 'butterfly', '../../img/categories/animals/butterfly.svg'),
 (1, 'cake', '../../img/categories/food and drinks/cake.svg'),
-(1, 'camel', '../../img/categories/animals/camel.webp'),
-(1, 'cap', '../../img/categories/plurals/cap.webp'),
-(1, 'caps', '../../img/categories/plurals/caps.webp'),
-(1, 'car', '../../img/categories/house/car.webp'),
+(1, 'camel', '../../img/categories/animals/camel.svg'),
+(1, 'cap', '../../img/categories/plurals/cap.svg'),
+(1, 'caps', '../../img/categories/plurals/caps.svg'),
+(1, 'car', '../../img/categories/house/car.svg'),
 (1, 'carpet', '../../img/categories/house/carpet.svg'),
 (1, 'carrot', '../../img/categories/food and drinks/carrot.svg'),
-(1, 'cat', '../../img/categories/animals/cat.webp'),
+(1, 'cat', '../../img/categories/animals/cat.svg'),
 (1, 'cereal', '../../img/categories/food and drinks/cereal.svg'),
-(1, 'chair', '../../img/categories/this these/chair.webp'),
-(1, 'chairs', '../../img/categories/this these/chairs.webp'),
+(1, 'chair', '../../img/categories/this these/chair.svg'),
+(1, 'chairs', '../../img/categories/this these/chairs.svg'),
 (1, 'cheeks', '../../img/categories/the body/cheeks.svg'),
 (1, 'cheese', '../../img/categories/food and drinks/cheese.svg'),
-(1, 'cherries', '../../img/categories/fruits/cherries.webp'),
-(1, 'cherry', '../../img/categories/fruits/cherry.webp'),
-(1, 'chest', '../../img/categories/the body/chest.webp'),
-(1, 'chicken', '../../img/categories/animals/chicken.webp'),
+(1, 'cherries', '../../img/categories/fruits/cherries.svg'),
+(1, 'cherry', '../../img/categories/fruits/cherry.svg'),
+(1, 'chest', '../../img/categories/the body/chest.svg'),
+(1, 'chicken', '../../img/categories/animals/chicken.svg'),
 (1, 'chickenf', '../../img/categories/food and drinks/chickenf.svg'),
-(1, 'child', '../../img/categories/plurals/child.webp'),
-(1, 'children', '../../img/categories/family/children.webp'),
+(1, 'child', '../../img/categories/plurals/child.svg'),
 (1, 'chin', '../../img/categories/the body/chin.svg'),
 (1, 'chocolate', '../../img/categories/food and drinks/chocolate.svg'),
-(1, 'church', '../../img/categories/places/church.webp'),
+(1, 'church', '../../img/categories/places/church.svg'),
 (1, 'cinema', '../../img/categories/places/cinema.webp'),
-(1, 'coat', '../../img/categories/fonetic abc/coat.webp'),
-(1, 'coats', '../../img/categories/plurals/coats.webp'),
+(1, 'coat', '../../img/categories/fonetic abc/coat.svg'),
+(1, 'coats', '../../img/categories/plurals/coats.svg'),
 (1, 'coffee', '../../img/categories/food and drinks/coffee.svg'),
 (1, 'coffee_shop', '../../img/categories/places/coffee_shop.webp'),
-(1, 'cold', '../../img/categories/feelings/cold.webp'),
-(1, 'computer', '../../img/categories/this these/computer.webp'),
-(1, 'computers', '../../img/categories/this these/computers.webp'),
-(1, 'confused', '../../img/categories/feelings/confused.webp'),
+(1, 'cold', '../../img/categories/feelings/cold.svg'),
+(1, 'computer', '../../img/categories/this these/computer.svg'),
+(1, 'computers', '../../img/categories/this these/computers.svg'),
+(1, 'confused', '../../img/categories/feelings/confused.svg'),
 (1, 'cookies', '../../img/categories/food and drinks/cookies.svg'),
-(1, 'cousinh', '../../img/categories/family/cousinh.webp'),
-(1, 'cousinm', '../../img/categories/family/cousinm.webp'),
+(1, 'cousin', '../../img/categories/family/cousin.svg'),
+(1, 'cow', '../../img/categories/animals/cow.webp'),
 (1, 'crackers', '../../img/categories/food and drinks/crackers.svg'),
-(1, 'crocodile', '../../img/categories/animals/crocodile.webp'),
+(1, 'crocodile', '../../img/categories/animals/crocodile.svg'),
 (1, 'croissant', '../../img/categories/food and drinks/croissant.svg'),
 (1, 'cucumber', '../../img/categories/food and drinks/cucumber.svg'),
-(1, 'cup', '../../img/categories/a an the/cup.webp'),
+(1, 'cup', '../../img/categories/a an the/cup.svg'),
 (1, 'cupcake', '../../img/categories/food and drinks/cupcake.svg'),
-(1, 'curtains', '../../img/categories/house/curtains.webp'),
-(1, 'cycling', '../../img/categories/sports/cycling.webp'),
-(1, 'deer', '../../img/categories/animals/deer.webp'),
-(1, 'dentist', '../../img/categories/ocupations/dentist.webp'),
-(1, 'desk', '../../img/categories/this these/desk.webp'),
-(1, 'desks', '../../img/categories/this these/desks.webp'),
+(1, 'curtains', '../../img/categories/house/curtains.svg'),
+(1, 'cycling', '../../img/categories/sports/cycling.svg'),
+(1, 'deer', '../../img/categories/animals/deer.svg'),
+(1, 'dentist', '../../img/categories/ocupations/dentist.svg'),
+(1, 'desk', '../../img/categories/this these/desk.svg'),
+(1, 'desks', '../../img/categories/this these/desks.svg'),
 (1, 'dessert', '../../img/categories/food and drinks/dessert.svg'),
-(1, 'dictionaries', '../../img/categories/plurals/dictionaries.webp'),
-(1, 'dictionary', '../../img/categories/plurals/dictionary.webp'),
-(1, 'doctor', '../../img/categories/ocupations/doctor.webp'),
-(1, 'dog', '../../img/categories/animals/dog.webp'),
-(1, 'dolphin', '../../img/categories/animals/dolphin.webp'),
-(1, 'donkey', '../../img/categories/animals/donkey.webp'),
-(1, 'donkeys', '../../img/categories/animals/donkeys.webp'),
-(1, 'door', '../../img/categories/fonetic abc/door.webp'),
-(1, 'dove', '../../img/categories/animals/dove.webp'),
-(1, 'dragonfly', '../../img/categories/animals/dragonfly.webp'),
+(1, 'dictionaries', '../../img/categories/plurals/dictionaries.svg'),
+(1, 'dictionary', '../../img/categories/plurals/dictionary.svg'),
+(1, 'doctor', '../../img/categories/ocupations/doctor.svg'),
+(1, 'dog', '../../img/categories/animals/dog.svg'),
+(1, 'dolphin', '../../img/categories/animals/dolphin.svg'),
+(1, 'donkey', '../../img/categories/animals/donkey.svg'),
+(1, 'donkeys', '../../img/categories/animals/donkeys.svg'),
+(1, 'door', '../../img/categories/fonetic abc/door.svg'),
+(1, 'dove', '../../img/categories/animals/dove.svg'),
+(1, 'dragonfly', '../../img/categories/animals/dragonfly.svg'),
 (1, 'drinks', '../../img/categories/food and drinks/drinks.svg'),
-(1, 'duck', '../../img/categories/animals/duck.webp'),
-(1, 'eagle', '../../img/categories/animals/eagle.webp'),
-(1, 'ear', '../../img/categories/the body/ear.webp'),
-(1, 'ears', '../../img/categories/the body/ears.svg'),
+(1, 'duck', '../../img/categories/animals/duck.svg'),
+(1, 'eagle', '../../img/categories/animals/eagle.svg'),
+(1, 'ear', '../../img/categories/the body/ear.svg'),
 (1, 'egg', '../../img/categories/food and drinks/egg.svg'),
 (1, 'elbow', '../../img/categories/the body/elbow.svg'),
-(1, 'elephant', '../../img/categories/animals/elephant.webp'),
-(1, 'elf', '../../img/categories/plurals/elf.webp'),
-(1, 'elves', '../../img/categories/plurals/elves.webp'),
-(1, 'embarrassed', '../../img/categories/feelings/embarrassed.webp'),
-(1, 'engineer', '../../img/categories/ocupations/engineer.webp'),
-(1, 'eraser', '../../img/categories/a an the/eraser.webp'),
-(1, 'erasers', '../../img/categories/this these/erasers.webp'),
+(1, 'elephant', '../../img/categories/animals/elephant.svg'),
+(1, 'elf', '../../img/categories/plurals/elf.svg'),
+(1, 'elves', '../../img/categories/plurals/elves.svg'),
+(1, 'embarrassed', '../../img/categories/feelings/embarrassed.svg'),
+(1, 'engineer', '../../img/categories/ocupations/engineer.svg'),
+(1, 'eraser', '../../img/categories/a an the/eraser.svg'),
+(1, 'erasers', '../../img/categories/this these/erasers.svg'),
+(1, 'eye', '../../img/categories/the body/eye.svg'),
 (1, 'eyebrows', '../../img/categories/the body/eyebrows.svg'),
 (1, 'eyelashes', '../../img/categories/the body/eyelashes.svg'),
-(1, 'eyes', '../../img/categories/the body/eyes.svg'),
-(1, 'family', '../../img/categories/family/family.svg'),
-(1, 'farmer', '../../img/categories/ocupations/farmer.webp'),
-(1, 'father', '../../img/categories/family/father.webp'),
+(1, 'farmer', '../../img/categories/ocupations/farmer.svg'),
+(1, 'father', '../../img/categories/family/father.svg'),
 (1, 'feet', '../../img/categories/the body/feet.svg'),
 (1, 'fingers', '../../img/categories/the body/fingers.svg'),
-(1, 'fire_fighter', '../../img/categories/ocupations/fire_fighter.webp'),
+(1, 'fire_fighter', '../../img/categories/ocupations/fire_fighter.svg'),
 (1, 'fire_station', '../../img/categories/places/fire_station.webp'),
 (1, 'fish', '../../img/categories/animals/fish.svg'),
-(1, 'flamingo', '../../img/categories/animals/flamingo.webp'),
+(1, 'flamingo', '../../img/categories/animals/flamingo.svg'),
 (1, 'flowers', '../../img/categories/house/flowers.svg'),
 (1, 'flowers_shop', '../../img/categories/places/flowers_shop.webp'),
-(1, 'fly', '../../img/categories/animals/fly.webp'),
+(1, 'fly', '../../img/categories/animals/fly.svg'),
 (1, 'foot', '../../img/categories/the body/foot.svg'),
-(1, 'football', '../../img/categories/sports/football.webp'),
-(1, 'forehead', '../../img/categories/the body/forehead.svg'),
-(1, 'fox', '../../img/categories/animals/fox.webp'),
-(1, 'foxes', '../../img/categories/animals/foxes.webp'),
+(1, 'football', '../../img/categories/sports/football.svg'),
+(1, 'fox', '../../img/categories/animals/fox.svg'),
+(1, 'foxes', '../../img/categories/animals/foxes.svg'),
 (1, 'fries', '../../img/categories/food and drinks/fries.svg'),
-(1, 'frog', '../../img/categories/animals/frog.webp'),
-(1, 'front', '../../img/categories/the body/front.svg'),
+(1, 'frog', '../../img/categories/animals/frog.svg'),
 (1, 'fruit', '../../img/categories/food and drinks/fruit.svg'),
 (1, 'gallery', '../../img/categories/places/gallery.webp'),
 (1, 'gas_station', '../../img/categories/places/gas_station.webp'),
-(1, 'geese', '../../img/categories/animals/geese.webp'),
-(1, 'giraffe', '../../img/categories/animals/giraffe.webp'),
-(1, 'girl', '../../img/categories/plurals/girl.webp'),
-(1, 'glad', '../../img/categories/feelings/glad.webp'),
-(1, 'glass', '../../img/categories/a an the/glass.webp'),
+(1, 'geese', '../../img/categories/animals/geese.svg'),
+(1, 'giraffe', '../../img/categories/animals/giraffe.svg'),
+(1, 'girl', '../../img/categories/plurals/girl.svg'),
+(1, 'glad', '../../img/categories/feelings/glad.svg'),
+(1, 'glass', '../../img/categories/a an the/glass.svg'),
 (1, 'glasses', '../../img/categories/fruits/glasses.svg'),
-(1, 'goat', '../../img/categories/animals/goat.webp'),
-(1, 'golf', '../../img/categories/sports/golf.webp'),
-(1, 'goose', '../../img/categories/animals/goose.webp'),
-(1, 'grandchildren', '../../img/categories/family/grandchildren.webp'),
-(1, 'grandfather', '../../img/categories/family/grandfather.webp'),
-(1, 'grandmother', '../../img/categories/family/grandmother.webp'),
-(1, 'grandson', '../../img/categories/family/grandson.webp'),
-(1, 'gray', '../../img/categories/colors/gray.webp'),
-(1, 'green', '../../img/categories/colors/green.webp'),
+(1, 'goat', '../../img/categories/animals/goat.svg'),
+(1, 'golf', '../../img/categories/sports/golf.svg'),
+(1, 'goose', '../../img/categories/animals/goose.svg'),
+(1, 'grandfather', '../../img/categories/family/grandfather.svg'),
+(1, 'grandmother', '../../img/categories/family/grandmother.svg'),
+(1, 'gray', '../../img/categories/colors/gray.svg'),
+(1, 'green', '../../img/categories/colors/green.svg'),
 (1, 'gym', '../../img/categories/places/gym.webp'),
 (1, 'hair', '../../img/categories/the body/hair.svg'),
-(1, 'hairdresser', '../../img/categories/ocupations/hairdresser.webp'),
+(1, 'hairdresser', '../../img/categories/ocupations/hairdresser.svg'),
 (1, 'ham', '../../img/categories/food and drinks/ham.svg'),
 (1, 'hamburger', '../../img/categories/food and drinks/hamburger.svg'),
 (1, 'hand', '../../img/categories/the body/hand.svg'),
-(1, 'happy', '../../img/categories/feelings/happy.webp'),
-(1, 'hat', '../../img/categories/plurals/hat.webp'),
-(1, 'hats', '../../img/categories/plurals/hats.webp'),
+(1, 'happy', '../../img/categories/feelings/happy.svg'),
+(1, 'hat', '../../img/categories/plurals/hat.svg'),
+(1, 'hats', '../../img/categories/plurals/hats.svg'),
 (1, 'he', '../../img/categories/personal pronouns/he.webp'),
-(1, 'head', '../../img/categories/the body/head.webp'),
-(1, 'hip', '../../img/categories/the body/hip.svg'),
-(1, 'hippopotamus', '../../img/categories/animals/hippopotamus.webp'),
+(1, 'head', '../../img/categories/the body/head.svg'),
+(1, 'hen', '../../img/categories/animals/hen.webp'),
+(1, 'hippopotamus', '../../img/categories/animals/hippopotamus.svg'),
 (1, 'hockey', '../../img/categories/sports/hockey.svg'),
-(1, 'horse', '../../img/categories/animals/horse.webp'),
+(1, 'horse', '../../img/categories/animals/horse.svg'),
 (1, 'hospital', '../../img/categories/places/hospital.webp'),
-(1, 'hot', '../../img/categories/feelings/hot.webp'),
+(1, 'hot', '../../img/categories/feelings/hot.svg'),
 (1, 'hotdog', '../../img/categories/food and drinks/hotdog.svg'),
 (1, 'hotel', '../../img/categories/places/hotel.webp'),
-(1, 'hour', '../../img/categories/a an the/hour.webp'),
-(1, 'house', '../../img/categories/a an the/house.webp'),
-(1, 'hungry', '../../img/categories/feelings/hungry.webp'),
+(1, 'hour', '../../img/categories/a an the/hour.svg'),
+(1, 'house', '../../img/categories/a an the/house.svg'),
+(1, 'hungry', '../../img/categories/feelings/hungry.svg'),
 (1, 'i', '../../img/categories/personal pronouns/i.webp'),
-(1, 'ice', '../../img/categories/fonetic abc/ice.webp'),
-(1, 'iceberg', '../../img/categories/a an the/iceberg.webp'),
+(1, 'ice', '../../img/categories/fonetic abc/ice.svg'),
+(1, 'iceberg', '../../img/categories/a an the/iceberg.svg'),
 (1, 'ice_cream', '../../img/categories/food and drinks/ice_cream.svg'),
 (1, 'ice_cream_shop', '../../img/categories/places/ice_cream_shop.webp'),
-(1, 'in', '../../img/categories/prepositions/in.webp'),
-(1, 'insect', '../../img/categories/fonetic abc/insect.webp'),
-(1, 'inside', '../../img/categories/prepositions/inside.webp'),
-(1, 'in_front_of', '../../img/categories/prepositions/in_front_of.webp'),
-(1, 'iris', '../../img/categories/the body/iris.svg'),
+(1, 'in', '../../img/categories/Prepositions/in.svg'),
+(1, 'insect', '../../img/categories/fonetic abc/insect.svg'),
+(1, 'inside', '../../img/categories/Prepositions/inside.svg'),
+(1, 'in_front_of', '../../img/categories/Prepositions/in_front_of.svg'),
 (1, 'it', '../../img/categories/personal pronouns/it.webp'),
-(1, 'jacket', '../../img/categories/plurals/jacket.webp'),
-(1, 'jackets', '../../img/categories/plurals/jackets.webp'),
+(1, 'jacket', '../../img/categories/plurals/jacket.svg'),
+(1, 'jackets', '../../img/categories/plurals/jackets.svg'),
 (1, 'jam', '../../img/categories/food and drinks/jam.svg'),
 (1, 'jello', '../../img/categories/food and drinks/jello.svg'),
 (1, 'jelly', '../../img/categories/food and drinks/jelly.svg'),
-(1, 'juice', '../../img/categories/fonetic abc/juice.webp'),
-(1, 'kangaroo', '../../img/categories/animals/kangaroo.webp'),
-(1, 'key', '../../img/categories/fonetic abc/key.webp'),
+(1, 'juice', '../../img/categories/fonetic abc/juice.svg'),
+(1, 'kangaroo', '../../img/categories/animals/kangaroo.svg'),
+(1, 'key', '../../img/categories/fonetic abc/key.svg'),
 (1, 'knee', '../../img/categories/the body/knee.svg'),
-(1, 'knife', '../../img/categories/plurals/knife.webp'),
-(1, 'knives', '../../img/categories/plurals/knives.webp'),
-(1, 'lamp', '../../img/categories/plurals/lamp.webp'),
-(1, 'laundry', '../../img/categories/places/laundry.webp'),
-(1, 'leaf', '../../img/categories/plurals/leaf.webp'),
-(1, 'leaves', '../../img/categories/plurals/leaves.webp'),
-(1, 'leg', '../../img/categories/the body/leg.webp'),
+(1, 'knife', '../../img/categories/plurals/knife.svg'),
+(1, 'knives', '../../img/categories/plurals/knives.svg'),
+(1, 'lamp', '../../img/categories/plurals/lamp.svg'),
+(1, 'laundry', '../../img/categories/places/laundry.svg'),
+(1, 'leaf', '../../img/categories/plurals/leaf.svg'),
+(1, 'leaves', '../../img/categories/plurals/leaves.svg'),
+(1, 'leg', '../../img/categories/the body/leg.svg'),
 (1, 'lemonade', '../../img/categories/food and drinks/lemonade.svg'),
 (1, 'lettuce', '../../img/categories/food and drinks/lettuce.svg'),
-(1, 'library', '../../img/categories/places/library.webp'),
-(1, 'lion', '../../img/categories/animals/lion.webp'),
-(1, 'mad', '../../img/categories/feelings/mad.webp'),
-(1, 'mall', '../../img/categories/places/mall.webp'),
-(1, 'man', '../../img/categories/plurals/man.webp'),
-(1, 'mango', '../../img/categories/fruits/mango.webp'),
-(1, 'mangoes', '../../img/categories/fruits/mangoes.webp'),
-(1, 'market', '../../img/categories/places/market.webp'),
+(1, 'library', '../../img/categories/places/library.svg'),
+(1, 'lion', '../../img/categories/animals/lion.svg'),
+(1, 'mad', '../../img/categories/feelings/mad.svg'),
+(1, 'man', '../../img/categories/plurals/man.svg'),
+(1, 'mango', '../../img/categories/fruits/mango.svg'),
+(1, 'mangoes', '../../img/categories/fruits/mangoes.svg'),
 (1, 'martial_arts', '../../img/categories/sports/martial_arts.svg'),
-(1, 'match', '../../img/categories/plurals/match.webp'),
+(1, 'match', '../../img/categories/plurals/match.svg'),
 (1, 'matches', '../../img/categories/fruits/matches.webp'),
 (1, 'meat', '../../img/categories/food and drinks/meat.svg'),
-(1, 'mechanic', '../../img/categories/ocupations/mechanic.webp'),
-(1, 'men', '../../img/categories/plurals/men.webp'),
-(1, 'mice', '../../img/categories/animals/mice.webp'),
+(1, 'mechanic', '../../img/categories/ocupations/mechanic.svg'),
+(1, 'men', '../../img/categories/plurals/men.svg'),
+(1, 'mice', '../../img/categories/animals/mice.svg'),
 (1, 'milk', '../../img/categories/food and drinks/milk.svg'),
-(1, 'monkey', '../../img/categories/animals/monkey.webp'),
-(1, 'monkeys', '../../img/categories/animals/monkeys.webp'),
+(1, 'monkey', '../../img/categories/animals/monkey.svg'),
+(1, 'monkeys', '../../img/categories/animals/monkeys.svg'),
 (1, 'mosquito', '../../img/categories/animals/mosquito.webp'),
 (1, 'mosquitoes', '../../img/categories/animals/mosquitoes.webp'),
-(1, 'mother', '../../img/categories/family/mother.webp'),
-(1, 'mouse', '../../img/categories/animals/mouse.webp'),
+(1, 'mother', '../../img/categories/family/mother.svg'),
+(1, 'mouse', '../../img/categories/animals/mouse.svg'),
 (1, 'mouth', '../../img/categories/the body/mouth.svg'),
-(1, 'museum', '../../img/categories/places/museum.webp'),
+(1, 'MUSEUM', '../../img/categories/places/MUSEUM.svg'),
 (1, 'nails', '../../img/categories/the body/nails.svg'),
 (1, 'neck', '../../img/categories/the body/neck.svg'),
-(1, 'next_to', '../../img/categories/prepositions/next_to.webp'),
+(1, 'next to', '../../img/categories/Prepositions/next to.svg'),
 (1, 'nose', '../../img/categories/the body/nose.svg'),
-(1, 'notebook', '../../img/categories/this these/notebook.webp'),
-(1, 'notebooks', '../../img/categories/this these/notebooks.webp'),
-(1, 'nurse', '../../img/categories/ocupations/nurse.webp'),
-(1, 'ocean', '../../img/categories/fonetic abc/ocean.webp'),
-(1, 'octopus', '../../img/categories/animals/octopus.webp'),
-(1, 'on', '../../img/categories/prepositions/on.webp'),
-(1, 'orange', '../../img/categories/fruits/orange.webp'),
-(1, 'orangec', '../../img/categories/colors/orangec.webp'),
-(1, 'ostrich', '../../img/categories/animals/ostrich.webp'),
-(1, 'owl', '../../img/categories/animals/owl.webp'),
+(1, 'notebook', '../../img/categories/this these/notebook.svg'),
+(1, 'notebooks', '../../img/categories/this these/notebooks.svg'),
+(1, 'nurse', '../../img/categories/ocupations/nurse.svg'),
+(1, 'ocean', '../../img/categories/fonetic abc/ocean.svg'),
+(1, 'octopus', '../../img/categories/animals/octopus.svg'),
+(1, 'on', '../../img/categories/Prepositions/on.svg'),
+(1, 'orange', '../../img/categories/fruits/orange.svg'),
+(1, 'orangec', '../../img/categories/colors/orangec.svg'),
+(1, 'ostrich', '../../img/categories/animals/ostrich.svg'),
+(1, 'owl', '../../img/categories/animals/owl.svg'),
 (1, 'painting', '../../img/categories/house/painting.svg'),
 (1, 'pancakes', '../../img/categories/food and drinks/pancakes.svg'),
-(1, 'panda', '../../img/categories/animals/panda.webp'),
+(1, 'panda', '../../img/categories/animals/panda.svg'),
 (1, 'park', '../../img/categories/places/park.webp'),
-(1, 'parrot', '../../img/categories/animals/parrot.webp'),
-(1, 'peach', '../../img/categories/fruits/peach.webp'),
-(1, 'peaches', '../../img/categories/fruits/peaches.webp'),
-(1, 'peacock', '../../img/categories/animals/peacock.webp'),
+(1, 'parrot', '../../img/categories/animals/parrot.svg'),
+(1, 'peach', '../../img/categories/fruits/peach.svg'),
+(1, 'peaches', '../../img/categories/fruits/peaches.svg'),
+(1, 'peacock', '../../img/categories/animals/peacock.svg'),
 (1, 'pedestrian_bridge', '../../img/categories/places/pedestrian_bridge.webp'),
 (1, 'pedestrian_crossing', '../../img/categories/places/pedestrian_crossing.webp'),
 (1, 'pedrestrian', '../../img/categories/places/pedrestrian.webp'),
-(1, 'pencil', '../../img/categories/a an the/pencil.webp'),
-(1, 'pencils', '../../img/categories/this these/pencils.webp'),
-(1, 'penguin', '../../img/categories/animals/penguin.webp'),
-(1, 'people', '../../img/categories/fruits/people.webp'),
-(1, 'person', '../../img/categories/plurals/person.webp'),
+(1, 'pencil', '../../img/categories/a an the/pencil.svg'),
+(1, 'pencils', '../../img/categories/this these/pencils.svg'),
+(1, 'penguin', '../../img/categories/animals/penguin.svg'),
+(1, 'people', '../../img/categories/fruits/people.svg'),
+(1, 'person', '../../img/categories/plurals/person.svg'),
 (1, 'pet_shop', '../../img/categories/places/pet_shop.webp'),
 (1, 'pharmacy', '../../img/categories/places/pharmacy.webp'),
 (1, 'pie', '../../img/categories/food and drinks/pie.svg'),
-(1, 'pig', '../../img/categories/animals/pig.webp'),
-(1, 'pilot', '../../img/categories/ocupations/pilot.webp'),
-(1, 'pink', '../../img/categories/colors/pink.webp'),
+(1, 'pig', '../../img/categories/animals/pig.svg'),
+(1, 'pilot', '../../img/categories/ocupations/pilot.svg'),
+(1, 'pink', '../../img/categories/colors/pink.svg'),
 (1, 'pizza', '../../img/categories/food and drinks/pizza.svg'),
-(1, 'police_officer', '../../img/categories/ocupations/police_officer.webp'),
+(1, 'police_officer', '../../img/categories/ocupations/police_officer.svg'),
 (1, 'police_station', '../../img/categories/places/police_station.webp'),
 (1, 'popcorn', '../../img/categories/food and drinks/popcorn.svg'),
 (1, 'potato', '../../img/categories/food and drinks/potato.svg'),
-(1, 'potatoes', '../../img/categories/food and drinks/potatoes.webp'),
+(1, 'potatoes', '../../img/categories/food and drinks/potatoes.svg'),
 (1, 'pudding', '../../img/categories/food and drinks/pudding.svg'),
-(1, 'pupil', '../../img/categories/the body/pupil.svg'),
-(1, 'purple', '../../img/categories/colors/purple.webp'),
-(1, 'quick', '../../img/categories/fonetic abc/quick.webp'),
-(1, 'quiet', '../../img/categories/fonetic abc/quiet.webp'),
-(1, 'rabbit', '../../img/categories/animals/rabbit.webp'),
+(1, 'purple', '../../img/categories/colors/purple.svg'),
+(1, 'quick', '../../img/categories/fonetic abc/quick.svg'),
+(1, 'quiet', '../../img/categories/fonetic abc/quiet.svg'),
+(1, 'rabbit', '../../img/categories/animals/rabbit.svg'),
 (1, 'rat', '../../img/categories/animals/rat.webp'),
-(1, 'red', '../../img/categories/colors/red.webp'),
+(1, 'red', '../../img/categories/colors/red.svg'),
 (1, 'restaurant', '../../img/categories/places/restaurant.webp'),
 (1, 'rice', '../../img/categories/food and drinks/rice.svg'),
-(1, 'rooster', '../../img/categories/animals/rooster.webp'),
-(1, 'rose', '../../img/categories/fonetic abc/rose.webp'),
-(1, 'sad', '../../img/categories/feelings/sad.webp'),
+(1, 'rooster', '../../img/categories/animals/rooster.svg'),
+(1, 'rose', '../../img/categories/fonetic abc/rose.svg'),
+(1, 'sad', '../../img/categories/feelings/sad.svg'),
 (1, 'salad', '../../img/categories/food and drinks/salad.svg'),
 (1, 'SALUDOS ejemplo 1', '../../img/categories/places/SALUDOS ejemplo 1.svg'),
 (1, 'SALUDOS ejemplo 2', '../../img/categories/places/SALUDOS ejemplo 2.svg'),
 (1, 'SALUDOS ejemplo 3', '../../img/categories/places/SALUDOS ejemplo 3.svg'),
 (1, 'sandwich', '../../img/categories/food and drinks/sandwich.svg'),
 (1, 'sausage', '../../img/categories/food and drinks/sausage.svg'),
-(1, 'saxophone', '../../img/categories/fonetic abc/saxophone.webp'),
-(1, 'scared', '../../img/categories/feelings/scared.webp'),
-(1, 'scarf', '../../img/categories/plurals/scarf.webp'),
-(1, 'scarves', '../../img/categories/plurals/scarves.webp'),
-(1, 'school', '../../img/categories/places/school.webp'),
-(1, 'seal', '../../img/categories/animals/seal.webp'),
-(1, 'secretary', '../../img/categories/ocupations/secretary.webp'),
+(1, 'saxophone', '../../img/categories/fonetic abc/saxophone.svg'),
+(1, 'scared', '../../img/categories/feelings/scared.svg'),
+(1, 'scarf', '../../img/categories/plurals/scarf.svg'),
+(1, 'scarves', '../../img/categories/plurals/scarves.svg'),
+(1, 'school', '../../img/categories/places/school.svg'),
+(1, 'seal', '../../img/categories/animals/seal.svg'),
+(1, 'secretary', '../../img/categories/ocupations/secretary.svg'),
 (1, 'shake', '../../img/categories/food and drinks/shake.svg'),
-(1, 'shark', '../../img/categories/animals/shark.webp'),
+(1, 'shark', '../../img/categories/animals/shark.svg'),
 (1, 'she', '../../img/categories/personal pronouns/she.webp'),
-(1, 'sheep', '../../img/categories/animals/sheep.webp'),
-(1, 'shelf', '../../img/categories/plurals/shelf.webp'),
-(1, 'shelves', '../../img/categories/plurals/shelves.webp'),
-(1, 'shirt', '../../img/categories/plurals/shirt.webp'),
-(1, 'shirts', '../../img/categories/plurals/shirts.webp'),
-(1, 'shoe', '../../img/categories/plurals/shoe.webp'),
-(1, 'shoes', '../../img/categories/plurals/shoes.webp'),
+(1, 'sheep', '../../img/categories/animals/sheep.svg'),
+(1, 'shelf', '../../img/categories/plurals/shelf.svg'),
+(1, 'shelves', '../../img/categories/plurals/shelves.svg'),
+(1, 'shirt', '../../img/categories/plurals/shirt.svg'),
+(1, 'shirts', '../../img/categories/plurals/shirts.svg'),
+(1, 'shoe', '../../img/categories/plurals/shoe.svg'),
+(1, 'shoes', '../../img/categories/plurals/shoes.svg'),
 (1, 'shopping_mall', '../../img/categories/places/shopping_mall.webp'),
 (1, 'shoulder', '../../img/categories/the body/shoulder.svg'),
-(1, 'sibblings', '../../img/categories/family/sibblings.webp'),
-(1, 'sick', '../../img/categories/feelings/sick.webp'),
-(1, 'sister', '../../img/categories/family/sister.webp'),
+(1, 'sick', '../../img/categories/feelings/sick.svg'),
+(1, 'sister', '../../img/categories/family/sister.svg'),
+(1, 'sister1', '../../img/categories/family/sister1.svg'),
 (1, 'skating', '../../img/categories/sports/skating.svg'),
-(1, 'skiing', '../../img/categories/sports/skiing.webp'),
-(1, 'skirt', '../../img/categories/plurals/skirt.webp'),
-(1, 'skirts', '../../img/categories/plurals/skirts.webp'),
+(1, 'skiing', '../../img/categories/sports/skiing.svg'),
+(1, 'skirt', '../../img/categories/plurals/skirt.svg'),
+(1, 'skirts', '../../img/categories/plurals/skirts.svg'),
 (1, 'skyscraper', '../../img/categories/places/skyscraper.webp'),
-(1, 'sleepy', '../../img/categories/feelings/sleepy.webp'),
-(1, 'snail', '../../img/categories/animals/snail.webp'),
-(1, 'snake', '../../img/categories/animals/snake.webp'),
-(1, 'soccer', '../../img/categories/sports/soccer.webp'),
+(1, 'sleepy', '../../img/categories/feelings/sleepy.svg'),
+(1, 'snail', '../../img/categories/animals/snail.svg'),
+(1, 'snake', '../../img/categories/animals/snake.svg'),
+(1, 'soccer', '../../img/categories/sports/soccer.svg'),
 (1, 'soda', '../../img/categories/food and drinks/soda.svg'),
 (1, 'sofa', '../../img/categories/house/sofa.svg'),
 (1, 'soup', '../../img/categories/food and drinks/soup.svg'),
-(1, 'space', '../../img/categories/fonetic abc/space.webp'),
+(1, 'space', '../../img/categories/fonetic abc/space.svg'),
 (1, 'spaghetti', '../../img/categories/food and drinks/spaghetti.svg'),
-(1, 'spider', '../../img/categories/animals/spider.webp'),
+(1, 'spider', '../../img/categories/animals/spider.svg'),
 (1, 'station', '../../img/categories/places/station.webp'),
-(1, 'strawberries', '../../img/categories/fruits/strawberries.webp'),
-(1, 'strawberry', '../../img/categories/fruits/strawberry.webp'),
+(1, 'strawberries', '../../img/categories/fruits/strawberries.svg'),
+(1, 'strawberry', '../../img/categories/fruits/strawberry.svg'),
 (1, 'street', '../../img/categories/places/street.webp'),
-(1, 'student', '../../img/categories/ocupations/student.webp'),
+(1, 'student', '../../img/categories/ocupations/student.svg'),
 (1, 'subway_station', '../../img/categories/places/subway_station.webp'),
-(1, 'sun', '../../img/categories/fonetic abc/sun.webp'),
-(1, 'supermarket', '../../img/categories/places/supermarket.webp'),
-(1, 'surfing', '../../img/categories/sports/surfing.webp'),
-(1, 'swan', '../../img/categories/animals/swan.webp'),
-(1, 'sweater', '../../img/categories/plurals/sweater.webp'),
-(1, 'sweaters', '../../img/categories/plurals/sweaters.webp'),
-(1, 'swimming', '../../img/categories/sports/swimming.webp'),
-(1, 'table', '../../img/categories/house/table.webp'),
-(1, 'taxi', '../../img/categories/house/taxi.webp'),
+(1, 'sun', '../../img/categories/fonetic abc/sun.svg'),
+(1, 'supermarket', '../../img/categories/places/supermarket.svg'),
+(1, 'surfing', '../../img/categories/sports/surfing.svg'),
+(1, 'swan', '../../img/categories/animals/swan.svg'),
+(1, 'sweater', '../../img/categories/plurals/sweater.svg'),
+(1, 'sweaters', '../../img/categories/plurals/sweaters.svg'),
+(1, 'swimming', '../../img/categories/sports/swimming.svg'),
+(1, 'table', '../../img/categories/house/table.svg'),
+(1, 'taxi', '../../img/categories/house/taxi.svg'),
 (1, 'tea', '../../img/categories/food and drinks/tea.svg'),
-(1, 'teacher', '../../img/categories/ocupations/teacher.webp'),
-(1, 'teeth', '../../img/categories/the body/teeth.webp'),
-(1, 'tennis', '../../img/categories/sports/tennis.webp'),
+(1, 'teacher', '../../img/categories/ocupations/teacher.svg'),
+(1, 'teeth', '../../img/categories/the body/teeth.svg'),
+(1, 'tennis', '../../img/categories/sports/tennis.svg'),
 (1, 'they', '../../img/categories/personal pronouns/they.webp'),
-(1, 'thirsty', '../../img/categories/feelings/thirsty.webp'),
-(1, 'thumb', '../../img/categories/the body/thumb.svg'),
-(1, 'tiger', '../../img/categories/animals/tiger.webp'),
-(1, 'tired', '../../img/categories/feelings/tired.webp'),
-(1, 'toes', '../../img/categories/the body/toes.svg'),
+(1, 'thirsty', '../../img/categories/feelings/thirsty.svg'),
+(1, 'tiger', '../../img/categories/animals/tiger.svg'),
+(1, 'tired', '../../img/categories/feelings/tired.svg'),
 (1, 'tomato', '../../img/categories/food and drinks/tomato.svg'),
-(1, 'tomatoes', '../../img/categories/food and drinks/tomatoes.webp'),
-(1, 'tooth', '../../img/categories/the body/tooth.webp'),
-(1, 'toy', '../../img/categories/plurals/toy.webp'),
-(1, 'toys', '../../img/categories/plurals/toys.webp'),
-(1, 'toy_store', '../../img/categories/places/toy_store.webp'),
-(1, 'to_the_left', '../../img/categories/prepositions/to_the_left.webp'),
-(1, 'to_the_right', '../../img/categories/prepositions/to_the_right.webp'),
-(1, 'traffic_light', '../../img/categories/places/traffic_light.webp'),
-(1, 'tree', '../../img/categories/a an the/tree.webp'),
-(1, 'tuna', '../../img/categories/food and drinks/tuna.webp'),
-(1, 'turkey', '../../img/categories/animals/turkey.webp'),
-(1, 'turkeys', '../../img/categories/animals/turkeys.webp'),
-(1, 'turtle', '../../img/categories/animals/turtle.webp'),
-(1, 'umbrella', '../../img/categories/a an the/umbrella.webp'),
-(1, 'umbrellas', '../../img/categories/fruits/umbrellas.webp'),
-(1, 'uncle', '../../img/categories/family/uncle.webp'),
-(1, 'under', '../../img/categories/prepositions/under.webp'),
-(1, 'unhappy', '../../img/categories/feelings/unhappy.webp'),
-(1, 'university', '../../img/categories/places/university.webp'),
-(1, 'vet', '../../img/categories/ocupations/vet.webp'),
-(1, 'voice', '../../img/categories/fonetic abc/voice.webp'),
-(1, 'volleyball', '../../img/categories/sports/volleyball.webp'),
-(1, 'watch', '../../img/categories/plurals/watch.webp'),
-(1, 'watches', '../../img/categories/plurals/watches.webp'),
+(1, 'tomatoes', '../../img/categories/food and drinks/tomatoes.svg'),
+(1, 'toy', '../../img/categories/plurals/toy.svg'),
+(1, 'toys', '../../img/categories/plurals/toys.svg'),
+(1, 'toy_store', '../../img/categories/places/toy_store.svg'),
+(1, 'to_the_right', '../../img/categories/Prepositions/to_the_right.svg'),
+(1, 'traffic_light', '../../img/categories/places/traffic_light.svg'),
+(1, 'tree', '../../img/categories/a an the/tree.svg'),
+(1, 'tuna', '../../img/categories/food and drinks/tuna.svg'),
+(1, 'turkey', '../../img/categories/animals/turkey.svg'),
+(1, 'turkeys', '../../img/categories/animals/turkeys.svg'),
+(1, 'turtle', '../../img/categories/animals/turtle.svg'),
+(1, 'umbrella', '../../img/categories/a an the/umbrella.svg'),
+(1, 'umbrellas', '../../img/categories/fruits/umbrellas.svg'),
+(1, 'uncle', '../../img/categories/family/uncle.svg'),
+(1, 'under', '../../img/categories/Prepositions/under.svg'),
+(1, 'unhappy', '../../img/categories/feelings/unhappy.svg'),
+(1, 'university', '../../img/categories/places/university.svg'),
+(1, 'vet', '../../img/categories/ocupations/vet.svg'),
+(1, 'voice', '../../img/categories/fonetic abc/voice.svg'),
+(1, 'volleyball', '../../img/categories/sports/volleyball.svg'),
+(1, 'watch', '../../img/categories/plurals/watch.svg'),
+(1, 'watches', '../../img/categories/plurals/watches.svg'),
 (1, 'water', '../../img/categories/food and drinks/water.svg'),
-(1, 'waterfall', '../../img/categories/a an the/waterfall.webp'),
+(1, 'waterfall', '../../img/categories/a an the/waterfall.svg'),
 (1, 'we', '../../img/categories/personal pronouns/we.webp'),
-(1, 'whale', '../../img/categories/animals/whale.webp'),
-(1, 'white', '../../img/categories/colors/white.webp'),
-(1, 'window', '../../img/categories/this these/window.webp'),
-(1, 'windows', '../../img/categories/this these/windows.webp'),
-(1, 'wing', '../../img/categories/fonetic abc/wing.webp'),
-(1, 'wolf', '../../img/categories/animals/wolf.webp'),
-(1, 'wolves', '../../img/categories/animals/wolves.webp'),
-(1, 'woman', '../../img/categories/plurals/woman.webp'),
-(1, 'women', '../../img/categories/plurals/women.webp'),
-(1, 'worm', '../../img/categories/animals/worm.webp'),
-(1, 'worried', '../../img/categories/feelings/worried.webp'),
+(1, 'whale', '../../img/categories/animals/whale.svg'),
+(1, 'white', '../../img/categories/colors/white.svg'),
+(1, 'window', '../../img/categories/this these/window.svg'),
+(1, 'windows', '../../img/categories/this these/windows.svg'),
+(1, 'wing', '../../img/categories/fonetic abc/wing.svg'),
+(1, 'wolf', '../../img/categories/animals/wolf.svg'),
+(1, 'wolves', '../../img/categories/animals/wolves.svg'),
+(1, 'woman', '../../img/categories/plurals/woman.svg'),
+(1, 'women', '../../img/categories/plurals/women.svg'),
+(1, 'worm', '../../img/categories/animals/worm.svg'),
+(1, 'worried', '../../img/categories/feelings/worried.svg'),
 (1, 'wrist', '../../img/categories/the body/wrist.svg'),
-(1, 'write', '../../img/categories/can/write.webp'),
-(1, 'xylophone', '../../img/categories/fonetic abc/xylophone.webp'),
-(1, 'yellow', '../../img/categories/colors/yellow.webp'),
+(1, 'write', '../../img/categories/can/write.svg'),
+(1, 'xylophone', '../../img/categories/fonetic abc/xylophone.svg'),
+(1, 'yellow', '../../img/categories/colors/yellow.svg'),
 (1, 'yoga', '../../img/categories/sports/yoga.svg'),
 (1, 'yogurt', '../../img/categories/food and drinks/yogurt.svg'),
 (1, 'you', '../../img/categories/personal pronouns/you.webp'),
 (1, 'you_2', '../../img/categories/personal pronouns/you_2.webp'),
-(1, 'zebra', '../../img/categories/animals/zebra.webp'),
-(1, 'zipper', '../../img/categories/fonetic abc/zipper.webp'),
-(1, 'zoo', '../../img/categories/places/zoo.webp');
+(1, 'zebra', '../../img/categories/animals/zebra.svg'),
+(1, 'zipper', '../../img/categories/fonetic abc/zipper.svg'),
+(1, 'zoo', '../../img/categories/places/zoo.svg');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `p100_videos`
+-- Table structure for table `p100_videos`
 --
 
 CREATE TABLE IF NOT EXISTS `p100_videos` (
@@ -963,7 +948,7 @@ CREATE TABLE IF NOT EXISTS `p100_videos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `p100_videos`
+-- Dumping data for table `p100_videos`
 --
 
 INSERT INTO `p100_videos` (`Co_Multimedia`, `Nb_videos`, `Tx_Url`) VALUES
@@ -1032,7 +1017,7 @@ INSERT INTO `p100_videos` (`Co_Multimedia`, `Nb_videos`, `Tx_Url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `p110_audio`
+-- Table structure for table `p110_audio`
 --
 
 CREATE TABLE IF NOT EXISTS `p110_audio` (
@@ -1042,10 +1027,11 @@ CREATE TABLE IF NOT EXISTS `p110_audio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `p110_audio`
+-- Dumping data for table `p110_audio`
 --
 
 INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
+(2, '0c', '../../aud/categories/numbers/0c.mp3'),
 (2, '100c', '../../aud/categories/numbers/100c.mp3'),
 (2, '10c', '../../aud/categories/numbers/10c.mp3'),
 (2, '10_45', '../../aud/categories/hours/10_45.mp3'),
@@ -1143,6 +1129,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, '91c', '../../aud/categories/numbers/91c.mp3'),
 (2, '96c', '../../aud/categories/numbers/96c.mp3'),
 (2, '9c', '../../aud/categories/numbers/9c.mp3'),
+(2, '9_05', '../../aud/categories/hours/9_05.mp3'),
 (2, '9_09', '../../aud/categories/hours/9_09.mp3'),
 (2, '9_16', '../../aud/categories/hours/9_16.mp3'),
 (2, '9_18', '../../aud/categories/hours/9_18.mp3'),
@@ -1150,6 +1137,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, '9_30', '../../aud/categories/hours/9_30.mp3'),
 (2, '9_49', '../../aud/categories/hours/9_49.mp3'),
 (2, '9_59', '../../aud/categories/hours/9_59.mp3'),
+(2, 'a', '../../aud/categories/abc/a.mp3'),
 (2, 'above', '../../aud/categories/prepositions/above.mp3'),
 (2, 'address', '../../aud/categories/personal information/address.mp3'),
 (2, 'afraid', '../../aud/categories/feelings/afraid.mp3'),
@@ -1161,9 +1149,10 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'am_i_sleepy', '../../aud/categories/feelings/am_i_sleepy.mp3'),
 (2, 'angry', '../../aud/categories/feelings/angry.mp3'),
 (2, 'ankle', '../../aud/categories/the body/ankle.mp3'),
+(2, 'ant', '../../aud/categories/animals/ant.mp3'),
 (2, 'apple', '../../aud/categories/fruits/apple.mp3'),
 (2, 'archery', '../../aud/categories/sports/archery.mp3'),
-(2, 'are_they_embarrassed', '../../aud/categories/feelings/are_they_embarrassed.mp3'),
+(2, 'are_they_embarrased', '../../aud/categories/feelings/are_they_embarrased.mp3'),
 (2, 'are_they_firefighters', '../../aud/categories/ocupations/are_they_firefighters.mp3'),
 (2, 'are_they_mechanics', '../../aud/categories/ocupations/are_they_mechanics.mp3'),
 (2, 'are_they_teachers', '../../aud/categories/ocupations/are_they_teachers.mp3'),
@@ -1179,6 +1168,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'athletics', '../../aud/categories/sports/athletics.mp3'),
 (2, 'aunt', '../../aud/categories/family/aunt.mp3'),
 (2, 'avenue', '../../aud/categories/places/avenue.mp3'),
+(2, 'b', '../../aud/categories/abc/b.mp3'),
 (2, 'babies', '../../aud/categories/plurals/babies.mp3'),
 (2, 'baby', '../../aud/categories/plurals/baby.mp3'),
 (2, 'back', '../../aud/categories/the body/back.mp3'),
@@ -1235,7 +1225,9 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'butter', '../../aud/categories/food and drinks/butter.mp3'),
 (2, 'butterfly', '../../aud/categories/animals/butterfly.mp3'),
 (2, 'bye', '../../aud/categories/the greetings/bye.mp3'),
+(2, 'c', '../../aud/categories/abc/c.mp3'),
 (2, 'cake', '../../aud/categories/food and drinks/cake.mp3'),
+(2, 'calf', '../../aud/categories/the body/calf.mp3'),
 (2, 'camel', '../../aud/categories/animals/camel.mp3'),
 (2, 'cap', '../../aud/categories/plurals/cap.mp3'),
 (2, 'caps', '../../aud/categories/plurals/caps.mp3'),
@@ -1272,6 +1264,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'confused', '../../aud/categories/feelings/confused.mp3'),
 (2, 'cookies', '../../aud/categories/food and drinks/cookies.mp3'),
 (2, 'cousin', '../../aud/categories/family/cousin.mp3'),
+(2, 'cow', '../../aud/categories/animals/cow.mp3'),
 (2, 'crackers', '../../aud/categories/food and drinks/crackers.mp3'),
 (2, 'crocodile', '../../aud/categories/animals/crocodile.mp3'),
 (2, 'croissant', '../../aud/categories/food and drinks/croissant.mp3'),
@@ -1280,6 +1273,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'cupcake', '../../aud/categories/food and drinks/cupcake.mp3'),
 (2, 'curtains', '../../aud/categories/house/curtains.mp3'),
 (2, 'cycling', '../../aud/categories/sports/cycling.mp3'),
+(2, 'd', '../../aud/categories/abc/d.mp3'),
 (2, 'daughter', '../../aud/categories/family/daughter.mp3'),
 (2, 'deer', '../../aud/categories/animals/deer.mp3'),
 (2, 'dentist', '../../aud/categories/ocupations/dentist.mp3'),
@@ -1298,6 +1292,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'dragonfly', '../../aud/categories/animals/dragonfly.mp3'),
 (2, 'drinks', '../../aud/categories/food and drinks/drinks.mp3'),
 (2, 'duck', '../../aud/categories/animals/duck.mp3'),
+(2, 'e', '../../aud/categories/abc/e.mp3'),
 (2, 'eagle', '../../aud/categories/animals/eagle.mp3'),
 (2, 'ear', '../../aud/categories/the body/ear.mp3'),
 (2, 'ears', '../../aud/categories/the body/ears.mp3'),
@@ -1314,6 +1309,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'eyebrows', '../../aud/categories/the body/eyebrows.mp3'),
 (2, 'eyelashes', '../../aud/categories/the body/eyelashes.mp3'),
 (2, 'eyes', '../../aud/categories/the body/eyes.mp3'),
+(2, 'f', '../../aud/categories/abc/f.mp3'),
 (2, 'farmer', '../../aud/categories/ocupations/farmer.mp3'),
 (2, 'father', '../../aud/categories/family/father.mp3'),
 (2, 'father_or_dad', '../../aud/categories/family/father_or_dad.mp3'),
@@ -1330,6 +1326,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'food', '../../aud/categories/food and drinks/food.mp3'),
 (2, 'foot', '../../aud/categories/the body/foot.mp3'),
 (2, 'football', '../../aud/categories/sports/football.mp3'),
+(2, 'forearm', '../../aud/categories/the body/forearm.mp3'),
 (2, 'forehead', '../../aud/categories/the body/forehead.mp3'),
 (2, 'fox', '../../aud/categories/animals/fox.mp3'),
 (2, 'foxes', '../../aud/categories/animals/foxes.mp3'),
@@ -1337,6 +1334,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'frog', '../../aud/categories/animals/frog.mp3'),
 (2, 'fruit', '../../aud/categories/food and drinks/fruit.mp3'),
 (2, 'full_name', '../../aud/categories/personal information/full_name.mp3'),
+(2, 'g', '../../aud/categories/abc/g.mp3'),
 (2, 'gallery', '../../aud/categories/places/gallery.mp3'),
 (2, 'gas_station', '../../aud/categories/places/gas_station.mp3'),
 (2, 'geese', '../../aud/categories/animals/geese.mp3'),
@@ -1356,13 +1354,13 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'goose', '../../aud/categories/animals/goose.mp3'),
 (2, 'grandchildren', '../../aud/categories/family/grandchildren.mp3'),
 (2, 'granddaughter', '../../aud/categories/family/granddaughter.mp3'),
-(2, 'granddoughter', '../../aud/categories/family/granddoughter.mp3'),
 (2, 'grandfather', '../../aud/categories/family/grandfather.mp3'),
 (2, 'grandmother', '../../aud/categories/family/grandmother.mp3'),
 (2, 'grandson', '../../aud/categories/family/grandson.mp3'),
 (2, 'gray', '../../aud/categories/colors/gray.mp3'),
 (2, 'green', '../../aud/categories/colors/green.mp3'),
 (2, 'gym', '../../aud/categories/places/gym.mp3'),
+(2, 'h', '../../aud/categories/abc/h.mp3'),
 (2, 'hair', '../../aud/categories/the body/hair.mp3'),
 (2, 'hairdresser', '../../aud/categories/ocupations/hairdresser.mp3'),
 (2, 'ham', '../../aud/categories/food and drinks/ham.mp3'),
@@ -1374,7 +1372,9 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'have_a_nice_day', '../../aud/categories/the greetings/have_a_nice_day.mp3'),
 (2, 'he', '../../aud/categories/personal pronouns/he.mp3'),
 (2, 'head', '../../aud/categories/the body/head.mp3'),
+(2, 'heel', '../../aud/categories/the body/heel.mp3'),
 (2, 'hello', '../../aud/categories/the greetings/hello.mp3'),
+(2, 'hen', '../../aud/categories/animals/hen.mp3'),
 (2, 'hey', '../../aud/categories/the greetings/hey.mp3'),
 (2, 'he_is_not_a_pilot', '../../aud/categories/ocupations/he_is_not_a_pilot.mp3'),
 (2, 'he_is_not_cold', '../../aud/categories/feelings/he_is_not_cold.mp3'),
@@ -1394,7 +1394,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'how_are_you', '../../aud/categories/the greetings/how_are_you.mp3'),
 (2, 'hungry', '../../aud/categories/feelings/hungry.mp3'),
 (2, 'husband', '../../aud/categories/family/husband.mp3'),
-(2, 'i', '../../aud/categories/personal pronouns/i.mp3'),
+(2, 'i', '../../aud/categories/abc/i.mp3'),
 (2, 'ice', '../../aud/categories/fonetic abc/ice.mp3'),
 (2, 'iceberg', '../../aud/categories/a an the/iceberg.mp3'),
 (2, 'ice_cream', '../../aud/categories/food and drinks/ice_cream.mp3'),
@@ -1414,17 +1414,21 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'i_am_not_happy', '../../aud/categories/feelings/i_am_not_happy.mp3'),
 (2, 'i_am_not_hungry', '../../aud/categories/feelings/i_am_not_hungry.mp3'),
 (2, 'i_am_not_sick', '../../aud/categories/feelings/i_am_not_sick.mp3'),
+(2, 'j', '../../aud/categories/abc/j.mp3'),
 (2, 'jacket', '../../aud/categories/prepositions/jacket.mp3'),
 (2, 'jackets', '../../aud/categories/plurals/jackets.mp3'),
 (2, 'jam', '../../aud/categories/food and drinks/jam.mp3'),
+(2, 'jaw', '../../aud/categories/the body/jaw.mp3'),
 (2, 'jello', '../../aud/categories/food and drinks/jello.mp3'),
 (2, 'jelly', '../../aud/categories/food and drinks/jelly.mp3'),
 (2, 'juice', '../../aud/categories/fonetic abc/juice.mp3'),
+(2, 'k', '../../aud/categories/abc/k.mp3'),
 (2, 'kangaroo', '../../aud/categories/animals/kangaroo.mp3'),
 (2, 'key', '../../aud/categories/fonetic abc/key.mp3'),
 (2, 'knee', '../../aud/categories/the body/knee.mp3'),
 (2, 'knife', '../../aud/categories/plurals/knife.mp3'),
 (2, 'knives', '../../aud/categories/plurals/knives.mp3'),
+(2, 'l', '../../aud/categories/abc/l.mp3'),
 (2, 'lamp', '../../aud/categories/house/lamp.mp3'),
 (2, 'last_name', '../../aud/categories/personal information/last_name.mp3'),
 (2, 'laundry', '../../aud/categories/places/laundry.mp3'),
@@ -1436,7 +1440,9 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'library', '../../aud/categories/places/library.mp3'),
 (2, 'light', '../../aud/categories/fonetic abc/light.mp3'),
 (2, 'lion', '../../aud/categories/animals/lion.mp3'),
+(2, 'lip', '../../aud/categories/the body/lip.mp3'),
 (2, 'listening', '../../aud/categories/hours/listening.mp3'),
+(2, 'm', '../../aud/categories/abc/m.mp3'),
 (2, 'mad', '../../aud/categories/feelings/mad.mp3'),
 (2, 'man', '../../aud/categories/plurals/man.mp3'),
 (2, 'mango', '../../aud/categories/fruits/mango.mp3'),
@@ -1472,6 +1478,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'my_middle_name_is_daniel', '../../aud/categories/personal information/my_middle_name_is_daniel.mp3'),
 (2, 'my_middle_name_is_jose', '../../aud/categories/personal information/my_middle_name_is_jose.mp3'),
 (2, 'my_name_is_sarah', '../../aud/categories/personal information/my_name_is_sarah.mp3'),
+(2, 'n', '../../aud/categories/abc/n.mp3'),
 (2, 'nails', '../../aud/categories/the body/nails.mp3'),
 (2, 'name', '../../aud/categories/personal information/name.mp3'),
 (2, 'neck', '../../aud/categories/the body/neck.mp3'),
@@ -1484,12 +1491,14 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'nothing', '../../aud/categories/the greetings/nothing.mp3'),
 (2, 'not_much', '../../aud/categories/the greetings/not_much.mp3'),
 (2, 'nurse', '../../aud/categories/ocupations/nurse.mp3'),
+(2, 'o', '../../aud/categories/abc/o.mp3'),
 (2, 'ocean', '../../aud/categories/fonetic abc/ocean.mp3'),
 (2, 'octopus', '../../aud/categories/animals/octopus.mp3'),
 (2, 'on', '../../aud/categories/prepositions/on.mp3'),
 (2, 'orange', '../../aud/categories/fruits/orange.mp3'),
 (2, 'ostrich', '../../aud/categories/animals/ostrich.mp3'),
 (2, 'owl', '../../aud/categories/animals/owl.mp3'),
+(2, 'p', '../../aud/categories/abc/p.mp3'),
 (2, 'painting', '../../aud/categories/house/painting.mp3'),
 (2, 'pancakes', '../../aud/categories/food and drinks/pancakes.mp3'),
 (2, 'panda', '../../aud/categories/animals/panda.mp3'),
@@ -1521,8 +1530,10 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'pudding', '../../aud/categories/food and drinks/pudding.mp3'),
 (2, 'pupil', '../../aud/categories/the body/pupil.mp3'),
 (2, 'purple', '../../aud/categories/colors/purple.mp3'),
+(2, 'q', '../../aud/categories/abc/q.mp3'),
 (2, 'quick', '../../aud/categories/fonetic abc/quick.mp3'),
 (2, 'quiet', '../../aud/categories/fonetic abc/quiet.mp3'),
+(2, 'r', '../../aud/categories/abc/r.mp3'),
 (2, 'rabbit', '../../aud/categories/animals/rabbit.mp3'),
 (2, 'rat', '../../aud/categories/animals/rat.mp3'),
 (2, 'red', '../../aud/categories/colors/red.mp3'),
@@ -1531,6 +1542,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'rice', '../../aud/categories/food and drinks/rice.mp3'),
 (2, 'rooster', '../../aud/categories/animals/rooster.mp3'),
 (2, 'rose', '../../aud/categories/fonetic abc/rose.mp3'),
+(2, 's', '../../aud/categories/abc/s.mp3'),
 (2, 'sad', '../../aud/categories/feelings/sad.mp3'),
 (2, 'salad', '../../aud/categories/food and drinks/salad.mp3'),
 (2, 'sandwich', '../../aud/categories/food and drinks/sandwich.mp3'),
@@ -1589,6 +1601,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'sweater', '../../aud/categories/plurals/sweater.mp3'),
 (2, 'sweaters', '../../aud/categories/plurals/sweaters.mp3'),
 (2, 'swimming', '../../aud/categories/sports/swimming.mp3'),
+(2, 't', '../../aud/categories/abc/t.mp3'),
 (2, 'table', '../../aud/categories/house/table.mp3'),
 (2, 'take_care', '../../aud/categories/the greetings/take_care.mp3'),
 (2, 'taxi', '../../aud/categories/places/taxi.mp3'),
@@ -1612,11 +1625,13 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'the_umbrella', '../../aud/categories/a an the/the_umbrella.mp3'),
 (2, 'the_university', '../../aud/categories/a an the/the_university.mp3'),
 (2, 'the_waterfall', '../../aud/categories/a an the/the_waterfall.mp3'),
+(2, 'thigh', '../../aud/categories/the body/thigh.mp3'),
 (2, 'thirsty', '../../aud/categories/feelings/thirsty.mp3'),
 (2, 'thumb', '../../aud/categories/the body/thumb.mp3'),
 (2, 'tiger', '../../aud/categories/animals/tiger.mp3'),
 (2, 'tired', '../../aud/categories/feelings/tired.mp3'),
 (2, 'toes', '../../aud/categories/the body/toes.mp3'),
+(2, 'toe_nails', '../../aud/categories/the body/toe_nails.mp3'),
 (2, 'tomato', '../../aud/categories/food and drinks/tomato.mp3'),
 (2, 'tomatoes', '../../aud/categories/food and drinks/tomatoes.mp3'),
 (2, 'tooth', '../../aud/categories/plurals/tooth.mp3'),
@@ -1627,21 +1642,26 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'to_the_right', '../../aud/categories/prepositions/to_the_right.mp3'),
 (2, 'traffic_light', '../../aud/categories/places/traffic_light.mp3'),
 (2, 'tree', '../../aud/categories/a an the/tree.mp3'),
+(2, 'trunk', '../../aud/categories/the body/trunk.mp3'),
 (2, 'tuna', '../../aud/categories/food and drinks/tuna.mp3'),
 (2, 'turkey', '../../aud/categories/animals/turkey.mp3'),
 (2, 'turkeys', '../../aud/categories/animals/turkeys.mp3'),
 (2, 'turtle', '../../aud/categories/animals/turtle.mp3'),
+(2, 'u', '../../aud/categories/abc/u.mp3'),
 (2, 'umbrella', '../../aud/categories/a an the/umbrella.mp3'),
 (2, 'umbrellas', '../../aud/categories/plurals/umbrellas.mp3'),
 (2, 'uncle', '../../aud/categories/family/uncle.mp3'),
 (2, 'under', '../../aud/categories/prepositions/under.mp3'),
 (2, 'unhappy', '../../aud/categories/feelings/unhappy.mp3'),
 (2, 'university', '../../aud/categories/places/university.mp3'),
+(2, 'v', '../../aud/categories/abc/v.mp3'),
 (2, 'very_well', '../../aud/categories/the greetings/very_well.mp3'),
 (2, 'vet', '../../aud/categories/ocupations/vet.mp3'),
 (2, 'vocabulary', '../../aud/categories/feelings/vocabulary.mp3'),
 (2, 'voice', '../../aud/categories/fonetic abc/voice.mp3'),
 (2, 'volleyball', '../../aud/categories/sports/volleyball.mp3'),
+(2, 'w', '../../aud/categories/abc/w.mp3'),
+(2, 'waist', '../../aud/categories/the body/waist.mp3'),
 (2, 'watch', '../../aud/categories/can/watch.mp3'),
 (2, 'watches', '../../aud/categories/plurals/watches.mp3'),
 (2, 'water', '../../aud/categories/food and drinks/water.mp3'),
@@ -1687,7 +1707,9 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'worried', '../../aud/categories/feelings/worried.mp3'),
 (2, 'wrist', '../../aud/categories/the body/wrist.mp3'),
 (2, 'write', '../../aud/categories/can/write.mp3'),
+(2, 'x', '../../aud/categories/abc/x.mp3'),
 (2, 'xylophone', '../../aud/categories/fonetic abc/xylophone.mp3'),
+(2, 'y', '../../aud/categories/abc/y.mp3'),
 (2, 'yellow', '../../aud/categories/colors/yellow.mp3'),
 (2, 'yo', '../../aud/categories/the greetings/yo.mp3'),
 (2, 'yoga', '../../aud/categories/sports/yoga.mp3'),
@@ -1698,6 +1720,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 (2, 'you_are_not_a_police_officers', '../../aud/categories/ocupations/you_are_not_a_police_officers.mp3'),
 (2, 'you_are_not_bored', '../../aud/categories/feelings/you_are_not_bored.mp3'),
 (2, 'you_are_not_hungry', '../../aud/categories/feelings/you_are_not_hungry.mp3'),
+(2, 'z', '../../aud/categories/abc/z.mp3'),
 (2, 'zebra', '../../aud/categories/animals/zebra.mp3'),
 (2, 'zipper', '../../aud/categories/fonetic abc/zipper.mp3'),
 (2, 'zoo', '../../aud/categories/places/zoo.mp3');
@@ -1705,7 +1728,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `t010_bitacora`
+-- Table structure for table `t010_bitacora`
 --
 
 CREATE TABLE IF NOT EXISTS `t010_bitacora` (
@@ -1715,10 +1738,10 @@ CREATE TABLE IF NOT EXISTS `t010_bitacora` (
   `Hr_Entrada` varchar(20) NOT NULL,
   `Hr_Salida` varchar(20) NOT NULL,
   `Nu_Lecciones` int(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `t010_bitacora`
+-- Dumping data for table `t010_bitacora`
 --
 
 INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_Entrada`, `Hr_Salida`, `Nu_Lecciones`) VALUES
@@ -1794,12 +1817,25 @@ INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_En
 (70, 8, '2019-10-12', '01:14:26', '01:14:47', 0),
 (71, 1, '2019-10-21', '07:02:26', '', 0),
 (72, 1, '2019-10-21', '07:02:27', '', 0),
-(73, 4, '2019-10-21', '07:35:31', '', 0);
+(73, 4, '2019-10-21', '07:35:31', '', 0),
+(74, 1, '2019-10-22', '11:06:22', '', 0),
+(75, 1, '2019-10-24', '06:10:41', '', 0),
+(76, 1, '2019-10-24', '07:08:33', '', 0),
+(77, 1, '2019-10-25', '05:26:38', '', 0),
+(78, 2, '2019-10-26', '03:34:16', '03:35:18', 0),
+(79, 1, '2019-10-26', '03:37:28', '09:51:41', 0),
+(80, 1, '2019-10-26', '03:42:34', '', 0),
+(81, 1, '2019-10-26', '04:02:05', '', 0),
+(82, 2, '2019-10-26', '09:31:21', '', 0),
+(83, 1, '2019-10-26', '10:57:38', '', 0),
+(84, 1, '2019-10-27', '06:15:21', '', 0),
+(85, 1, '2019-10-28', '11:02:08', '', 0),
+(86, 1, '2019-10-28', '11:03:39', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `t020_juego_tema`
+-- Table structure for table `t020_juego_tema`
 --
 
 CREATE TABLE IF NOT EXISTS `t020_juego_tema` (
@@ -1814,7 +1850,7 @@ CREATE TABLE IF NOT EXISTS `t020_juego_tema` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `t020_juego_tema`
+-- Dumping data for table `t020_juego_tema`
 --
 
 INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
@@ -2098,31 +2134,19 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (17, 5, 39, 'pencil', NULL, 'pencil', '', 'a'),
 (17, 5, 39, 'hour', NULL, 'hour', '', 'an'),
 (17, 5, 39, 'umbrella', NULL, 'umbrella', '', 'an'),
-(9, 5, 40, 'waterfall', NULL, 'waterfall', 'A/An', 'a'),
-(9, 5, 40, 'cup', NULL, 'cup', 'A/An', 'a'),
-(9, 5, 40, 'orange', NULL, 'orange', 'A/An', 'an'),
-(9, 5, 40, 'tree', NULL, 'tree', 'A/An', 'a'),
-(9, 5, 40, 'house', NULL, 'house', 'A/An', 'a'),
-(9, 5, 40, 'eraser', NULL, 'eraser', 'A/An', 'an'),
-(9, 5, 40, 'elephant', NULL, 'elephant', 'A/An', 'an'),
-(9, 5, 40, 'eagle', NULL, 'eagle', 'A/An', 'an'),
-(9, 5, 40, 'iceberg', NULL, 'iceberg', 'A/An', 'an'),
-(9, 5, 40, 'glass', NULL, 'glass', 'A/An', 'a'),
-(9, 5, 40, 'pencil', NULL, 'pencil', 'A/An', 'a'),
-(9, 5, 40, 'hour', NULL, 'hour', 'A/An', 'an'),
-(9, 5, 40, 'umbrella', NULL, 'umbrella', 'A/An', 'an'),
-(16, 5, 41, 'pencil', NULL, NULL, 'A/An', 'A'),
-(16, 5, 41, 'waterfall', NULL, NULL, 'A/An', 'A'),
-(16, 5, 41, 'cup', NULL, NULL, 'A/An', 'A'),
-(16, 5, 41, 'house', NULL, NULL, 'A/An', 'A'),
-(16, 5, 41, 'university', NULL, NULL, 'A/An', 'An'),
-(16, 5, 41, 'eraser', NULL, NULL, 'A/An', 'An'),
-(16, 5, 41, 'elephant', NULL, NULL, 'A/An', 'An'),
-(16, 5, 41, 'orange', NULL, NULL, 'A/An', 'An'),
-(16, 5, 41, 'eagle', NULL, NULL, 'A/An', 'An'),
-(16, 5, 41, 'iceberg', NULL, NULL, 'A/An', 'An'),
-(16, 5, 41, 'hour', NULL, NULL, 'A/An', 'An'),
-(16, 5, 41, 'umbrella', NULL, NULL, 'A/An', 'An'),
+(1, 5, 40, NULL, 'video55', NULL, '', ''),
+(5, 5, 41, 'the_pencil', NULL, 'pencil', 'The Pencil', 'the pencil'),
+(5, 5, 41, 'the_waterfall', NULL, 'waterfall', 'The Waterfall', 'the waterfall'),
+(5, 5, 41, 'the_cup', NULL, 'cup', 'The Cup', 'the cup'),
+(5, 5, 41, 'the_house', NULL, 'house', 'The House', 'the house'),
+(5, 5, 41, 'the_university', NULL, 'university', 'The University', 'the university'),
+(5, 5, 41, 'the_eraser', NULL, 'eraser', 'The Eraser', 'the eraser'),
+(5, 5, 41, 'the_elephant', NULL, 'elephant', 'The Elephant', 'the elephant'),
+(5, 5, 41, 'the_orange', NULL, 'orange', 'The Orange', 'the orange'),
+(5, 5, 41, 'the_eagle', NULL, 'eagle', 'The Eagle', 'the eagle'),
+(5, 5, 41, 'the_iceberg', NULL, 'iceberg', 'The Iceberg', 'the iceberg'),
+(5, 5, 41, 'the_hour', NULL, 'hour', 'The Hour', 'the hour'),
+(5, 5, 41, 'the_umbrella', NULL, 'umbrella', 'The Umbrella', 'the umbrella'),
 (1, 6, 42, NULL, 'video61', NULL, '', ''),
 (8, 6, 43, 'alligator', NULL, 'alligator', 'Alligator', 'Caimán'),
 (8, 6, 43, 'ant', NULL, 'ant', 'Ant', 'Hormiga'),
@@ -3589,7 +3613,7 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `t030_cobranza`
+-- Table structure for table `t030_cobranza`
 --
 
 CREATE TABLE IF NOT EXISTS `t030_cobranza` (
@@ -3603,7 +3627,7 @@ CREATE TABLE IF NOT EXISTS `t030_cobranza` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `t040_retos`
+-- Table structure for table `t040_retos`
 --
 
 CREATE TABLE IF NOT EXISTS `t040_retos` (
@@ -3616,7 +3640,7 @@ CREATE TABLE IF NOT EXISTS `t040_retos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `t040_retos`
+-- Dumping data for table `t040_retos`
 --
 
 INSERT INTO `t040_retos` (`Co_Reto`, `Co_Usuario`, `Co_Tema`, `Nu_Identificacion`, `Fe_Ejecucion`, `St_Reto`) VALUES
@@ -3632,7 +3656,7 @@ INSERT INTO `t040_retos` (`Co_Reto`, `Co_Usuario`, `Co_Tema`, `Nu_Identificacion
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `t080_usuario_institucion`
+-- Table structure for table `t080_usuario_institucion`
 --
 
 CREATE TABLE IF NOT EXISTS `t080_usuario_institucion` (
@@ -3642,7 +3666,7 @@ CREATE TABLE IF NOT EXISTS `t080_usuario_institucion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `t080_usuario_institucion`
+-- Dumping data for table `t080_usuario_institucion`
 --
 
 INSERT INTO `t080_usuario_institucion` (`Co_Usuario`, `Nu_Identificacion`, `Fe_Ingreso`) VALUES
@@ -3659,7 +3683,7 @@ INSERT INTO `t080_usuario_institucion` (`Co_Usuario`, `Nu_Identificacion`, `Fe_I
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `t090_usuario_nivel`
+-- Table structure for table `t090_usuario_nivel`
 --
 
 CREATE TABLE IF NOT EXISTS `t090_usuario_nivel` (
@@ -3673,7 +3697,7 @@ CREATE TABLE IF NOT EXISTS `t090_usuario_nivel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `t090_usuario_nivel`
+-- Dumping data for table `t090_usuario_nivel`
 --
 
 INSERT INTO `t090_usuario_nivel` (`Co_Usuario`, `Co_Nivel`, `Progreso`, `Se_Actual`, `Te_Actual`, `Horas`, `Le_Actual`) VALUES
@@ -3688,11 +3712,11 @@ INSERT INTO `t090_usuario_nivel` (`Co_Usuario`, `Co_Nivel`, `Progreso`, `Se_Actu
 (9, 1, 0, 0, 0, 0, '');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `m210_usuario`
+-- Indexes for table `m210_usuario`
 --
 ALTER TABLE `m210_usuario`
   ADD PRIMARY KEY (`Co_Usuario`),
@@ -3701,84 +3725,84 @@ ALTER TABLE `m210_usuario`
   ADD KEY `FK_M210_P080_ROL` (`Co_Rol`);
 
 --
--- Indices de la tabla `m220_alumno`
+-- Indexes for table `m220_alumno`
 --
 ALTER TABLE `m220_alumno`
   ADD PRIMARY KEY (`Co_Alumno`);
 
 --
--- Indices de la tabla `p020_institucion`
+-- Indexes for table `p020_institucion`
 --
 ALTER TABLE `p020_institucion`
   ADD PRIMARY KEY (`Nu_Identificacion`);
 
 --
--- Indices de la tabla `p030_nivel`
+-- Indexes for table `p030_nivel`
 --
 ALTER TABLE `p030_nivel`
   ADD PRIMARY KEY (`Co_Nivel`);
 
 --
--- Indices de la tabla `p040_temas`
+-- Indexes for table `p040_temas`
 --
 ALTER TABLE `p040_temas`
   ADD PRIMARY KEY (`Co_Tema`),
   ADD KEY `FK_P040_P030_Nivel` (`Co_Nivel`);
 
 --
--- Indices de la tabla `p050_juego`
+-- Indexes for table `p050_juego`
 --
 ALTER TABLE `p050_juego`
   ADD PRIMARY KEY (`Co_Juego`);
 
 --
--- Indices de la tabla `p060_multimedia`
+-- Indexes for table `p060_multimedia`
 --
 ALTER TABLE `p060_multimedia`
   ADD PRIMARY KEY (`Co_Multimedia`);
 
 --
--- Indices de la tabla `p070_orden`
+-- Indexes for table `p070_orden`
 --
 ALTER TABLE `p070_orden`
   ADD PRIMARY KEY (`Co_Orden`),
   ADD KEY `FK_P070_P040_Temas` (`Co_Tema`);
 
 --
--- Indices de la tabla `p080_rol`
+-- Indexes for table `p080_rol`
 --
 ALTER TABLE `p080_rol`
   ADD PRIMARY KEY (`Co_Rol`);
 
 --
--- Indices de la tabla `p090_imagenes`
+-- Indexes for table `p090_imagenes`
 --
 ALTER TABLE `p090_imagenes`
   ADD PRIMARY KEY (`Nb_imagenes`),
   ADD KEY `FK_P090_P060_Multimedia` (`Co_Multimedia`);
 
 --
--- Indices de la tabla `p100_videos`
+-- Indexes for table `p100_videos`
 --
 ALTER TABLE `p100_videos`
   ADD PRIMARY KEY (`Nb_videos`),
   ADD KEY `FK_P100_P060_Multimedia` (`Co_Multimedia`);
 
 --
--- Indices de la tabla `p110_audio`
+-- Indexes for table `p110_audio`
 --
 ALTER TABLE `p110_audio`
   ADD PRIMARY KEY (`Nb_audio`),
   ADD KEY `FK_P110_P060_Multimedia` (`Co_Multimedia`);
 
 --
--- Indices de la tabla `t010_bitacora`
+-- Indexes for table `t010_bitacora`
 --
 ALTER TABLE `t010_bitacora`
   ADD PRIMARY KEY (`Co_Bitacora`);
 
 --
--- Indices de la tabla `t020_juego_tema`
+-- Indexes for table `t020_juego_tema`
 --
 ALTER TABLE `t020_juego_tema`
   ADD KEY `FK_P020_P050_Juego` (`Co_Juego`),
@@ -3789,14 +3813,14 @@ ALTER TABLE `t020_juego_tema`
   ADD KEY `FK_P020_P090_imagenes` (`Nb_imagenes`);
 
 --
--- Indices de la tabla `t030_cobranza`
+-- Indexes for table `t030_cobranza`
 --
 ALTER TABLE `t030_cobranza`
   ADD PRIMARY KEY (`Co_Cobranza`),
   ADD KEY `FK_T030_P020_Institucion` (`Nu_Identificacion`);
 
 --
--- Indices de la tabla `t040_retos`
+-- Indexes for table `t040_retos`
 --
 ALTER TABLE `t040_retos`
   ADD PRIMARY KEY (`Co_Reto`,`Co_Usuario`),
@@ -3804,7 +3828,7 @@ ALTER TABLE `t040_retos`
   ADD KEY `FK_t040_t080_usuario_institucion_fk` (`Nu_Identificacion`);
 
 --
--- Indices de la tabla `t080_usuario_institucion`
+-- Indexes for table `t080_usuario_institucion`
 --
 ALTER TABLE `t080_usuario_institucion`
   ADD PRIMARY KEY (`Co_Usuario`,`Nu_Identificacion`),
@@ -3812,53 +3836,53 @@ ALTER TABLE `t080_usuario_institucion`
   ADD KEY `FK_T080_P020_Institucion` (`Nu_Identificacion`);
 
 --
--- Indices de la tabla `t090_usuario_nivel`
+-- Indexes for table `t090_usuario_nivel`
 --
 ALTER TABLE `t090_usuario_nivel`
   ADD KEY `FK_T090_M210_Usuario` (`Co_Usuario`),
   ADD KEY `FK_T090_P030_Nivel` (`Co_Nivel`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `m210_usuario`
+-- AUTO_INCREMENT for table `m210_usuario`
 --
 ALTER TABLE `m210_usuario`
   MODIFY `Co_Usuario` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT de la tabla `m220_alumno`
+-- AUTO_INCREMENT for table `m220_alumno`
 --
 ALTER TABLE `m220_alumno`
   MODIFY `Co_Alumno` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
--- AUTO_INCREMENT de la tabla `p030_nivel`
+-- AUTO_INCREMENT for table `p030_nivel`
 --
 ALTER TABLE `p030_nivel`
   MODIFY `Co_Nivel` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT de la tabla `p040_temas`
+-- AUTO_INCREMENT for table `p040_temas`
 --
 ALTER TABLE `p040_temas`
   MODIFY `Co_Tema` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
--- AUTO_INCREMENT de la tabla `p050_juego`
+-- AUTO_INCREMENT for table `p050_juego`
 --
 ALTER TABLE `p050_juego`
   MODIFY `Co_Juego` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 --
--- AUTO_INCREMENT de la tabla `p080_rol`
+-- AUTO_INCREMENT for table `p080_rol`
 --
 ALTER TABLE `p080_rol`
   MODIFY `Co_Rol` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT de la tabla `t010_bitacora`
+-- AUTO_INCREMENT for table `t010_bitacora`
 --
 ALTER TABLE `t010_bitacora`
-  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
+  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=87;
 --
--- AUTO_INCREMENT de la tabla `t030_cobranza`
+-- AUTO_INCREMENT for table `t030_cobranza`
 --
 ALTER TABLE `t030_cobranza`
   MODIFY `Co_Cobranza` int(11) NOT NULL AUTO_INCREMENT;

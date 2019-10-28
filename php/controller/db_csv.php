@@ -12,7 +12,7 @@
 
   //cambiar la variable por la que necesite
   //1 si es img, 2 si es aud, 3 si es video
-  listar_directorios_ruta("../../".$img,1);
+  listar_directorios_ruta("../../".$aud,2);
 
   function listar_directorios_ruta($ruta,$tmult){
      if (is_dir($ruta)){
