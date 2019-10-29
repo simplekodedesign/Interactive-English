@@ -174,29 +174,57 @@ function mistake () {
 }
 
 function congratsMessage () {
+  rocketMessage.style.setProperty("display", "flex");
+  setTimeout(() => {
+    rocketMessage.style.setProperty("opacity", "1");    
+  }, 500);
   var rand = (Math.random())*10;
 
   if (rand < 2.5) {
       congratsAudio.src = "../../aud/congratulations/c1.mp3";
       congratsAudio.play();
-      rocketMessage.innerHTML = "Excellent!";
+      messageConstructor("Excellent!");
   }
 
   if (rand > 2.5 && rand < 5) {
       congratsAudio.src = "../../aud/congratulations/c2.mp3";
       congratsAudio.play();
-      rocketMessage.innerHTML = "Good job!";
+      messageConstructor("Good job!");
   }
 
   if (rand > 5 && rand < 7.5) {
       congratsAudio.src = "../../aud/congratulations/c3.mp3";
       congratsAudio.play();
-      rocketMessage.innerHTML = "Very good!";
+      messageConstructor("Very good!");
   }
 
   if (rand > 7.5) {
       congratsAudio.src = "../../aud/congratulations/c4.mp3";
       congratsAudio.play();
-      rocketMessage.innerHTML = "We are learning!";
+      messageConstructor("We are learning!");
+  }
+}
+
+
+function messageConstructor (message) {
+  let text = message.split("");
+  console.log(text);
+  let textLength = text.length;
+  let span;
+
+  for (let j = 0; j < textLength; j++) {
+    span = document.createElement("span");
+    if (text[j] == " ") {
+      span.innerHTML = "_";
+      span.style.setProperty("color", "transparent");
+      span.style.setProperty("animation-name", "unset");
+      span.style.setProperty("transform", "scale(0)");
+    } else {
+      span.innerHTML = text[j];
+      span.style.setProperty("animation-delay", j/10 + "s");
+    }
+
+
+    rocketMessage.appendChild(span);
   }
 }
