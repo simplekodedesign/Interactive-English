@@ -231,9 +231,8 @@
     <div id="rocketMessage"></div>
 
     <div class="win" id= "win" >
-      <audio src="../../aud/waiting.mp3" id="victoryAudio"></audio>
+      <audio src="" id="themeAudio"></audio>
       <img src="../../img/congratulations.svg" id="Congratulations"></img>
-      <audio src="" id="congratsAudio"></audio>
       <span id="winMessage"></span>
     </div>
 

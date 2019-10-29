@@ -152,6 +152,10 @@ var victoryMessage = function() {
   document.getElementById("victoryAudio").play();
   if (location.href.indexOf("aTema") != -1) {
     win.classList.add("winactive")
+    let audio = document.getElementById('themeAudio')
+    console.log(audio);
+    audio.setAttribute("src", "../../aud/kids.mp3")
+    audio.play()
   }
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {

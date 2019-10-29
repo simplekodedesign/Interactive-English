@@ -28,6 +28,10 @@ b{
   font-weight: 900;
 }
 
+h1{
+  text-rendering: geometricPrecision;
+}
+
 body{
   font-family: 'Myriad Pro Regular';
   display: flex;
