@@ -127,7 +127,6 @@ function select (){
 }
 
 function check () {
-  console.log(currentItems + " " + itemsLength);
   if (col1.getAttribute("colorName") == col2.firstElementChild.innerHTML) {
     col2.removeEventListener("click", select);
     col2.style.setProperty("background-color", col1.getElementsByClassName('color')[0].getAttribute("fill"));
