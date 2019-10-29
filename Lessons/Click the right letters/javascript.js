@@ -189,12 +189,15 @@ function check () {
   if(appear == 0) {
     posLetter++;
     if(posLetter < lettersLength) {
-      clearGame();
-      if(type == 1){
-        createGame(2);
-      } else {
-        cord == 26? createGame(0) : createGame(1);
-      }
+      mainAud.play();
+      setTimeout(() => {
+        clearGame();
+        if(type == 1){
+          createGame(2);
+        } else {
+          cord == 26? createGame(0) : createGame(1);
+        }        
+      }, 750);
     } else {
       // alert("YOU WON");
       victoryMessage();
