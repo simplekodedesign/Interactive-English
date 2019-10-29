@@ -64,8 +64,6 @@ echo"
         <div class='lessonButton' value='2'>Back</div>-->
       </div>
       <div class='object' id='object'>
-        <!--<object type='image/svg+xml' data='../../img/categories/family/family.svg' alt='The body' class='svg show' id='svg1'></object>
-        <object type='image/svg+xml' data='../../img/categories/the body/back.svg' alt='The body' class='svg' id='svg2'></object>-->
       </div>
       <audio id='audio'></audio>
       <span class='vocabulary' id='en'></span>

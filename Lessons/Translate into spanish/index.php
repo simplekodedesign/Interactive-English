@@ -33,8 +33,8 @@
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       $new = array_push($data->message, $res["Nb_Ask"]); // mensaje
       $new = array_push($data->compare, $res["Nb_Comparar"]); // validacion a comparar
-      // $message[]=$res["Nb_Ask"]; 
-      // $compare[]=$res["Nb_Comparar"]; 
+      // $message[]=$res["Nb_Ask"];
+      // $compare[]=$res["Nb_Comparar"];
       $total+=1; //total de elementos
     }
   }
@@ -50,7 +50,7 @@
       <input type='text' placeholder='Write here' class='write' id='write'>
       <i class='fa fa-pencil' aria-hidden='true'></i>
     </div>
-    <span class='lessonButton' id='btnCheck'>check</span>
+    <span class='lessonButton' id='btnCheck'>Check</span>
   </div>
   <script type='text/javascript' src='../../Lessons/Translate into spanish/Javascript.js?q=".$q."'></script>";
 ?>
