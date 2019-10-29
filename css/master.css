@@ -765,6 +765,7 @@ label {
   left: 50%;
   top: 50%;
   font-size: 3.5em;
+  z-index: 1010;
   transform: translate(-50%, -50%);
   /* background-color: red; */
 }
