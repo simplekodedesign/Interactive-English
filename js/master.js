@@ -172,6 +172,7 @@ var victoryMessage = function() {
   };
   xhttp.open("GET", "../controller/continue.php?co="+cord, true);
   xhttp.send();
+  victoryMessage = null;
 }
 
 function mistake () {
