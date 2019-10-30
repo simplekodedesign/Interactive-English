@@ -4,6 +4,10 @@ window.addEventListener("load",function(){
     location.href="?url=profile.php";
   })
 
+  document.getElementById("awards").addEventListener("click",function(){
+    location.href="?url=awards.php";
+  })
+
   //direccionar a EXIT
   document.getElementById("btnExit").addEventListener("click",function(){
     location.href="../controller/exit.php";
