@@ -226,8 +226,9 @@
       <audio src="../../aud/victoryAudio.mp3" id="victoryAudio"></audio>
       <object data="../../img/rocket.svg" type="image/svg+xml" id="rocketSVG"></object>
       <audio src="" id="congratsAudio"></audio>
-      <span id="rocketMessage"></span>
     </div>
+
+    <div id="rocketMessage"></div>
 
     <div class="win" id= "win" >
       <audio src="" id="themeAudio"></audio>

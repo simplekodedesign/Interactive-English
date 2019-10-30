@@ -15,6 +15,9 @@ echo "<link rel='stylesheet' href='../../Lessons/Paint the draws/style.css?q=".$
   <div id='colorsContainer'></div>
   <div id='drawsContainer'></div>
 </div>
+<script type='text/javascript'>
+    var cord=".$_GET["co"].";
+</script>
 <script src='../../Lessons/Paint the draws/javascript.js?q=".$q."'></script>";
 
 ?> 
