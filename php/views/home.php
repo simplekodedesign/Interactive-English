@@ -91,6 +91,7 @@
           <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt=" Pic">
           <ul>
             <li id="btnProfile">PROFILE</li>
+            <li id="awards">Awards</li>
             <li class="B_exit" id="btnExit">EXIT</li>
           </ul>
         </span>
@@ -240,9 +241,13 @@
 
     <?php
       if(isset($_GET["th"])){
-        echo "<script>var numero_leccion = ".$_GET["th"].";</script>";
+        echo "<script>var numero_leccion = ".$_GET["th"].";
+        console.log(numero_leccion)
+        </script>";
       }else if(isset($co_tema)){
-        echo "<script>var numero_leccion = ".$co_tema.";</script>";
+        echo "<script>var numero_leccion = ".$co_tema.";
+        console.log(numero_leccion)
+        </script>";
       }
 
       if(isset($_SESSION["reto_actual"])){

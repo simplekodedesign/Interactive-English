@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+}
+
+.premio {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+.premio > .cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  /* gap: 5px; */
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  /* clip-path: polygon(33% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 33%, 33% 33%); */
+}
+
+.cover > span {
+  background-color: gray;
+  border: 2px solid white;
+}
+
+.premio > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  height: 85%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 1;
+}

@@ -11,14 +11,19 @@
 }
 
 .cont_abc > .letra {
-	width: 80%;
-	height: auto;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+	height: 400px;
+	width: 400px;
 	cursor: pointer;
 }
 
 .letra > img {
-	width: 100%;
-	height: auto;
+	min-width: 300px;
+	min-height: 300px;
+	max-width: 400px;
+	max-height: 400px;
 }
 
 .buttons{
@@ -58,3 +63,17 @@
 /* .NavButtons {
 	display: flex;
 } */
+
+@media screen and (max-width: 400px) {
+	.cont_abc{
+		max-width: 300px;
+	}
+
+	.letra {
+		max-width: 300px;
+	}
+
+	.letra img{
+		max-width: 300px;
+	}
+}
