@@ -1,13 +1,15 @@
 var pos=0;
+var write = document.getElementById("write");
+var aud = document.getElementById("aud")
 
 window.addEventListener("load",function(){
 	actual();
 	document.getElementById("btnListen").addEventListener("click",function(){
-		document.getElementById("aud").play();
+		aud.play();
 	})
-	document.getElementById("write").addEventListener("keyup", key);
+	write.addEventListener("keyup", key);
 
-	document.getElementById("btncheck").addEventListener("click",validate_with_split);
+	document.getElementById("btncheck").addEventListener("click", validate_with_split);
 })
 
 function key (e) {
@@ -17,28 +19,30 @@ function key (e) {
 }
 
 function actual(){
-	document.getElementById("number").innerHTML=text[pos];
-	document.getElementById("aud").src=urlAud[pos];
-	document.getElementById("write").value="";
-	document.getElementById("aud").play();
+	document.getElementById("number").innerHTML = text[pos];
+	aud.src = urlAud[pos];
+	write.value="";
+	aud.play();
 }
 
 function validate_with_split(){
-	comp=compare[pos].split("/",15);
-	var b=0;
+	console.log("GG");
+	comp = compare[pos].split("/", 15);
+	var b = 0;
 	comp.forEach(function(e){
-		if(e.toLowerCase() == document.getElementById("write").value.toLowerCase() && document.getElementById("write").value!=""){
+		if(e.toLowerCase() == write.value.toLowerCase() && write.value != ""){
 			pos++;
-			b=1;
-			if(pos>=text.length){
-				document.getElementById("write").removeEventListener("keyup", key);
-				document.getElementById("btncheck").removeEventListener("click",validate_with_split);
+			b = 1;
+			if(pos >= text.length){
+				write.removeEventListener("keyup", key);
+				document.getElementById("btncheck").removeEventListener("click", validate_with_split);
 				victoryMessage();
 			}else{
 				actual();
 			}
-		} else {
-			mistake();
 		}
 	});
+	if (b === 0) {
+		mistake();
+	}
 }
