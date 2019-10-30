@@ -43,7 +43,7 @@
   }
   echo "<link rel='stylesheet' href='../../Lessons/Write the right option/style.css?q=".$q."'>
   <div class='cont_abc' id='cont_all'>
-    <div class='letra 0 active'><img src='' height='350px' width='350px' alt='say_the_correct_word' id='img'> <audio src='' id='aud'></audio> </div>
+    <div class='letra 0 active' id='letra'><img src='' height='350px' width='350px' alt='say_the_correct_word' id='img'> <audio src='' id='aud'></audio> </div>
   </div>
   <div class='buttons'>
     <div class='input'>
