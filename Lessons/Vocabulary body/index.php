@@ -60,8 +60,9 @@ echo"
     <link rel='stylesheet' href='../../Lessons/Vocabulary Body/style.css'>
     <div class='theme' id='theme'>
       <div class='buttonContainer' id='buttonContainer'>
-        <!--<div class='lessonButton color' value='1'>Front</div>
-        <div class='lessonButton' value='2'>Back</div>-->
+      </div>
+      <div class='cont'>
+        <h3> Te faltan <span id='cont'></span> partes por descubrir</h3>
       </div>
       <div class='object' id='object'>
       </div>
