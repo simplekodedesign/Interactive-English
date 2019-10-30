@@ -13,6 +13,7 @@
 .cont_abc > .letra {
 	width: 80%;
 	height: auto;
+	cursor: pointer;
 }
 
 .letra > img {
