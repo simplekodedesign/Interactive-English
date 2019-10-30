@@ -288,7 +288,7 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 (5, 1, 36, 'Here - There', '?url=../../Lessons/Video/index.php&co=35', '?url=../../Lessons/Video/index.php&co=37'),
 (5, 1, 37, 'The Preposition A', '?url=../../Lessons/Video/index.php&co=36', '?url=../../Lessons/Video/index.php&co=38'),
 (5, 1, 38, 'The Preprosition An', '?url=../../Lessons/Video/index.php&co=37', '?url=../../Lessons/Write the right option/index.php&co=39'),
-(5, 17, 39, 'Complete with  "A"  or  "An"', '?url=../../Lessons/Video/index.php&co=38', '?url=../../Lessons/Select the correct option/index.php&co=40'),
+(5, 17, 39, 'Write  "A"  or  "An"', '?url=../../Lessons/Video/index.php&co=38', '?url=../../Lessons/Select the correct option/index.php&co=40'),
 (5, 9, 40, 'Select the correct preposition', '?url=../../Lessons/Write the right option/index.php&co=39', '?url=../../Lessons/Select the right image/index.php&co=41'),
 (5, 16, 41, 'Select the right preposition', '?url=../../Lessons/Select the correct option/index.php&co=40', '?url=../../Lessons/Video/index.php&co=42'),
 (6, 1, 42, 'Animals', '?url=../../Lessons/Select the right image/index.php&co=41', '?url=../../Lessons/Vocabulary/index.php&co=43'),
@@ -348,7 +348,7 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 (12, 9, 96, 'Select the correct color', '?url=../../Lessons/Write the right option/index.php&co=95', '?url=../../Lessons/Video/index.php&co=97'),
 (13, 1, 97, 'Personal Pronouns', '?url=../../Lessons/Select the correct option/index.php&co=96', '?url=../../Lessons/Vocabulary txt/index.php&co=98'),
 (13, 12, 98, 'Vocabulary Personal Pronouns', '?url=../../Lessons/Video/index.php&co=97', '?url=../../Lessons/Translate into spanish/index.php&co=99'),
-(13, 11, 99, 'Translate into Spanish', '?url=../../Lessons/Vocabulary txt/index.php&co=98', '?url=../../Lessons/Video/index.php&co=100'),
+(13, 11, 99, 'Translate to English', '?url=../../Lessons/Vocabulary txt/index.php&co=98', '?url=../../Lessons/Video/index.php&co=100'),
 (13, 1, 100, 'Personal Pronouns', '?url=../../Lessons/Translate into spanish/index.php&co=99', '?url=../../Lessons/Video/index.php&co=101'),
 (13, 1, 101, 'Professions', '?url=../../Lessons/Video/index.php&co=100', '?url=../../Lessons/Vocabulary/index.php&co=102'),
 (13, 8, 102, 'Vocabulary', '?url=../../Lessons/Video/index.php&co=101', '?url=../../Lessons/Connect with image/index.php&co=103'),
@@ -397,7 +397,7 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 (18, 5, 145, 'Drag to the correct greeting', '?url=../../Lessons/Video/index.php&co=144', '?url=../../Lessons/Write the right option/index.php&co=146'),
 (18, 17, 146, 'Write the right hour', '?url=../../Lessons/Drag to the box/index.php&co=145', '?url=../../Lessons/Memory/index.php&co=147'),
 (18, 18, 147, 'Memory', '?url=../../Lessons/Write the right option/index.php&co=146', '?url=../../Lessons/Select the correct option/index.php&co=148'),
-(18, 9, 148, 'Select the right hour', '?url=../../Lessons/Memory/index.php&co=147', '#');
+(18, 9, 148, 'Listen and select the right hour', '?url=../../Lessons/Memory/index.php&co=147', '#');
 
 -- --------------------------------------------------------
 
@@ -2030,9 +2030,9 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (14, 3, 25, '40c', NULL, NULL, '40', 'forty'),
 (14, 3, 25, '12c', NULL, NULL, '12', 'twelve'),
 (14, 3, 25, '20c', NULL, NULL, '20', 'twenty'),
-(21, 3, 27, '2c', NULL, NULL, 'T-Y-F-O-R-O-W-T', 'forty two'),
-(21, 3, 27, '53c', NULL, NULL, 'R-E-E-T-Y-H-F-T-I-F', 'fifty three'),
-(21, 3, 27, '64c', NULL, NULL, 'X-I-S-F-R-T-Y-U-O', 'sixty four'),
+(21, 3, 27, '2c', NULL, NULL, 'T-Y-F-O-R-O-W-T', 'forty-two'),
+(21, 3, 27, '53c', NULL, NULL, 'R-E-E-T-Y-H-F-T-I-F', 'fifty-three'),
+(21, 3, 27, '64c', NULL, NULL, 'X-I-S-F-R-T-Y-U-O', 'sixty-four'),
 (21, 3, 27, '77c', NULL, NULL, 'S-E-S-E-V-EV-E-Y-N-T-N', 'seventy-seven'),
 (21, 3, 27, '87c', NULL, NULL, 'N-E-V-E-S-Y-T-H-G-E-I', 'eighty-seven'),
 (21, 3, 27, '96c', NULL, NULL, 'T-Y-N-I-S-I-N-E-X', 'ninety-six'),

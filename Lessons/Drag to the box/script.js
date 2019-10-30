@@ -14,12 +14,15 @@ var words = [];
 
 window.addEventListener("load", function () {
 
-  if(!data.options[1] && !data.urlImg[0]) {
+  if (data.options[0]== "" && !data.urlImg[0]) {
+    constIMG = 1;
+  }
+  if(!data.options[1] && !data.urlImg[0] && data.options.length < 2){
     createForABC();
     if (data.compare[0] != "") {
       constIMG = 1;
     }
-  } else {
+  }else{
     ask = data.options;
     compare = data.compare;
     arrayLength = data.compare.length;
@@ -79,7 +82,7 @@ function itemCreator(){
     item.setAttribute("id", "item");
   }else{
     item = document.createElement("div");
-    if (constIMG) {
+    if (constIMG == '1') {
       item.innerHTML = "?";
     }
     item.setAttribute("id", "item");
