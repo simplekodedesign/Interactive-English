@@ -61,7 +61,8 @@ echo"
     <div class='theme' id='theme'>
       <div class='buttonContainer' id='buttonContainer'>
       </div>
-      <div class='count' id='count'>
+      <div class='cont'>
+        <h3> Te faltan <span id='cont'></span> partes por descubrir</h3>
       </div>
       <div class='object' id='object'>
       </div>

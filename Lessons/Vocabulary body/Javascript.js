@@ -8,6 +8,7 @@ var theme
 var svg
 var en
 var es
+var cont = document.getElementById('cont')
 
 window.addEventListener("load", function (){
   var selectContainer = document.getElementById('buttonContainer')
@@ -21,10 +22,6 @@ window.addEventListener("load", function (){
   svg = document.getElementsByClassName(`svg`)
 
   godCreator()
-
-  for (let i = 0; i < svgLength; i++) {
-    god(i)
-  }
 
   if (svgLength > 1) {
     for (let i = 0; i < svgLength; i++) {
@@ -54,6 +51,7 @@ function godCreator(){
       svg.classList.add("show")
     }
     theme.appendChild(svg);
+    god(i)
   }
 }
 
@@ -82,7 +80,7 @@ function god(who){
     const itemsLength = items.length
 
     contSvg += itemsLength
-    console.log(contSvg);
+    cont.innerHTML = contSvg;
 
     for (let i = 0; i < itemsLength; i++) {
       items[i].addEventListener("click", spotlight)
@@ -104,7 +102,6 @@ function spotlight (e) {
   var idS = this.id
   var id
   var aud
-
 
   if (svgLength > 1) {
     // seteando posición de los spans con variables css
@@ -132,12 +129,13 @@ function spotlight (e) {
   aud = src[0].replace(str, id)
 
   audio.setAttribute('src', aud)
-  audio.play();
+  audio.play()
 
-  //Al remover el Cl se quita el filtro sin embargo no es bueno quitar el evento
   if (this.getAttribute("class").indexOf("item") != -1 ) {
     contSvg--
+    cont.innerHTML = contSvg
   }
+  //Al remover el Cl se quita el filtro sin embargo no es bueno quitar el evento
   this.classList.remove("item")
 
   if (contSvg < 1) {
