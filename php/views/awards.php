@@ -16,6 +16,12 @@
     }
   }
 ?>
+
+<div class='titles' id='titles'>
+  <h1>AWARDS!!</h1>
+  <span>Keep learning to get amazing stuffs</span>
+</div>
+
 <link rel="stylesheet" href="../../css/awards.css?q=<?php echo $q?>">
 <div class="container" id="premios">
   <div class="premio">

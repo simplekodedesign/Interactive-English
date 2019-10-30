@@ -32,6 +32,10 @@ window.addEventListener("load", function () {
     }
   }
 
+  words = words.sort((a,b) => {
+    return 0.5 - Math.random();
+  })
+
   itemCreator();
 
   if(constIMG == 0)item.innerHTML = ask[currentItem];
@@ -169,6 +173,10 @@ function createForABC () {
       compare.push("Consonant");
     }
   }
+
+  ask.push("U");
+  data.urlAud.push(url + "u" + ".mp3");
+  compare.push("Vowel");
 
   arrayLength = compare.length;
 }
