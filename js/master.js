@@ -10,7 +10,8 @@ const color = [
 
 var road = document.getElementById("road");
 var profileScreen = document.getElementById("profileScreen");
-if (!road && !profileScreen && !premios) {
+var hayPremio = document.getElementById("premios");
+if (!road && !profileScreen && !hayPremio) {
   var svgcolor = numero_leccion-1;
   if (svgcolor >= 7) {
     svgcolor%= 7;

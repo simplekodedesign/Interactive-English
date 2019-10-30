@@ -17,9 +17,9 @@
   }
 ?>
 <link rel="stylesheet" href="../../css/awards.css?q=<?php echo $q?>">
-<div class="container">
+<div class="container" id="premios">
   <div class="premio">
-    <img src="../../img/categories/food and drinks/ice_cream.svg" alt="HELADO!!">
+    <img src="../../img/default.svg">
     <div class="cover">
       <span></span>
       <span></span>
@@ -32,7 +32,8 @@
       <span></span>
     </div>
   </div>
-  <div class="premio"><img src="../../img/categories/food and drinks/ice_cream.svg" alt="HELADO!!">
+  <div class="premio">
+    <img src="../../img/default.svg">
     <div class="cover">
       <span></span>
       <span></span>

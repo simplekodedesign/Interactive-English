@@ -30,11 +30,8 @@
 }
 
 .cover > span {
-  background-color: black;
-}
-
-.cover > span:nth-child(1) {
-  background-color: transparent;
+  background-color: gray;
+  border: 2px solid white;
 }
 
 .premio > img {
