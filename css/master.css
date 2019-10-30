@@ -160,7 +160,7 @@ header > a img{
 }
 
 .B_exit {
-  background-color: var(--cyan);
+  background-color: var(--orange);
 }
 
 .B_exit:hover {
@@ -185,7 +185,7 @@ header > a img{
 }
 
 .B_perfil > ul > li:nth-child(2) {
-  background-color: var(--orange);
+  background-color: var(--cyan);
 }
 
 .B_ayuda li:nth-child(1), .B_ayuda li:nth-child(1):hover {

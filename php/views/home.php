@@ -90,9 +90,9 @@
         <span class="hButton B_perfil">
           <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt=" Pic">
           <ul>
-            <li id="btnProfile">PROFILE</li>
+            <li id="btnProfile">Profile</li>
             <li id="awards">Awards</li>
-            <li class="B_exit" id="btnExit">EXIT</li>
+            <li class="B_exit" id="btnExit">Exit</li>
           </ul>
         </span>
       </div>
