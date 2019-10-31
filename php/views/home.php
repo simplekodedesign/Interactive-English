@@ -76,12 +76,12 @@
         <div class="barContainer">
           <span id="showmenu"></span>
           <span id="navbarNav">
-            <a href="home.php"><span class="hButton B_lecciones">Lessons</span></a>
-            <span class="hButton B_herr" id="translator">Translator</span>
-            <span class="hButton B_ayuda">Help
+            <a href="home.php"><span class="hButton B_lecciones">Lecciones</span></a>
+            <span class="hButton B_herr" id="translator">Traductor</span>
+            <span class="hButton B_ayuda">Ayuda
               <ul>
-                <li id="contactButton">Contact</li>
-                <li id="gifButton">Instructions</li>
+                <li id="contactButton">Contáctanos</li>
+                <li id="gifButton">Instrucciones</li>
               </ul>
             </span>
           </span>
@@ -90,9 +90,9 @@
         <span class="hButton B_perfil">
           <img src="<?php echo $_SESSION["user_icon"]?>" class="avatar" alt=" Pic">
           <ul>
-            <li id="btnProfile">Profile</li>
-            <li id="awards">Awards</li>
-            <li class="B_exit" id="btnExit">Exit</li>
+            <li id="btnProfile">Perfil</li>
+            <li id="awards">Premios</li>
+            <li class="B_exit" id="btnExit">Salir</li>
           </ul>
         </span>
       </div>
@@ -104,7 +104,7 @@
           echo '
           <script src="../../js/home.js"></script>
           <div class="titles">
-            <h1 class="roadTitle" id="lessonTitle">LESSONS</h1>
+            <h1 class="roadTitle" id="lessonTitle">Lecciones</h1>
           </div>
 
           <div class="container" id="road">
