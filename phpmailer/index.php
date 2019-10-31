@@ -15,36 +15,12 @@
   require "../php/controller/db_connection.php";
 
   Connection::connect();
-  $results=Connection::request("select Co_Usuario,Co_Alumno from m210_usuario where Nb_Usuario like '".$_GET["nbUsuario"]."'");
-  if($results->rowCount()>0){
-    while($res=$results->fetch(PDO::FETCH_ASSOC)){
-      $co_usuario=$res["Co_Usuario"];
-      $co_alumno=$res["Co_Alumno"];
-    }
-  }
-  $email="";
-  $results=Connection::request("select Nb_Apellido,Nb_Alumno,Tx_Email from m220_alumno where Co_Alumno=".$co_alumno);
-  if($results->rowCount()>0){
-    while($res=$results->fetch(PDO::FETCH_ASSOC)){
-      $name=$res["Nb_Alumno"];
-      $surname=$res["Nb_Apellido"];
-      $email=$res["Tx_Email"];
-    }
-  }
-  if($email!=""){
-    $subject="Recuperación de Contraseña Interactive English";
-    $txt="<html>
-                  <head>
-                  </head>
-                  <body>
-                    <div style='margin: auto; text-align: center; text-shadow: 3px 3px 5px #FFB033'><h1 style='color: #FEAA08; font-size: 5em;'>Interactive English</h1></div>
-                    <div style='margin: auto; text-align: center;'><p style='font-size: 2em;'>
-                    Cordiales Saludos ".$name." ".$surname.", hemos procesado su solicitud pra el cambio de contraseña, su codigo de recuperacion de contraseña es: <br><br><b style='font-size: 1em; color: #007EFE;'>"
-                    .$_GET["cod"]."</b><br><br> Le esperamos pronto para continuar en el camino del aprendizaje del ingles.<br><br><small style='color: #BEBDBA'><i>Equipo de Interactive English<br>Capacitese 21</i></small>
-                    </p>
-                    </div>
-                  </body>
-                </html>";
+
+  session_start();
+
+  if(isset($_SESSION["email"])){
+    $subject=$_POST["subject"];
+    $txt=$_POST["message"];
 
     try {
       $mail = new PHPMailer(true); // Solicitamos una instancia de la clase PHPMailer, el parámetro true es para que nos acepte los exceptions
@@ -58,11 +34,11 @@
           $mail->SMTPSecure = 'tls';
           $mail->Port = 587;
           ## MENSAJE A ENVIAR
-          $mail->setFrom('c21english.01@gmail.com', 'C21English Comunicaciones');  // Establecemos el remitente. Se recomienda usar la misma del username, esta para evitar conflictos para los sistema AntiSpam
+          $mail->setFrom(('c21english.01@gmail.com', $_SESSION["name"]." ".$_SESSION["surname"]);  // Establecemos el remitente. Se recomienda usar la misma del username, esta para evitar conflictos para los sistema AntiSpam
           //$mail->addReplyTo("reply@yourdomain.com", "Reply"); ////En caso de que el usuario le de la opción de responder, esta es la dirección donde enviaría
-          $mail->addAddress($email); //// Dirección del Destinatario
+          $mail->addAddress("andry@c21english.com"); //// Dirección del Destinatario
           $mail->isHTML(true);
-          $mail->Subject = $subject;
+          $mail->Subject = $_SESSION["name"]." ".$_SESSION["surname"].": ".$subject;
           $mail->Body = $txt;
           // Attachments
           // $mail->addAttachment('./attachments/file.tar.gz');         // Add attachments

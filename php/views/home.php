@@ -208,7 +208,7 @@
         </div>
         <div>
           <span class="barcolor"></span>
-          <select name="categorie" id="categorie" placeholder="&nbsp;" class="formInput">
+          <select name="subject" id="categorie" placeholder="&nbsp;" class="formInput">
             <option value="Support">Soporte técnico</option>
             <option value="Teacher">Consulta</option>
           </select>
@@ -216,7 +216,7 @@
         </div>
         <div>
           <span class="barcolor"></span>
-          <textarea name="pass" id="password" placeholder="&nbsp;" class="formInput"></textarea>
+          <textarea name="message" id="password" placeholder="&nbsp;" class="formInput"></textarea>
           <label for="password" id="usernamepass" class="inputLabel">¿Con que te podemos ayudar?</label>
         </div>
         <input type="submit" value="enviar" id="submitButton" class="formButton">

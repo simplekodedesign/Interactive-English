@@ -31,6 +31,7 @@
     }
 
     if(password_verify($_POST["pass"],$pass)){
+      $_SESSION["email"]=$user;
       $_SESSION["user"]=$user;
       //buscar codigo de alumno y de codigo de usuario
       $results=Connection::request("select Co_Usuario,Co_Alumno,Tx_Url from m210_usuario where Tx_Email like '".$user."'");

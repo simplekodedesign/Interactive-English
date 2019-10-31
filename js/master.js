@@ -44,6 +44,7 @@ var congratsAudio = document.getElementById("congratsAudio");
 var win = document.getElementById("win")
 var durationRocket = 5;
 var mistakeAudio = document.getElementById("mAudio");
+var contact = this.document.getElementById("formLogin");
 
 window.addEventListener("load", function () {
   if(reloadButton) {
@@ -92,6 +93,21 @@ window.addEventListener("load", function () {
   win.addEventListener("click", () => {
     win.classList.remove("winactive")
     document.getElementById("lSigu").firstElementChild.click()
+  })
+
+  //envio de correo
+  contact.addEventListener("submit",function(send){
+    send.preventDefault();
+    var data = new FormData(contact);
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200){
+        contact.reset();
+      }
+    }
+    xhttp.open("POST","../../phpmailer/index.php");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(data);
   })
 });
 
