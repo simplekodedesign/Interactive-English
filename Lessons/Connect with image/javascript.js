@@ -1,4 +1,5 @@
 var items = document.getElementsByClassName("item");
+var itemsLength = items.length;
 var c1, c2 ;
 c1 = {idText: undefined , idcol: undefined, type: undefined};
 c2 = {idText: undefined , idcol: undefined, type: undefined};
@@ -6,7 +7,7 @@ var b;
 var container = document.getElementById("container");
 
 window.addEventListener("load", function() {
-    for(var i = 0; i < items.length; i++) {
+    for(var i = 0; i < itemsLength; i++) {
         items[i].addEventListener("click", funclick);
     }
 });
@@ -58,28 +59,30 @@ var funclick = function () {
 }
 
 var textos = document.getElementsByClassName("text");
+var textosLength = textos.length;
 var imagenes = document.getElementsByClassName("img");
+var imagenesLength = imagenes.length;
 function check (t1,t2) {
     if(t1.idText == t2.idText) {
         if (t1.type) {
-            for (var i = 0; i < textos.length; i++) {
+            for (var i = 0; i < textosLength; i++) {
                 if (textos[i].innerHTML == t1.idText) {
                     desanimar(textos[i].parentElement, 1);
                 }
             }
-            for(var i = 0; i < imagenes.length; i++ ) {
+            for(var i = 0; i < imagenesLength; i++ ) {
                 if(imagenes[i].firstElementChild.alt == t2.idText) {
                     desanimar(imagenes[i], 1);
                 }
             }
 
         } else {
-            for(var i = 0; i < imagenes.length; i++ ) {
+            for(var i = 0; i < imagenesLength; i++ ) {
                 if(imagenes[i].firstElementChild.alt == t1.idText) {
                     desanimar(imagenes[i], 1);
                 }
             }
-            for (var i = 0; i < textos.length; i++) {
+            for (var i = 0; i < textosLength; i++) {
                 if (textos[i].innerHTML == t2.idText) {
                     desanimar(textos[i].parentElement, 1);
                 }
@@ -89,24 +92,24 @@ function check (t1,t2) {
         tot--;
     } else {
         if (t1.type) {
-            for (var i = 0; i < textos.length; i++) {
+            for (var i = 0; i < textosLength; i++) {
                 if (textos[i].innerHTML == t1.idText) {
                     desanimar(textos[i].parentElement, 0);
                 }
             }
-            for(var i = 0; i < imagenes.length; i++ ) {
+            for(var i = 0; i < imagenesLength; i++ ) {
                 if(imagenes[i].firstElementChild.alt == t2.idText) {
                     desanimar(imagenes[i], 0);
                 }
             }
 
         } else {
-            for(var i = 0; i < imagenes.length; i++ ) {
+            for(var i = 0; i < imagenesLength; i++ ) {
                 if(imagenes[i].firstElementChild.alt == t1.idText) {
                     desanimar(imagenes[i], 0);
                 }
             }
-            for (var i = 0; i < textos.length; i++) {
+            for (var i = 0; i < textosLength; i++) {
                 if (textos[i].innerHTML == t2.idText) {
                     desanimar(textos[i].parentElement, 0);
                 }

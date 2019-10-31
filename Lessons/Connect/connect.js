@@ -1,5 +1,6 @@
 
 var texts = document.getElementsByClassName("text");
+var textLength = text.length;
 var c1, c2 ;
 c1 = {idText: undefined , idcol: undefined};
 c2 = {idText: undefined , idcol: undefined};
@@ -7,7 +8,7 @@ c2 = {idText: undefined , idcol: undefined};
 var container = document.getElementById("container");
 
 
-for(var i = 0; i<texts.length; i++) {
+for(var i = 0; i < textLength; i++) {
     texts[i].addEventListener("click", function() {
 
         this.style.color = "white";
@@ -30,14 +31,14 @@ for(var i = 0; i<texts.length; i++) {
 
 function check (t1,t2) {
     if(t1.idText == t2.idText) {
-        for(var i = 0 ; i<texts.length ; i++) {
+        for(var i = 0 ; i < textLength ; i++) {
             if(((texts[i].classList)[1] == t1.idText && (texts[i].parentElement.id == t1.idcol)) || (texts[i].classList)[1] == t2.idText && (texts[i].parentElement.id == t2.idcol)) {
                 desanimar(texts[i], 1);
             }
         }
         tot--;
     } else {
-        for(var i = 0 ; i<texts.length ; i++) {
+        for(var i = 0 ; i < textLength ; i++) {
             if((texts[i].classList)[1] == t1.idText && (texts[i].parentElement.id == t1.idcol)) {
                 desanimar(texts[i], 0);
             }
