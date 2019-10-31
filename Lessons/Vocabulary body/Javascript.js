@@ -11,6 +11,9 @@ var es
 var cont = document.getElementById('cont')
 
 window.addEventListener("load", function (){
+  window.addEventListener("click", function (e) {
+    console.log(e.x + " " + window.innerWidth);
+  })
   var selectContainer = document.getElementById('buttonContainer')
   var audio = document.getElementById('audio')
   en = document.getElementById('en')
@@ -102,12 +105,16 @@ function spotlight (e) {
   var idS = this.id
   var id
   var aud
-
   if (svgLength > 1) {
     // seteando posición de los spans con variables css
-    root.style.setProperty('--x', e.screenX + "px")
-    root.style.setProperty('--y', e.clientY + "px")
-
+    console.log(e.x + 20 + " " + window.innerWidth);
+    if(e.x + 250 > window.innerWidth) {
+      root.style.setProperty('--x', (e.x - 30) + "px")
+    } else {
+      root.style.setProperty('--x', (e.x+75) + "px")
+    }
+    
+    root.style.setProperty('--y', e.y + "px")
 
     // Retorna el id[1] = ingles, id[2] = español. id[0] realmente no importa
     // Illustrator por defecto sustituye los espacios con _ por ello se limpia el string
