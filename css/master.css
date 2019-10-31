@@ -621,7 +621,7 @@ footer p{
 /*------------------------------Support---------------------------------*/
 
 .contact-activated{
-  display: flex;
+  display: flex !important;
 }
 
 .loginForm{

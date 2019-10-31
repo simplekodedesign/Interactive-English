@@ -154,7 +154,7 @@ function getTranslate(){
 }
 
 function showContact () {
-  contact.classList.toggle("contact-activated");
+  contact.parentElement.classList.toggle("contact-activated");
 }
 
 //-------------------------------------GIF--------------------------------------
@@ -198,7 +198,7 @@ function mistake () {
 function congratsMessage () {
   rocketMessage.style.setProperty("display", "flex");
   setTimeout(() => {
-    rocketMessage.style.setProperty("opacity", "1");    
+    rocketMessage.style.setProperty("opacity", "1");
   }, 500);
   var rand = (Math.random())*10;
 
