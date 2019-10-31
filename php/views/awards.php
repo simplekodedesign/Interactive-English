@@ -54,6 +54,5 @@
 </div>
 <script>
   var COTEMA = <?php echo $_SESSION["te_actual"];?>;
-  console.log(COTEMA)
 </script>
 <script src="../../js/awards.js"></script>
