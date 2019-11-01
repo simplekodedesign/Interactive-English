@@ -624,19 +624,50 @@ footer p{
   display: flex !important;
 }
 
-.loginForm{
-  display: flex;
-  flex-direction: column;
+/* #contact{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+} */
+
+.contactUs{
+  height: 100%;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.contactUs h1{
+  text-align: center;
+  color: white;
+}
+
+.loginForm{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   min-width: 320px;
   max-width: 600px;
+  min-height: 400px;
   background-color: rgb(255, 255, 255);
 }
 
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 10px;
+}
 
-.loginForm > div {
+.loginForm .form > div {
   display: flex;
   padding: 0 10px;
   flex-direction: column;
@@ -645,7 +676,25 @@ footer p{
   height: auto;
   align-self: center;
   position: relative;
-  margin: 30px 10px;
+  margin: 0;
+}
+
+.loginForm > .textarea{
+  min-height: 200px;
+}
+
+.loginForm textarea{
+  resize: none;
+  min-height: 100px;
+}
+
+.loginForm #submitButton{
+  width: 100%;
+  padding: 10px 15px;
+  background-color: var(--secondary);
+  color: white;
+  border: 0;
+  outline: 0;
 }
 
 .barcolor {
