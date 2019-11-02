@@ -31,7 +31,7 @@ try {
     $mail->addAddress('andry@c21english.com'); //// Dirección del Destinatario
     $mail->isHTML(true);
     $mail->Subject = $_SESSION["name"]." ".$_SESSION["surname"].": ".$_POST["subject"];
-    $mail->Body = $_POST["message"];
+    $mail->Body = $_POST["message"]."<br> from: ".$_SESSION["email"];
     // Attachments
     // $mail->addAttachment('./attachments/file.tar.gz');         // Add attachments
     //$mail->addAttachment('./attachments/image.jpg', 'new.jpg');    // Optional name
