@@ -103,10 +103,10 @@ window.addEventListener("load", function () {
     xhttp.onreadystatechange = function(){
       if(this.readyState == 4 && this.status == 200){
         contact.reset();
+        console.log(this.responseText);
       }
     }
-    xhttp.open("POST","../../phpmailer/index.php");
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.open("POST","../../phpmailer/index.php",true);
     xhttp.send(data);
   })
 });

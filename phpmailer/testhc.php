@@ -12,9 +12,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 require 'Constantes.php';
-
-session_start();
-
 $mail = new PHPMailer(true); // Solicitamos una instancia de la clase PHPMailer, el parámetro true es para que nos acepte los exceptions
 try {
     $mail->SMTPDebug = 2; // Si no necesitamos un debug la comentamos, la usamos en modo de desarrollo. En producción lo comentamos
@@ -28,10 +25,10 @@ try {
     ## MENSAJE A ENVIAR
     $mail->setFrom('c21english.01@gmail.com', 'C21English Comunicaciones');  // Establecemos el remitente. Se recomienda usar la misma del username, esta para evitar conflictos para los sistema AntiSpam    
     //$mail->addReplyTo("reply@yourdomain.com", "Reply"); ////En caso de que el usuario le de la opción de responder, esta es la dirección donde enviaría
-    $mail->addAddress('andry@c21english.com'); //// Dirección del Destinatario
+    $mail->addAddress('heberth.castillo@gmail.com'); //// Dirección del Destinatario
     $mail->isHTML(true);
-    $mail->Subject = $_SESSION["name"]." ".$_SESSION["surname"].": ".$_POST["subject"];
-    $mail->Body = $_POST["message"];
+    $mail->Subject = 'Esta es una prueba de email';
+    $mail->Body = 'Texto del correo enviado desde <b>phpmailer</b>';
     // Attachments
     // $mail->addAttachment('./attachments/file.tar.gz');         // Add attachments
     //$mail->addAttachment('./attachments/image.jpg', 'new.jpg');    // Optional name
