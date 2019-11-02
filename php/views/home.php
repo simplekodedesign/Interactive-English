@@ -63,6 +63,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>C21 English: Aprende inglés fácilmente</title>
+    <link rel="shortcut icon" type="image/ico" href="../../img/favicon.ico">
     <link rel="stylesheet" href="../../css/font.css">
     <link rel="stylesheet" href="../../css/master.css?q=<?php echo $q?>">
     <link rel="stylesheet" href="../../css/lessons.css?q=<?php echo $q?>">
@@ -201,25 +202,30 @@
       </div>
 
       <form method="post" autocomplete="off" class="loginForm" id="formLogin">
-        <div>
-          <span class="barcolor"></span>
-          <input type="email" name="email" id="email" placeholder="&nbsp;" class="formInput" disabled>
-          <label for="email" id="email" class="inputLabel">Dirección de zoho</label>
+        <div class="contactUs">
+          <h1>Te responderemos lo más rápido posible</h1>
         </div>
-        <div>
-          <span class="barcolor"></span>
-          <select name="subject" id="categorie" placeholder="&nbsp;" class="formInput">
-            <option value="Support">Soporte técnico</option>
-            <option value="Teacher">Consulta</option>
-          </select>
-          <label for="password" id="usernamepass" class="inputLabel">Contraseña</label>
+        <div class="form">
+          <div>
+            <span class="barcolor"></span>
+            <input type="email" name="email" id="email" placeholder="&nbsp;" class="formInput" disabled>
+            <label for="email" id="email" class="inputLabel">Dirección de zoho</label>
+          </div>
+          <div>
+            <span class="barcolor"></span>
+            <select name="subject" id="categorie" placeholder="&nbsp;" class="formInput">
+              <option value="Support">Soporte técnico</option>
+              <option value="Teacher">Consulta</option>
+            </select>
+            <label for="categorie" id="usernamepass" class="inputLabel">Categoria</label>
+          </div>
+          <div class="textarea">
+            <span class="barcolor"></span>
+            <textarea name="message" id="password" placeholder="&nbsp;" class="formInput"></textarea>
+            <label for="password" id="usernamepass" class="inputLabel">¿Con que te podemos ayudar?</label>
+          </div>
+          <input type="submit" value="Enviar" id="submitButton" class="formButton">
         </div>
-        <div>
-          <span class="barcolor"></span>
-          <textarea name="message" id="password" placeholder="&nbsp;" class="formInput"></textarea>
-          <label for="password" id="usernamepass" class="inputLabel">¿Con que te podemos ayudar?</label>
-        </div>
-        <input type="submit" value="enviar" id="submitButton" class="formButton">
       </form>
     </div>
 

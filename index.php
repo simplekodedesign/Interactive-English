@@ -27,6 +27,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
     <link rel="stylesheet" href="css/login.css?q=<?php echo $q?>">
     <link rel="stylesheet" href="css/background.css?q=<?php echo $q?>">
     <title>C21 English: Aprende inglés fácilmente</title>
