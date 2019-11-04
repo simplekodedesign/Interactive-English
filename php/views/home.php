@@ -119,8 +119,8 @@
               <div class="roadicon" id="theme7"><img src="../../img/lessons/background/foodanddrinks.svg" height="100%" alt="Food and Drinks"></div>
               <div class="roadicon" id="theme8"><img src="../../img/lessons/background/body.svg" height="100%" alt="Parts of the Body"></div>
               <div class="roadicon" id="theme9"><img src="../../img/lessons/background/plurals.svg" height="100%" alt="Plurals"></div>
-              <div class="roadicon" id="theme10"><img src="../../img/lessons/background/thisthese.svg" height="100%" alt="This-These"></div>
-              <div class="roadicon" id="theme11"><img src="../../img/lessons/background/thatthose.svg" height="100%" alt="That-Those"></div>
+              <div class="roadicon" id="theme10"><img src="../../img/lessons/background/thisthese.svg" height="100%" alt="This - These"></div>
+              <div class="roadicon" id="theme11"><img src="../../img/lessons/background/thatthose.svg" height="100%" alt="That - Those"></div>
               <div class="roadicon" id="theme12"><img src="../../img/lessons/background/thecolors.svg" height="70%" alt="Colors"></div>
               <div class="roadicon" id="theme13"><img src="../../img/lessons/background/occupations.svg" height="100%" alt="To be and Occupations"></div>
               <div class="roadicon" id="theme14"><img src="../../img/lessons/background/sports.svg" height="100%" alt="Sports"></div>

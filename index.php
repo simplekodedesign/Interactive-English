@@ -41,10 +41,10 @@
 
   <section class="main" id="main">
     <div class="firstHalf">
-      <img src="descarga.png" alt="">
+      <img src="img/Colegio-Calasanz.png" alt="">
 
       <form method="post" autocomplete="off" class="loginForm" id="formLogin">
-        <h3>C21 English</h3>
+        <h3>Colegio Calasanz</h3>
         <div>
           <span class="barcolor"></span>
           <input type="text" name="user" id="username" placeholder="&nbsp;" class="formInput">

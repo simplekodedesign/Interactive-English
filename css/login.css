@@ -19,6 +19,17 @@
   box-sizing: border-box;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -59,8 +70,10 @@ body {
 
 
 .firstHalf {
-  --mainColor: #004a7d;
-  --secondColor: #fea400;
+  /* --mainColor: #004a7d;
+  --secondColor: #fea400; */
+  --mainColor: #e4c238;
+  --secondColor: black;
   padding: 25px;
   height: 100vh;
   min-width: 350px;
