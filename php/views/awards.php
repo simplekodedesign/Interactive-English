@@ -18,7 +18,7 @@
 ?>
 
 <div class='titles' id='titles'>
-  <h1>AWARDS!!</h1>
+  <h1>AWARDS!</h1>
   <span>Keep learning to get amazing stuffs</span>
 </div>
 

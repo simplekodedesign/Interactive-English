@@ -756,8 +756,18 @@ label {
   transform: translate(0, -30px);
 }
 
-.formInput:not(:placeholder-shown) + .inputLabel{
+.formInput:not(:placeholder-shown) + .inputLabel {
   transform: translate(0, -30px);
+}
+
+.txtarea:focus + .inputLabel{
+  bottom: 100%;
+  transform: translate(0, -15%);
+}
+
+.txtarea:not(:placeholder-shown) + .inputLabel {
+  bottom: 100%;
+  transform: translate(0, -15%);
 }
 
 #submit, .siguiente {
