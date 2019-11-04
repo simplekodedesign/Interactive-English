@@ -69,6 +69,7 @@ window.addEventListener("load", function() {
     var data = new FormData(form);
     xhttp.onreadystatechange = function(){
       if(this.readyState == 4 && this.status == 200){
+        console.log(this.responseText);
         response = JSON.parse(this.responseText);
         console.log(response);
         if(response.status == 1){
@@ -114,7 +115,7 @@ function loginHandler(handle){
       errorMessage.innerHTML = 'Error inesperado, recarga la página y vuelve a intentarlo o contacta al soporte';
       break;
   }
-  document.getElementById("messageContainer").style.transform = "translate(0)"
+  document.getElementById("messageContainer").style.transform = "translate(0)";
 }
 
 // var remeb = function() {
