@@ -6,6 +6,9 @@ window.addEventListener("load", function () {
     lessons[i].addEventListener("mouseenter", function () {
       title.innerHTML = this.firstElementChild.getAttribute("alt")
     })
+    lessons[i].addEventListener("mouseleave", function () {
+      title.innerHTML = "LESSONS"
+    })
   }
 
   // function audioCreator (){

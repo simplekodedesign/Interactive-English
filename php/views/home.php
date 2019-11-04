@@ -105,7 +105,7 @@
           echo '
           <script src="../../js/home.js"></script>
           <div class="titles">
-            <h1 class="roadTitle" id="lessonTitle">Lecciones</h1>
+            <h1 class="roadTitle" id="lessonTitle">LESSONS</h1>
           </div>
 
           <div class="container" id="road">
@@ -113,21 +113,21 @@
               <div class="roadicon" id="theme1"><img src="../../img/lessons/background/abc.svg" width="100%" alt="The Alphabet"></div>
               <div class="roadicon" id="theme2"><img src="../../img/lessons/background/greetings.svg" height="100%" alt="The Greetings"></div>
               <div class="roadicon" id="theme3"><img src="../../img/lessons/background/thenumbers.svg" height="100%" alt="Numbers"></div>
-              <div class="roadicon" id="theme4"><img src="../../img/lessons/background/personalinformation.svg" height="60%" alt="Personal information"></div>
-              <div class="roadicon" id="theme5"><img src="../../img/lessons/background/articles.svg" height="100%" alt="The articles"></div>
+              <div class="roadicon" id="theme4"><img src="../../img/lessons/background/personalinformation.svg" height="60%" alt="Personal Information"></div>
+              <div class="roadicon" id="theme5"><img src="../../img/lessons/background/articles.svg" height="100%" alt="The Articles"></div>
               <div class="roadicon" id="theme6"><img src="../../img/lessons/background/animals.svg" height="100%" alt="Animals"></div>
-              <div class="roadicon" id="theme7"><img src="../../img/lessons/background/foodanddrinks.svg" height="100%" alt="Food and drinks"></div>
-              <div class="roadicon" id="theme8"><img src="../../img/lessons/background/body.svg" height="100%" alt="Parts of the body"></div>
+              <div class="roadicon" id="theme7"><img src="../../img/lessons/background/foodanddrinks.svg" height="100%" alt="Food and Drinks"></div>
+              <div class="roadicon" id="theme8"><img src="../../img/lessons/background/body.svg" height="100%" alt="Parts of the Body"></div>
               <div class="roadicon" id="theme9"><img src="../../img/lessons/background/plurals.svg" height="100%" alt="Plurals"></div>
               <div class="roadicon" id="theme10"><img src="../../img/lessons/background/thisthese.svg" height="100%" alt="This-These"></div>
-              <div class="roadicon" id="theme11"><img src="../../img/lessons/background/thatthose.svg" height="100%" alt="That-those"></div>
+              <div class="roadicon" id="theme11"><img src="../../img/lessons/background/thatthose.svg" height="100%" alt="That-Those"></div>
               <div class="roadicon" id="theme12"><img src="../../img/lessons/background/thecolors.svg" height="70%" alt="Colors"></div>
-              <div class="roadicon" id="theme13"><img src="../../img/lessons/background/occupations.svg" height="100%" alt="To be and occupations"></div>
+              <div class="roadicon" id="theme13"><img src="../../img/lessons/background/occupations.svg" height="100%" alt="To be and Occupations"></div>
               <div class="roadicon" id="theme14"><img src="../../img/lessons/background/sports.svg" height="100%" alt="Sports"></div>
               <div class="roadicon" id="theme15"><img src="../../img/lessons/background/prepositions.svg" height="100%" alt="Prepositions"></div>
               <div class="roadicon" id="theme16"><img src="../../img/lessons/background/directions.svg" height="80%" alt="Directions"></div>
               <div class="roadicon" id="theme17"><img src="../../img/lessons/background/family.svg" height="80%" alt="Family"></div>
-              <div class="roadicon" id="theme18"><img src="../../img/lessons/background/hours.svg" height="70%" alt="What time is it?"></div>
+              <div class="roadicon" id="theme18"><img src="../../img/lessons/background/hours.svg" height="70%" alt="What Time is it?"></div>
               <div id="start"><img src="../../img/lessons/background/start.svg" height="100%" alt="Start"></div>
               <div id="end"><img src="../../img/lessons/background/end.svg" height="100%" alt="END"></div>
             </div>

@@ -86,8 +86,8 @@ body {
   display: flex;
   flex-direction: column;
   /* background-color: rgb(255, 255, 255); */
-  width: 80%;
-  max-width: 300px;
+  width: 90%;
+  min-width: 300px;
   transition: .3s ease-in-out;
 }
 
@@ -105,6 +105,7 @@ body {
   padding: 7px 0px;
   text-align: center;
   text-decoration: underline;
+  font-size: 1.2em;
   color: var(--secondColor);
   cursor: pointer;
 }
@@ -113,6 +114,7 @@ body {
   text-align: center;
   background: var(--mainColor);
   color: white;
+  font-size: 1.2em;
   box-shadow: none;
   border: none;
   cursor: pointer;
@@ -283,7 +285,6 @@ label {
 
 
 @media screen and (max-width : 500px) {
-
   .main {
     position: relative;
   }
