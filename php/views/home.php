@@ -221,7 +221,7 @@
           </div>
           <div class="textarea">
             <span class="barcolor"></span>
-            <textarea name="message" id="password" placeholder="&nbsp;" class="formInput"></textarea>
+            <textarea name="message" id="password" placeholder="&nbsp;" class="formInput txtarea"></textarea>
             <label for="password" id="usernamepass" class="inputLabel">¿Con que te podemos ayudar?</label>
           </div>
           <input type="submit" value="Enviar" id="submitButton" class="formButton">
