@@ -3,8 +3,17 @@
   align-self: flex-start;
 }
 
+.titles h1 {
+  font-size: 3em;
+}
+
+.titles span {
+  color: var(--yellow);
+  font-size: 1.5em;
+}
+
 .container {
-  height: 260px;
+  height: auto;
   min-width: 320px;
   width: 65%;
   max-width: 1000px;
@@ -32,6 +41,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin: 4px;
 }
 
 .pic > img {
@@ -49,6 +59,7 @@
   justify-content: flex-end;
   align-items: center;
   min-width: 440px;
+  max-width: 600px;
 }
 
 .profileInf > #selectedPic {
@@ -64,6 +75,10 @@
   width: 330px;
 }
 
+.profileInf > table > tbody > tr > td {
+  padding: 4px 0;
+}
+
 .profileInf .variable {
   text-align: end;
 }
@@ -75,12 +90,32 @@
   padding: 2px 5px;
 }
 
+.variable, .value {
+  font-size: 115%;
+  position: relative;
+}
+
+.separation {
+  padding: 0;
+}
+
+.separation::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  color: gray;
+  left: 0;
+  top: calc(50% - 1.5px);
+}
+
 /* .buttons{
   grid-column: 1/ span 2;
 } */
 
 .lessonButton {
   color: black;
+  font-size: 1.5em;
 }
 
 @media screen and (max-width : 620px) {

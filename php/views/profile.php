@@ -94,6 +94,10 @@
                   <td class='value'><input type='text' name='Email' id='email' disabled value='".$email."'></td>
                 </tr>
                 <tr>
+                  <td class='variable separation'></td>
+                  <td class='value separation'></td>
+                </tr>
+                <tr>
                   <td class='variable'>Old Password:</td>
                   <td class='value'><input type='text' name='OldPassword' id='OldPassword'></td>
                 </tr>
@@ -109,6 +113,6 @@
             </div>
           </div>
           <div class='buttons'>
-            <span class='lessonButton' id='save' onclick='updateProfile()'>save</span>
+            <span class='lessonButton' id='save'>Guardar</span>
           </div>
           <script type='text/javascript' src='../../js/profile.js?q=".$q."'></script>";

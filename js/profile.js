@@ -1,6 +1,7 @@
-
+var saveButton = document.getElementById("save");
 
 window.addEventListener("load", function() {
+  saveButton.addEventListener("click", updateProfile);
   var pictures = document.getElementsByClassName("pic");
   var l = pictures.length
   var selected = document.getElementById("selectedPic");
