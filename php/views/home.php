@@ -209,7 +209,7 @@
           <div>
             <span class="barcolor"></span>
             <input type="email" name="email" id="email" placeholder="&nbsp;" class="formInput" disabled>
-            <label for="email" id="email" class="inputLabel">Dirección de zoho</label>
+            <label for="email" id="email" class="inputLabel">supportc21@zoho.com</label>
           </div>
           <div>
             <span class="barcolor"></span>
@@ -217,12 +217,12 @@
               <option value="Support">Soporte técnico</option>
               <option value="Teacher">Consulta</option>
             </select>
-            <label for="categorie" id="usernamepass" class="inputLabel">Categoria</label>
+            <label for="categorie" id="usernamepass" class="inputLabel">Categoría</label>
           </div>
           <div class="textarea">
             <span class="barcolor"></span>
             <textarea name="message" id="password" placeholder="&nbsp;" class="formInput txtarea"></textarea>
-            <label for="password" id="usernamepass" class="inputLabel">¿Con que te podemos ayudar?</label>
+            <label for="password" id="usernamepass" class="inputLabel">¿Con qué te podemos ayudar?</label>
           </div>
           <input type="submit" value="Enviar" id="submitButton" class="formButton">
         </div>

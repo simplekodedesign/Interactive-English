@@ -481,7 +481,10 @@ footer p{
 .translateDiv button {
   width: 50%;
   margin-top: 30px;
+  color: white;
   border-radius: 12px;
+  font-weight: 900;
+  font-size: 1.4em;
   background-color: var(--yellow);
   padding: 10px 5px;
   box-shadow: none;
@@ -515,8 +518,11 @@ footer p{
   min-width: 100px;
   height: 100px;
   resize: none;
-  border-radius: 10px;
   border: none;
+  font-size: 1.2em;
+  border-radius: 10px;
+  padding-left: 10px;
+  outline: 0;
 }
 
 #from_toButton{
@@ -528,14 +534,14 @@ footer p{
   flex-direction: column;
   flex-wrap: nowrap;
   position: absolute;
-  top: calc(10vh + 30px);
-  right: 100px;
+  top: calc(10vh + 25px);
+  right: 55px;
   cursor: pointer;
 }
 
 .line {
   width: 45px;
-  height: 4px;
+  height: 8px;
   margin: 5px;
   background-color: red;
 }
@@ -544,7 +550,7 @@ footer p{
 }
 
 .exitButton > .line:nth-child(2) {
-  transform: rotate(-45deg) translate(7px, 1px);
+  transform: rotate(-45deg) translate(13px, 0px);
 }
 
 /*------------------------WIN------------------------------*/
@@ -650,6 +656,9 @@ footer p{
   justify-content: center;
   align-items: center;
   padding: 15px;
+  border-radius: 12px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .contactUs h1{
@@ -662,6 +671,7 @@ footer p{
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
+  border-radius: 12px;
   width: 50%;
   min-width: 320px;
   max-width: 600px;
@@ -707,6 +717,7 @@ footer p{
   color: white;
   border: 0;
   outline: 0;
+  font-size: 1.2em;
 }
 
 .barcolor {

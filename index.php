@@ -41,7 +41,7 @@
 
   <section class="main" id="main">
     <div class="firstHalf">
-      <img src="img/Colegio-Calasanz.png" alt="">
+      <img src="img/colegios/Colegio-Calasanz.png" alt="">
 
       <form method="post" autocomplete="off" class="loginForm" id="formLogin">
         <h3>Colegio Calasanz</h3>
