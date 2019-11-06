@@ -68,31 +68,46 @@
                 <img src='../../img/perfil/users/woman6.svg' alt=''>
               </div>
             </div>
-            <div class='profileInf'>
-              <div id='selectedPic' class='pic'>
-                <img src='".$photo."' alt=''>
+
+            <div class='infContainer'>
+
+              <div class='profileInf'>
+                <div id='selectedPic' class='pic'>
+                  <img src='".$photo."' alt=''>
+                </div>
+                <table>
+                  <tr>
+                    <td class='variable'>First Name:</td>
+                    <td class='value'><input type='text' name='FirstName' id='firstname' disabled value='".$_SESSION['name']."'></td>
+                  </tr>
+                  <tr>
+                    <td class='variable'>Last Name:</td>
+                    <td class='value'><input type='text' name='LastName' id='lastname' disabled value='".$_SESSION['surname']."'></td>
+                  </tr>
+                  <tr>
+                    <td class='variable'>Parent:</td>
+                    <td class='value'><input type='text' name='Parent' id='parent' disabled value='".$parent."'></td>
+                  </tr>
+                  <tr>
+                    <td class='variable'>Birth Date:</td>
+                    <td class='value'><input type='text' name='Birth' id='birth' disabled value='".$birth."'></td>
+                  </tr>
+                  <tr>
+                    <td class='variable'>Email:</td>
+                    <td class='value'><input type='text' name='Email' id='email' disabled value='".$email."'></td>
+                  </tr>
+                  <tr>
+                    <td class='variable separation'></td>
+                    <td class='value separation'></td>
+                  </tr>
+                </table>
               </div>
-              <table>
-                <tr>
-                  <td class='variable'>First Name:</td>
-                  <td class='value'><input type='text' name='FirstName' id='firstname' disabled value='".$_SESSION['name']."'></td>
-                </tr>
-                <tr>
-                  <td class='variable'>Last Name:</td>
-                  <td class='value'><input type='text' name='LastName' id='lastname' disabled value='".$_SESSION['surname']."'></td>
-                </tr>
-                <tr>
-                  <td class='variable'>Parent:</td>
-                  <td class='value'><input type='text' name='Parent' id='parent' disabled value='".$parent."'></td>
-                </tr>
-                <tr>
-                  <td class='variable'>Birth Date:</td>
-                  <td class='value'><input type='text' name='Birth' id='birth' disabled value='".$birth."'></td>
-                </tr>
-                <tr>
-                  <td class='variable'>Email:</td>
-                  <td class='value'><input type='text' name='Email' id='email' disabled value='".$email."'></td>
-                </tr>
+
+              <div class='profileInf passInfo'>
+                <div class='pic'>
+                  <img src='../../img/password.png' alt=''>
+                </div>
+                <table>
                 <tr>
                   <td class='variable'>Old Password:</td>
                   <td class='value'><input type='text' name='OldPassword' id='OldPassword'></td>
@@ -105,10 +120,13 @@
                   <td class='variable'>Repeat Password:</td>
                   <td class='value'><input type='text' name='RepeatPassword' id='RepeatNewPassword'></td>
                 </tr>
-              </table>
+                </table>
+              </div>
+
             </div>
+
           </div>
           <div class='buttons'>
-            <span class='lessonButton' id='save' onclick='updateProfile()'>save</span>
+            <span class='lessonButton' id='save'>Guardar</span>
           </div>
           <script type='text/javascript' src='../../js/profile.js?q=".$q."'></script>";
