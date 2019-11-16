@@ -121,7 +121,9 @@ function dropItem() {
       refreshgame();
     } else {
       $(this.target).appendTo('#' + src);
-      victoryMessage();
+      if (victoryMessage !== null) {
+        victoryMessage();
+      }
       TweenMax.fromTo(this.target, 1, {
         x:"+=" + (boundsBefore.left - boundsAfter.left),
         y:"+=" + (boundsBefore.top - boundsAfter.top),

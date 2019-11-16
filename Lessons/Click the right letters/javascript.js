@@ -191,6 +191,8 @@ function check () {
   if(appear == 0) {
     posLetter++;
     if(posLetter < lettersLength) {
+      mainAud.pause();
+      mainAud.currentTime = 0;
       mainAud.play();
       setTimeout(() => {
         clearGame();
@@ -202,7 +204,9 @@ function check () {
       }, 750);
     } else {
       // alert("YOU WON");
-      victoryMessage();
+      if (victoryMessage !== null) {
+        victoryMessage();
+      }
     }
   }
 }

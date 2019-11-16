@@ -50,7 +50,9 @@ window.addEventListener("load",function(){
 					pos=Math.round(Math.random()*25);
 				}while(bLetters[pos]&&count<26);
 				if(count>=26){
-					victoryMessage();
+					if (victoryMessage !== null) {
+						victoryMessage();
+					}
 				}else{
 					setTimeout(function(){
 						letters[pos].style.transform="scale(1,1)";
@@ -70,9 +72,6 @@ window.addEventListener("load",function(){
 				sn = false;
 				document.getElementById("btnSpeak").innerHTML="Speak";
 			}
-	})
-	window.addEventListener("click", function() {
-		victoryMessage();
 	})
 })
 

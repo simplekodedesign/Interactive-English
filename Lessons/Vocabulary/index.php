@@ -5,7 +5,7 @@
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>
       <h1>".$res["Nb_Lesson"]."</h1>
-      <span>Listen to the Vocabulary</span>
+      <span>Escucha el vocabulario</span>
       </div>";
       $co_juego=$res["Co_Juego"];
     }

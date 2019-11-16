@@ -31,7 +31,9 @@ function validate_with_split(){
 			pos++;
 			b=1;
 			if(pos>=text.length){
-				victoryMessage();
+				if (victoryMessage !== null) {
+					victoryMessage();
+				}
 			}else{
 				actual();
 			}

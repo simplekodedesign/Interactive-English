@@ -36,7 +36,9 @@ function  check () {
 			for (var i = 0; i < l; i++) {
 				opt[i].removeEventListener("click", check);
 			}
-			victoryMessage();
+			if (victoryMessage !== null) {
+				victoryMessage();
+			}
 		}else{
 			 actual();
 		}

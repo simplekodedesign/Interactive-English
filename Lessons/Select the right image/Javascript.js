@@ -8,7 +8,9 @@ window.addEventListener("load",function(){
 					pos++;
 					actual();
 				}else{
-					victoryMessage();
+					if (victoryMessage !== null) {
+						victoryMessage();
+					}
 				}
 			} else {
 				mistake();

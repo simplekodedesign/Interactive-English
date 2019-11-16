@@ -143,7 +143,9 @@ function check () {
         return;
       }
     } else {
-      victoryMessage()
+      if (victoryMessage !== null) {
+        victoryMessage();
+      }
     }
 
   } else {

@@ -34,7 +34,9 @@ function actual(dir){
 	}
 	if(pos==total){
 		document.getElementById("btnDer").style.transform="scale(0,0)";
-		victoryMessage();
+		if (victoryMessage !== null) {
+			victoryMessage();
+		}
 	}else{
 		document.getElementById("btnDer").style.transform="scale(1,1)";
 	}
