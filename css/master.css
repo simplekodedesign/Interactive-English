@@ -811,7 +811,8 @@ label {
 
 #reloadButton {
   margin: 0;
-  padding: 10px 15px 10px 30px;
+  /* padding: 10px 15px 10px 30px; */
+  padding: 10px 15px;
   background-color: var(--orange);
   color: white;
   cursor: pointer;
@@ -820,9 +821,14 @@ label {
   left: 50%;
   min-width: 170px;
   transform: translate(-50%, -50%);
+  font-size: 120%;
+  text-align: center;
+
+  border-radius: 13px;
 }
 
 #reloadButton::after {
+  display: none;
   content: url(../img/refresh.svg);
   position: absolute;
   left: 5px;

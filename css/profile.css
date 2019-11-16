@@ -74,11 +74,11 @@
 }
 
 .passInfo > .pic {
-  width: 125px;
-  height: 125px;
+  width: 80px;
+  height: 80px;
   position: absolute;
   top: 50%;
-  left: 25px;
+  left: 47px;
   transform: translate(0, -50%);
 }
 
@@ -134,6 +134,10 @@
 /* .buttons{
   grid-column: 1/ span 2;
 } */
+
+.buttons {
+  margin-top: 50px;
+}
 
 .lessonButton {
   color: black;
