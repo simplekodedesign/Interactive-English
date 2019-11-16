@@ -152,7 +152,7 @@
     </section>
     <?php
       if($_GET["co"]) {
-        echo "<div id='reloadButton'>Reiniciar actividad</div>";
+        echo "<div id='reloadButton'>REINICIAR</div>";
       }
       if(empty($_GET["ini"])&&empty($_GET["end"])){
         if($lant != "" && $lant != "#"){
