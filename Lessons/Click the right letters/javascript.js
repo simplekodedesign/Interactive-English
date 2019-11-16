@@ -154,13 +154,13 @@ function clearGame () {
 }
 
 function check () {
-  console.log(mainAud);
-
 
   if (type == 1) {
     if (mainLetter.firstElementChild.alt == this.firstElementChild.alt) {
       this.style.setProperty("opacity", ".7");
       this.removeEventListener("click", check);
+      mainAud.pause();
+      mainAud.currentTime = 0;
       mainAud.play();
       appear--;
     } else {
@@ -174,6 +174,8 @@ function check () {
     if (mainLetter.innerHTML == this.innerHTML) {
       this.style.setProperty("color", "green");
       this.removeEventListener("click", check);
+      mainAud.pause();
+      mainAud.currentTime = 0;
       mainAud.play();
       appear--;
     } else {
