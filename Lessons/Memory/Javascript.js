@@ -43,5 +43,9 @@ function check (t1,t2) {
         c1 = c2 = undefined;
     }
     container.lastElementChild.style.zIndex = "-1";
-    if(tot==0)victoryMessage();
+    if(tot==0) {
+        if (victoryMessage !== null) {
+            victoryMessage();
+        }
+    }
 }

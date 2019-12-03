@@ -58,7 +58,9 @@ function validate_with_split () {
 			b=1;
 			if(pos >= total){
         text.removeEventListener("keyup", key);
-				victoryMessage();
+				if (victoryMessage !== null) {
+          victoryMessage();
+        }
 			}else{
 				actual();
 			}

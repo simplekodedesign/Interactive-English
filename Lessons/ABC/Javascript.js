@@ -8,7 +8,11 @@ window.addEventListener("load",function(){
 		for(var i=0;i<letters.length;i++)letters[i].addEventListener("click",function(ev){
 			if(!bletter[ev.target.classList[1]]){
 				finish--;
-				if(finish<=0)victoryMessage();
+				if(finish<=0){
+					if (victoryMessage !== null) {
+						victoryMessage();
+					}
+				}
 				if(cordLec==cordAct)ev.target.style.transform="scale(0,0)";
 				bletter[ev.target.classList[1]]=1;
 			}

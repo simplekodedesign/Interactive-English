@@ -50,7 +50,11 @@ function check (t1,t2) {
     }
     c1.idText = c1.idcol = c2.idText = c2.idcol = undefined;
 
-    if(tot==0)victoryMessage();
+    if(tot==0) {
+        if (victoryMessage !== null) {
+            victoryMessage();
+        }
+    }
 }
 
 

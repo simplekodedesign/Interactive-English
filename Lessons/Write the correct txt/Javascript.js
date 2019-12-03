@@ -36,7 +36,9 @@ function validate_with_split(){
 			if(pos >= text.length){
 				write.removeEventListener("keyup", key);
 				document.getElementById("btncheck").removeEventListener("click", validate_with_split);
-				victoryMessage();
+				if (victoryMessage !== null) {
+					victoryMessage();
+				}
 			}else{
 				actual();
 			}

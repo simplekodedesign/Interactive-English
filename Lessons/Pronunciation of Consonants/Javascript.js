@@ -43,7 +43,9 @@ window.addEventListener("load",function(){
 				letters[pos].style.transform="scale(0,0)";
 				pos++;
 				if(pos>=26){
-					victoryMessage();
+					if (victoryMessage !== null) {
+						victoryMessage();
+					}
 				}else{
 					setTimeout(function(){
 						letters[pos].style.transform="scale(1,1)";

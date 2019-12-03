@@ -786,11 +786,11 @@ footer p{
 }
 
 #reloadButton::after {
-  display: none;
   content: url(../img/refresh.svg);
   position: absolute;
-  left: 5px;
-  width: 20px;
+  left: 10px;
+  top: calc(50% - 12px);
+  width: 25px;
   height: auto;
 }
 

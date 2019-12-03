@@ -48,7 +48,9 @@ function setter () {
             shops[i].removeEventListener("click", setter);
         }
 
-        victoryMessage();
+        if (victoryMessage !== null) {
+            victoryMessage();
+        }
     }
     this.parentElement.lastElementChild.play();
     engname.innerHTML = this.parentElement.firstElementChild.alt

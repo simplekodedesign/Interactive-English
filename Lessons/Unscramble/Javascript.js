@@ -24,7 +24,9 @@ function validate(){
 		}else{
 			document.getElementById("write").removeEventListener("keyup", key);
 			document.getElementById("check").removeEventListener("click",validate);
-			victoryMessage();
+			if (victoryMessage !== null) {
+				victoryMessage();
+			}
 		}
 	} else {
 		mistake();

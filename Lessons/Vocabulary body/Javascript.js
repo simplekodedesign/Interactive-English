@@ -146,6 +146,8 @@ function spotlight (e) {
   this.classList.remove("item")
 
   if (contSvg < 1) {
-    victoryMessage()
+    if (victoryMessage !== null) {
+      victoryMessage();
+    }
   }
 }

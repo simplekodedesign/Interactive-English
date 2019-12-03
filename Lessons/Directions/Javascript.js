@@ -56,7 +56,9 @@ var checkgame = function () {
         turns--;
         this.style.backgroundColor = "green";
         if(turns < 0){
-          victoryMessage();
+          if (victoryMessage !== null) {
+            victoryMessage();
+          }
           // alert("YOU WON");
           return;
         }

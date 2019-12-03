@@ -52,7 +52,9 @@ window.addEventListener("load",function(){
 					document.getElementById("message").innerHTML=compare[pos];
 					sound();
 				}else{
-					victoryMessage();
+					if (victoryMessage !== null) {
+						victoryMessage();
+					}
 				}
 			}
 		}

@@ -78,7 +78,11 @@ var evento = function() {
 var check = function (text, data) {
   if(text == data.lastElementChild.alt){
     tot--;
-    if(tot<=0)victoryMessage();
+    if(tot<=0) {
+      if (victoryMessage !== null) {
+        victoryMessage();
+      }
+    }
     data.firstElementChild.firstElementChild.play();
     for(var i = 0; i < cards.length; i++){
       if(cards[i].lastElementChild.alt == data.lastElementChild.alt && cards[i].lastElementChild.id != data.lastElementChild.id){

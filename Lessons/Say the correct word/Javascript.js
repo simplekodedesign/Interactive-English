@@ -120,7 +120,9 @@ function validate_with_split(){
 			pos++;
 			b=1;
 			if(pos>=total){
-				victoryMessage();
+				if (victoryMessage !== null) {
+					victoryMessage();
+				}
 			}else{
 				document.getElementById("img").src=urlImg[pos];
 				document.getElementById("aud").src=urlAud[pos];
