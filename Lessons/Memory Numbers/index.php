@@ -4,8 +4,7 @@
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>
-          <h1>".$res["Nb_Lesson"]."</h1>
-          <span>Match the Image</span>
+          <h1>Encuentra las parejas</h1>
       </div>";
       $co_juego=$res["Co_Juego"];
     }
@@ -26,7 +25,7 @@
   $initialValue;
   $endingValue;
 
-  
+
   if ($_GET["co"] == 6) {
     $initialValue = 64;
     $endingValue = 90;
@@ -69,4 +68,3 @@
     <audio src='' id='cardAud' style='display:none;'></audio>
     <script type='text/javascript' src='../../Lessons/Memory Numbers/Javascript.js?q=".$q."'></script>";
 ?>
-

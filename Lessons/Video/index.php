@@ -4,8 +4,7 @@
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>
-      <h1>".$res["Nb_Lesson"]."</h1>
-      <span>Video</span>
+      <h1>Observa, escucha y aprende</h1>
       </div>";
       $co_juego=$res["Co_Juego"];
     }
@@ -37,11 +36,20 @@
   echo "
     <link rel='stylesheet' href='../../Lessons/Video/style.css?q=".$q."'>
     <div class='cont_abc' id='cont_all'>
-    <video width='90%' height='auto' controls autoplay controlsList='nodownload' onEnded='victoryMessage()'>
+    <video width='90%' height='auto' controls autoplay controlsList='nodownload' onEnded='victoryMessage()' id='video'>
          <source src='".$urlVid."' type='video/mp4'>
            Your browser does not support HTML5 video.
       </video>
     </div>
+    <script type='text/javascript'>
+    video = document.getElementById('video')
+    video.addEventListener('ended', () =>{
+      video.addEventListener('click', () => setTimeout(() => {
+        rocketMessage.style.setProperty('display', 'none')
+        rocket.style.setProperty('display', 'none');
+      }, 750))
+    })
+    </script>
   ";
 ?>
 <script type="text/javascript">

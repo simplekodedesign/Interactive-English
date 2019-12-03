@@ -103,7 +103,6 @@ window.addEventListener("load", function () {
     xhttp.onreadystatechange = function(){
       if(this.readyState == 4 && this.status == 200){
         contact.reset();
-        console.log(this.responseText);
       }
     }
     xhttp.open("POST","../../phpmailer/index.php",true);
@@ -170,7 +169,6 @@ var victoryMessage = function() {
   if (location.href.indexOf("aTema") != -1) {
     win.classList.add("winactive")
     var audio = document.getElementById('themeAudio')
-    console.log(audio);
     audio.setAttribute("src", "../../aud/kids.mp3")
   }
   var xhttp = new XMLHttpRequest();
@@ -230,7 +228,6 @@ function congratsMessage () {
 
 function messageConstructor (message) {
   let text = message.split("");
-  console.log(text);
   let textLength = text.length;
   let span;
 
@@ -249,4 +246,8 @@ function messageConstructor (message) {
 
     rocketMessage.appendChild(span);
   }
+  window.addEventListener("click", () =>  {
+    rocketMessage.style.setProperty("display", "none")
+    rocket.style.setProperty("display", "none");
+  })
 }

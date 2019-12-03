@@ -30,8 +30,7 @@
   echo "<link rel='stylesheet' href='../../css/profile.css?q=".$q."'>
         <link rel='stylesheet' href='../../css/background.css?q=".$q."'>
         <div class='titles' id='titles'>
-            <h1>".$_SESSION['name']." ".$_SESSION['surname']."</h1>
-            <span id='subtitle'>This is your personal information:</span>
+            <h1>This is your personal information:</h1>
         </div>
 
 

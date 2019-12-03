@@ -13,9 +13,24 @@
 }
 
 .vocabulary{
-	width: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-width: 320px;
+	width: 100%;
+	height: 150px;
 	font-size: 2em;
 	text-align: center;
+}
+
+#arrow{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 0 10px;
+	clip-path: polygon(0% 40%, 60% 40%, 60% 10%, 100% 50%, 60% 90%, 60% 60%, 0% 60%);
+	/* clip-path: polygon(0% 20%, 60% 20%, 60% 10%, 100% 50%, 60% 90%, 60% 80%, 0% 80%); */
+	background-color: var(--orange);
 }
 
 .letra{
@@ -39,6 +54,7 @@
 	height: 100%;
 	max-width: 400px;
 	max-height: 400px;
+	cursor: pointer;
 }
 
 .active{
@@ -50,6 +66,7 @@
 	grid-template-columns: auto auto;
 	justify-content: center;
 	height: 50px;
+	width: 100%;
 }
 
 .lessonButton {

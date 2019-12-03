@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
 })
 
 function createAwards () {
-  let nPremios = COTEMA > 9? 2 : 1;
+  let nPremios = COTEMA > 9 ? 2 : 1;
   let temas = COTEMA;
 
   for (let i = 0; i < nPremios; i++) {
@@ -15,7 +15,7 @@ function createAwards () {
     premios[i].firstElementChild.setAttribute("src", IMGURL);
     for (let j = 0; j < spansLength; j++) {
       spans[j].style.setProperty("background-color", color[parseInt(getRandomArbitrary(0, 7))]);
-      spans[j].innerHTML = j + 1;
+      spans[j].innerHTML = "Lección " + (j + 1);
       if(j + 1 < temas) {
         spans[j].style.setProperty("opacity", "0");
       }

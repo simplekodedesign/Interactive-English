@@ -1,6 +1,6 @@
 
 var texts = document.getElementsByClassName("text");
-var textLength = text.length;
+var textLength = texts.length;
 var c1, c2 ;
 c1 = {idText: undefined , idcol: undefined};
 c2 = {idText: undefined , idcol: undefined};

@@ -4,8 +4,7 @@
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>
-      <h1>".$res["Nb_Lesson"]."</h1>
-      <span>Listen to the Vocabulary</span>
+      <h1>Pulsa, escucha y aprende nuevas palabras</h1>
       </div>";
       $co_juego=$res["Co_Juego"];
     }
@@ -45,14 +44,15 @@
 
   echo "<link rel='stylesheet' href='../../Lessons/Vocabulary/style.css?q=".$q."'>
   <div class='theme'>
-    <span class='vocabulary' id='es'>Spanish</span>
     <div class='cont_abc' id='cont_all'>
       <div class='letra 0 active' id='A'>
         <img id='img' src='' alt='image'>
         <audio src='' id='aud'></audio>
       </div>
     </div>
-    <span class='vocabulary' id='en'>English</span>
+    <div class='vocabulary'>
+      <span id='es'>Spanish</span> <span id='arrow'></span> <span id='en'>English</span>
+    </div>
     <div class='buttons'>
       <span class='lessonButton' id='btnIzq'>
         <div class='navigationButtons'></div>

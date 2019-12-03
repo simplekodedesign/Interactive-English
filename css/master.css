@@ -668,13 +668,13 @@ footer p{
 
 .loginForm{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 35% 65%;
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  width: 50%;
+  width: 60%;
   min-width: 320px;
-  max-width: 600px;
+  max-width: 1000px;
   min-height: 400px;
   background-color: rgb(255, 255, 255);
 }
@@ -683,10 +683,10 @@ footer p{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   height: 100%;
-  padding: 10px;
+  padding: 9% 3% 2% 3%;
 }
 
 .loginForm .form > div {
@@ -707,55 +707,31 @@ footer p{
 
 .loginForm textarea{
   resize: none;
-  min-height: 100px;
+  min-height: 200px;
+  font-size: 1.5em;
+  border-color: var(--secondary);
+  padding-left: 8px;
 }
 
 .loginForm #submitButton{
   width: 100%;
   padding: 10px 15px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   color: white;
+  border-radius: 12px;
   border: 0;
   outline: 0;
   font-size: 1.4em;
   cursor: pointer;
+  align-self: flex-end;
 }
 
 .loginForm #submitButton:hover{
   filter: brightness(.8);
 }
 
-.barcolor {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  min-width: 230px;
-  left: 0;
-  bottom: -1px;
-  background-color: var(--secondary);
-  transform: scale(0.0,1);
-  transform-origin: left bottom;
-  transition: .3s ease;
-}
-
-div label {
-  font-size: 125%;
-  width: 100%;
-  position: absolute;
-  bottom: 3px;
-}
-
-label {
-  margin: 0;
-  display: block;
-  cursor: pointer;
-}
-
 .formInput {
-  background-color: rgba(0, 0, 0, 0);
   border: none;
-  border-bottom: 2px solid var(--secondary);
   position: relative;
   width: 100%;
   min-width: 230px;
@@ -767,24 +743,6 @@ label {
 
 .inputLabel {
   transition: .3s ease;
-}
-
-.formInput:focus + .inputLabel{
-  transform: translate(0, -30px);
-}
-
-.formInput:not(:placeholder-shown) + .inputLabel {
-  transform: translate(0, -30px);
-}
-
-.txtarea:focus + .inputLabel{
-  bottom: 100%;
-  transform: translate(0, -15%);
-}
-
-.txtarea:not(:placeholder-shown) + .inputLabel {
-  bottom: 100%;
-  transform: translate(0, -15%);
 }
 
 #submit, .siguiente {

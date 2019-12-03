@@ -158,9 +158,6 @@
         if($lant != "" && $lant != "#"){
           echo "<div class='navigationButtons' id='lPrev'><a href='".$lant."'><span></span></a></div>";
         }
-        if($lact != "" && $lact != "#"){
-          echo "<div><a href='".$lact."'>Actual</a></div>";
-        }
         if($lsig != "" && $lsig != "#"){
           if($_SESSION["se_actual"] > $_GET["co"]) {
             echo "<div class='navigationButtons' id='lSigu'><a href='".$lsig."'><span></span></a></div>";
@@ -203,26 +200,28 @@
 
       <form method="post" autocomplete="off" class="loginForm" id="formLogin">
         <div class="contactUs">
-          <h1>Te responderemos lo más rápido posible</h1>
+          <h1>Te responderemos lo más pronto posible</h1>
         </div>
         <div class="form">
-          <div>
+          <!-- <div>
             <span class="barcolor"></span>
             <input type="email" name="email" id="email" placeholder="&nbsp;" class="formInput" disabled>
             <label for="email" id="email" class="inputLabel">supportc21@zoho.com</label>
-          </div>
+          </div> -->
           <div>
             <span class="barcolor"></span>
-            <select name="subject" id="categorie" placeholder="&nbsp;" class="formInput">
+            <!-- <select name="subject" id="categorie" placeholder="&nbsp;" class="formInput">
               <option value="Support">Soporte técnico</option>
               <option value="Teacher">Consulta</option>
-            </select>
+            </select> -->
+            <div class="checkForm formActive">Consulta</div>
+            <div class="checkForm">Soporte</div>
             <label for="categorie" id="usernamepass" class="inputLabel">Categoría</label>
           </div>
           <div class="textarea">
             <span class="barcolor"></span>
-            <textarea name="message" id="password" placeholder="&nbsp;" class="formInput txtarea"></textarea>
-            <label for="password" id="usernamepass" class="inputLabel">¿Con qué te podemos ayudar?</label>
+            <textarea name="message" id="password" placeholder="Escribe aquí tu inquietud" class="txtarea"></textarea>
+            <!-- <label for="password" id="usernamepass" class="">Escribe aquí tu inquietud</label> -->
           </div>
           <input type="submit" value="Enviar" id="submitButton" class="formButton">
         </div>
@@ -248,11 +247,9 @@
     <?php
       if(isset($_GET["th"])){
         echo "<script>var numero_leccion = ".$_GET["th"].";
-        console.log(numero_leccion)
         </script>";
       }else if(isset($co_tema)){
         echo "<script>var numero_leccion = ".$co_tema.";
-        console.log(numero_leccion)
         </script>";
       }
 

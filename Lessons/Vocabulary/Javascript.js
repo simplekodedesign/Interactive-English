@@ -1,36 +1,34 @@
 var pos=-1;
-window.addEventListener("load",function(){
+var img = document.getElementById("img")
+var aud = document.getElementById("aud")
+window.addEventListener("load", function(){
 	actual(true);
-	document.getElementById("btnIzq").addEventListener("click",function(){actual(false)});
-	document.getElementById("btnDer").addEventListener("click",function(){actual(true)});
-	document.getElementById("img").style.cursor="pointer";
-	document.getElementById("img").addEventListener("click",function(){
-		document.getElementById("aud").play();
-	})
+	document.getElementById("btnIzq").addEventListener("click", () => actual(false))
+	document.getElementById("btnDer").addEventListener("click", () =>	actual(true))
+
+	img.addEventListener("click", () => aud.play())
 })
 
 function actual(dir){
 	if(dir){
 		pos++;
 		if(pos<total){
-			document.getElementById("img").src=urlImg[pos];
-			document.getElementById("aud").src=urlAud[pos];
+			img.src=urlImg[pos];
+			aud.src=urlAud[pos];
 			document.getElementById("es").innerHTML=es[pos];
 			document.getElementById("en").innerHTML=en[pos];
 		}
 	}else{
 		if(pos-1>=0){
 			pos--;
-			document.getElementById("img").src=urlImg[pos];
-			document.getElementById("aud").src=urlAud[pos];
+			img.src=urlImg[pos];
+			aud.src=urlAud[pos];
 			document.getElementById("es").innerHTML=es[pos];
 			document.getElementById("en").innerHTML=en[pos];
 		}
 	}
 	if(pos==total-1){
 		document.getElementById("btnDer").innerHTML="Finish";
-	}else{
-		
 	}
 	if(pos==total){
 		document.getElementById("btnDer").style.transform="scale(0,0)";
@@ -43,4 +41,5 @@ function actual(dir){
 	}else{
 		document.getElementById("btnIzq").style.transform="scale(1,1)";
 	}
+	img.addEventListener("load", () => aud.play())
 }

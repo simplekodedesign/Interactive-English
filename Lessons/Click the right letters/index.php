@@ -4,8 +4,12 @@ $results=Connection::request("select Co_Juego,Nb_Lesson from p070_orden where Co
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>
-      <h1>".$res["Nb_Lesson"]."</h1>
-      <span>Listen the letter</span>
+      <h1>Encuentra y pulsa:
+       <span class='mainLetter' id='mainLetter'>
+          <audio src='' id='mainAud'></audio>
+          <audio src='../../aud/mistake.mp3' id='mistakeAud'></audio>
+        </span>cuantas veces le encuentres
+      </h1>
       </div>";
       $co_juego=$res["Co_Juego"];
     }
@@ -57,10 +61,6 @@ $results=Connection::request("select Co_Juego,Nb_Lesson from p070_orden where Co
 ?>
 <link rel="stylesheet" href="../../Lessons/Click the right letters/style.css?q=<?php echo $q;?>">
 <div class="cont_abc">
-  <div class="mainLetter" id="mainLetter">
-    <audio src="" id="mainAud"></audio>
-    <audio src="../../aud/mistake.mp3" id="mistakeAud"></audio>
-  </div>
   <div id="optionsLetters"></div>
 </div>
 
