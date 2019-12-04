@@ -60,7 +60,7 @@ function actual () {
 
 function validate_with_split(){
   comp=compare[pos].split("/",15);
-	var b=0;
+  var b=0;
 	comp.forEach(function(e){
 		if(e.toLowerCase() == (text.value).toLowerCase() && text.value != ""){
 			pos++;
@@ -73,10 +73,11 @@ function validate_with_split(){
 			}else{
 				actual();
 			}
-		} else {
-      mistake();
-    }
-	});
+		}
+  });
+  if (b === 0) {
+    mistake()
+  }
 }
 
 
