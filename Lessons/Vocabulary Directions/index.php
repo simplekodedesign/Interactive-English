@@ -10,6 +10,14 @@
       $co_tema = $res["Co_Tema"];
     }
   }
+
+  $results=Connection::request("select Tx_Help from p050_juego where Co_Juego=".$co_juego);
+  if($results->rowCount()>0){
+    while($res=$results->fetch(PDO::FETCH_ASSOC)){
+      $gift=$res["Tx_Help"];
+    }
+  }
+  
   echo "
   <link rel='stylesheet' href='../../Lessons\Vocabulary Directions\style.css?q=".$q."'>
 
