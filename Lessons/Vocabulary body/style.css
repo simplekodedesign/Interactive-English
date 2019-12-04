@@ -40,34 +40,29 @@ body{
   border: 2px solid var(--lessons);
   font-size: 1.2em;
   border-radius: 0;
+  width: 160px;
 }
 
 .object{
   display: flex;
   justify-content: center;
   position: relative;
-  min-width: 250px;
-  min-height: 700px;
+  min-width: 280px;
+  min-height: 900px;
   width: 100%;
   max-width: 1000px;
   max-height: 1000px;
 }
 
 .theme object{
-  /* min-height: 600px; */
-  /* height: 70vh; */
   max-height: 900px;
   position: absolute;
-  width: 100%;
-  /* top: 0; */
   left: 50%;
   transform: scale(0) translate(-50%, 0);
-  /* display: ; */
 }
 
 .theme .show{
   transform: scale(1) translate(-50%, 0);
-  /* display: block; */
 }
 
 .theme .color{

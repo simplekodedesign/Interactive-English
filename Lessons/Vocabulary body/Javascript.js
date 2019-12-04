@@ -8,12 +8,10 @@ var theme
 var svg
 var en
 var es
+var items= [];
 var cont = document.getElementById('cont')
 
 window.addEventListener("load", function (){
-  window.addEventListener("click", function (e) {
-    console.log(e.x + " " + window.innerWidth);
-  })
   var selectContainer = document.getElementById('buttonContainer')
   var audio = document.getElementById('audio')
   en = document.getElementById('en')
@@ -35,9 +33,7 @@ window.addEventListener("load", function (){
       }
       select[i].innerHTML = data.compare[i]
       selectContainer.appendChild(select[i])
-      select[i].addEventListener("click", function(){
-        show()
-      })
+      select[i].addEventListener("click", () => show())
     }
   }
 })
@@ -66,8 +62,6 @@ function god(who){
       var child = svgdoc.children
       const childLength = child.length
 
-      var items
-
       for (let i = 0; i < childLength; i++) {
         let id = child[i].getAttribute('id')
         if (id){
@@ -79,10 +73,14 @@ function god(who){
         }
       }
     }
-    items = svgdoc.getElementsByClassName('item')
+    var aux = svgdoc.getElementsByClassName('item')
+    for(let i = 0; i < aux.length; ++i){
+      items.push(aux[i])
+    }
     const itemsLength = items.length
 
-    contSvg += itemsLength
+    svgLength > 1 ? contSvg = itemsLength - 10 : itemsLength
+    // contSvg = itemsLength
     cont.innerHTML = contSvg;
 
     for (let i = 0; i < itemsLength; i++) {
@@ -99,6 +97,13 @@ function show(){
   select[1].classList.toggle('color')
 }
 
+// function check(){
+//   svg.forEach((item, index) =>{
+//     let svgdoc = (svg[who].contentDocument.getElementsByTagName('svg'))[0]
+//     contSvg += (svgdoc.getElementsByClassName("item")).length
+//   })
+// }
+
 function spotlight (e) {
   let root = document.documentElement
 
@@ -107,13 +112,12 @@ function spotlight (e) {
   var aud
   if (svgLength > 1) {
     // seteando posición de los spans con variables css
-    console.log(e.x + 20 + " " + window.innerWidth);
     if(e.x + 250 > window.innerWidth) {
       root.style.setProperty('--x', (e.x - 30) + "px")
     } else {
       root.style.setProperty('--x', (e.x+75) + "px")
     }
-    
+
     root.style.setProperty('--y', e.y + "px")
 
     // Retorna el id[1] = ingles, id[2] = español. id[0] realmente no importa
@@ -127,6 +131,12 @@ function spotlight (e) {
     es.style.display = 'block';
     // Añadiendo src y reproduciendo audio
     // audio.setAttribute('src', "../../aud/categories/family/"+id+".mp3")
+
+    window.addEventListener("click", () => {
+      en.style.display = 'none';
+      es.style.display = 'none';
+    })
+
   }else{
     id = idS
   }
@@ -144,6 +154,13 @@ function spotlight (e) {
   }
   //Al remover el Cl se quita el filtro sin embargo no es bueno quitar el evento
   this.classList.remove("item")
+  var compareId = this.id
+
+  items.forEach((item, index) =>{
+    if (compareId === item.id){
+      item.classList.remove("item")
+    }
+  })
 
   if (contSvg < 1) {
     if (victoryMessage !== null) {
