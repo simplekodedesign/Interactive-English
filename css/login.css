@@ -90,7 +90,7 @@ body {
 
 .firstHalf > img {
   height: 20%;
-  width: auto;
+  max-width: 80%;
   transition: .3s ease-in-out;
 }
 
