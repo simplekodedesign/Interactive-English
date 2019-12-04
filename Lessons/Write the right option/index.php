@@ -1,12 +1,13 @@
 <?php
   //Buscar el titulo de la leccion
-  $results=Connection::request("select Co_Juego,Nb_Lesson from p070_orden where Co_Orden=".$_GET["co"]);
+  $results=Connection::request("select Co_Juego,Nb_Lesson,Co_Tema from p070_orden where Co_Orden=".$_GET["co"]);
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>
       <h1>Escribe la opción correcta</h1>
     </div>";
       $co_juego=$res["Co_Juego"];
+      $co_tema = $res["Co_Tema"];
     }
   }
   $results=Connection::request("select Tx_Help from p050_juego where Co_Juego=".$co_juego);
@@ -92,4 +93,5 @@
           echo "]";
           ?>;
   var cord=<?php echo $_GET["co"]?>;
+  var co_tema = <?php echo $co_tema?>;
 </script>

@@ -267,5 +267,9 @@
     <script src="../../js/routing.js?q=<?php echo $q?>"></script>
     <script src="../../js/master.js?q=<?php echo $q?>"></script>
 
+    <script type="text/javascript">
+      if(co_tema)alert(co_tema);
+    </script>
+
   </body>
 </html>

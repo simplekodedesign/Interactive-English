@@ -10,13 +10,14 @@
 
   echo "<link rel='stylesheet' href='../../Lessons/Drag to the box/style.css?".$q."'>
   <div class='cont_abc' id='cont_all'>";
-    $results=Connection::request("select Co_Juego,Nb_Lesson from p070_orden where Co_Orden=".$_GET["co"]);
+    $results=Connection::request("select Co_Juego,Nb_Lesson,Co_Tema from p070_orden where Co_Orden=".$_GET["co"]);
     if($results->rowCount()>0){
       while($res=$results->fetch(PDO::FETCH_ASSOC)){
         echo "<div class='titles' id='titles'>
           <h1>Arrastra hacia la caja que corresponda</h1>
         </div>";
         $co_juego=$res["Co_Juego"];
+        $co_tema = $res["Co_Tema"];
       }
     }
       echo "<div class='itemContainer'>
@@ -72,3 +73,6 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js?q=".$q."' type='text/javascript'></script>
   ";
 ?>
+<script type="text/javascript">
+  var co_tema = <?php echo $co_tema?>;
+</script>
