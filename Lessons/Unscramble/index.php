@@ -4,8 +4,7 @@
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>
-      <h1>".$res["Nb_Lesson"]."</h1>
-      <span>Copy the word in the right way</span>
+      <h1>Ordena las letras</h1>
       </div>";
       $co_juego=$res["Co_Juego"];
     }
@@ -45,9 +44,9 @@
 
   <div class='buttons'>
     <div class='input'>
-      <input type='text'placeholder='Write here' class='write' id='write'>
+      <input type='text'placeholder='Escribe aquí' class='write' id='write'>
     </div>
-    <span class='lessonButton' id='check'>Check</span>
+    <span class='lessonButton' id='check'>Verificar</span>
   </div>
   <audio src='' id='aud'></audio>
   <script type='text/javascript' src='../../Lessons/Unscramble/Javascript.js?q=".$q."'></script>

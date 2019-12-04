@@ -4,7 +4,7 @@
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>
-      <h1>".$res["Nb_Lesson"]."</h1>
+      <h1>Selecciona la opción correcta</h1>
       </div>";
       $co_juego=$res["Co_Juego"];
     }

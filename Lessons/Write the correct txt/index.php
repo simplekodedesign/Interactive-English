@@ -4,7 +4,7 @@
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>
-              <h1>".$res["Nb_Lesson"]."</h1>
+              <h1>Escribe la opción correcta</h1>
             </div>";
       $co_juego=$res["Co_Juego"];
     }
@@ -47,8 +47,8 @@
     <input type='text'placeholder='Write' class='write' id='write'>
     <i class='fa fa-pencil' aria-hidden='true'></i>
     </div>
-    <span class='lessonButton' id='btnListen'>Listen</span>
-    <span class='lessonButton' id='btncheck'>Check</span>
+    <span class='lessonButton' id='btnListen'>Escucha</span>
+    <span class='lessonButton' id='btncheck'>Verificar</span>
   </div>
   <script type='text/javascript' src='../../Lessons/Write the correct txt/Javascript.js?q=".$q."'></script>";
 ?>

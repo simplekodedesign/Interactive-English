@@ -4,8 +4,7 @@
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>
-      <h1>".$res["Nb_Lesson"]."</h1>
-      <span>Select the correct image</span>
+      <h1>Escucha y selecciona la opción correcta</h1>
       </div>";
       $co_juego=$res["Co_Juego"];
     }
@@ -46,7 +45,7 @@
     </div>
   </div>
   <div class='buttons'>
-    <span class='lessonButton' id='btnListen'>Listen</span>
+    <span class='lessonButton' id='btnListen'>Escucha</span>
   </div>
   <script type='text/javascript' src='../../Lessons/Select the right image/Javascript.js?q=".$q."'></script>";
 ?>

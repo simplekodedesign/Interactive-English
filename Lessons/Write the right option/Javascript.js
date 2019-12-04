@@ -8,6 +8,7 @@ var letra = document.getElementById("letra");
 window.addEventListener("load",function(){
   actual();
 	document.getElementById("btnListen").addEventListener("click", audListen);
+  document.getElementById("btncheck").addEventListener("click", validate_with_split);
 
 	text.addEventListener("keyup", key);
   letra.addEventListener("click", audListen);
