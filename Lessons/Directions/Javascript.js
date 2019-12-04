@@ -90,7 +90,6 @@ var checkgame = function () {
       }
     }
   }
-  if(turns < 0  )alert("YOU WON");
 }
 
 function getRandomArbitrary(min, max) {

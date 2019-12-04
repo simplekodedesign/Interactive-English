@@ -280,7 +280,6 @@ i {
 .questionsContainer {
     width: 304px;
     height: auto;
-    background-color: brown;
     color: rgb(0, 0, 0);
 
     display: flex;

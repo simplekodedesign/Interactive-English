@@ -53,6 +53,6 @@
     </div></div>
 </div>
 <script>
-  var COTEMA = <?php echo $_SESSION["te_actual"];?>;
+  const COTEMA = <?php echo $_SESSION["te_actual"];?>;
 </script>
 <script src="../../js/awards.js"></script>

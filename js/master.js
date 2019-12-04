@@ -45,12 +45,19 @@ var win = document.getElementById("win")
 var durationRocket = 5;
 var mistakeAudio = document.getElementById("mAudio");
 var contact = this.document.getElementById("formLogin");
+var goBackButton = document.getElementById("goBackButton")
 
 window.addEventListener("load", function () {
   if(reloadButton) {
     document.getElementById("reloadButton").addEventListener("click", function () {
       location.reload();
     });
+  }
+
+  if(goBackButton) {
+    goBackButton.addEventListener("click", () => {
+      window.location.href = "home.php?url=lessons.php&th=" + co_tema
+    })
   }
 
   mistakeAudio.src = "../../aud/mistake.mp3";

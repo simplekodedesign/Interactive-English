@@ -3,6 +3,7 @@ var write = document.getElementById("write");
 var aud = document.getElementById("aud")
 
 window.addEventListener("load",function(){
+	description(CORD)
 	actual();
 	document.getElementById("btnListen").addEventListener("click",function(){
 		aud.play();
@@ -47,4 +48,18 @@ function validate_with_split(){
 	if (b === 0) {
 		mistake();
 	}
+}
+
+
+const description = cord => {
+  let title = document.getElementById("titles").firstElementChild
+  switch (cord) {
+    case 79:
+      title.innerHTML = "Escribe This / These según corresponda";
+		break
+		
+		case 86:
+      title.innerHTML = "Escribe That / Those según corresponda";
+    break
+  }
 }

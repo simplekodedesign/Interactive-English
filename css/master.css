@@ -765,7 +765,17 @@ footer p{
   background-color: hsl(30, 100%, 40%);
 }
 
-/*------------------------------RESTART BUTTON----------------------*/
+/*------------------------------RESTART and goBack BUTTON----------------------*/
+
+.actionButtons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
 
 #reloadButton {
   margin: 0;
@@ -774,15 +784,13 @@ footer p{
   background-color: var(--orange);
   color: white;
   cursor: pointer;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
   min-width: 170px;
-  transform: translate(-50%, -50%);
   font-size: 120%;
   text-align: center;
 
   border-radius: 13px;
+
+  margin-left: 5px;
 }
 
 #reloadButton::after {
@@ -793,6 +801,31 @@ footer p{
   width: 25px;
   height: auto;
 }
+
+
+#goBackButton {
+  margin: 0;
+  /* padding: 10px 15px 10px 30px; */
+  padding: 10px 15px;
+  background-color: var(--cyan);
+  color: white;
+  cursor: pointer;
+  min-width: 170px;
+  font-size: 120%;
+  text-align: center;
+
+  border-radius: 13px;
+  margin-right: 5px;
+}
+
+/* #goBackButton::after {
+  content: url(../img/refresh.svg);
+  position: absolute;
+  left: 10px;
+  top: calc(50% - 12px);
+  width: 25px;
+  height: auto;
+} */
 
 /*---------------------------------ROCKET---------------------------*/
 

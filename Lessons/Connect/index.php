@@ -1,6 +1,6 @@
 <?php
   //Buscar el titulo de la leccion
-  $results=Connection::request("select Co_Juego,Nb_Lesson,Co_tema from p070_orden where Co_Orden=".$_GET["co"]);
+  $results=Connection::request("select Co_Juego,Nb_Lesson,Co_Tema from p070_orden where Co_Orden=".$_GET["co"]);
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>

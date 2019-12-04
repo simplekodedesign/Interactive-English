@@ -6,6 +6,7 @@ var text = document.getElementById("write");
 var letra = document.getElementById("letra");
 
 window.addEventListener("load",function(){
+  description(CORD)
   actual();
 	document.getElementById("btnListen").addEventListener("click", audListen);
   document.getElementById("btncheck").addEventListener("click", validate_with_split);
@@ -76,4 +77,22 @@ function validate_with_split(){
       mistake();
     }
 	});
+}
+
+
+const description = cord => {
+  let title = document.getElementById("titles").firstElementChild
+  switch (cord) {
+    case 39:
+      title.innerHTML = "Escribe a / an según corresponda";
+    break
+
+    case 81:
+      title.innerHTML = "Responde la pregunta con This / These";
+    break
+
+    case 88:
+      title.innerHTML = "Responde la pregunta con That / Those";
+    break
+  }
 }

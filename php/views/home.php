@@ -152,22 +152,27 @@
     </section>
     <?php
       if($_GET["co"]) {
-        echo "<div id='reloadButton'>REINICIAR</div>";
+        echo "
+        <div class='actionButtons'>
+          <div id='goBackButton'>REGRESAR</div>
+          <div id='reloadButton'>REINICIAR</div>
+        </div>
+        ";
       }
-      if(empty($_GET["ini"])&&empty($_GET["end"])){
-        if($lant != "" && $lant != "#"){
-          echo "<div class='navigationButtons' id='lPrev'><a href='".$lant."'><span></span></a></div>";
-        }
-        if($lsig != "" && $lsig != "#"){
-          if($_SESSION["se_actual"] > $_GET["co"]) {
-            echo "<div class='navigationButtons' id='lSigu'><a href='".$lsig."'><span></span></a></div>";
-          } else {
-            echo "<div class='navigationButtons' style='display: none;'id='lSigu'><a href='".$lsig."'><span></span></a></div>";
-          }
-        }
-      }else{
-            echo "<div class='navigationButtons' style='display: none;'id='lSigu'><a href='".$lsig."'><span></span></a></div>";
-      }
+      // if(empty($_GET["ini"])&&empty($_GET["end"])){
+      //   if($lant != "" && $lant != "#"){
+      //     echo "<div class='navigationButtons' id='lPrev'><a href='".$lant."'><span></span></a></div>";
+      //   }
+      //   if($lsig != "" && $lsig != "#"){
+      //     if($_SESSION["se_actual"] > $_GET["co"]) {
+      //       echo "<div class='navigationButtons' id='lSigu'><a href='".$lsig."'><span></span></a></div>";
+      //     } else {
+      //       echo "<div class='navigationButtons' style='display: none;'id='lSigu'><a href='".$lsig."'><span></span></a></div>";
+      //     }
+      //   }
+      // }else{
+      //       echo "<div class='navigationButtons' style='display: none;'id='lSigu'><a href='".$lsig."'><span></span></a></div>";
+      // }
        $par="'".$_GET["url"]."',".$_GET["co"];
     ?>
     <div class="translatorScreen" id="translatorScreen">
@@ -266,10 +271,6 @@
     </script>
     <script src="../../js/routing.js?q=<?php echo $q?>"></script>
     <script src="../../js/master.js?q=<?php echo $q?>"></script>
-
-    <script type="text/javascript">
-      if(co_tema)alert(co_tema);
-    </script>
 
   </body>
 </html>

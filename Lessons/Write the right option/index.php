@@ -92,6 +92,6 @@
           }
           echo "]";
           ?>;
-  var cord=<?php echo $_GET["co"]?>;
+  const CORD=<?php echo $_GET["co"]?>;
   var co_tema = <?php echo $co_tema?>;
 </script>
