@@ -1862,7 +1862,7 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (1, 1, 3, NULL, 'video13', NULL, '', ''),
 (1, 1, 5, NULL, NULL, NULL, '', ''),
 (1, 1, 7, NULL, 'video14', NULL, '', ''),
-(8, 1, 8, 'ocean', NULL, 'ocean', 'Ocean', 'Oceano'),
+(8, 1, 8, 'ocean', NULL, 'ocean', 'Ocean', 'Océano'),
 (8, 1, 8, 'xylophone', NULL, 'xylophone', 'Xylophone', 'Xilófono'),
 (8, 1, 8, 'voice', NULL, 'voice', 'Voice', 'Voz'),
 (8, 1, 8, 'asia', NULL, 'asia', 'Asia', 'Asia'),
