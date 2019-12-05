@@ -182,7 +182,7 @@
       </div>
 
       <div class="translateDiv">
-        <span class="hButton B_herr" id="from_toButton">ENG - ESP</span>
+        <span class="hButton B_herr current" id="from_toButton">ENG - ESP</span>
         <div class="areasContainer">
           <textarea name="" id="txtFrom"></textarea>
           <textarea name="" id="txtTo" disabled></textarea>
