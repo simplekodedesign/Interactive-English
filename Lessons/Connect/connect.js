@@ -31,6 +31,7 @@ for(var i = 0; i < textLength; i++) {
 
 function check (t1,t2) {
     if(t1.idText == t2.idText) {
+      mistake("correct")
         for(var i = 0 ; i < textLength ; i++) {
             if(((texts[i].classList)[1] == t1.idText && (texts[i].parentElement.id == t1.idcol)) || (texts[i].classList)[1] == t2.idText && (texts[i].parentElement.id == t2.idcol)) {
                 desanimar(texts[i], 1);

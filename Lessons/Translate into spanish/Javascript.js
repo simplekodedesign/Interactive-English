@@ -64,8 +64,9 @@ function validate_with_split () {
 			}else{
 				actual();
 			}
-		} else {
-      mistake();
-    }
+		}
 	});
+	if (b === 0) {
+		miskate()
+	}
 }

@@ -1,6 +1,7 @@
 var pos=-1;
 var img = document.getElementById("img")
 var aud = document.getElementById("aud")
+
 window.addEventListener("load", function(){
 	actual(true);
 	document.getElementById("btnIzq").addEventListener("click", () => actual(false))

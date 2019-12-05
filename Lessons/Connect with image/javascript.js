@@ -64,6 +64,7 @@ var imagenes = document.getElementsByClassName("img");
 var imagenesLength = imagenes.length;
 function check (t1,t2) {
     if(t1.idText == t2.idText) {
+      mistake("correct")
         if (t1.type) {
             for (var i = 0; i < textosLength; i++) {
                 if (textos[i].innerHTML == t1.idText) {

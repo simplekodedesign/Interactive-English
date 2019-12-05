@@ -15,7 +15,8 @@ function createAwards () {
     let spansLength = spans.length;
     premios[i].firstElementChild.setAttribute("src", IMGURL);
     for (let j = 0; j < spansLength; j++) {
-      spans[j].innerHTML = "Lección " + (j + 1);
+      let numLecc = i === 0 ? j : j + 9
+      spans[j].innerHTML = "Lección " + (numLecc + 1);
       if(j + 1 === temas) {
         spans[j].style.setProperty("background-color", color[parseInt(getRandomArbitrary(0, 7))]);
         spans[j].classList.add("current")

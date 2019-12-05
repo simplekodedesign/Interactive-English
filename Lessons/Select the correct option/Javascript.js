@@ -9,14 +9,14 @@ window.addEventListener("load",function(){
 });
 
 function actual(){
-	document.getElementById("img").src=urlImg[pos];
+	document.getElementById("img").src= urlImg[pos];
 
-	document.getElementById("img").addEventListener("click",function(){
-		if(pos<total){
-			document.getElementById("aud").src=urlAud[pos];
-			document.getElementById("aud").play();
-		}
-	});
+	// document.getElementById("img").addEventListener("click", function(){
+	// 	if(pos < total){
+	// 		document.getElementById("aud").src = urlAud[pos];
+	// 		document.getElementById("aud").play();
+	// 	}
+	// });
 
 	option = options[pos].split("/",15);
 	option.sort(function (a, b) {
@@ -28,8 +28,10 @@ function actual(){
 }
 
 function  check () {
-	if(this.innerHTML.toLowerCase()==compare[pos].toLowerCase()){
+	if(this.innerHTML.toLowerCase() == compare[pos].toLowerCase()){
 		pos++;
+		mistake("correct")
+
 		if(pos >= total){
 			var opt = document.getElementsByClassName("lessonButton");
 			var l = opt.length;
@@ -57,5 +59,5 @@ function createButtons (arrayTexts) {
 		span.innerHTML = arrayTexts[i];
 		span.addEventListener("click", check);
 		buttons.appendChild(span);
-	}	
+	}
 }

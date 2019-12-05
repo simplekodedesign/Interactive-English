@@ -39,18 +39,17 @@
   echo "<link rel='stylesheet' href='../../Lessons/Vocabulary txt/style.css?q=".$q."'>
 
     <div class='cont_abc' id='cont_all'>
-      <span class='vocabulary' id='en'></span>
-      <div class='letra 0 active' id='text'></div>
-      <audio src='' id='aud'></audio>
-      <span class='vocabulary' id='es'></span>
-    </div>
-    <div class='buttons'>
       <span class='lessonButton' id='btnIzq'>
         <div class='navigationButtons'></div>
       </span>
+      <div class='letra 0 active' id='text'></div>
+      <audio src='' id='aud'></audio>
       <span class='lessonButton' id='btnDer'>
         <div class='navigationButtons'></div>
       </span>
+    </div>
+    <div class='vocabulary'>
+      <span id='es'></span>
     </div>
 
   <script type='text/javascript' src='../../Lessons/Vocabulary txt/Javascript.js?q=".$q."'></script>";

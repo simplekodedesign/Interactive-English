@@ -1,5 +1,5 @@
-var pos=0;
-var sound=document.getElementById("aud");
+var pos = 0;
+var sound = document.getElementById("aud");
 window.addEventListener("load",function(){
 	document.getElementById("text").innerHTML=text[pos];
 	document.getElementById("check").addEventListener("click",validate);
@@ -8,6 +8,7 @@ window.addEventListener("load",function(){
 		sound.src=urlAud[pos];
 		sound.play();
 	});
+	document.getElementById("listen").addEventListener("click", () => sound.play())
 })
 
 function key (e) {
@@ -17,6 +18,7 @@ function key (e) {
 }
 
 function validate(){
+	sound.play();
 	if(document.getElementById("write").value.toLowerCase()==compare[pos]){
 		if((pos + 1) < total){
 			pos++;

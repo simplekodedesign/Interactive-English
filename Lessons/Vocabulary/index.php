@@ -46,21 +46,21 @@
   echo "<link rel='stylesheet' href='../../Lessons/Vocabulary/style.css?q=".$q."'>
   <div class='theme'>
     <div class='cont_abc' id='cont_all'>
+      <span class='lessonButton' id='btnIzq'>
+        <div class='navigationButtons'></div>
+      </span>
       <div class='letra 0 active' id='A'>
         <img id='img' src='' alt='image'>
         <audio src='' id='aud'></audio>
       </div>
+      <span class='lessonButton' id='btnDer'>
+        <div class='navigationButtons'></div>
+      </span>
     </div>
     <div class='vocabulary'>
       <span id='es'>Spanish</span> <span id='arrow'></span> <span id='en'>English</span>
     </div>
     <div class='buttons'>
-      <span class='lessonButton' id='btnIzq'>
-        <div class='navigationButtons'></div>
-      </span>
-      <span class='lessonButton' id='btnDer'>
-        <div class='navigationButtons'></div>
-      </span>
     </div>
   </div>
   <script type='text/javascript' src='../../Lessons/Vocabulary/Javascript.js?q=".$q."'></script>";

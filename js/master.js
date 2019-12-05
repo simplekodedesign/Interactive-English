@@ -60,8 +60,6 @@ window.addEventListener("load", function () {
     })
   }
 
-  mistakeAudio.src = "../../aud/mistake.mp3";
-
   var rocket = document.getElementById("rocketSVG");
   svgRocket = rocket.contentDocument;
 
@@ -196,7 +194,9 @@ var victoryMessage = function() {
   victoryMessage = null;
 }
 
-function mistake () {
+function mistake (what) {
+  mistakeAudio.src = what === "correct" ? "../../aud/correct.mp3" : "../../aud/mistake.mp3";
+
   mistakeAudio.play();
 }
 

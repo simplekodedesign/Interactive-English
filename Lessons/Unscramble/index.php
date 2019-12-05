@@ -47,6 +47,7 @@
     <div class='input'>
       <input type='text'placeholder='Escribe aquí' class='write' id='write'>
     </div>
+    <span class='lessonButton' id='listen'>Escuchar</span>
     <span class='lessonButton' id='check'>Verificar</span>
   </div>
   <audio src='' id='aud'></audio>

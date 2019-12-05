@@ -274,7 +274,7 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 (3, 1, 22, 'Video', '?url=../../Lessons/Translate into spanish/index.php&co=21', '?url=../../Lessons/Vocabulary txt/index.php&co=23'),
 (3, 12, 23, 'Vocabulario', '?url=../../Lessons/Video/index.php&co=22', '?url=../../Lessons/Memory Numbers/index.php&co=24'),
 (3, 13, 24, 'Memoria', '?url=../../Lessons/Vocabulary txt/index.php&co=23', '?url=../../Lessons/Write the correct txt/index.php&co=25'),
-(3, 14, 25, 'opción', '?url=../../Lessons/Memory Numbers/index.php&co=24', '?url=../../Lessons/Click the right letters/index.php&co=26'),
+(3, 14, 25, 'Opción', '?url=../../Lessons/Memory Numbers/index.php&co=24', '?url=../../Lessons/Click the right letters/index.php&co=26'),
 (3, 3, 26, '¿Dónde está?', '?url=../../Lessons/Write the correct txt/index.php&co=25', '?url=../../Lessons/Unscramble/index.php&co=27'),
 (3, 21, 27, 'Reordenamiento', '?url=../../Lessons/Click the right letters/index.php&co=26', '?url=../../Lessons/Select the right image/index.php&co=28'),
 (3, 16, 28, 'Selección', '?url=../../Lessons/Unscramble/index.php&co=27', '?url=../../Lessons/Video/index.php&co=29'),
