@@ -213,15 +213,15 @@
             <input type="email" name="email" id="email" placeholder="&nbsp;" class="formInput" disabled>
             <label for="email" id="email" class="inputLabel">supportc21@zoho.com</label>
           </div> -->
-          <div>
+          <div class="categorie">
             <span class="barcolor"></span>
             <!-- <select name="subject" id="categorie" placeholder="&nbsp;" class="formInput">
               <option value="Support">Soporte técnico</option>
               <option value="Teacher">Consulta</option>
             </select> -->
+            <label for="categorie" id="usernamepass" class="inputLabel">Categoría:</label>
             <div class="checkForm formActive">Consulta</div>
             <div class="checkForm">Soporte</div>
-            <label for="categorie" id="usernamepass" class="inputLabel">Categoría</label>
           </div>
           <div class="textarea">
             <span class="barcolor"></span>

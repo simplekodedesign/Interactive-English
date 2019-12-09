@@ -31,7 +31,8 @@ var helpgif = document.getElementById("helpgif");
 var translatebutton = document.getElementById("translatebutton");
 var gifButton = document.getElementById("gifButton");
 var contactButton = document.getElementById("contactButton");
-var contact = document.getElementById("contact");
+var contactForm = document.getElementById("contact");
+const categorieButton = document.getElementsByClassName('checkForm')
 var navbar = document.getElementById('navbarNav');
 var reloadButton = document.getElementById("reloadButton");
 var from_toButton = document.getElementById("from_toButton"); // Button for translateScreen
@@ -92,6 +93,15 @@ window.addEventListener("load", function () {
   if (contact) {
     contactButton.addEventListener("click", showContact)
     extibuttonContact.addEventListener("click", showContact);
+
+    for (item of categorieButton) {
+      item.addEventListener("click", function() {
+        for (item of categorieButton) {
+          item.classList.remove("formActive")
+        }
+        this.classList.add("formActive")
+      })
+    }
   }
 
   /*-------Animacion de avance de tema------*/
