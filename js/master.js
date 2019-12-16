@@ -94,10 +94,10 @@ window.addEventListener("load", function () {
     contactButton.addEventListener("click", showContact)
     extibuttonContact.addEventListener("click", showContact);
 
-    for (item of categorieButton) {
-      item.addEventListener("click", function() {
-        for (item of categorieButton) {
-          item.classList.remove("formActive")
+    for (itemContact of categorieButton) {
+      itemContact.addEventListener("click", function() {
+        for (itemContact of categorieButton) {
+          itemContact.classList.remove("formActive")
         }
         this.classList.add("formActive")
       })

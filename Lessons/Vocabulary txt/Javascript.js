@@ -14,7 +14,7 @@ window.addEventListener("load",function(){
 function actual(dir){
 	if(dir){
 		pos++;
-		if(pos<total){
+		if(pos < total){
 			texto.innerHTML= text[pos];
 			aud.src= urlAud[pos];
 			if (isNaN(text[pos])) {
@@ -25,19 +25,19 @@ function actual(dir){
 		}
 	}else{
 		pos--;
-		if(pos>=0){
+		if(pos >= 0){
 			texto.innerHTML= text[pos];
 			aud.src= urlAud[pos];
 			if (isNaN(text[pos])) {
 				document.getElementById("es").innerHTML= text2[pos];
 			} else {
-				document.getElementById("es").innerHTML= text2[pos].split("/",2)[1];
+				document.getElementById("es").innerHTML= text2[pos];
 			}
 		}
 	}
 
 
-	if(pos==total){
+	if(pos == total){
 		document.getElementById("btnDer").style.transform="scale(0,0)";
 		if (victoryMessage !== null) {
 			victoryMessage();

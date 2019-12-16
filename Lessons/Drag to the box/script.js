@@ -1,22 +1,20 @@
 
-var ask = data.options;
-var compare = data.compare;
-var container = document.getElementById('cont_all');
-var boxContainer = document.getElementById("boxesContainer");
-var audio = document.getElementById('audio');
-var itemContainer = (document.getElementsByClassName('itemContainer'))[0];
-var currentItem = 0;
-var arrayLength;
-var type;
-var item;
-var constIMG = 0;
-var words = [];
+var ask
+var compare
+const container = document.getElementById('cont_all')
+const boxContainer = document.getElementById("boxesContainer")
+const audio = document.getElementById('audio')
+const itemContainer = (document.getElementsByClassName('itemContainer'))[0]
+var currentItem = 0
+var arrayLength
+var type
+var item
+var constIMG = 0
+var words = []
 
 window.addEventListener("load", function () {
 
-  if (data.options[0]== "" && !data.urlImg[0]) {
-    constIMG = 1;
-  }
+  constIMG = data.options[0]== "" && !data.urlImg[0] ? 1 : 0;
   if(!data.options[1] && !data.urlImg[0] && data.options.length < 2){
     createForABC();
     if (data.compare[0] != "") {
@@ -27,6 +25,7 @@ window.addEventListener("load", function () {
     compare = data.compare;
     arrayLength = data.compare.length;
   }
+  console.log(data);
 
   words.push(compare[0]);
   for (let i = 0; i < arrayLength; i++) {
@@ -41,7 +40,7 @@ window.addEventListener("load", function () {
 
   itemCreator();
 
-  if(constIMG == 0)item.innerHTML = ask[currentItem];
+  if(constIMG === 0)item.innerHTML = ask[currentItem];
   item.setAttribute("type", compare[currentItem]);
   audio.src = data.urlAud[currentItem];
 
@@ -154,6 +153,7 @@ function refreshgame () {
     if (constIMG) {
       item.innerHTML = "?";
     }else{
+      console.log(currentItem);
       item.innerHTML = ask[currentItem];
     }
   }
