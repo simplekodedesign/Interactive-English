@@ -1,12 +1,14 @@
 var pos=-1;
 var texto = document.getElementById("text")
 var aud = document.getElementById("aud")
+const btnIzq = document.getElementById("btnIzq")
+const btnDer = document.getElementById("btnDer")
 
 window.addEventListener("load",function(){
 
 	actual(true);
-	document.getElementById("btnIzq").addEventListener("click", () => actual(false));
-	document.getElementById("btnDer").addEventListener("click", () => actual(true));
+	btnIzq.addEventListener("click", () => actual(false));
+	btnDer.addEventListener("click", () => actual(true));
 
 	texto.addEventListener("click", () => aud.play())
 })
@@ -38,17 +40,17 @@ function actual(dir){
 
 
 	if(pos == total){
-		document.getElementById("btnDer").style.transform="scale(0,0)";
+		btnDer.style.transform="scale(0,0)";
 		if (victoryMessage !== null) {
 			victoryMessage();
 		}
 	}else{
-		document.getElementById("btnDer").style.transform="scale(1,1)";
+		btnDer.style.transform="scale(1,1)";
 	}
 	if(pos==0){
-		document.getElementById("btnIzq").style.transform="scale(0,0)";
+		btnIzq.style.transform="scale(0,0)";
 	}else{
-		document.getElementById("btnIzq").style.transform="scale(1,1)";
+		btnIzq.style.transform="scale(1,1)";
 	}
 	aud.play();
 }

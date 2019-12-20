@@ -8,7 +8,6 @@ window.addEventListener("load",function(){
 	document.getElementById("write").addEventListener("keyup",function(e){
 		// alert(this.id);
 		if(e.keyCode == 13){
-			alert("HI");
 			validate_with_split();
 		}
 	})

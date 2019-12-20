@@ -1,13 +1,15 @@
 var pos = 0;
-var sound = document.getElementById("aud");
+const sound = document.getElementById("aud");
+const unscrambleText = document.getElementById("text")
+const unscrambleWrite = document.getElementById("write")
+const unscrambleCheck = document.getElementById('check')
+
 window.addEventListener("load",function(){
-	document.getElementById("text").innerHTML=text[pos];
-	document.getElementById("check").addEventListener("click",validate);
-	document.getElementById("write").addEventListener("keyup", key);
-	document.getElementById("text").addEventListener("click",function(){
-		sound.src=urlAud[pos];
-		sound.play();
-	});
+	sound.src= urlAud[pos]
+	unscrambleText.innerHTML=text[pos];
+	unscrambleCheck.addEventListener("click",validate);
+	unscrambleWrite.addEventListener("keyup", key);
+	unscrambleText.addEventListener("click",() => sound.play());
 	document.getElementById("listen").addEventListener("click", () => sound.play())
 })
 
@@ -18,14 +20,14 @@ function key (e) {
 }
 
 function validate(){
-	sound.play();
-	if(document.getElementById("write").value.toLowerCase()==compare[pos]){
+	if(unscrambleWrite.value.toLowerCase()==compare[pos]){
 		if((pos + 1) < total){
 			pos++;
-			document.getElementById("text").innerHTML=text[pos];
+			unscrambleText.innerHTML=text[pos];
+			sound.src = urlAud[pos];
 		}else{
-			document.getElementById("write").removeEventListener("keyup", key);
-			document.getElementById("check").removeEventListener("click",validate);
+			unscrambleWrite.removeEventListener("keyup", key);
+			unscrambleCheck.removeEventListener("click",validate);
 			if (victoryMessage !== null) {
 				victoryMessage();
 			}
@@ -33,5 +35,6 @@ function validate(){
 	} else {
 		mistake();
 	}
-	document.getElementById("write").value="";
+	unscrambleWrite.value="";
+	sound.play();
 }
