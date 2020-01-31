@@ -47,9 +47,9 @@
       <span class='lessonButton' id='btnDer'>
         <div class='navigationButtons'></div>
       </span>
-    </div>
-    <div class='vocabulary'>
-      <span id='es'></span>
+      <div class='vocabulary'>
+        <span id='es'></span>
+      </div>
     </div>
 
   <script type='text/javascript' src='../../Lessons/Vocabulary txt/Javascript.js?q=".$q."'></script>";

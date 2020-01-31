@@ -1,6 +1,5 @@
 var pos=0;
 
-
 var buttons = document.getElementById("buttons");
 
 
@@ -11,12 +10,12 @@ window.addEventListener("load",function(){
 function actual(){
 	document.getElementById("img").src= urlImg[pos];
 
-	// document.getElementById("img").addEventListener("click", function(){
-	// 	if(pos < total){
-	// 		document.getElementById("aud").src = urlAud[pos];
-	// 		document.getElementById("aud").play();
-	// 	}
-	// });
+	document.getElementById("img").addEventListener("click", function(){
+		if(pos < total){
+			document.getElementById("aud").src = urlAud[pos];
+			document.getElementById("aud").play();
+		}
+	});
 
 	option = options[pos].split("/",15);
 	option.sort(function (a, b) {

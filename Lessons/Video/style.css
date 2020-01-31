@@ -21,8 +21,10 @@
 }
 
 video{
-	max-width: 1024;
-	max-height: 768px;
+	height: auto;
+	width: 90%;
+	min-width: 300px;
+	max-width: 500px;
 }
 
 .buttons{
@@ -39,6 +41,9 @@ video{
 
 @media only screen and (min-width: 650px) {
   video{
-    width: 70%;
+		width: auto;
+		height: 60vh;
+		max-width: 1024px;
+		max-height: 768px;
   }
 }

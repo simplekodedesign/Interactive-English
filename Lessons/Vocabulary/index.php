@@ -56,11 +56,9 @@
       <span class='lessonButton' id='btnDer'>
         <div class='navigationButtons'></div>
       </span>
-    </div>
-    <div class='vocabulary'>
-      <span id='es'>Spanish</span> <span id='arrow'></span> <span id='en'>English</span>
-    </div>
-    <div class='buttons'>
+      <div class='vocabulary'>
+        <span id='es'>Spanish</span> <span id='arrow'></span> <span id='en'>English</span>
+      </div>
     </div>
   </div>
   <script type='text/javascript' src='../../Lessons/Vocabulary/Javascript.js?q=".$q."'></script>";

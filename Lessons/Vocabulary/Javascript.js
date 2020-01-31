@@ -30,9 +30,6 @@ function actual(dir){
 			document.getElementById("en").innerHTML=en[pos];
 		}
 	}
-	if(pos==total-1){
-		btnDer.innerHTML="Finish";
-	}
 	if(pos==total){
 		btnDer.style.transform="scale(0,0)";
 		if (victoryMessage !== null) {

@@ -15,16 +15,17 @@
 .column {
     height: auto;
     position: relative;
+    min-width: 150px;
 }
 
 .text {
     transition: .5s ease;
-    font-size: 75%;
+    font-size: 1em;
     text-align: center;
-    /* border-bottom: 5px solid #FF0066; */
     border-radius: 10px;
     cursor: pointer;
-    padding: 0 12px;
+    min-width: 100%;
+    padding: 10px 20px;
 }
 
 
@@ -37,16 +38,8 @@
     z-index: -1;
 }
 
-/* .NavButtons {
-	display: flex;
-} */
-
 @media only screen and (min-width: 650px) {
     .text {
         font-size: 150%;
     }
-}
-
-@media only screen and (min-width: 1020px) {
-
 }

@@ -12,7 +12,7 @@ for(var i = 0; i < textLength; i++) {
     texts[i].addEventListener("click", function() {
 
         this.style.color = "white";
-        this.style.backgroundColor = "rgb(12, 13, 104)";
+        this.style.backgroundColor = "var(--primary)";
         if (c1.idText == undefined) {
             c1.idText = (this.classList)[1];
             c1.idcol = this.parentElement.id;

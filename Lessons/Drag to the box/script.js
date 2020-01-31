@@ -1,10 +1,10 @@
 
-var ask
-var compare
 const container = document.getElementById('cont_all')
 const boxContainer = document.getElementById("boxesContainer")
 const audio = document.getElementById('audio')
 const itemContainer = (document.getElementsByClassName('itemContainer'))[0]
+var ask
+var compare
 var currentItem = 0
 var arrayLength
 var type
@@ -14,7 +14,7 @@ var words = []
 
 window.addEventListener("load", function () {
 
-  constIMG = data.options[0]== "" && !data.urlImg[0] ? 1 : 0;
+  constIMG = data.options[0] == "" && !data.urlImg[0] ? 1 : 0;
   if(!data.options[1] && !data.urlImg[0] && data.options.length < 2){
     createForABC();
     if (data.compare[0] != "") {
@@ -25,7 +25,6 @@ window.addEventListener("load", function () {
     compare = data.compare;
     arrayLength = data.compare.length;
   }
-  console.log(data);
 
   words.push(compare[0]);
   for (let i = 0; i < arrayLength; i++) {
@@ -73,9 +72,8 @@ function setAudio() {
 function itemCreator(){
   let boxesLength = words.length;
   var div, text, innerText;
-  let object
 
-  if (data.urlImg[0] != undefined) {  //|| constIMG
+  if (data.urlImg[0] != undefined) {
     item = document.createElement("img")
     item.setAttribute("src", data.urlImg[0]);
     item.setAttribute("id", "item");
@@ -153,12 +151,12 @@ function refreshgame () {
     if (constIMG) {
       item.innerHTML = "?";
     }else{
-      console.log(currentItem);
       item.innerHTML = ask[currentItem];
     }
   }
   item.setAttribute("type", compare[currentItem]);
   audio.src = data.urlAud[currentItem];
+  audio.play();
 }
 
 function createForABC () {

@@ -234,17 +234,16 @@ header > a img{
 section{
   align-self: center;
   position: relative;
-  /* margin-top: 5vh; */
-  min-height: 85vh;
+  min-height: 92vh;
   width: 80%;
   min-width: 300px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
-  margin-bottom: 100px;
+  padding-bottom: 20px;
 }
 
 .main{
@@ -264,7 +263,8 @@ section{
   display: flex;
   /* text-transform: uppercase; */
   justify-content: space-between;
-  padding-left: 10%;
+  padding: 10px 0;
+  /* margin: 20px; */
 }
 
 .titles h1{
@@ -797,12 +797,14 @@ footer p{
 
 .actionButtons {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  position: absolute;
+  flex-wrap: wrap;
+  width: 100%;
+  /* position: absolute;
   bottom: 10px;
   left: 50%;
-  transform: translate(-50%, 0)
+  transform: translate(-50%, 0) */
 }
 
 #reloadButton {
@@ -1061,5 +1063,10 @@ footer p{
     border-bottom: 35px solid var(--secondary);
     border-right: 25px solid transparent;
     border-left: 25px solid transparent;
+  }
+  @media screen and (max-width : 450px){
+    .titles h1{
+      padding: 0;
+    }
   }
 }

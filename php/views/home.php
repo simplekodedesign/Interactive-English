@@ -147,18 +147,18 @@
               </div>
             </div>";
           }
+          if($_GET["co"]) {
+            echo "
+            <div class='actionButtons'>
+              <div id='goBackButton'>REGRESAR</div>
+              <div id='reloadButton'>REINICIAR</div>
+            </div>
+            ";
+          }
         }
         ?>
     </section>
     <?php
-      if($_GET["co"]) {
-        echo "
-        <div class='actionButtons'>
-          <div id='goBackButton'>REGRESAR</div>
-          <div id='reloadButton'>REINICIAR</div>
-        </div>
-        ";
-      }
       // if(empty($_GET["ini"])&&empty($_GET["end"])){
       //   if($lant != "" && $lant != "#"){
       //     echo "<div class='navigationButtons' id='lPrev'><a href='".$lant."'><span></span></a></div>";

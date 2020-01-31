@@ -10,19 +10,25 @@ section{
 .mainContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  width: 80%;
+  min-width: 300px;
+  /* max-width */
 }
 
-.titles{
+#titleLesson{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding: 0 50px;
-  margin-top: 50px;
+  text-align: center;
+  padding: 0;
+  margin: 20px 0 0 0;
+  color: var(--secondary);
+  font-size: 1.2em;
 }
 
-.titlesLessons {
+#titleLesson {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -32,15 +38,15 @@ section{
   align-items: center;
 }
 
-.titles h1, .titlesLessons h1{
+.titles h1, #titleLesson h1{
   font-size: 2.5em;
   font-weight: 600;
-  margin: 0 0 25px 0;
+  margin: 0 0;
   width: 100%;
   height: auto;
 }
 
-.titlesLessons a {
+#titleLesson a {
   display: inline-block;
   width: 100px;
   height: auto;
@@ -198,11 +204,11 @@ section{
 
 
 @media screen and (max-width : 910px) {
-  .titles {
+  #titleLesson {
     margin: 50px 0;
   }
 
-  .titlesLessons a {
+  #titleLesson a {
    width: 75px;
   }
 
@@ -236,6 +242,7 @@ section{
     grid-template-columns: unset;
     grid-template-rows: 1fr 1fr;
     grid-gap: 0px;
+    padding: 0;
   }
 
   #left > .lesson:nth-last-child(1) {
@@ -256,11 +263,11 @@ section{
     /* max-width: 105px; */
   }
 
-  .titlesLessons a {
+  #titleLesson a {
     width: 50px;
    }
 
-  .titlesLessons {
+  #titlesLessons {
     padding: 0;
   }
 

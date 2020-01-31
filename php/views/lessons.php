@@ -68,7 +68,7 @@
       }
   }
   echo "
-    <div class='titlesLessons'>
+    <div id='titleLesson'>
       <h1>".$Nb_Tema."</h1>
     </div>
     <a href='".$url."' class='".$currentClass."' id='retoImage'>
