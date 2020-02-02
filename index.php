@@ -103,9 +103,6 @@
     </div>
   </section>
 
-
-
-
   <div class="message" id="messageContainer" display="none">
     <p id="message">
       ERROR

@@ -15,8 +15,6 @@ window.addEventListener("load", function() {
     loginHandler(error)
   }
 
-
-
   next.addEventListener("click", function() {
     var character = "abcdefghijkmnpqrtuvwxyzABCDEFGHJKMNPQRTUVWXYZ2346789";
     var cod = "";
