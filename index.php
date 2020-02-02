@@ -41,10 +41,10 @@
       diseñada para divertirse mientras se aprende.
       ">
     <meta name="author" content="C21">
+    <script src="./js/colegio.js"></script>
 </head>
 <body>
-
-  <section class="main" id="main">
+    <section class="main" id="main">
     <div class="firstHalf">
       <img src="img/English21.svg" alt="Logo">
 

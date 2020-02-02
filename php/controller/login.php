@@ -52,58 +52,58 @@
           $_SESSION["color_institucion"]=$res["color"];
       }
 
-        //guardar datos personales del usuario en variables de sesion
-        $results=Connection::request("select Nb_Apellido,Nb_Alumno from m220_alumno where Co_Alumno=".$coAlumno);
-        if($results->rowCount()>0){
-          while($res=$results->fetch(PDO::FETCH_ASSOC)){
-            $_SESSION["name"]=$res["Nb_Alumno"];
-            $_SESSION["surname"]=$res["Nb_Apellido"];
-          }
+      //guardar datos personales del usuario en variables de sesion
+      $results=Connection::request("select Nb_Apellido,Nb_Alumno from m220_alumno where Co_Alumno=".$coAlumno);
+      if($results->rowCount()>0){
+        while($res=$results->fetch(PDO::FETCH_ASSOC)){
+          $_SESSION["name"]=$res["Nb_Alumno"];
+          $_SESSION["surname"]=$res["Nb_Apellido"];
         }
-        //guardar datos del usuario respecto a su avance en el sistema en variables de sesion
-        $results=Connection::request("select Progreso,Se_Actual,Te_Actual,Le_Actual from t090_usuario_nivel where Co_Usuario=".$_SESSION["co_usuario"]);
-        if($results->rowCount()>0){
-          while($res=$results->fetch(PDO::FETCH_ASSOC)){
-            $_SESSION["progreso"]=$res["Progreso"];
-            $_SESSION["se_actual"]=$res["Se_Actual"];
-            $_SESSION["te_actual"]=$res["Te_Actual"];
-            $_SESSION["le_actual"]=$res["Le_Actual"];
-          }
+      }
+      //guardar datos del usuario respecto a su avance en el sistema en variables de sesion
+      $results=Connection::request("select Progreso,Se_Actual,Te_Actual,Le_Actual from t090_usuario_nivel where Co_Usuario=".$_SESSION["co_usuario"]);
+      if($results->rowCount()>0){
+        while($res=$results->fetch(PDO::FETCH_ASSOC)){
+          $_SESSION["progreso"]=$res["Progreso"];
+          $_SESSION["se_actual"]=$res["Se_Actual"];
+          $_SESSION["te_actual"]=$res["Te_Actual"];
+          $_SESSION["le_actual"]=$res["Le_Actual"];
         }
-        //guardar datos para estadisticas"
-        $results=Connection::request("insert into t010_bitacora (Co_Usuario,Fe_Ejecucion,Hr_Entrada,Hr_Salida,Nu_Lecciones) values (".$_SESSION["co_usuario"].",'".(date("Y")."-".date("m")."-".date("d"))."','".(date("h").":".date("i").":".date("s"))."','',0)");
-        if($results->rowCount()>0){
-          $_SESSION["nu_lec_aprob"]=0;
-        }
+      }
+      //guardar datos para estadisticas"
+      $results=Connection::request("insert into t010_bitacora (Co_Usuario,Fe_Ejecucion,Hr_Entrada,Hr_Salida,Nu_Lecciones) values (".$_SESSION["co_usuario"].",'".(date("Y")."-".date("m")."-".date("d"))."','".(date("h").":".date("i").":".date("s"))."','',0)");
+      if($results->rowCount()>0){
+        $_SESSION["nu_lec_aprob"]=0;
+      }
 
-        $results=Connection::request("select Co_Bitacora from t010_bitacora where Co_Usuario=".$_SESSION["co_usuario"]);
+      $results=Connection::request("select Co_Bitacora from t010_bitacora where Co_Usuario=".$_SESSION["co_usuario"]);
+      if($results->rowCount()>0){
+        while($res=$results->fetch(PDO::FETCH_ASSOC)){
+          $_SESSION["co_bit"]=$res["Co_Bitacora"];
+        }
+      }
+
+      //Revisar si es necesario activar algun reto al usuario
+      /*$results=Connection::request("select Fe_Ejecucion from t040_retos where Co_Usuario=".$_SESSION["co_usuario"]);
+      if($results->rowCount()>0){
+        while($res=$results->fetch(PDO::FETCH_ASSOC)){
+          $feEjecucion=$res["Fe_Ejecucion"];
+        }
+      }
+      if(strtotime(date("d-m-Y",time()))>=strtotime(date($feEjecucion,time()))){
+        Connection::request("update t040_retos set St_Reto='A' where Co_Usuario=".$_SESSION["co_usuario"]);
+        $results = Connection::request("select Co_Reto from t040_retos where Co_Usuario = ".$_SESSION["co_usuario"]);
         if($results->rowCount()>0){
-          while($res=$results->fetch(PDO::FETCH_ASSOC)){
-            $_SESSION["co_bit"]=$res["Co_Bitacora"];
+          while($result = $results->fetch(PDO::FETCH_ASSOC)){
+            $_SESSION["reto_actual"] = $result["Co_Reto"];
           }
         }
+      }*/
 
-        //Revisar si es necesario activar algun reto al usuario
-        /*$results=Connection::request("select Fe_Ejecucion from t040_retos where Co_Usuario=".$_SESSION["co_usuario"]);
-        if($results->rowCount()>0){
-          while($res=$results->fetch(PDO::FETCH_ASSOC)){
-            $feEjecucion=$res["Fe_Ejecucion"];
-          }
-        }
-        if(strtotime(date("d-m-Y",time()))>=strtotime(date($feEjecucion,time()))){
-          Connection::request("update t040_retos set St_Reto='A' where Co_Usuario=".$_SESSION["co_usuario"]);
-          $results = Connection::request("select Co_Reto from t040_retos where Co_Usuario = ".$_SESSION["co_usuario"]);
-          if($results->rowCount()>0){
-            while($result = $results->fetch(PDO::FETCH_ASSOC)){
-              $_SESSION["reto_actual"] = $result["Co_Reto"];
-            }
-          }
-        }*/
+      $results=Connection::request("update m210_usuario set St_Session=1 where Co_Usuario=".$_SESSION["co_usuario"]);
 
-        $results=Connection::request("update m210_usuario set St_Session=1 where Co_Usuario=".$_SESSION["co_usuario"]);
-
-        $login->status = 1;
-        $login->redirect = "php/views/home.php";
+      $login->status = 1;
+      $login->redirect = "php/views/home.php";
     }else{
       $login->status = 3;
     }
