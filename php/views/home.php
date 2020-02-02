@@ -55,6 +55,10 @@
   $q = rand();
 
   //variable del reto recien activado
+
+  //variables de imagen y color de institucion
+  if(isset($_SESSION["img_institucion"]))echo "<script>var img_institucion = '".$_SESSION["img_institucion"]."'</script>";
+  if(isset($_SESSION["color_institucion"]))echo "<script>var color_institucion = '".$_SESSION["color_institucion"]."'</script>";
 ?>
 
 <!DOCTYPE html>
@@ -147,7 +151,7 @@
               </div>
             </div>";
           }
-          if($_GET["co"]) {
+          if($_GET["co"] && !isset($_GET["th"])) {
             echo "
             <div class='actionButtons'>
               <div id='goBackButton'>REGRESAR</div>
@@ -263,11 +267,19 @@
                 var reto_actual = ".$_SESSION["reto_actual"].";
               </script>";
       }
+
+      if(isset($lsig) && isset($_GET["th"])) {
+        echo "<script>
+                var siguLesson = '".$lsig."';
+                var th = ".$_GET["th"]."
+              </script>";
+      }
      ?>
 
     <script type="text/javascript">
       var se_actual = <?php echo $_SESSION["se_actual"];?>;
       var te_actual = <?php echo $_SESSION["te_actual"];?>;
+      alert("img: "+img_institucion+" color: "+color_institucion);
     </script>
     <script src="../../js/routing.js?q=<?php echo $q?>"></script>
     <script src="../../js/master.js?q=<?php echo $q?>"></script>
