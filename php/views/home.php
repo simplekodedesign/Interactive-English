@@ -55,6 +55,10 @@
   $q = rand();
 
   //variable del reto recien activado
+
+  //variables de imagen y color de institucion
+  if(isset($_SESSION["img_institucion"]))echo "<script>var img_institucion = '".$_SESSION["img_institucion"]."'</script>";
+  if(isset($_SESSION["color_institucion"]))echo "<script>var color_institucion = '".$_SESSION["color_institucion"]."'</script>";
 ?>
 
 <!DOCTYPE html>
@@ -275,6 +279,7 @@
     <script type="text/javascript">
       var se_actual = <?php echo $_SESSION["se_actual"];?>;
       var te_actual = <?php echo $_SESSION["te_actual"];?>;
+      alert("img: "+img_institucion+" color: "+color_institucion);
     </script>
     <script src="../../js/routing.js?q=<?php echo $q?>"></script>
     <script src="../../js/master.js?q=<?php echo $q?>"></script>
