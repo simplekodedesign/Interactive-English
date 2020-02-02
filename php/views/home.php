@@ -279,7 +279,6 @@
     <script type="text/javascript">
       var se_actual = <?php echo $_SESSION["se_actual"];?>;
       var te_actual = <?php echo $_SESSION["te_actual"];?>;
-      alert("img: "+img_institucion+" color: "+color_institucion);
     </script>
     <script src="../../js/routing.js?q=<?php echo $q?>"></script>
     <script src="../../js/master.js?q=<?php echo $q?>"></script>
