@@ -107,7 +107,7 @@ window.addEventListener("load", function () {
   /*-------Animacion de avance de tema------*/
   win.addEventListener("click", () => {
     win.classList.remove("winactive")
-    document.getElementById("lSigu").firstElementChild.click()
+    window.location = "home.php"
   })
 
   //envio de correo
@@ -186,6 +186,7 @@ var victoryMessage = function() {
     var audio = document.getElementById('themeAudio')
     audio.setAttribute("src", "../../aud/kids.mp3")
   }
+
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -196,7 +197,15 @@ var victoryMessage = function() {
         congratsMessage();
         audio.play()
       }, (durationRocket*1000) + 500);
-      document.getElementById("lSigu").style.display="flex";
+      // document.getElementById("lSigu").style.display="flex";
+
+      if (window.location.search.indexOf("&th=") != -1) {
+        if (location.href.indexOf("aTema") === -1) {
+          setTimeout(() => {
+            window.location = siguLesson
+          }, 7000);
+        }
+      }
     }
   };
   xhttp.open("GET", "../controller/continue.php?co="+cord, true);

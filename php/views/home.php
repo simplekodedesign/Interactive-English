@@ -147,7 +147,7 @@
               </div>
             </div>";
           }
-          if($_GET["co"]) {
+          if($_GET["co"] && !isset($_GET["th"])) {
             echo "
             <div class='actionButtons'>
               <div id='goBackButton'>REGRESAR</div>
@@ -261,6 +261,13 @@
       if(isset($_SESSION["reto_actual"])){
         echo "<script>
                 var reto_actual = ".$_SESSION["reto_actual"].";
+              </script>";
+      }
+
+      if(isset($lsig) && isset($_GET["th"])) {
+        echo "<script>
+                var siguLesson = '".$lsig."';
+                var th = ".$_GET["th"]."
               </script>";
       }
      ?>
