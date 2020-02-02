@@ -15,6 +15,8 @@ window.addEventListener("load", function() {
     loginHandler(error)
   }
 
+
+
   next.addEventListener("click", function() {
     var character = "abcdefghijkmnpqrtuvwxyzABCDEFGHJKMNPQRTUVWXYZ2346789";
     var cod = "";
@@ -69,9 +71,7 @@ window.addEventListener("load", function() {
     var data = new FormData(form);
     xhttp.onreadystatechange = function(){
       if(this.readyState == 4 && this.status == 200){
-        console.log(this.responseText);
         response = JSON.parse(this.responseText);
-        console.log(response);
         if(response.status == 1){
           beging(response);
         }else{

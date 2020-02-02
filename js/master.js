@@ -20,9 +20,6 @@ if (!road && !profileScreen && !hayPremio) {
   document.documentElement.style.setProperty('--lessons', color[svgcolor]);
 }
 
-// if(numero_leccion != null) {
-// }
-
 var translator = document.getElementById("translator");
 var extibutton = document.getElementById("exitButton");
 var extibuttonGif = document.getElementById("exitButtonGif");

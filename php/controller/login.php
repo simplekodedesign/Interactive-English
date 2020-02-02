@@ -43,14 +43,6 @@
         }
       }
 
-      //buscar la imagen y el color al que pertenece el usuario
-      $results = Connection::request("select I.color,I.Img_Url from p020_institucion I,t080_usuario_institucion T where T.Co_Usuario = ".$_SESSION["co_usuario"]." and I.Nu_Identificacion like T.Nu_Identificacion");
-      if($results->rowCount()>0){
-          $res=$results->fetch(PDO::FETCH_ASSOC);
-          $_SESSION["img_institucion"]=$res["Img_Url"];
-          $_SESSION["color_institucion"]=$res["color"];
-      }
-
         //guardar datos personales del usuario en variables de sesion
         $results=Connection::request("select Nb_Apellido,Nb_Alumno from m220_alumno where Co_Alumno=".$coAlumno);
         if($results->rowCount()>0){

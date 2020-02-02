@@ -1,5 +1,4 @@
 <?php
-
   if(isset($_GET["c"])&&$_GET["c"]==1){
     session_start();
     session_destroy();
@@ -20,6 +19,12 @@
   }
   //variable para recargar los js y css
   $q=rand();
+
+  //variables de imagen y color de institucion
+  $url = explode(".", $_SERVER['HTTP_HOST'])[0];
+  echo "<script>var img_institucion = '".$url."'</script>";
+  if(isset($_SESSION["img_institucion"]))echo "<script>var img_institucion = '".$_SESSION["img_institucion"]."'</script>";
+  if(isset($_SESSION["color_institucion"]))echo "<script>var color_institucion = '".$_SESSION["color_institucion"]."'</script>";
 ?>
 <!DOCTYPE html>
 <html lang="es">

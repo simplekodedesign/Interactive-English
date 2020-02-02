@@ -55,10 +55,6 @@
   $q = rand();
 
   //variable del reto recien activado
-
-  //variables de imagen y color de institucion
-  if(isset($_SESSION["img_institucion"]))echo "<script>var img_institucion = '".$_SESSION["img_institucion"]."'</script>";
-  if(isset($_SESSION["color_institucion"]))echo "<script>var color_institucion = '".$_SESSION["color_institucion"]."'</script>";
 ?>
 
 <!DOCTYPE html>
