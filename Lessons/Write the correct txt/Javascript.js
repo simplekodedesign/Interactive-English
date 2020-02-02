@@ -3,7 +3,7 @@ var write = document.getElementById("write");
 var aud = document.getElementById("aud")
 
 window.addEventListener("load",function(){
-	description(CORD)
+	description(cord)
 	actual();
 	document.getElementById("btnListen").addEventListener("click",function(){
 		aud.play();
@@ -11,6 +11,7 @@ window.addEventListener("load",function(){
 	write.addEventListener("keyup", key);
 
 	document.getElementById("btncheck").addEventListener("click", validate_with_split);
+	console.log(text.length, compare.length);
 })
 
 function key (e) {
@@ -27,7 +28,6 @@ function actual(){
 }
 
 function validate_with_split(){
-	console.log("GG");
 	comp = compare[pos].split("/", 15);
 	var b = 0;
 	comp.forEach(function(e){
@@ -54,6 +54,10 @@ function validate_with_split(){
 const description = cord => {
   let title = document.getElementById("titles").firstElementChild
   switch (cord) {
+		case 32:
+      title.innerHTML = "Escribe la pregunta correspondiente";
+		break
+
     case 79:
       title.innerHTML = "Escribe This / These según corresponda";
 		break

@@ -91,8 +91,6 @@ var text2=<?php
         echo "]";
         ?>;
 
-  console.log(text);
-  console.log(text2);
   var cord=<?php echo $_GET["co"]?>;
   var co_tema = <?php echo $co_tema?>;
 </script>

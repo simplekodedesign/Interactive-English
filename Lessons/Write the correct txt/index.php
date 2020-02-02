@@ -4,7 +4,7 @@
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       echo "<div class='titles' id='titles'>
-              <h1>Escribe la opción correcta</h1>
+              <h1>Escribe en inglés</h1>
             </div>";
       $co_juego=$res["Co_Juego"];
       $co_tema = $res["Co_Tema"];
@@ -88,6 +88,6 @@ var text=<?php
         }
         echo "]";
         ?>;
-  const CORD=<?php echo $_GET["co"]?>;
+  const cord=<?php echo $_GET["co"]?>;
   var co_tema = <?php echo $co_tema?>;
 </script>

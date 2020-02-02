@@ -3,8 +3,20 @@ var texto = document.getElementById("text")
 var aud = document.getElementById("aud")
 const btnIzq = document.getElementById("btnIzq")
 const btnDer = document.getElementById("btnDer")
+const es = document.getElementById("es")
+var en;
+const vocabulary = (document.getElementsByClassName('vocabulary'))[0]
 
 window.addEventListener("load",function(){
+
+	if(!isNaN(text[0])){
+		en = document.createElement("span")
+		let arrow = document.createElement("span")
+		arrow.setAttribute('id', 'arrow')
+		en.setAttribute('id', 'en')
+		vocabulary.insertBefore(arrow, es)
+		vocabulary.insertBefore(en, arrow)
+	}
 
 	actual(true);
 	btnIzq.addEventListener("click", () => actual(false));
@@ -20,9 +32,11 @@ function actual(dir){
 			texto.innerHTML= text[pos];
 			aud.src= urlAud[pos];
 			if (isNaN(text[pos])) {
-				document.getElementById("es").innerHTML= text2[pos];
+				es.innerHTML= text2[pos];
 			} else {
-				document.getElementById("es").innerHTML= text2[pos].split("/",2)[1];
+				let text = text2[pos].split("/",2)
+				en.innerHTML= text[0]
+				es.innerHTML= text[1]
 			}
 		}
 	}else{
@@ -31,9 +45,11 @@ function actual(dir){
 			texto.innerHTML= text[pos];
 			aud.src= urlAud[pos];
 			if (isNaN(text[pos])) {
-				document.getElementById("es").innerHTML= text2[pos];
+				es.innerHTML= text2[pos];
 			} else {
-				document.getElementById("es").innerHTML= text2[pos];
+				let text = text2[pos].split("/",2)
+				en.innerHTML= text[0]
+				es.innerHTML= text[1]
 			}
 		}
 	}
