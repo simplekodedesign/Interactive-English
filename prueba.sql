@@ -2,10 +2,10 @@
 -- version 4.4.15.9
 -- https://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Oct 28, 2019 at 11:04 PM
--- Server version: 5.6.37
--- PHP Version: 5.6.31
+-- Servidor: localhost
+-- Tiempo de generación: 02-02-2020 a las 05:56:15
+-- Versión del servidor: 5.6.37
+-- Versión de PHP: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `prueba`
+-- Base de datos: `prueba`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `m210_usuario`
+-- Estructura de tabla para la tabla `m210_usuario`
 --
 
 CREATE TABLE IF NOT EXISTS `m210_usuario` (
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `m210_usuario` (
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `m210_usuario`
+-- Volcado de datos para la tabla `m210_usuario`
 --
 
 INSERT INTO `m210_usuario` (`Co_Usuario`, `Co_Alumno`, `Co_Rol`, `Tx_Email`, `Tx_Clave`, `St_Session`, `Tx_Url`, `Fe_Status`) VALUES
@@ -55,7 +55,7 @@ INSERT INTO `m210_usuario` (`Co_Usuario`, `Co_Alumno`, `Co_Rol`, `Tx_Email`, `Tx
 -- --------------------------------------------------------
 
 --
--- Table structure for table `m220_alumno`
+-- Estructura de tabla para la tabla `m220_alumno`
 --
 
 CREATE TABLE IF NOT EXISTS `m220_alumno` (
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `m220_alumno` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `m220_alumno`
+-- Volcado de datos para la tabla `m220_alumno`
 --
 
 INSERT INTO `m220_alumno` (`Co_Alumno`, `Nb_Apellido`, `Nb_Alumno`, `Nb_ApellidoRepre`, `Nb_Representante`, `Tx_Direccion`, `Nu_Telefono_Fijo`, `Nu_Telefono_Movil`, `Fe_Nacimiento`, `St_Alumno`) VALUES
@@ -90,7 +90,7 @@ INSERT INTO `m220_alumno` (`Co_Alumno`, `Nb_Apellido`, `Nb_Alumno`, `Nb_Apellido
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p020_institucion`
+-- Estructura de tabla para la tabla `p020_institucion`
 --
 
 CREATE TABLE IF NOT EXISTS `p020_institucion` (
@@ -102,20 +102,21 @@ CREATE TABLE IF NOT EXISTS `p020_institucion` (
   `Nu_Telefono` varchar(20) NOT NULL,
   `Pag_Url` varchar(200) NOT NULL,
   `St_Institucion` enum('A','I') DEFAULT NULL,
+  `color` varchar(500) NOT NULL,
   `Fe_ultimaData` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p020_institucion`
+-- Volcado de datos para la tabla `p020_institucion`
 --
 
-INSERT INTO `p020_institucion` (`Nu_Identificacion`, `Nb_Institucion`, `Img_Url`, `Tx_Email`, `Direccion`, `Nu_Telefono`, `Pag_Url`, `St_Institucion`, `Fe_ultimaData`) VALUES
-('A0001I', 'Unet', '../../img/perfil/schools/unet.png', 'unet@gmail.com', 'SC', '0123456789', 'www.unet.com', 'A', '0000-00-00');
+INSERT INTO `p020_institucion` (`Nu_Identificacion`, `Nb_Institucion`, `Img_Url`, `Tx_Email`, `Direccion`, `Nu_Telefono`, `Pag_Url`, `St_Institucion`, `color`, `Fe_ultimaData`) VALUES
+('A0001I', 'Unet', '../../img/perfil/schools/unet.png', 'unet@gmail.com', 'SC', '0123456789', 'www.unet.com', 'A', '#fff', '0000-00-00');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p030_nivel`
+-- Estructura de tabla para la tabla `p030_nivel`
 --
 
 CREATE TABLE IF NOT EXISTS `p030_nivel` (
@@ -124,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `p030_nivel` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p030_nivel`
+-- Volcado de datos para la tabla `p030_nivel`
 --
 
 INSERT INTO `p030_nivel` (`Co_Nivel`, `Nb_Nivel`) VALUES
@@ -133,7 +134,7 @@ INSERT INTO `p030_nivel` (`Co_Nivel`, `Nb_Nivel`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p040_temas`
+-- Estructura de tabla para la tabla `p040_temas`
 --
 
 CREATE TABLE IF NOT EXISTS `p040_temas` (
@@ -145,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `p040_temas` (
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p040_temas`
+-- Volcado de datos para la tabla `p040_temas`
 --
 
 INSERT INTO `p040_temas` (`Co_Tema`, `Co_Nivel`, `Nb_Tema`, `Tx_Url_Img`, `Tx_Url_Aud`) VALUES
@@ -171,7 +172,7 @@ INSERT INTO `p040_temas` (`Co_Tema`, `Co_Nivel`, `Nb_Tema`, `Tx_Url_Img`, `Tx_Ur
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p050_juego`
+-- Estructura de tabla para la tabla `p050_juego`
 --
 
 CREATE TABLE IF NOT EXISTS `p050_juego` (
@@ -182,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `p050_juego` (
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p050_juego`
+-- Volcado de datos para la tabla `p050_juego`
 --
 
 INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUES
@@ -213,7 +214,7 @@ INSERT INTO `p050_juego` (`Co_Juego`, `Nb_Juego`, `Tx_Url_Img`, `Tx_Help`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p060_multimedia`
+-- Estructura de tabla para la tabla `p060_multimedia`
 --
 
 CREATE TABLE IF NOT EXISTS `p060_multimedia` (
@@ -222,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `p060_multimedia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p060_multimedia`
+-- Volcado de datos para la tabla `p060_multimedia`
 --
 
 INSERT INTO `p060_multimedia` (`Co_Multimedia`, `Nb_Multimedia`) VALUES
@@ -233,7 +234,7 @@ INSERT INTO `p060_multimedia` (`Co_Multimedia`, `Nb_Multimedia`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p070_orden`
+-- Estructura de tabla para la tabla `p070_orden`
 --
 
 CREATE TABLE IF NOT EXISTS `p070_orden` (
@@ -246,7 +247,7 @@ CREATE TABLE IF NOT EXISTS `p070_orden` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p070_orden`
+-- Volcado de datos para la tabla `p070_orden`
 --
 
 INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_Ant`, `Les_Sig`) VALUES
@@ -402,7 +403,7 @@ INSERT INTO `p070_orden` (`Co_Tema`, `Co_Juego`, `Co_Orden`, `Nb_Lesson`, `Les_A
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p080_rol`
+-- Estructura de tabla para la tabla `p080_rol`
 --
 
 CREATE TABLE IF NOT EXISTS `p080_rol` (
@@ -411,7 +412,7 @@ CREATE TABLE IF NOT EXISTS `p080_rol` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p080_rol`
+-- Volcado de datos para la tabla `p080_rol`
 --
 
 INSERT INTO `p080_rol` (`Co_Rol`, `Nb_Rol`) VALUES
@@ -420,7 +421,7 @@ INSERT INTO `p080_rol` (`Co_Rol`, `Nb_Rol`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p090_imagenes`
+-- Estructura de tabla para la tabla `p090_imagenes`
 --
 
 CREATE TABLE IF NOT EXISTS `p090_imagenes` (
@@ -430,7 +431,7 @@ CREATE TABLE IF NOT EXISTS `p090_imagenes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p090_imagenes`
+-- Volcado de datos para la tabla `p090_imagenes`
 --
 
 INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
@@ -659,12 +660,12 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 (1, 'engineer', '../../img/categories/ocupations/engineer.svg'),
 (1, 'eraser', '../../img/categories/a an the/eraser.svg'),
 (1, 'erasers', '../../img/categories/this these/erasers.svg'),
-(1, 'eyes', '../../img/categories/the body/eyes.svg'),
 (1, 'eyebrows', '../../img/categories/the body/eyebrows.svg'),
 (1, 'eyelashes', '../../img/categories/the body/eyelashes.svg'),
+(1, 'eyes', '../../img/categories/the body/eyes.svg'),
+(1, 'family', '../../img/categories/family/family.svg'),
 (1, 'farmer', '../../img/categories/ocupations/farmer.svg'),
 (1, 'father', '../../img/categories/family/father.svg'),
-(1, 'family', '../../img/categories/family/family.svg'),
 (1, 'feet', '../../img/categories/the body/feet.svg'),
 (1, 'fingers', '../../img/categories/the body/fingers.svg'),
 (1, 'fire_fighter', '../../img/categories/ocupations/fire_fighter.svg'),
@@ -941,7 +942,7 @@ INSERT INTO `p090_imagenes` (`Co_Multimedia`, `Nb_imagenes`, `Tx_Url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p100_videos`
+-- Estructura de tabla para la tabla `p100_videos`
 --
 
 CREATE TABLE IF NOT EXISTS `p100_videos` (
@@ -951,7 +952,7 @@ CREATE TABLE IF NOT EXISTS `p100_videos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p100_videos`
+-- Volcado de datos para la tabla `p100_videos`
 --
 
 INSERT INTO `p100_videos` (`Co_Multimedia`, `Nb_videos`, `Tx_Url`) VALUES
@@ -1020,7 +1021,7 @@ INSERT INTO `p100_videos` (`Co_Multimedia`, `Nb_videos`, `Tx_Url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p110_audio`
+-- Estructura de tabla para la tabla `p110_audio`
 --
 
 CREATE TABLE IF NOT EXISTS `p110_audio` (
@@ -1030,7 +1031,7 @@ CREATE TABLE IF NOT EXISTS `p110_audio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `p110_audio`
+-- Volcado de datos para la tabla `p110_audio`
 --
 
 INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
@@ -1731,7 +1732,7 @@ INSERT INTO `p110_audio` (`Co_Multimedia`, `Nb_audio`, `Tx_Url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t010_bitacora`
+-- Estructura de tabla para la tabla `t010_bitacora`
 --
 
 CREATE TABLE IF NOT EXISTS `t010_bitacora` (
@@ -1741,10 +1742,10 @@ CREATE TABLE IF NOT EXISTS `t010_bitacora` (
   `Hr_Entrada` varchar(20) NOT NULL,
   `Hr_Salida` varchar(20) NOT NULL,
   `Nu_Lecciones` int(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `t010_bitacora`
+-- Volcado de datos para la tabla `t010_bitacora`
 --
 
 INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_Entrada`, `Hr_Salida`, `Nu_Lecciones`) VALUES
@@ -1833,12 +1834,13 @@ INSERT INTO `t010_bitacora` (`Co_Bitacora`, `Co_Usuario`, `Fe_Ejecucion`, `Hr_En
 (83, 1, '2019-10-26', '10:57:38', '', 0),
 (84, 1, '2019-10-27', '06:15:21', '', 0),
 (85, 1, '2019-10-28', '11:02:08', '', 0),
-(86, 1, '2019-10-28', '11:03:39', '', 0);
+(86, 1, '2019-10-28', '11:03:39', '', 0),
+(87, 1, '2020-02-02', '05:55:03', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t020_juego_tema`
+-- Estructura de tabla para la tabla `t020_juego_tema`
 --
 
 CREATE TABLE IF NOT EXISTS `t020_juego_tema` (
@@ -1853,7 +1855,7 @@ CREATE TABLE IF NOT EXISTS `t020_juego_tema` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `t020_juego_tema`
+-- Volcado de datos para la tabla `t020_juego_tema`
 --
 
 INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
@@ -2754,8 +2756,7 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (9, 10, 77, 'erasers', NULL, 'erasers', 'these/this', 'These'),
 (9, 10, 77, 'chairs', NULL, 'chairs', 'these/this', 'These'),
 (9, 10, 77, 'computer', NULL, 'computer', 'these/this', 'This'),
-(9, 10, 77, 'desk', NULL, 'desk', 'these/this', 'This');
-INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
+(9, 10, 77, 'desk', NULL, 'desk', 'these/this', 'This'),
 (9, 10, 77, 'book', NULL, 'book', 'these/this', 'This'),
 (9, 10, 77, 'books', NULL, 'books', 'these/this', 'These'),
 (9, 10, 77, 'window', NULL, 'window', 'these/this', 'This'),
@@ -2768,7 +2769,8 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (5, 10, 78, 'windows', NULL, '', '', 'these'),
 (5, 10, 78, 'pencils', NULL, '', '', 'these'),
 (5, 10, 78, 'erasers', NULL, '', '', 'these'),
-(5, 10, 78, 'chairs', NULL, '', '', 'these'),
+(5, 10, 78, 'chairs', NULL, '', '', 'these');
+INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
 (5, 10, 78, 'computer', NULL, '', '', 'this'),
 (5, 10, 78, 'desk', NULL, '', '', 'this'),
 (5, 10, 78, 'book', NULL, '', '', 'this'),
@@ -3495,8 +3497,7 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (17, 18, 146, 'what_time_is_it', NULL, '8_32', '', 'eight thirty two'),
 (17, 18, 146, 'what_time_is_it', NULL, '4_20', '', 'four twenty'),
 (17, 18, 146, 'what_time_is_it', NULL, '7_02', '', 'seven ou two'),
-(17, 18, 146, 'what_time_is_it', NULL, '1_05', '', 'one ou five');
-INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `Nb_videos`, `Nb_imagenes`, `Nb_Ask`, `Nb_Comparar`) VALUES
+(17, 18, 146, 'what_time_is_it', NULL, '1_05', '', 'one ou five'),
 (17, 18, 146, 'what_time_is_it', NULL, '5_16', '', 'five sixteen'),
 (17, 18, 146, 'what_time_is_it', NULL, '10_58', '', 'ten fifty eight'),
 (17, 18, 146, 'what_time_is_it', NULL, '9_46', '', 'nine forty six'),
@@ -3559,7 +3560,7 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t030_cobranza`
+-- Estructura de tabla para la tabla `t030_cobranza`
 --
 
 CREATE TABLE IF NOT EXISTS `t030_cobranza` (
@@ -3573,7 +3574,7 @@ CREATE TABLE IF NOT EXISTS `t030_cobranza` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t040_retos`
+-- Estructura de tabla para la tabla `t040_retos`
 --
 
 CREATE TABLE IF NOT EXISTS `t040_retos` (
@@ -3586,14 +3587,14 @@ CREATE TABLE IF NOT EXISTS `t040_retos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `t040_retos`
+-- Volcado de datos para la tabla `t040_retos`
 --
 
 INSERT INTO `t040_retos` (`Co_Reto`, `Co_Usuario`, `Co_Tema`, `Nu_Identificacion`, `Fe_Ejecucion`, `St_Reto`) VALUES
+(1, 4, 1, 'A0001I', '05-07-2019', 'A'),
 (18, 1, 18, 'A0001I', '05-07-2019', 'A'),
 (18, 2, 18, 'A0001I', '05-07-2019', 'A'),
 (18, 3, 18, 'A0001I', '05-07-2019', 'A'),
-(1, 4, 1, 'A0001I', '05-07-2019', 'A'),
 (18, 5, 18, 'A0001I', '05-07-2019', 'A'),
 (18, 6, 18, 'A0001I', '05-07-2019', 'A'),
 (18, 7, 18, 'A0001I', '17-07-2019', 'A'),
@@ -3602,7 +3603,7 @@ INSERT INTO `t040_retos` (`Co_Reto`, `Co_Usuario`, `Co_Tema`, `Nu_Identificacion
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t080_usuario_institucion`
+-- Estructura de tabla para la tabla `t080_usuario_institucion`
 --
 
 CREATE TABLE IF NOT EXISTS `t080_usuario_institucion` (
@@ -3612,7 +3613,7 @@ CREATE TABLE IF NOT EXISTS `t080_usuario_institucion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `t080_usuario_institucion`
+-- Volcado de datos para la tabla `t080_usuario_institucion`
 --
 
 INSERT INTO `t080_usuario_institucion` (`Co_Usuario`, `Nu_Identificacion`, `Fe_Ingreso`) VALUES
@@ -3629,7 +3630,7 @@ INSERT INTO `t080_usuario_institucion` (`Co_Usuario`, `Nu_Identificacion`, `Fe_I
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t090_usuario_nivel`
+-- Estructura de tabla para la tabla `t090_usuario_nivel`
 --
 
 CREATE TABLE IF NOT EXISTS `t090_usuario_nivel` (
@@ -3643,7 +3644,7 @@ CREATE TABLE IF NOT EXISTS `t090_usuario_nivel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `t090_usuario_nivel`
+-- Volcado de datos para la tabla `t090_usuario_nivel`
 --
 
 INSERT INTO `t090_usuario_nivel` (`Co_Usuario`, `Co_Nivel`, `Progreso`, `Se_Actual`, `Te_Actual`, `Horas`, `Le_Actual`) VALUES
@@ -3658,11 +3659,11 @@ INSERT INTO `t090_usuario_nivel` (`Co_Usuario`, `Co_Nivel`, `Progreso`, `Se_Actu
 (9, 1, 0, 0, 0, 0, '');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `m210_usuario`
+-- Indices de la tabla `m210_usuario`
 --
 ALTER TABLE `m210_usuario`
   ADD PRIMARY KEY (`Co_Usuario`),
@@ -3671,84 +3672,84 @@ ALTER TABLE `m210_usuario`
   ADD KEY `FK_M210_P080_ROL` (`Co_Rol`);
 
 --
--- Indexes for table `m220_alumno`
+-- Indices de la tabla `m220_alumno`
 --
 ALTER TABLE `m220_alumno`
   ADD PRIMARY KEY (`Co_Alumno`);
 
 --
--- Indexes for table `p020_institucion`
+-- Indices de la tabla `p020_institucion`
 --
 ALTER TABLE `p020_institucion`
   ADD PRIMARY KEY (`Nu_Identificacion`);
 
 --
--- Indexes for table `p030_nivel`
+-- Indices de la tabla `p030_nivel`
 --
 ALTER TABLE `p030_nivel`
   ADD PRIMARY KEY (`Co_Nivel`);
 
 --
--- Indexes for table `p040_temas`
+-- Indices de la tabla `p040_temas`
 --
 ALTER TABLE `p040_temas`
   ADD PRIMARY KEY (`Co_Tema`),
   ADD KEY `FK_P040_P030_Nivel` (`Co_Nivel`);
 
 --
--- Indexes for table `p050_juego`
+-- Indices de la tabla `p050_juego`
 --
 ALTER TABLE `p050_juego`
   ADD PRIMARY KEY (`Co_Juego`);
 
 --
--- Indexes for table `p060_multimedia`
+-- Indices de la tabla `p060_multimedia`
 --
 ALTER TABLE `p060_multimedia`
   ADD PRIMARY KEY (`Co_Multimedia`);
 
 --
--- Indexes for table `p070_orden`
+-- Indices de la tabla `p070_orden`
 --
 ALTER TABLE `p070_orden`
   ADD PRIMARY KEY (`Co_Orden`),
   ADD KEY `FK_P070_P040_Temas` (`Co_Tema`);
 
 --
--- Indexes for table `p080_rol`
+-- Indices de la tabla `p080_rol`
 --
 ALTER TABLE `p080_rol`
   ADD PRIMARY KEY (`Co_Rol`);
 
 --
--- Indexes for table `p090_imagenes`
+-- Indices de la tabla `p090_imagenes`
 --
 ALTER TABLE `p090_imagenes`
   ADD PRIMARY KEY (`Nb_imagenes`),
   ADD KEY `FK_P090_P060_Multimedia` (`Co_Multimedia`);
 
 --
--- Indexes for table `p100_videos`
+-- Indices de la tabla `p100_videos`
 --
 ALTER TABLE `p100_videos`
   ADD PRIMARY KEY (`Nb_videos`),
   ADD KEY `FK_P100_P060_Multimedia` (`Co_Multimedia`);
 
 --
--- Indexes for table `p110_audio`
+-- Indices de la tabla `p110_audio`
 --
 ALTER TABLE `p110_audio`
   ADD PRIMARY KEY (`Nb_audio`),
   ADD KEY `FK_P110_P060_Multimedia` (`Co_Multimedia`);
 
 --
--- Indexes for table `t010_bitacora`
+-- Indices de la tabla `t010_bitacora`
 --
 ALTER TABLE `t010_bitacora`
   ADD PRIMARY KEY (`Co_Bitacora`);
 
 --
--- Indexes for table `t020_juego_tema`
+-- Indices de la tabla `t020_juego_tema`
 --
 ALTER TABLE `t020_juego_tema`
   ADD KEY `FK_P020_P050_Juego` (`Co_Juego`),
@@ -3759,14 +3760,14 @@ ALTER TABLE `t020_juego_tema`
   ADD KEY `FK_P020_P090_imagenes` (`Nb_imagenes`);
 
 --
--- Indexes for table `t030_cobranza`
+-- Indices de la tabla `t030_cobranza`
 --
 ALTER TABLE `t030_cobranza`
   ADD PRIMARY KEY (`Co_Cobranza`),
   ADD KEY `FK_T030_P020_Institucion` (`Nu_Identificacion`);
 
 --
--- Indexes for table `t040_retos`
+-- Indices de la tabla `t040_retos`
 --
 ALTER TABLE `t040_retos`
   ADD PRIMARY KEY (`Co_Reto`,`Co_Usuario`),
@@ -3774,7 +3775,7 @@ ALTER TABLE `t040_retos`
   ADD KEY `FK_t040_t080_usuario_institucion_fk` (`Nu_Identificacion`);
 
 --
--- Indexes for table `t080_usuario_institucion`
+-- Indices de la tabla `t080_usuario_institucion`
 --
 ALTER TABLE `t080_usuario_institucion`
   ADD PRIMARY KEY (`Co_Usuario`,`Nu_Identificacion`),
@@ -3782,53 +3783,53 @@ ALTER TABLE `t080_usuario_institucion`
   ADD KEY `FK_T080_P020_Institucion` (`Nu_Identificacion`);
 
 --
--- Indexes for table `t090_usuario_nivel`
+-- Indices de la tabla `t090_usuario_nivel`
 --
 ALTER TABLE `t090_usuario_nivel`
   ADD KEY `FK_T090_M210_Usuario` (`Co_Usuario`),
   ADD KEY `FK_T090_P030_Nivel` (`Co_Nivel`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `m210_usuario`
+-- AUTO_INCREMENT de la tabla `m210_usuario`
 --
 ALTER TABLE `m210_usuario`
   MODIFY `Co_Usuario` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT for table `m220_alumno`
+-- AUTO_INCREMENT de la tabla `m220_alumno`
 --
 ALTER TABLE `m220_alumno`
   MODIFY `Co_Alumno` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
--- AUTO_INCREMENT for table `p030_nivel`
+-- AUTO_INCREMENT de la tabla `p030_nivel`
 --
 ALTER TABLE `p030_nivel`
   MODIFY `Co_Nivel` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `p040_temas`
+-- AUTO_INCREMENT de la tabla `p040_temas`
 --
 ALTER TABLE `p040_temas`
   MODIFY `Co_Tema` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
--- AUTO_INCREMENT for table `p050_juego`
+-- AUTO_INCREMENT de la tabla `p050_juego`
 --
 ALTER TABLE `p050_juego`
   MODIFY `Co_Juego` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 --
--- AUTO_INCREMENT for table `p080_rol`
+-- AUTO_INCREMENT de la tabla `p080_rol`
 --
 ALTER TABLE `p080_rol`
   MODIFY `Co_Rol` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `t010_bitacora`
+-- AUTO_INCREMENT de la tabla `t010_bitacora`
 --
 ALTER TABLE `t010_bitacora`
-  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=87;
+  MODIFY `Co_Bitacora` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=88;
 --
--- AUTO_INCREMENT for table `t030_cobranza`
+-- AUTO_INCREMENT de la tabla `t030_cobranza`
 --
 ALTER TABLE `t030_cobranza`
   MODIFY `Co_Cobranza` int(11) NOT NULL AUTO_INCREMENT;
