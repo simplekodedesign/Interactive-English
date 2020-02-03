@@ -48,7 +48,7 @@
       <img src="img/English21.svg" alt="Logo" id="logoImg">
 
       <form method="post" autocomplete="off" class="loginForm" id="formLogin">
-        <h3>C21English</h3>
+        <h3 id="colName">C21English</h3>
         <div>
           <span class="barcolor"></span>
           <input type="text" name="user" id="username" placeholder="&nbsp;" class="formInput">

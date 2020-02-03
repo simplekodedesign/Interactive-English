@@ -10,6 +10,7 @@ var form = document.getElementById("formLogin");
 var response;
 var logoImg = document.getElementById("logoImg")
 var firstHalf = document.getElementById("firstHalf")
+var colName = document.getElementById("colName")
 
 window.addEventListener("load", function() {
 
@@ -23,12 +24,13 @@ window.addEventListener("load", function() {
     if(this.readyState == 4 && this.status == 200){
       const response = JSON.parse(this.responseText);
       console.log(response)
-      const {color_institucion, img_institucion} = response
+      const {color_institucion, img_institucion, Nb_Institucion} = response
       if(img_institucion === "") {
         logoImg.setAttribute("src", "img/English21.svg")
       } else {
         logoImg.setAttribute("src", img_institucion)
         firstHalf.style.setProperty("--mainColor", color_institucion)
+        colName.innerHTML = Nb_Institucion
       }
     }
   }
