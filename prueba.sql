@@ -111,7 +111,9 @@ CREATE TABLE IF NOT EXISTS `p020_institucion` (
 --
 
 INSERT INTO `p020_institucion` (`Nu_Identificacion`, `Nb_Institucion`, `Img_Url`, `Tx_Email`, `Direccion`, `Nu_Telefono`, `Pag_Url`, `St_Institucion`, `color`, `Fe_ultimaData`) VALUES
-('A0001I', 'Unet', '../../img/perfil/schools/unet.png', 'unet@gmail.com', 'SC', '0123456789', 'www.unet.com', 'A', '#fff', '0000-00-00');
+('A0001I', 'Unet', './img/instituciones/unet.png', 'unet@gmail.com', 'SC', '0123456789', 'www.unet.com', 'A', '#fff', '0000-00-00'),
+('A0002I', 'Localhost', './img/instituciones/localhost.png', 'unet@gmail.com', 'SC', '0123456789', 'www.unet.com', 'A', '#fff', '0000-00-00'),
+('A0003I', 'Colegio San Tarsicio', './img/instituciones/santarsicio.png', 'colsantarcu@hotmail.com', 'Cúcuta AV.9 #1-45 Callejón', '5826928', 'www.colsantarweb.webnode.es', 'A', '#009240', '0000-00-00');
 
 -- --------------------------------------------------------
 

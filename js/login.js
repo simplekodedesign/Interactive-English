@@ -8,12 +8,34 @@ var co_usuario= undefined;
 var errorMessage = document.getElementById('message')
 var form = document.getElementById("formLogin");
 var response;
+var logoImg = document.getElementById("logoImg")
+var firstHalf = document.getElementById("firstHalf")
 
 window.addEventListener("load", function() {
 
   if (error) {
     loginHandler(error)
   }
+
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      const response = JSON.parse(this.responseText);
+      console.log(response)
+      const {color_institucion, img_institucion} = response
+      if(img_institucion === "") {
+        logoImg.setAttribute("src", "img/English21.svg")
+      } else {
+        console.log("HI")
+        logoImg.setAttribute("src", img_institucion)
+        firstHalf.style.setProperty("--mainColor", color_institucion)
+      }
+    }
+  }
+  xhttp.open("GET","php/controller/subdomain.php", true);
+  xhttp.send();
+
 
   next.addEventListener("click", function() {
     var character = "abcdefghijkmnpqrtuvwxyzABCDEFGHJKMNPQRTUVWXYZ2346789";

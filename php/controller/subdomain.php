@@ -18,8 +18,9 @@
   Connection::connect();
   //buscar la imagen y el color
   
-  $url = explode(".", $_SERVER['HTTP_HOST'])[0];
+  $url = "./img/instituciones/".explode(".", $_SERVER['HTTP_HOST'])[0].".png";
   $results = Connection::request("select I.color,I.Img_Url from p020_institucion I where I.Img_Url = '".$url."'");
+  // $results = Connection::request("select I.color,I.Img_Url from p020_institucion I where I.Img_Url = '../../img/perfil/schools/unet.png'");
   if($results->rowCount() > 0){
     $res=$results->fetch(PDO::FETCH_ASSOC);
     $data->img_institucion = $res["Img_Url"];

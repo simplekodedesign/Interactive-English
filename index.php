@@ -41,12 +41,11 @@
       diseñada para divertirse mientras se aprende.
       ">
     <meta name="author" content="C21">
-    <script src="./js/colegio.js"></script>
 </head>
 <body>
     <section class="main" id="main">
-    <div class="firstHalf">
-      <img src="img/English21.svg" alt="Logo">
+    <div class="firstHalf" id="firstHalf">
+      <img src="img/English21.svg" alt="Logo" id="logoImg">
 
       <form method="post" autocomplete="off" class="loginForm" id="formLogin">
         <h3>C21English</h3>
