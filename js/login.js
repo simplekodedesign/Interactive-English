@@ -27,7 +27,6 @@ window.addEventListener("load", function() {
       if(img_institucion === "") {
         logoImg.setAttribute("src", "img/English21.svg")
       } else {
-        console.log("HI")
         logoImg.setAttribute("src", img_institucion)
         firstHalf.style.setProperty("--mainColor", color_institucion)
       }
