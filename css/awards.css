@@ -5,6 +5,10 @@
   padding: 15px;
 }
 
+.titles > *{
+  width: 100%;
+}
+
 .premio {
   position: relative;
   width: 400px;
@@ -47,4 +51,14 @@
   height: 85%;
   transform: translate(-50%, -50%) rotate(45deg);
   z-index: 1;
+}
+
+@media screen and (max-width : 475px){
+  .premio{
+    margin: 20px 0;
+  }
+
+  .premio > img {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 }

@@ -95,7 +95,7 @@ body {
 }
 
 .loginForm {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   display: flex;
   flex-direction: column;
   /* background-color: rgb(255, 255, 255); */
@@ -121,6 +121,10 @@ body {
   font-size: 1.2em;
   color: var(--secondColor);
   cursor: pointer;
+}
+
+.loginForm > #submitButton{
+  padding: 10px 5px;
 }
 
 .formButton {

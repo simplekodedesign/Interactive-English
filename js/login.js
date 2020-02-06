@@ -12,31 +12,28 @@ var logoImg = document.getElementById("logoImg")
 var firstHalf = document.getElementById("firstHalf")
 var colName = document.getElementById("colName")
 
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function(){
+  if(this.readyState == 4 && this.status == 200){
+    const response = JSON.parse(this.responseText);
+    const {color_institucion, img_institucion, Nb_Institucion} = response
+    if(img_institucion === "") {
+      logoImg.setAttribute("src", "img/English21.svg")
+    } else {
+      logoImg.setAttribute("src", img_institucion)
+      firstHalf.style.setProperty("--mainColor", color_institucion)
+      colName.innerHTML = Nb_Institucion
+    }
+  }
+}
+xhttp.open("GET","php/controller/subdomain.php", true);
+xhttp.send();
+
 window.addEventListener("load", function() {
 
   if (error) {
     loginHandler(error)
   }
-
-
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function(){
-    if(this.readyState == 4 && this.status == 200){
-      const response = JSON.parse(this.responseText);
-      console.log(response)
-      const {color_institucion, img_institucion, Nb_Institucion} = response
-      if(img_institucion === "") {
-        logoImg.setAttribute("src", "img/English21.svg")
-      } else {
-        logoImg.setAttribute("src", img_institucion)
-        firstHalf.style.setProperty("--mainColor", color_institucion)
-        colName.innerHTML = Nb_Institucion
-      }
-    }
-  }
-  xhttp.open("GET","php/controller/subdomain.php", true);
-  xhttp.send();
-
 
   next.addEventListener("click", function() {
     var character = "abcdefghijkmnpqrtuvwxyzABCDEFGHJKMNPQRTUVWXYZ2346789";

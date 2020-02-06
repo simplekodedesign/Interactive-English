@@ -40,14 +40,15 @@
       C21 English es una herramienta de aprendizaje del idioma inglés mediante juegos e interactividad,
       diseñada para divertirse mientras se aprende.
       ">
-    <meta name="author" content="C21">
+    <meta name="author" content="Capacitese 21">
 </head>
 <body>
     <section class="main" id="main">
     <div class="firstHalf" id="firstHalf">
-      <img src="img/English21.svg" alt="Logo" id="logoImg">
+      <img src="" alt="Logo" id="logoImg">
 
       <form method="post" autocomplete="off" class="loginForm" id="formLogin">
+        <h3>Plataforma de inglés:</h3>
         <h3 id="colName">C21English</h3>
         <div>
           <span class="barcolor"></span>
@@ -93,7 +94,7 @@
       </div>
 
       <div class="footer">
-        Aquí irá la información sobre C21, el texto sobre los derechos, etc
+        Copyright © 2020 Capacitese 21
       </div>
 
     </div>

@@ -8,7 +8,7 @@
       $photo=$res["Tx_Url"];
     }
   }
-  $results=Connection::request("select Co_Alumno,Nb_ApellidoRepre,Nb_Representante,Fe_Nacimiento from m220_alumno where Co_Alumno=".$coAlumno);
+  $results=Connection::request("select Co_Alumno,Nb_ApellidoRepre,Nb_Representante from m220_alumno where Co_Alumno=".$coAlumno);
   if($results->rowCount()>0){
     while($res=$results->fetch(PDO::FETCH_ASSOC)){
       $parent=$res["Nb_Representante"]." ".$res["Nb_ApellidoRepre"];
@@ -86,10 +86,6 @@
                   <tr>
                     <td class='variable'>Parent:</td>
                     <td class='value'><input type='text' name='Parent' id='parent' disabled value='".$parent."'></td>
-                  </tr>
-                  <tr>
-                    <td class='variable'>Birth Date:</td>
-                    <td class='value'><input type='text' name='Birth' id='birth' disabled value='".$birth."'></td>
                   </tr>
                   <tr>
                     <td class='variable'>Email:</td>

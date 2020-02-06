@@ -1,10 +1,10 @@
 .cont_abc{
-	min-height: 400px;
+	min-height: 350px;
 	display: flex;
 	justify-content: center;
   align-items: center;
 	flex-wrap: wrap;
-  height: 400px;
+  height: 350px;
 	width: 100%;
 }
 
@@ -20,10 +20,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 400px;
-	width: 400px;
+	height: 350px;
+	width: 350px;
 	cursor: pointer;
-  margin: 10px;
+  /* margin: 10px; */
 	-webkit-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s;

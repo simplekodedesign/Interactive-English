@@ -15,7 +15,6 @@
     private static $dbUser = "root";               //Nombre de Usuario para el phpmyadmin
     private static $dbPass = "mysql";     //Contraseña para phpmyadmin
 
-
     //Variable que guardara la conexion a la Base de Datos
     private static $dbConnection;
 

@@ -25,7 +25,7 @@
   if($results->rowCount() > 0){
     $res=$results->fetch(PDO::FETCH_ASSOC);
     $data->img_institucion = $res["Img_Url"];
-    $data->color_institucion =$res["color"];
+    $data->color_institucion = $res["color"];
     $data->Nb_Institucion = $res["Nb_Institucion"];
   }
 

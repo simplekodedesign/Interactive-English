@@ -60,6 +60,7 @@ body{
 .container{
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -261,6 +262,7 @@ section{
   width: 100%;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   /* text-transform: uppercase; */
   justify-content: space-between;
   padding: 10px 0;
