@@ -7,8 +7,8 @@
     como metodos de clase y la conexion se trabaja mediante una variable
     de clase llamada $dbConnection
   */
-
-  class Connection{
+    
+    class Connection{
     //Datos Conexion
     private static $dbHost = "localhost";             //Nombre del Host
     private static $dbName = "prueba";          //Nombre de la Base de Datos
@@ -38,6 +38,11 @@
       } catch (PDOException $e) {
           die("¡Error!: " . $e->getMessage());
       }
+    }
+
+    //obtener el id de la ultima insercion
+    public static function get_last_id(){
+      return self::$dbConnection->lastInsertId();
     }
   }
 ?>
