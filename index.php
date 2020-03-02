@@ -62,6 +62,7 @@
         </div>
         <input type="submit" value="Ingresar" id="submitButton" class="formButton">
         <p id="forgot">¿Olvidaste tú contraseña?</p>
+        <a href="registro.php">Registrarme</a>
       </form>
 
       <div id="forgotForm" display="none">
