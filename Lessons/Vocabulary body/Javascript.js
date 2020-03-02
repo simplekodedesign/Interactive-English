@@ -79,7 +79,7 @@ function god(who){
     }
     const itemsLength = items.length
 
-    svgLength > 1 ? contSvg = itemsLength - 10 : itemsLength
+    contSvg = svgLength > 1 ?  itemsLength - 10 : itemsLength
     // contSvg = itemsLength
     cont.innerHTML = contSvg;
 

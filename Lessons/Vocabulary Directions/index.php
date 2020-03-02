@@ -47,7 +47,7 @@
                     <div class='shop s4 3'>
                         <img src='../../img/categories/places/restaurant.webp' class='img' alt='Restaurant'>
                         <span>Restaurant</span>
-                        <i class='fas fa-bus-alt Bus'>
+                        <i class='fas fa-bus-alt bus'>
                             <span>Bus</span>
                         </i>
                         <audio src='../../aud/categories/places/restaurant.mp3'></audio>
@@ -63,7 +63,7 @@
                     <div class='shop s2 5'>
                         <img src='../../img/categories/places/school.webp' class='img' alt='School'>
                         <span>Escuela</span>
-                        <i class='fas fa-taxi Taxi'>
+                        <i class='fas fa-taxi taxi'>
                             <span>Taxi</span>
                         </i>
                         <audio src='../../aud/categories/places/school.mp3'></audio>
@@ -76,7 +76,7 @@
                     <div class='shop s4 7'>
                         <img src='../../img/categories/places/museum.webp' class='img' alt='Museum'>
                         <span>Museo</span>
-                        <i class='fas fa-traffic-light Traffic_light'>
+                        <i class='fas fa-traffic-light traffic_light'>
                             <span>Semáforo</span>
                         </i>
                         <audio src='../../aud/categories/places/museum.mp3'></audio>
@@ -92,7 +92,7 @@
                     <div class='shop s2 9'>
                         <img src='../../img/categories/places/cinema.webp' class='img' alt='Cinema'>
                         <span>Cine</span>
-                        <i class='fas fa-bus-alt Bus'>
+                        <i class='fas fa-bus-alt bus'>
                             <span>Bus</span>
                         </i>
                         <audio src='../../aud/categories/places/cinema.mp3'></audio>
@@ -105,7 +105,7 @@
                     <div class='shop s4 11'>
                         <img src='../../img/categories/places/bakery.webp' class='img' alt='Bakery'>
                         <span>Panadería</span>
-                        <i class='fas fa-traffic-light Traffic_light'>
+                        <i class='fas fa-traffic-light traffic_light'>
                             <span>Semáforo</span>
                         </i>
                         <audio src='../../aud/categories/places/bakery.mp3'></audio>
@@ -121,7 +121,7 @@
                     <div class='shop s2 13'>
                         <img src='../../img/categories/places/gym.webp' class='img' alt='Gym'>
                         <span>Gimnasio</span>
-                        <i class='fas fa-taxi Taxi'>
+                        <i class='fas fa-taxi taxi'>
                             <span>Taxi</span>
                         </i>
                         <audio src='../../aud/categories/places/gym.mp3'></audio>
@@ -166,7 +166,7 @@
                     <div class='shop s3 18'>
                         <img src='../../img/categories/places/shopping_mall.webp' class='img' alt='Shopping Mall'>
                         <span>Centro Comercial</span>
-                        <i class='fas fa-traffic-light Traffic_light'>
+                        <i class='fas fa-traffic-light traffic_light'>
                             <span>Semáforo</span>
                         </i>
                         <audio src='../../aud/categories/places/shopping_mall.mp3'></audio>
@@ -182,7 +182,7 @@
                     <div class='shop s1 20'>
                         <img src='../../img/categories/places/barber_shop.webp' class='img' alt='Barber Shop'>
                         <span>Barbería</span>
-                        <i class='fas fa-taxi Taxi'>
+                        <i class='fas fa-taxi taxi'>
                             <span>Taxi</span>
                         </i>
                         <audio src='../../aud/categories/places/barber_shop.mp3'></audio>
@@ -196,7 +196,7 @@
                     <div class='shop s3 22'>
                         <img src='../../img/categories/places/laundry.webp' class='img' alt='Laundry'>
                         <span>Lavandería</span>
-                        <i class='fas fa-traffic-light Traffic_light'>
+                        <i class='fas fa-traffic-light traffic_light'>
                             <span>Semáforo</span>
                         </i>
                         <audio src='../../aud/categories/places/laundry.mp3'></audio>
@@ -221,7 +221,7 @@
                     <div class='shop s2 25'>
                         <img src='../../img/categories/places/university.webp' class='img' alt='University'>
                         <span>Universidad</span>
-                        <i class='fas fa-bus-alt Bus'>
+                        <i class='fas fa-bus-alt bus'>
                             <span>Bus</span>
                         </i>
                         <audio src='../../aud/categories/places/university.mp3'></audio>
@@ -229,7 +229,7 @@
                     <div class='shop s3 26'>
                         <img src='../../img/categories/places/skyscraper.webp' class='img' alt='Skyscraper'>
                         <span>Rasca Cielos</span>
-                        <i class='fas fa-traffic-light Traffic_light'>
+                        <i class='fas fa-traffic-light traffic_light'>
                             <span>Semáforo</span>
                         </i>
                         <audio src='../../aud/categories/places/skyscraper.mp3'></audio>
@@ -245,7 +245,7 @@
                     <div class='shop s1 28'>
                         <img src='../../img/categories/places/hotel.webp' class='img' alt='Hotel'>
                         <span>Hotel</span>
-                        <i class='fas fa-bus-alt Bus'>
+                        <i class='fas fa-bus-alt bus'>
                             <span>Bus</span>
                         </i>
                         <audio src='../../aud/categories/places/hotel.mp3'></audio>
@@ -253,7 +253,7 @@
                     <div class='shop s2 29'>
                         <img src='../../img/categories/places/gas_station.webp' class='img' alt='Gas Station'>
                         <span>Estación de Servicio</span>
-                        <i class='fas fa-taxi Taxi'>
+                        <i class='fas fa-taxi taxi'>
                             <span>Taxi</span>
                         </i>
                         <audio src='../../aud/categories/places/gas_station.mp3'></audio>
@@ -261,7 +261,7 @@
                     <div class='shop s3 30'>
                         <img src='../../img/categories/places/bank.webp' class='img' alt='Bank'>
                         <span>Banco</span>
-                        <i class='fas fa-traffic-light Traffic_light'>
+                        <i class='fas fa-traffic-light traffic_light'>
                             <span>Semáforo</span>
                         </i>
                         <audio src='../../aud/categories/places/bank.mp3'></audio>
