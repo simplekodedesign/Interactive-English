@@ -92,7 +92,7 @@
 
     document.getElementById("formLogin").addEventListener("submit",(e) => {
         e.preventDefault()
-        var data = new FormData(document.getElementById("my_form"))
+        var data = new FormData(document.getElementById("formLogin"))
         xhttp.open("POST","../controller/registro.php",true)
         xhttp.send(data)
       })
