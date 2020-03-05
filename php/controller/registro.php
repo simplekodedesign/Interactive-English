@@ -36,7 +36,7 @@
 							Connection::request("insert into t090_usuario_nivel (Co_Usuario,Co_Nivel,Progreso,Se_Actual,Te_Actual,Horas,Le_Actual) values (".$id_usuario.",1,0,1,1,0,'#')");
 							Connection::request("update codigos set estatus = 'I' where id = ".$result["id"]);
 							$resp->status = 1;
-							$resp->message = "Todo Bien";
+							$resp->message = "Te has registrado exitosamente";
 						}catch(Exception $e){
 							$resp->status = -5;
 							$resp->message = $e->getMessage();
@@ -47,12 +47,12 @@
 					}
 				}else{
 					$resp->status = -6;
-					$resp->message = "El nombre de usuario ya se encuentra utilizado";	
+					$resp->message = "El nombre de usuario ya está siendo utilizado";	
 				}
 				
 			}else{
 				$resp->status = -2;
-				$resp->message = "El Pin indicado ya fue utilizado";	
+				$resp->message = "El Pin indicado ya ya está siendo utilizado";	
 			}
 		}else{
 			$resp->status = -1;
@@ -62,9 +62,5 @@
 		$resp->status = -3;
 		$resp->message = "La institucion no se encuentra registrada";
 	}
-
-	
-
-
 	echo json_encode($resp);
 ?>

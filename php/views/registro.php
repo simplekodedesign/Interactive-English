@@ -81,21 +81,8 @@
           </div>
       </form>
     </div>
-    
-  <script type="text/javascript">
-    var xhttp = new XMLHttpRequest()
-    xhttp.onreadystatechange = function(){
-      if(this.readyState == 4 && this.status == 200){
-        console.log(this.responseText)
-      }
-    }
 
-    document.getElementById("formLogin").addEventListener("submit",(e) => {
-        e.preventDefault()
-        var data = new FormData(document.getElementById("formLogin"))
-        xhttp.open("POST","../controller/registro.php",true)
-        xhttp.send(data)
-      })
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="../../js/registro.js"></script>
   </body>
 </html>
