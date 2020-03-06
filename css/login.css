@@ -38,6 +38,15 @@ body {
   font-family: myriad-pro, sans-serif;
 }
 
+a{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
 .main {
   width: 100%;
   min-height: 100vh;
@@ -117,10 +126,13 @@ body {
   margin: 10px;
   padding: 7px 0px;
   text-align: center;
-  text-decoration: underline;
   font-size: 1.2em;
   color: var(--secondColor, black);
   cursor: pointer;
+}
+
+.loginForm > p:hover {
+  text-decoration: underline;
 }
 
 .loginForm > #submitButton{
@@ -145,6 +157,8 @@ body {
 }
 
 .firstHalf > .footer {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   bottom: 10px;
   text-align: center;
@@ -231,6 +245,17 @@ label {
 
 .formInput:not(:placeholder-shown) + .inputLabel{
   transform: translate(0, -30px);
+}
+
+.signUp__link{
+  width: 100%;
+  justify-self: flex-end;
+  text-align: center;
+}
+
+.signUp__link > span{
+  color: var(--mainColor, var(--secondary));
+  font-weight: bolder;
 }
 
 #submit, .siguiente {

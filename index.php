@@ -62,7 +62,6 @@
         </div>
         <input type="submit" value="Ingresar" id="submitButton" class="formButton">
         <p id="forgot">¿Olvidaste tú contraseña?</p>
-        <a href="registro.php">Registrarme</a>
       </form>
 
       <div id="forgotForm" display="none">
@@ -95,7 +94,8 @@
       </div>
 
       <div class="footer">
-        Copyright © 2020 Capacitese 21
+        <a href="./php/views/registro.php" class='signUp__link'>¿Aún no tienes tu cuenta? <span>Registrate</span></a>
+        <span>Copyright © 2020 Capacitese 21</span>
       </div>
 
     </div>

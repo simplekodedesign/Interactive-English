@@ -1,7 +1,10 @@
-body{
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,33 +13,88 @@ body{
 
 .signUp{
   background-color: white;
-  width: 85%;
+  width: 90%; min-width: 300px;
   min-height: 90vh;
+  position: relative;
   padding: 2%;
+}
+
+.regresar{
+  font-weight: bolder;
+  color: var(--yellow);
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  padding: 15px 0 0 40px;
+  left: 3%;
+  top: 3%;
+}
+
+#close{
+  top: 0;
+  left: 0;
+}
+
+#closeA{
+  background-color: var(--yellow, black);
+}
+
+#closeA::after, #closeA::before{
+  background-color: inherit;
 }
 
 .signUp__title{
   width: 100%;
   text-align: center;
-  color: var(--secondary, black)
+  font-size: 1.8em;
+  color: var(--secondary, black);
+  /* margin-bottom: 20px; */
 }
 
 #formLogin{
   width: 100%;;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  
+  justify-items: center; */
 }
 
 .loginForm{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  min-height: 400px;
+  min-height: 350px;
+  min-width: 250px; width: 30%;
+  padding-top: 20px;
 }
 
 .loginForm > div{
-  margin: 45px 0px;
+  margin: 0;
+}
+
+.loginForm > div + div{
+  margin: 30px 0 0 0;
+}
+
+.loginForm  img {
+  margin-top: 10px;
+  width: 30%;
+  min-width: 250px;
+}
+
+legend{
+  padding-left: 2px;
+}
+
+.loginForm > .row{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-self: flex-end;
+  justify-content: space-between;
 }
 
 #submit{
@@ -44,9 +102,58 @@ body{
   text-transform: uppercase;
   font-size: 1em;
   font-weight: bolder;
+  align-self: flex-end;
   border-radius: 0;
-  margin: 10px 0;
-  min-width: 300px;
+  min-width: 250px;
   min-height: 50px;
   padding: 10px 20px;
 }
+
+@media screen and (max-width: 1024px){
+  .signUp{
+    padding-top: 100px;
+  }
+
+  .loginForm > .row{
+    padding-top: 20px;
+    position: static;
+    flex-direction: row-reverse;
+  }
+
+  .loginForm  img {
+    position: absolute;
+    right: 3%;
+    top: 1%;
+  }
+}
+
+@media screen and (max-width: 870px){
+  .loginForm{
+    margin: 10px 0;
+  }
+
+  .loginForm > .row{
+    justify-content: center;
+  }
+  .loginForm{
+    min-height: auto; height: auto;
+    padding: 5% 0;
+  }
+  .loginForm  img {
+    min-width: 50%;
+    top: 2%;
+    /* right: 50%;
+    top: calc(1% + 20px);
+    transform: translateX(50%); */
+  }
+}
+
+/* @media screen and (max-width: 420px){
+  .signUp{
+    padding-top: 110px;
+  }
+
+  .regresar{
+    top: 1%;
+  }
+} */
