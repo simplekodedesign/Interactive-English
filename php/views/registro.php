@@ -24,7 +24,10 @@
         <fieldset class='loginForm'>
           <legend>Datos de la Institución</legend>
             <div>
-                <input type="text" name="nombre_inst" id="nombre_inst" placeholder="&nbsp;" class="formInput" required>
+                <select id="nombre_inst" class="formInput" name="nombre_inst" required>
+                  
+                </select>
+                <!--<input type="text" name="nombre_inst" id="nombre_inst" placeholder="&nbsp;" class="formInput" required>-->
                 <label for="nombre_inst" class="inputLabel">Nombre de la Institución</label>
             </div>
             <div>

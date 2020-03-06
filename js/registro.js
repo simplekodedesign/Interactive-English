@@ -25,6 +25,24 @@ xhttp.onreadystatechange = function(){
   }
 }
 
+var select = document.getElementById("nombre_inst")
+
+window.addEventListener("load",() => {
+  let xhttp2 = new XMLHttpRequest()
+  xhttp2.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      let data = JSON.parse(this.responseText)
+      data.map(inst => {
+        let option = document.createElement("option")
+        option.setAttribute("value",inst)
+        option.appendChild(document.createTextNode(inst))
+        select.appendChild(option)
+      })
+    }
+  }
+  xhttp2.open("GET","../controller/list_schools.php")
+  xhttp2.send()
+})
 
 document.getElementById("formLogin").addEventListener("submit", e => {
   e.preventDefault()
