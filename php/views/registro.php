@@ -24,13 +24,6 @@
         <fieldset class='loginForm'>
           <legend>Datos de la Institución</legend>
             <div>
-                <select id="nombre_inst" class="formInput" name="nombre_inst" required>
-                  
-                </select>
-                <!--<input type="text" name="nombre_inst" id="nombre_inst" placeholder="&nbsp;" class="formInput" required>-->
-                <label for="nombre_inst" class="inputLabel">Nombre de la Institución</label>
-            </div>
-            <div>
                 <input type="password" name="pin" id="pin" placeholder="&nbsp;" class="formInput" required>
                 <label for="pin" class="inputLabel">PIN</label>
             </div>
