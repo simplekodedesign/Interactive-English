@@ -1,3 +1,9 @@
+var nb_usuario = document.getElementById("nb_usuario");
+
+nb_usuario.addEventListener("keydown",(e) => {
+  e.keyCode == 32 ? e.preventDefault() : 0
+})
+
 var xhttp = new XMLHttpRequest()
 xhttp.onreadystatechange = function(){
   if(this.readyState == 4){

@@ -41,6 +41,7 @@
 								Connection::request("insert into t080_usuario_institucion (Co_Usuario,Nu_Identificacion,Fe_Ingreso) values (".$id_usuario.",'".$nu_identificacion."','".date("Y-m-d")."')");
 								Connection::request("insert into t090_usuario_nivel (Co_Usuario,Co_Nivel,Progreso,Se_Actual,Te_Actual,Horas,Le_Actual) values (".$id_usuario.",1,0,1,1,0,'#')");
 								Connection::request("update codigos set estatus = 'I' where id = ".$id_codigo);
+								Connection::request("insert into t040_retos (Co_Reto,Co_Usuario,Co_Tema,Nu_Identificacion,Fe_Ejecucion,St_Reto) values (1,".$id_usuario.",1,'".$nu_identificacion."','".date("d-m-Y")."','I')");
 								$resp->status = 1;
 								$resp->message = "Te has registrado exitosamente";
 							}catch(Exception $e){

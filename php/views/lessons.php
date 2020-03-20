@@ -60,7 +60,7 @@
   $op = 80;
   $url = "#";
   $currentClass = "";
-  if($_SESSION["te_actual"] > $_GET["th"] || ($_SESSION["te_actual"] == $temaReto && $_SESSION["se_actual"] > $totalLec && $stReto=='A')){
+  if(($_SESSION["te_actual"] > $_GET["th"] || ($_SESSION["te_actual"] == $temaReto) && ($_SESSION["se_actual"] > $totalLec && $stReto=='A'))){
       $op = 0;
       $url = "challenge.php?ini=".$iniTema."&end=".$totalLec."&th=".$_GET["th"];
       if($_SESSION["te_actual"] == $_GET["th"]) {
