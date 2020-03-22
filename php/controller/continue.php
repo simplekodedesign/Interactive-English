@@ -17,9 +17,8 @@
     //Buscar el url de la siguiente leccion para actualizar el url de la leccion actual de usuario
     $results=Connection::request("select Les_Sig from p070_orden where Co_Orden=".$_GET["co"]);
     if($results->rowCount()>0){
-      while($res=$results->fetch(PDO::FETCH_ASSOC)){
-        $_SESSION["le_actual"]=$res["Les_Sig"];
-      }
+      $res=$results->fetch(PDO::FETCH_ASSOC);
+      $_SESSION["le_actual"]=$res["Les_Sig"];
     }
 
     $result = Connection::request("select Co_Orden from p070_orden where Co_Tema = ".$_SESSION["te_actual"]." order by Co_Orden desc");

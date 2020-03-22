@@ -7,7 +7,7 @@
   session_start();
 
   //en caso de ser el tercer reto realizar el avance de tema
-  if($_SESSION["reto"] > 3){
+  if($_SESSION["reto"] > 1){  //aqui deberian ser 3
     unset($_SESSION["reto"]);
     unset($_SESSION["reto_aplicado"]);
     if($_GET["th"]>=$_SESSION["te_actual"]){
@@ -23,9 +23,8 @@
     }
     $results=Connection::request("select Les_Sig from p070_orden where Co_Orden=".($_SESSION["se_actual"]-1));
     if($results-> rowCount () > 0){
-      while($res=$results->fetch(PDO::FETCH_ASSOC)){
-        echo "<script>location='home.php".$res["Les_Sig"]."'</script>";
-      }
+      $res=$results->fetch(PDO::FETCH_ASSOC);
+      echo "<script>location='home.php".$res["Les_Sig"]."'</script>";
     }
   }else{
     //juegos que no se tomaran en encuentra
