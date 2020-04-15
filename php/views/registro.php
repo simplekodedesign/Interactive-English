@@ -61,14 +61,23 @@
             <div>
               <input type="text" name="nb_usuario" id="nb_usuario" placeholder="&nbsp;" class="formInput" required>
               <label for="nb_usuario" class="inputLabel">Nombre de usuario</label>
+              <div class="tooltip">?
+                <span class="tooltiptext">El nombre de usuario no puede contener espacios</span>
+              </div>
             </div>
             <div>
               <input type="password" name="password" id="password" placeholder="&nbsp;" class="formInput" required>
               <label for="password" class="inputLabel">Contraseña</label>
+              <div class="tooltip">?
+                <span class="tooltiptext">La contraseña no puede contener espacios</span>
+              </div>
             </div>
             <div>
               <input type="password" name="password2" id="password2" placeholder="&nbsp;" class="formInput" required>
               <label for="password2" class="inputLabel">Confirmar contraseña</label>
+              <div class="tooltip">?
+                <span class="tooltiptext">La contraseña no puede contener espacios</span>
+              </div>
             </div>
           </fieldset>
           <div class='row'>

@@ -94,7 +94,7 @@
       </div>
 
       <div class="footer">
-        <a href="./php/views/registro.php" class='signUp__link'>¿Aún no tienes tu cuenta? <span>Registrate</span></a>
+        <a href="./php/views/registro.php" class='signUp__link'>¿Aún no tienes tu cuenta? <span>Regístrate</span></a>
         <span>Copyright © 2020 Capacitese 21</span>
       </div>
 

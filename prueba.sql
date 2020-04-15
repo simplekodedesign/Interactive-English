@@ -2034,7 +2034,7 @@ INSERT INTO `t020_juego_tema` (`Co_Juego`, `Co_Tema`, `Co_Orden`, `Nb_audio`, `N
 (14, 3, 25, '40c', NULL, NULL, '40', 'forty'),
 (14, 3, 25, '12c', NULL, NULL, '12', 'twelve'),
 (14, 3, 25, '20c', NULL, NULL, '20', 'twenty'),
-(21, 3, 27, '2c', NULL, NULL, 'T-Y-F-O-R-O-W-T', 'forty-two'),
+(21, 3, 27, '42c', NULL, NULL, 'T-Y-F-O-R-O-W-T', 'forty-two'),
 (21, 3, 27, '53c', NULL, NULL, 'R-E-E-T-Y-H-F-T-I-F', 'fifty-three'),
 (21, 3, 27, '64c', NULL, NULL, 'X-I-S-F-R-T-Y-U-O', 'sixty-four'),
 (21, 3, 27, '77c', NULL, NULL, 'S-E-S-E-V-E-V-E-Y-N-T-N', 'seventy-seven'),

@@ -118,6 +118,7 @@ function dropItem() {
       refreshgame();
     } else {
       $(this.target).appendTo('#' + src);
+      $(this.target).css('display','none')
       if (victoryMessage !== null) {
         victoryMessage();
       }

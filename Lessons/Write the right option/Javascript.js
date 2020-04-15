@@ -6,7 +6,7 @@ var text = document.getElementById("write");
 var letra = document.getElementById("letra");
 
 window.addEventListener("load",function(){
-  description(CORD)
+  description(cord)
   actual();
 	document.getElementById("btnListen").addEventListener("click", audListen);
   document.getElementById("btncheck").addEventListener("click", validate_with_split);

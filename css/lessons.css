@@ -3,6 +3,10 @@ section{
   /* flex-direction: row; */
 }
 
+.main{
+  min-height: 1000px;
+}
+
 #retoImage{
   min-width: 100px;
 }
@@ -13,7 +17,7 @@ section{
   justify-content: space-around;
   width: 80%;
   min-width: 300px;
-  /* max-width */
+  min-height: 800px;
 }
 
 #titleLesson{

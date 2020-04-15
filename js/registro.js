@@ -1,4 +1,5 @@
 var nb_usuario = document.getElementById("nb_usuario");
+const submitButton = document.getElementById("submit");
 
 nb_usuario.addEventListener("keydown",(e) => {
   e.keyCode == 32 ? e.preventDefault() : 0
@@ -21,6 +22,7 @@ xhttp.onreadystatechange = function(){
             title: 'Ha ocurrido un error',
             text: resp.message,
           })
+          submitButton.removeAttribute("disabled")
         }
     }else{
       Swal.fire({
@@ -28,6 +30,7 @@ xhttp.onreadystatechange = function(){
         title: 'Ha ocurrido un error con la conexión',
         text: 'Intenta recargar la pagina o contacta a soporte',
       })
+      submitButton.removeAttribute("disabled")
     } 
   }
 }
@@ -35,6 +38,7 @@ xhttp.onreadystatechange = function(){
 document.getElementById("formLogin").addEventListener("submit", e => {
   e.preventDefault()
   var data = new FormData(document.getElementById("formLogin"))
+  submitButton.setAttribute("disabled", true)
   xhttp.open("POST", "../controller/registro.php", true)
   xhttp.send(data)
 })
